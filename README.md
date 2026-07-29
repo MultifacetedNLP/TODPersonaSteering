@@ -274,21 +274,3 @@ INSTRUCTIONS.md               # fresh-clone environment setup (Python env, .env,
 utils.py, my_enums.py, base_datamodule.py, simple_tod_dataclasses.py   # legacy import-only modules
 ```
 
-## Gitignored Artifacts
-
-```
-output/          # experiment outputs
-logs/            # Slurm logs
-hf_cache/        # HuggingFace model cache
-config/hydra/tmp_configs/
-```
-
-## Security Before Publishing
-
-1. Rotate any previously exposed credentials.
-2. Scan working tree and history: `gitleaks detect` / `trufflehog git .`
-3. If leaks exist in history, rewrite history before creating a public repo.
-
-## Citation
-
-<!-- TODO: add BibTeX once the COLM proceedings entry is available -->
