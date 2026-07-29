@@ -18,6 +18,8 @@ git clone https://github.com/xcfcode/persona
 
 This matters because the code defaults to finding persona vectors at `../persona/vectors/<model-name>/` (relative to `Activation-Steered-Personas`). The sibling `persona` repo is also used as a fallback import path for activation-steering utilities.
 
+> If you instead use GitHub's "Download ZIP" button rather than `git clone`, the extracted folder will be named `TODPersonaSteering-main`. Rename it to `Activation-Steered-Personas` (or adjust the paths in the commands below to match) before continuing.
+
 ---
 
 ### 2) Create Python env and install deps
