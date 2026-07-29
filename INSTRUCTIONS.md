@@ -12,7 +12,7 @@ Keep both repos as siblings in the same parent folder:
 ```bash
 mkdir -p ~/work/activation-steered-personas && cd ~/work/activation-steered-personas
 
-git clone https://github.com/MaryamShoaei1/Activation-Steered-Personas
+git clone https://github.com/MultifacetedNLP/TODPersonaSteering
 git clone https://github.com/xcfcode/persona
 ```
 
