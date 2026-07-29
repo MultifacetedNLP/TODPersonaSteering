@@ -1,0 +1,16 @@
+Speaker,Utterance
+dialogue_id:, 23_00017
+USER,"""Book me a rental car."""
+SYSTEM,"""Sure. What time will you pick it up? What date will you return the car?"""
+USER,"""I'll pick it up around 10:30 in the morning, keeping it until next Thursday"""
+SYSTEM,"""Where will you be picking it up? What day?"""
+USER,"""I'll pick it up in New York on March 4th"""
+SYSTEM,"""APICall(method='GetCarsAvailable', parameters={ dropoff_date: 2019-03-07, pickup_city: New York, pickup_date: 2019-03-04, pickup_time: 10:30 })"""
+Tool,"""Search Results\n[{ car_name: Altima, dropoff_date: 2019-03-07, pickup_city: New York, pickup_date: 2019-03-04, pickup_location: Port Authority Station, pickup_time: 10:30, total_price: 84, type: Standard }, { car_name: Camry, dropoff_date: 2019-03-07, pickup_city: New York, pickup_date: 2019-03-04, pickup_location: JFK International Airport, pickup_time: 10:30, total_price: 99, type: Standard }]\nEnd Search Results"""
+SYSTEM,"""I have 6 cars for you. There's a standard car, an Altima, available at Port Authority Station next Monday"""
+USER,"""Sounds good"""
+SYSTEM,"""Would you like to book a reservation?"""
+USER,"""No not now"""
+SYSTEM,"""Is there anything else I can do?"""
+USER,"""No thanks so much"""
+SYSTEM,"""Have a good day"""

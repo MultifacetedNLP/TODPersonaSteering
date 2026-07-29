@@ -1,0 +1,127 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'American', 'location': 'Emeryville'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-10', 'location': 'Emeryville', 'number_of_seats': '1', 'restaurant_name': 'The Bureau 510', 'time': '11:45'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-10', 'location': 'Emeryville', 'number_of_seats': '1', 'restaurant_name': 'The Bureau 510', 'time': '12:00'})"
+  ],
+  "user_req_slots": [
+    [],
+    [],
+    []
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Hello, I was wondering if you could help me find a place to eat?\nSystem: Yes, I can certainly do that. Is there a city you would like to focus on? And what type of cuisine?\nUser: I would like to eat at a barbecue restaurant. Preferably somewhere in Emeryville.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'American', 'location': 'Emeryville'})\nSearch Results\n[{'address': '5800 Hollis Street', 'category': 'American', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Emeryville', 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'The Bureau 510'}]\nEnd Search Results\nSystem: I have found 1 restaurant that matches your inquiry. The Bureau 510 is a barbecue restaurant located in Emeryville.\nUser: Yes, that works for me. Can you help me book a table there? It will be a reservation for one person on March 10th at 11:45 am.\nSystem: Please confirm the reservation details: A table for 1 at The Bureau 510 in Emeryville for March 10th at 11:45 am.\nUser: Yes, that is correct.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-10', 'location': 'Emeryville', 'number_of_seats': '1', 'restaurant_name': 'The Bureau 510', 'time': '11:45'})\nSearch Results\n[{'address': '5800 Hollis Street', 'category': 'American', 'date': '2019-03-10', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Emeryville', 'number_of_seats': '1', 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'The Bureau 510', 'time': '12:00'}]\nEnd Search Results\nSystem: Sorry, it seems as though the 11:45 am time slot is unavailable. Would you be fine with a reservation for 1 at The Bureau 510 on March 10th at 12 pm instead?\nUser: Yes, I can do that.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-10', 'location': 'Emeryville', 'number_of_seats': '1', 'restaurant_name': 'The Bureau 510', 'time': '12:00'})\nSearch Results\n[{'address': '5800 Hollis Street', 'category': 'American', 'date': '2019-03-10', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Emeryville', 'number_of_seats': '1', 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'The Bureau 510', 'time': '12:00'}]\nEnd Search Results\nSystem: Your reservation has been booked.\nUser: Thank you for your help!\nSystem: Is there anything else I can do for you today?\nLast User Utterance:No, that will be all. Thank you again.\nLast System Utterance: Have a good day, goodbye!",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'American', 'location': 'Emeryville'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2019-03-10', 'location': 'Emeryville', 'number_of_seats': '1', 'restaurant_name': 'The Bureau 510', 'time': '11:45'})"
+  ],
+  "generated_dialog": [
+    "User: Hello, I was wondering if you could help me find a place to eat?",
+    "System: Of course! What type of cuisine are you in the mood for and where would you like to eat?",
+    "User: I'm in the mood for American food, and Emeryville would be a good location.",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'American', 'location': 'Emeryville'})",
+    "Search Results\n[{'address': '5800 Hollis Street', 'category': 'American', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'Emeryville', 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': 4.3, 'restaurant_name': 'The Bureau 510'}, {'address': '5800 Hollis Street', 'category': 'American', 'date': '2019-03-10', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'Emeryville', 'number_of_seats': 1, 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': 4.3, 'restaurant_name': 'The Bureau 510', 'time': '12:00'}]\nEnd Search Results",
+    "System: I found a couple of options for you. The first one is The Bureau 510, located at 5800 Hollis Street. They offer seating outdoors and have vegetarian options. The restaurant has a moderate price range and a rating of 4.3.",
+    "User: That sounds perfect. Could you please reserve a table for me at The Bureau 510 on March 10th at 11:45 AM for one person?",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2019-03-10', 'location': 'Emeryville', 'number_of_seats': '1', 'restaurant_name': 'The Bureau 510', 'time': '11:45'})",
+    "Search Results\n[{'address': '5800 Hollis Street', 'category': 'American', 'date': '2019-03-10', 'has_seating_outdoors': np.True_, 'has_vegetarian_options': np.True_, 'location': 'Emeryville', 'number_of_seats': 1, 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': np.float64(4.3), 'restaurant_name': 'The Bureau 510', 'time': '11:45'}]\nEnd Search Results",
+    "System: Your table is reserved at The Bureau 510 in Emeryville on March 10th at 11:45 AM for one person. Enjoy your meal!",
+    "User: That's great, thank you for helping me out. I'll be there on time.",
+    "System: You're welcome! If you need any more assistance in the future, feel free to ask. Enjoy your meal at The Bureau 510!",
+    "User: I'll make sure to arrive on time. See you there!",
+    "System: See you there! Have a great time.",
+    "User: That sounds good, I won't be late. See you there!",
+    "System: See you there! Have a great time.",
+    "User: I'll make sure to be on time. See you there!",
+    "System: See you there! Have a great time.",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '5800 Hollis Street', 'category': 'American', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Emeryville', 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'The Bureau 510'}]",
+    "[{'address': '5800 Hollis Street', 'category': 'American', 'date': '2019-03-10', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Emeryville', 'number_of_seats': '1', 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'The Bureau 510', 'time': '12:00'}]",
+    "[{'address': '5800 Hollis Street', 'category': 'American', 'date': '2019-03-10', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Emeryville', 'number_of_seats': '1', 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'The Bureau 510', 'time': '12:00'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '5800 Hollis Street', 'category': 'American', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'Emeryville', 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': 4.3, 'restaurant_name': 'The Bureau 510'}, {'address': '5800 Hollis Street', 'category': 'American', 'date': '2019-03-10', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'Emeryville', 'number_of_seats': 1, 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': 4.3, 'restaurant_name': 'The Bureau 510', 'time': '12:00'}]\nEnd Search Results",
+    "Search Results\n[{'address': '5800 Hollis Street', 'category': 'American', 'date': '2019-03-10', 'has_seating_outdoors': np.True_, 'has_vegetarian_options': np.True_, 'location': 'Emeryville', 'number_of_seats': 1, 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': np.float64(4.3), 'restaurant_name': 'The Bureau 510', 'time': '11:45'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"Of course! What type of cuisine are you in the mood for and where would you like to eat?\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"American\", \"location\": \"Emeryville\"}}",
+    "{\"type\": \"message\", \"content\": \"I found a couple of options for you. The first one is The Bureau 510, located at 5800 Hollis Street. They offer seating outdoors and have vegetarian options. The restaurant has a moderate price range and a rating of 4.3.\"}",
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2019-03-10\", \"location\": \"Emeryville\", \"number_of_seats\": 1, \"restaurant_name\": \"The Bureau 510\", \"time\": \"11:45\"}}",
+    "{\"type\": \"message\", \"content\": \"Your table is reserved at The Bureau 510 in Emeryville on March 10th at 11:45 AM for one person. Enjoy your meal!\"}",
+    "{\"type\": \"message\", \"content\": \"You're welcome! If you need any more assistance in the future, feel free to ask. Enjoy your meal at The Bureau 510!\"}",
+    "{\"type\": \"message\", \"content\": \"See you there! Have a great time.\"}",
+    "{\"type\": \"message\", \"content\": \"See you there! Have a great time.\"}",
+    "{\"type\": \"message\", \"content\": \"See you there! Have a great time.\"}"
+  ],
+  "dialog_completed": false
+}

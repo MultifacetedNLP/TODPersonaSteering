@@ -1,0 +1,93 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'Italian', 'location': 'Belmont'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-14', 'location': 'Belmont', 'number_of_seats': '2', 'restaurant_name': 'Caprinos', 'time': '11:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "phone_number"
+    ],
+    [
+      "price_range",
+      "address"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Help me find somewhere to eat.\nSystem: Sure, where and what kind of food?\nUser: Find an Italian restaurant in Belmont.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'Italian', 'location': 'Belmont'})\nSearch Results\n[{'address': '1000 6th Avenue', 'category': 'Italian', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Belmont', 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': '3.20', 'restaurant_name': 'Caprinos'}]\nEnd Search Results\nSystem: There's 3 you may like. How about Caprinos in Belmont?\nUser: What's the phone number?\nSystem: They're at 650-591-4156.\nUser: Great, thank you.\nSystem: Should I reserve a table?\nUser: Yeah, reserve a table for 2 for the 14th of this month at morning 11:30.\nSystem: Sure, please confirm you'd like a table for 2 at Caprinos in Belmont at 11:30 am on March 14th.\nUser: Correct, is it cheap and what's their address?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-14', 'location': 'Belmont', 'number_of_seats': '2', 'restaurant_name': 'Caprinos', 'time': '11:30'})\nSearch Results\n[{'address': '1000 6th Avenue', 'category': 'Italian', 'date': '2019-03-14', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Belmont', 'number_of_seats': '2', 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': '3.20', 'restaurant_name': 'Caprinos', 'time': '11:30'}]\nEnd Search Results\nSystem: I've reserved your table. They are moderate and at 1000 6th Avenue.\nUser: Thank you again.\nSystem: Need anything else?\nLast User Utterance:Nope, thank you!\nLast System Utterance: My pleasure, enjoy your day.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Help me find somewhere to eat.",
+    "System: What type of food are you interested in and where should it be?",
+    "User: I'm in the mood for Italian food and I'm in Belmont, can you show me some options?",
+    "System: Italian food is delicious. What type of Italian food are you in the mood for (e.g. pasta, pizza, etc.) and would you like to know about restaurants in Belmont that are cheap, moderate, or pricey?",
+    "User: I'm in the mood for pasta and I'd love to know about restaurants in Belmont that are moderate.",
+    "System: Pasta is a great choice. For moderate-priced options in Belmont, I'd like to know if you'd like to know about restaurants with outdoor seating or vegetarian options.",
+    "User: Do you have any Italian restaurants in Belmont with outdoor seating that serve pasta?",
+    "System: We have a few options for Italian restaurants in Belmont with outdoor seating that serve pasta. Would you like me to show you some options?",
+    "User: Do you have any phone numbers for those restaurants?",
+    "System: We have a few options for Italian restaurants in Belmont with outdoor seating that serve pasta. Would you like me to show you some options?",
+    "User: Yes, that sounds great, show me the options.",
+    "System: We have a few options for Italian restaurants in Belmont with outdoor seating that serve pasta. Would you like me to show you some options?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '1000 6th Avenue', 'category': 'Italian', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Belmont', 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': '3.20', 'restaurant_name': 'Caprinos'}]",
+    "[{'address': '1000 6th Avenue', 'category': 'Italian', 'date': '2019-03-14', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Belmont', 'number_of_seats': '2', 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': '3.20', 'restaurant_name': 'Caprinos', 'time': '11:30'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"What type of food are you interested in?\"}",
+    "{\"type\": \"message\", \"content\": \"Italian food, got it. What's your budget like for this meal?\"}",
+    "{\"type\": \"message\", \"content\": \"Pasta is a great choice. For moderate-priced options in Belmont, I'd like to know if you'd like to know about restaurants with outdoor seating or vegetarian options.\"}",
+    "{\"type\": \"message\", \"content\": \"We have a few options for Italian restaurants in Belmont with outdoor seating that serve pasta. Would you like me to show you some options?\"}\n\n{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"Italian\", \"location\": \"Belmont\", \"price_range\": \"moderate\", \"has_seating_outdoors\": \"True\", \"has_vegetarian_options\": \"dontcare\"}}",
+    "{\"type\": \"message\", \"content\": \"We have a few options for Italian restaurants in Belmont with outdoor seating that serve pasta. Would you like me to show you some options?\"}\n\n{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"Italian\", \"location\": \"Belmont\", \"price_range\": \"moderate\", \"has_seating_outdoors\": \"True\", \"has_vegetarian_options\": \"dontcare\"}}",
+    "{\"type\": \"message\", \"content\": \"We have a few options for Italian restaurants in Belmont with outdoor seating that serve pasta. Would you like me to show you some options?\"}\n\n{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"Italian\", \"location\": \"Belmont\", \"price_range\": \"moderate\", \"has_seating_outdoors\": \"True\", \"has_vegetarian_options\": \"True\"}}"
+  ],
+  "dialog_completed": false
+}

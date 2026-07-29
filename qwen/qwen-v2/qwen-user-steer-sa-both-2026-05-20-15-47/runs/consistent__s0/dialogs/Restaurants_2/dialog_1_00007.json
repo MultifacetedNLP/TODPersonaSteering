@@ -1,0 +1,69 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Larkspur', 'number_of_seats': '2', 'restaurant_name': 'Left Bank Larkspur Brasserie', 'time': '13:30'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I would like to make a reservation at a restaurant for half past 1 in the afternoon.\nSystem: In which restaurant would you like a table?\nUser: I would like a table at Left Bank.\nSystem: In which location would you like?\nUser: I would like a restaurant in Larkspur.\nSystem: Booking a table at Left Bank Larkspur Brasserie in Larkspur for 2 people on March 1st at 1:30 pm.\nUser: Yes, that reservation is good.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Larkspur', 'number_of_seats': '2', 'restaurant_name': 'Left Bank Larkspur Brasserie', 'time': '13:30'})\nSearch Results\n[{'address': '507 Magnolia Avenue', 'category': 'Brasserie', 'date': '2019-03-01', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'False', 'location': 'Larkspur', 'number_of_seats': '2', 'phone_number': '415-927-3034', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Left Bank Larkspur Brasserie', 'time': '13:30'}]\nEnd Search Results\nSystem: Your reservation was made.\nLast User Utterance:Thank you for your assistance.\nLast System Utterance: Have a good day.",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'Left Bank Larkspur Brasserie', 'location': 'Larkspur', 'time': '13:30'})"
+  ],
+  "generated_dialog": [
+    "User: I would like to make a reservation at a restaurant for half past 1 in the afternoon.",
+    "System: Could you please tell me the name of the restaurant or the location where you'd like to make the reservation?",
+    "User: I want to reserve a table at Left Bank Larkspur Brasserie in Larkspur.",
+    "System: APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'Left Bank Larkspur Brasserie', 'location': 'Larkspur', 'time': '13:30'})",
+    "Search Results\n[{'address': '507 Magnolia Avenue', 'category': 'Brasserie', 'date': '2019-03-01', 'has_seating_outdoors': True, 'has_vegetarian_options': False, 'location': 'Larkspur', 'number_of_seats': 2, 'phone_number': '415-927-3034', 'price_range': 'moderate', 'rating': 4.3, 'restaurant_name': 'Left Bank Larkspur Brasserie', 'time': '13:30'}]\nEnd Search Results",
+    "System: Your table is reserved at Left Bank Larkspur Brasserie in Larkspur for 13:30. Is there anything else you need help with?",
+    "User: No, that's all, thanks.",
+    "System: You're welcome! Enjoy your meal at Left Bank Larkspur Brasserie.",
+    "User: Great, see you there!"
+  ],
+  "search_results": [
+    "[{'address': '507 Magnolia Avenue', 'category': 'Brasserie', 'date': '2019-03-01', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'False', 'location': 'Larkspur', 'number_of_seats': '2', 'phone_number': '415-927-3034', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Left Bank Larkspur Brasserie', 'time': '13:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '507 Magnolia Avenue', 'category': 'Brasserie', 'date': '2019-03-01', 'has_seating_outdoors': True, 'has_vegetarian_options': False, 'location': 'Larkspur', 'number_of_seats': 2, 'phone_number': '415-927-3034', 'price_range': 'moderate', 'rating': 4.3, 'restaurant_name': 'Left Bank Larkspur Brasserie', 'time': '13:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"time\": \"13:30\", \"location\": \"dontcare\", \"restaurant_name\": \"dontcare\"}}",
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"restaurant_name\": \"Left Bank Larkspur Brasserie\", \"location\": \"Larkspur\", \"time\": \"13:30\"}}",
+    "{\"type\": \"message\", \"content\": \"Your table is reserved at Left Bank Larkspur Brasserie in Larkspur for 13:30. Is there anything else you need help with?\"}",
+    "{\"type\": \"message\", \"content\": \"You're welcome! Enjoy your meal at Left Bank Larkspur Brasserie.\"}"
+  ],
+  "dialog_completed": false
+}

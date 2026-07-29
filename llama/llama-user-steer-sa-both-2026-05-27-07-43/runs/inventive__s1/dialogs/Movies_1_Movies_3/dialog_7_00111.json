@@ -1,0 +1,119 @@
+{
+  "api_calls": [
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'number_of_tickets': '1', 'show_date': '2019-03-02', 'show_time': '22:00', 'show_type': 'regular'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: I'm looking to buy tickets to see a movie.\nSystem: How many tickets would you like?\nUser: Just 1 ticket please.\nSystem: What kind of show are you interested in?\nUser: Just a regular show, nothing special.\nSystem: When do you want to watch the movie and what film do you want to watch?\nUser: I want to watch Good Boys at 22:00.\nSystem: When would you like to watch it and where are you based?\nUser: Please find movies in Santa Rosa on March 2nd.\nSystem: Okay sure so just to confirm, you want 1 ticket to watch a regular movie called Good Boys in Santa Rosa on March 2nd at 10 pm.\nUser: Yes that's correct.\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'number_of_tickets': '1', 'show_date': '2019-03-02', 'show_time': '22:00', 'show_type': 'regular'})\nSearch Results\n[{'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'number_of_tickets': '1', 'price': '12', 'show_date': '2019-03-02', 'show_time': '22:00', 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14'}]\nEnd Search Results\nSystem: Your ticket has been purchased.\nUser: Thanks a lot.\nSystem: Do you need anything else?\nLast User Utterance:No that's all for now thanks.\nLast System Utterance: Enjoy your day.",
+  "predicted_api_calls": [
+    "APICall(method='GetTimesForMovie', parameters={'movie_name': 'Good Boys', 'location': 'Santa Rosa', 'show_date': '2024-03-02'})"
+  ],
+  "generated_dialog": [
+    "User: I'm looking to buy tickets to see a movie.",
+    "System: What movie would you like to see?",
+    "User: I'd like to see \"Good Boys\", I've heard great things about it.",
+    "System: Which city would you like to watch 'Good Boys' in?",
+    "User: I'd like to watch it in Santa Rosa.",
+    "System: What date would you like to watch 'Good Boys'?",
+    "User: Can I watch it on March 2nd?",
+    "System: What date would you like to watch 'Good Boys'?",
+    "User: What time would the 22:00 show start, exactly?",
+    "System: What time would the 22:00 show start, exactly?",
+    "User: What time is 22:00 in military time, exactly?",
+    "System: You're asking about the time format, but I need to clarify the show time for 'Good Boys' on March 2nd in Santa Rosa. Can you please confirm the show time you're interested in?",
+    "User: I'm confirming the show time, it's 10 PM, right?",
+    "System: APICall(method='GetTimesForMovie', parameters={'movie_name': 'Good Boys', 'location': 'Santa Rosa', 'show_date': '2024-03-02'})",
+    "Search Results\n[{'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 13, 'show_type': 'regular', 'street_address': '409 Aviation Boulevard', 'theater_name': 'Airport Stadium 12', 'show_date': '2024-03-02', 'show_time': '21:30', 'number_of_tickets': 4}, {'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 12, 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14', 'show_date': '2024-03-02', 'show_time': '22:00', 'number_of_tickets': 1}, {'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 12, 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14', 'show_date': '2024-03-02'}]\nEnd Search Results",
+    "System: The 22:00 show for 'Good Boys' on March 2nd in Santa Rosa starts at 10 PM military time, which is 22:00.",
+    "User: I'm confirming the show time, it's 10 PM, right?",
+    "System: You're confirming the show time for 'Good Boys' on March 2nd in Santa Rosa. I've found a 10 PM show at Roxy Stadium 14. Is that correct?",
+    "User: Yes, that's correct, the 10 PM show at Roxy Stadium 14."
+  ],
+  "search_results": [
+    "[{'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'number_of_tickets': '1', 'price': '12', 'show_date': '2019-03-02', 'show_time': '22:00', 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 13, 'show_type': 'regular', 'street_address': '409 Aviation Boulevard', 'theater_name': 'Airport Stadium 12', 'show_date': '2024-03-02', 'show_time': '21:30', 'number_of_tickets': 4}, {'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 12, 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14', 'show_date': '2024-03-02', 'show_time': '22:00', 'number_of_tickets': 1}, {'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 12, 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14', 'show_date': '2024-03-02'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"What movie would you like to see?\"}",
+    "{\"type\": \"message\", \"content\": \"Which theater would you like to see it at?\"}",
+    "{\"type\": \"message\", \"content\": \"What date would you like to watch 'Good Boys'?\"}",
+    "{\"type\": \"message\", \"content\": \"What date would you like to watch 'Good Boys'?\"}",
+    "{\"type\": \"message\", \"content\": \"What time would you like to watch 'Good Boys' on March 2nd?\"}",
+    "{\"type\": \"message\", \"content\": \"You're asking about the time format, but I need to know the show time in a format I can understand. Can you please tell me the show time in 24-hour format (HH:MM)?\"}",
+    "Based on the conversation history, I will respond as the system. \n\n{\"type\": \"message\", \"content\": \"I need to clarify the show time for 'Good Boys' on March 2nd in Santa Rosa. Can you please confirm the show time you're interested in?\"}\n\nPlease note that I'm asking for confirmation of the show time to ensure I provide the correct information. \n\nAlso, I will make sure to follow the format requirements and provide a valid JSON object as the response. \n\nNext, I will wait for the user's response to confirm the show time. \n\nIf the user confirms the show time, I will make an API call to get the show details. \n\nIf the user does not confirm the show time, I will ask for clarification or provide more information to help the user make a decision. \n\nPlease let me know the user's response.",
+    "Based on the conversation history, I will respond as the System.\n\nSince the user has confirmed the show time, I will proceed with the API call to buy tickets.\n\nHowever, I need to clarify that the user has not confirmed the number of tickets yet. I will ask the user for the number of tickets.\n\n{\"type\": \"message\", \"content\": \"How many tickets would you like to buy for 'Good Boys' on March 2nd in Santa Rosa?\"}\n\nPlease respond with the number of tickets.",
+    "{\"type\": \"message\", \"content\": \"You're confirming the show time for 'Good Boys' on March 2nd in Santa Rosa. I've found a 10 PM show at Roxy Stadium 14. Is that correct?\"}"
+  ],
+  "dialog_completed": false
+}

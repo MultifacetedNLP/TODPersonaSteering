@@ -1,0 +1,12 @@
+Speaker,Utterance
+dialogue_id:, 23_00000
+USER,"""Can you help me book a cab?it is for two people and we would like to go to 560 Waverley Street."""
+SYSTEM,"""Is shared ride ok for you?"""
+USER,"""I am ok with shared ride and is it for one people."""
+SYSTEM,"""please confirm thr following details: you want to book a cab for 1 people in a shared ride to 560 Waverley Street."""
+USER,"""Yes that's correct"""
+SYSTEM,"""APICall(method='GetRide', parameters={ destination: 560 Waverley Street, number_of_riders: 1, shared_ride: True })"""
+Tool,"""Search Results\n[{ approximate_ride_duration: 18, destination: 560 Waverley Street, number_of_riders: 1, ride_fare: 9.69, shared_ride: True }]\nEnd Search Results"""
+SYSTEM,"""You Cab booking is confirmed and your cab is on the way."""
+USER,"""Thanks for your timely help. At present this is what i need for now."""
+SYSTEM,"""Wish you a great day."""

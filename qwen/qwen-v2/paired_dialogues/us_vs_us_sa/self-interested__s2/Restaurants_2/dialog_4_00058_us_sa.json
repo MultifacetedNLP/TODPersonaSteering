@@ -1,0 +1,110 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'Japanese', 'location': 'Mountain View'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-04', 'location': 'Mountain View', 'number_of_seats': '1', 'restaurant_name': 'Bushido', 'time': '11:00'})"
+  ],
+  "user_req_slots": [
+    [
+      "has_seating_outdoors",
+      "phone_number",
+      "rating"
+    ],
+    [
+      "price_range"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I'm planning to dine out soon. Can you help me select a restaurant in Mountain View?\nSystem: Do you have a specific type of cuisine in mind?\nUser: Sure, search for restaurants that have Ramen.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'Japanese', 'location': 'Mountain View'})\nSearch Results\n[{'address': '156 Castro Street', 'category': 'Japanese', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Mountain View', 'phone_number': '650-386-6821', 'price_range': 'moderate', 'rating': '4.10', 'restaurant_name': 'Bushido'}]\nEnd Search Results\nSystem: There are 9 such places in Mountain View that may suit your tastes. One such restaurant is Bushido\nUser: Can you tell me if they have seating available outside?\nSystem: This restaurant does not have seating outside.\nUser: What is the average user rating for this establishment? Also, can you give me their contact number?\nSystem: The restaurant has an average user rating of 4.1 and they can be reached at: 650-386-6821\nUser: Great, thanks!\nSystem: Do you want to make a reservation for this restaurant?\nUser: Sure, I'd like to make a reservation for 1 person at eleven in the morning on the 4th.\nSystem: So you would like to reserve a table for 1 at 11 am on March 4th at Bushido in Mountain View. Is this correct?\nUser: That is correct. Can you tell me the price range of this restaurant?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-04', 'location': 'Mountain View', 'number_of_seats': '1', 'restaurant_name': 'Bushido', 'time': '11:00'})\nSearch Results\n[{'address': '156 Castro Street', 'category': 'Japanese', 'date': '2019-03-04', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Mountain View', 'number_of_seats': '1', 'phone_number': '650-386-6821', 'price_range': 'moderate', 'rating': '4.10', 'restaurant_name': 'Bushido', 'time': '11:00'}]\nEnd Search Results\nSystem: Your table has been booked. The price range is moderate for this restaurant.\nLast User Utterance:Great, thanks for your help! That's it for me.\nLast System Utterance: Enjoy your day!",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'Japanese', 'location': 'Mountain View'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2023-03-04', 'location': 'Mountain View', 'number_of_seats': '2', 'restaurant_name': 'Bushido', 'time': '11:00'})"
+  ],
+  "generated_dialog": [
+    "User: I'm planning to dine out soon. Can you help me select a restaurant in Mountain View?",
+    "System: Of course! What type of cuisine are you in the mood for?",
+    "User: I'm in the mood for Japanese food. Do they have outdoor seating available and what's the phone number? Also, can you check the rating?",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'Japanese', 'location': 'Mountain View'})",
+    "Search Results\n[{'address': '156 Castro Street', 'category': 'Japanese', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'Mountain View', 'phone_number': '650-386-6821', 'price_range': 'moderate', 'rating': 4.1, 'restaurant_name': 'Bushido'}, {'address': '1943 West El Camino Real', 'category': 'Japanese', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Mountain View', 'phone_number': '650-965-8301', 'price_range': 'moderate', 'rating': 4.5, 'restaurant_name': 'Gochi Japanese Fusion Tapas'}, {'address': '1040 North Rengstorff Avenue', 'category': 'Japanese', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Mountain View', 'phone_number': '650-988-8686', 'price_range': 'moderate', 'rating': 4.1, 'restaurant_name': 'Hanabi Sushi'}]\nEnd Search Results",
+    "System: I found a couple of Japanese restaurants in Mountain View for you. The first one is Bushido with a rating of 4.1. They have vegetarian options and their phone number is 650-386-6821. The second option is Gochi Japanese Fusion Tapas, also rated 4.5, but they don't have vegetarian options. Their phone number is 650-965-8301. And the third option is Hanabi Sushi, also rated 4.1, without vegetarian options, and their phone number is 650-988-8686.",
+    "User: I think I'll go with Bushido. Could you tell me their price range?",
+    "System: Bushido is in the moderate price range. Shall we proceed with making a reservation?",
+    "User: Sure, let's make the reservation. Can you confirm the date and time? I prefer March 4th at 11:00 AM.",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2023-03-04', 'location': 'Mountain View', 'number_of_seats': '2', 'restaurant_name': 'Bushido', 'time': '11:00'})",
+    "Search Results\n[{'address': '194 Castro Street', 'category': 'Mexican', 'date': '2023-03-04', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.True_, 'location': 'Mountain View', 'number_of_seats': 2, 'phone_number': '650-969-6767', 'price_range': 'moderate', 'rating': np.float64(4.0), 'restaurant_name': 'Bushido', 'time': '11:00'}]\nEnd Search Results",
+    "System: Your reservation for Bushido on March 4th at 11:00 AM for 2 people is confirmed. Enjoy your meal!",
+    "User: That sounds perfect. Confirm it's for two people, please.",
+    "System: Sure, your reservation for Bushido on March 4th at 11:00 AM for 2 people is confirmed. Enjoy your meal!",
+    "User: Great, can you also remind me of the address?"
+  ],
+  "search_results": [
+    "[{'address': '156 Castro Street', 'category': 'Japanese', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Mountain View', 'phone_number': '650-386-6821', 'price_range': 'moderate', 'rating': '4.10', 'restaurant_name': 'Bushido'}]",
+    "[{'address': '156 Castro Street', 'category': 'Japanese', 'date': '2019-03-04', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Mountain View', 'number_of_seats': '1', 'phone_number': '650-386-6821', 'price_range': 'moderate', 'rating': '4.10', 'restaurant_name': 'Bushido', 'time': '11:00'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '156 Castro Street', 'category': 'Japanese', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'Mountain View', 'phone_number': '650-386-6821', 'price_range': 'moderate', 'rating': 4.1, 'restaurant_name': 'Bushido'}, {'address': '1943 West El Camino Real', 'category': 'Japanese', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Mountain View', 'phone_number': '650-965-8301', 'price_range': 'moderate', 'rating': 4.5, 'restaurant_name': 'Gochi Japanese Fusion Tapas'}, {'address': '1040 North Rengstorff Avenue', 'category': 'Japanese', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Mountain View', 'phone_number': '650-988-8686', 'price_range': 'moderate', 'rating': 4.1, 'restaurant_name': 'Hanabi Sushi'}]\nEnd Search Results",
+    "Search Results\n[{'address': '194 Castro Street', 'category': 'Mexican', 'date': '2023-03-04', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.True_, 'location': 'Mountain View', 'number_of_seats': 2, 'phone_number': '650-969-6767', 'price_range': 'moderate', 'rating': np.float64(4.0), 'restaurant_name': 'Bushido', 'time': '11:00'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 2.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"Of course! What type of cuisine are you in the mood for?\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"Japanese\", \"location\": \"Mountain View\"}}",
+    "{\"type\": \"message\", \"content\": \"I found a couple of Japanese restaurants in Mountain View for you. The first one is Bushido with a rating of 4.1. They have vegetarian options and their phone number is 650-386-6821. The second one is Gochi Japanese Fusion Tapas, also with a rating of 4.5, but they don't have vegetarian options. Their phone number is 650-965-8301. And the third one is Hanabi Sushi, also rated 4.1, without vegetarian options, and their phone number is 650-988-8686. Which one would you like to choose?\"}",
+    "{\"type\": \"message\", \"content\": \"Bushido is in the moderate price range. Shall we proceed with making a reservation?\"}",
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2023-03-04\", \"location\": \"Mountain View\", \"number_of_seats\": 2, \"restaurant_name\": \"Bushido\", \"time\": \"11:00\"}}",
+    "{\"type\": \"message\", \"content\": \"Your reservation for Bushido on March 4th at 11:00 AM for 2 people is confirmed. Enjoy your meal!\"}",
+    "{\"type\": \"message\", \"content\": \"Sure, your reservation for Bushido on March 4th at 11:00 AM for 2 people is confirmed. Enjoy your meal!\"}"
+  ],
+  "dialog_completed": false
+}

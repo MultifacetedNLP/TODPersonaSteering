@@ -1,0 +1,99 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'American', 'location': 'San Francisco'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '4', 'restaurant_name': '25 Lusk', 'time': '19:00'})"
+  ],
+  "user_req_slots": [
+    [
+      "phone_number",
+      "rating"
+    ],
+    [
+      "address"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I need help finding somewhere to eat.\nSystem: What area are you interested in and what kind of food do you like?\nUser: I want a Barbecue place in San Fran.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'American', 'location': 'San Francisco'})\nSearch Results\n[{'address': '1760 Polk Street', 'category': 'American', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'phone_number': '415-359-1212', 'price_range': 'pricey', 'rating': '4.40', 'restaurant_name': '1760'}]\nEnd Search Results\nSystem: 1760 is a good place in San Francisco.\nUser: What else is there?\nSystem: 25 Lusk is a good place in San Francisco.\nUser: Can you give me their phone number?\nSystem: You can reach them at 415-495-5875.\nUser: And what is their user rating?\nSystem: They have 4.4 user rating.\nUser: Alright, that seems good.\nSystem: Do you want me to book you a table?\nUser: Yes, please do that.\nSystem: What time do you want the table?\nUser: I want it for 7:15 pm.\nSystem: I'll book you a table for 2 at 25 Lusk in San Francisco for March 1st at 7:15 pm. Does that work for you?\nUser: No, it should be a table for 4 and for seven pm.\nSystem: So a table for 4 at 7 pm. Are these the changes you wanted?\nUser: Yes. And can you tell me their address?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '4', 'restaurant_name': '25 Lusk', 'time': '19:00'})\nSearch Results\n[{'address': '25 Lusk Street', 'category': 'American', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '4', 'phone_number': '415-495-5875', 'price_range': 'pricey', 'rating': '4.40', 'restaurant_name': '25 Lusk', 'time': '19:00'}]\nEnd Search Results\nSystem: They are located at 25 Lusk Street. I have booked you table.\nUser: Thanks a lot.\nSystem: Do you need me to help with anything else?\nLast User Utterance:No, thanks again.\nLast System Utterance: Have a fine day.",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'American', 'location': 'San Francisco'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '4', 'restaurant_name': 'Aster', 'time': '19:00'})"
+  ],
+  "generated_dialog": [
+    "User: I need help finding somewhere to eat.",
+    "System: Sure, what type of cuisine are you in the mood for and where would you like to eat?",
+    "User: I'm in the mood for some American food in San Francisco! Can you find me a place with a good rating and phone number?",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'American', 'location': 'San Francisco'})",
+    "Search Results\n[{'address': '1722 Sacramento Street', 'category': 'American', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'phone_number': '(415) 567-5432', 'price_range': 'ultra high-end', 'rating': 4.6, 'restaurant_name': 'Acquerello'}, {'address': '1001 Guerrero Street', 'category': 'American', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'phone_number': '415-875-9810', 'price_range': 'ultra high-end', 'rating': 4.5, 'restaurant_name': 'Aster'}, {'address': '490 Geary Street', 'category': 'American', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'phone_number': '415-345-2303', 'price_range': 'ultra high-end', 'rating': 3.9, 'restaurant_name': 'Aveline'}]\nEnd Search Results",
+    "System: I found a couple of options for you. The first one is Acquerello, located at 1722 Sacramento Street, with a rating of 4.6 and a phone number of (415) 567-5432. The second option is Aster, situated at 1001 Guerrero Street, also with a high rating of 4.5 and a phone number of 415-875-9810. Which one would you prefer to reserve a table at?",
+    "User: I think I want to go with Aster! Can you help me reserve a table for 4 people at 7 PM on March 1st?",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '4', 'restaurant_name': 'Aster', 'time': '19:00'})",
+    "Search Results\n[{'address': '25 Lusk Street', 'category': 'American', 'date': '2019-03-01', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.True_, 'location': 'San Francisco', 'number_of_seats': 4, 'phone_number': '415-495-5875', 'price_range': 'pricey', 'rating': np.float64(4.4), 'restaurant_name': 'Aster', 'time': '19:00'}]\nEnd Search Results",
+    "System: Great! Your table for 4 people at Aster in San Francisco on March 1st at 7 PM is booked. Enjoy your meal!",
+    "User: That sounds perfect! Can't wait to try it out.",
+    "System: I'm glad you're excited! If you need any more assistance, feel free to ask. Enjoy your dinner at Aster!",
+    "User: That's awesome, thanks for everything! I'll see you there!"
+  ],
+  "search_results": [
+    "[{'address': '1760 Polk Street', 'category': 'American', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'phone_number': '415-359-1212', 'price_range': 'pricey', 'rating': '4.40', 'restaurant_name': '1760'}]",
+    "[{'address': '25 Lusk Street', 'category': 'American', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '4', 'phone_number': '415-495-5875', 'price_range': 'pricey', 'rating': '4.40', 'restaurant_name': '25 Lusk', 'time': '19:00'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '1722 Sacramento Street', 'category': 'American', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'phone_number': '(415) 567-5432', 'price_range': 'ultra high-end', 'rating': 4.6, 'restaurant_name': 'Acquerello'}, {'address': '1001 Guerrero Street', 'category': 'American', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'phone_number': '415-875-9810', 'price_range': 'ultra high-end', 'rating': 4.5, 'restaurant_name': 'Aster'}, {'address': '490 Geary Street', 'category': 'American', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'phone_number': '415-345-2303', 'price_range': 'ultra high-end', 'rating': 3.9, 'restaurant_name': 'Aveline'}]\nEnd Search Results",
+    "Search Results\n[{'address': '25 Lusk Street', 'category': 'American', 'date': '2019-03-01', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.True_, 'location': 'San Francisco', 'number_of_seats': 4, 'phone_number': '415-495-5875', 'price_range': 'pricey', 'rating': np.float64(4.4), 'restaurant_name': 'Aster', 'time': '19:00'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"Sure, what type of cuisine are you in the mood for and where would you like to eat?\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"American\", \"location\": \"San Francisco\"}}",
+    "{\"type\": \"message\", \"content\": \"I found a couple of options for you. The first one is Acquerello, located at 1722 Sacramento Street, with a rating of 4.6 and a phone number of (415) 567-5432. The second option is Aster, situated at 1001 Guerrero Street, also with a high rating of 4.5 and a phone number of 415-875-9810. Which one would you prefer to reserve a table at?\"}",
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2019-03-01\", \"location\": \"San Francisco\", \"number_of_seats\": 4, \"restaurant_name\": \"Aster\", \"time\": \"19:00\"}}",
+    "{\"type\": \"message\", \"content\": \"Great! Your table for 4 people at Aster in San Francisco on March 1st at 7 PM is booked. Enjoy your meal!\"}",
+    "{\"type\": \"message\", \"content\": \"I'm glad you're excited! If you need any more assistance, feel free to ask. Enjoy your dinner at Aster!\"}"
+  ],
+  "dialog_completed": false
+}

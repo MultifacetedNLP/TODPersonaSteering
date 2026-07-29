@@ -1,0 +1,72 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'location': 'Newark', 'theater_name': 'AMC NewPark 12'})",
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'Newark', 'movie_name': '47 Meters Down: Uncaged', 'number_of_tickets': '1', 'show_date': '2019-03-03', 'show_time': '14:00', 'show_type': 'regular'})"
+  ],
+  "user_req_slots": [
+    [],
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: I am looking for a movie to watch at AMC NewPark.\nSystem: Can you tell me the location?\nUser: Can you look for the movie in Newark?\nSystem: ApiCall(method='FindMovies', parameters={'location': 'Newark', 'theater_name': 'AMC NewPark 12'})\nSearch Results\n[{'genre': 'Horror', 'location': 'Newark', 'movie_name': '47 Meters Down: Uncaged', 'price': '6', 'show_type': 'regular', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12'}]\nEnd Search Results\nSystem: What do you think of 47 Meters Down: Uncaged, Ad Astra or Angel Has Fallen?\nUser: 47 Meters DOwn: Uncaged sounds great. Can you book me 1 movie ticket for the regular show at two in the afternoon.\nSystem: What is your preferred date?\nUser: I would like to watch it on Sunday this week.\nSystem: Please confirm: You want me to book 1 ticket for the regular show of 47 Meters Down: Uncaged on March 3rd in Newark starting at 2 pm.\nUser: Yes, That sounds nice to me.\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'Newark', 'movie_name': '47 Meters Down: Uncaged', 'number_of_tickets': '1', 'show_date': '2019-03-03', 'show_time': '14:00', 'show_type': 'regular'})\nSearch Results\n[{'genre': 'Horror', 'location': 'Newark', 'movie_name': '47 Meters Down: Uncaged', 'number_of_tickets': '1', 'price': '6', 'show_date': '2019-03-03', 'show_time': '14:00', 'show_type': 'regular', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12'}]\nEnd Search Results\nSystem: Your tickets for the show has been successfully booked.\nLast User Utterance:That will be all for now. Thank you!\nLast System Utterance: I am glad I could help. Have a nice day!",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'location': 'Newark', 'theater_name': 'AMC NewPark 12'})",
+    "APICall(method='GetTimesForMovie', parameters={'movie_name': 'Captain Marvel', 'location': 'Newark', 'show_date': '2023-10-10'})",
+    "APICall(method='GetTimesForMovie', parameters={'movie_name': 'Captain Marvel', 'location': 'Newark', 'show_date': '2023-10-10', 'show_type': '3d', 'theater_name': 'AMC NewPark 12'})"
+  ],
+  "generated_dialog": [
+    "User: I am looking for a movie to watch at AMC NewPark.",
+    "System: Sure, where are you located now?",
+    "User: I am located in Newark.",
+    "System: APICall(method='FindMovies', parameters={'location': 'Newark', 'theater_name': 'AMC NewPark 12'})",
+    "Search Results\n[{'genre': 'Biographical', 'location': 'Newark', 'movie_name': 'Breakthrough', 'price': 24, 'show_type': 'regular', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12'}, {'genre': 'Adventure', 'location': 'Newark', 'movie_name': 'Captain Marvel', 'price': 13, 'show_type': '3d', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12'}, {'genre': 'Fantasy', 'location': 'Newark', 'movie_name': 'Dumbo', 'price': 10, 'show_type': 'imax', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12'}]\nEnd Search Results",
+    "System: We have 'Breakthrough', 'Captain Marvel', and 'Dumbo' showing at AMC NewPark 12 in Newark. Which one would you like to see?",
+    "User: I would like to watch \"47 Meters Down: Uncaged.\"",
+    "System: I'm sorry, but '47 Meters Down: Uncaged' is not currently showing at AMC NewPark 12 in Newark. Would you like to see 'Breakthrough', 'Captain Marvel', or 'Dumbo'?",
+    "User: You may recommend other movies that are currently showing.",
+    "System: Sure, let me recommend some other movies that are currently showing at AMC NewPark 12 in Newark. How about 'Breakthrough', 'Captain Marvel', or 'Dumbo'?",
+    "User: You can recommend additional movies that are currently showing, and I can choose from the options provided.",
+    "System: Great! Let's consider 'Breakthrough', 'Captain Marvel', or 'Dumbo'. Which one catches your interest?",
+    "User: I choose \"Captain Marvel.\"",
+    "System: APICall(method='GetTimesForMovie', parameters={'movie_name': 'Captain Marvel', 'location': 'Newark', 'show_date': '2023-10-10'})",
+    "Search Results\n[{'genre': 'Adventure', 'location': 'Newark', 'movie_name': 'Captain Marvel', 'price': 13, 'show_type': '3d', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12', 'show_date': '2023-10-10'}, {'genre': 'Adventure', 'location': 'Newark', 'movie_name': 'Captain Marvel', 'price': 13, 'show_type': '3d', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12', 'show_date': '2023-10-10', 'show_time': '22:30'}, {'genre': 'Adventure', 'location': 'Newark', 'movie_name': 'Captain Marvel', 'price': 13, 'show_type': '3d', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12', 'show_date': '2023-10-10', 'show_time': '21:30'}]\nEnd Search Results",
+    "System: I found multiple showtimes for Captain Marvel on October 10th. There are screenings at 9:30 PM and 10:30 PM. Which time works best for you?",
+    "User: The 9:30 PM screening works well for me.",
+    "System: APICall(method='GetTimesForMovie', parameters={'movie_name': 'Captain Marvel', 'location': 'Newark', 'show_date': '2023-10-10', 'show_type': '3d', 'theater_name': 'AMC NewPark 12'})",
+    "Search Results\n[{'genre': 'Adventure', 'location': 'Newark', 'movie_name': 'Captain Marvel', 'price': 13, 'show_type': '3d', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12', 'show_date': '2023-10-10'}, {'genre': 'Adventure', 'location': 'Newark', 'movie_name': 'Captain Marvel', 'price': 13, 'show_type': '3d', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12', 'show_date': '2023-10-10', 'show_time': '22:30'}, {'genre': 'Adventure', 'location': 'Newark', 'movie_name': 'Captain Marvel', 'price': 13, 'show_type': '3d', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12', 'show_date': '2023-10-10', 'show_time': '21:30'}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'genre': 'Horror', 'location': 'Newark', 'movie_name': '47 Meters Down: Uncaged', 'price': '6', 'show_type': 'regular', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12'}]",
+    "[{'genre': 'Horror', 'location': 'Newark', 'movie_name': '47 Meters Down: Uncaged', 'number_of_tickets': '1', 'price': '6', 'show_date': '2019-03-03', 'show_time': '14:00', 'show_type': 'regular', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'genre': 'Biographical', 'location': 'Newark', 'movie_name': 'Breakthrough', 'price': 24, 'show_type': 'regular', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12'}, {'genre': 'Adventure', 'location': 'Newark', 'movie_name': 'Captain Marvel', 'price': 13, 'show_type': '3d', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12'}, {'genre': 'Fantasy', 'location': 'Newark', 'movie_name': 'Dumbo', 'price': 10, 'show_type': 'imax', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12'}]\nEnd Search Results",
+    "Search Results\n[{'genre': 'Adventure', 'location': 'Newark', 'movie_name': 'Captain Marvel', 'price': 13, 'show_type': '3d', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12', 'show_date': '2023-10-10'}, {'genre': 'Adventure', 'location': 'Newark', 'movie_name': 'Captain Marvel', 'price': 13, 'show_type': '3d', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12', 'show_date': '2023-10-10', 'show_time': '22:30'}, {'genre': 'Adventure', 'location': 'Newark', 'movie_name': 'Captain Marvel', 'price': 13, 'show_type': '3d', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12', 'show_date': '2023-10-10', 'show_time': '21:30'}]\nEnd Search Results",
+    "Search Results\n[{'genre': 'Adventure', 'location': 'Newark', 'movie_name': 'Captain Marvel', 'price': 13, 'show_type': '3d', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12', 'show_date': '2023-10-10'}, {'genre': 'Adventure', 'location': 'Newark', 'movie_name': 'Captain Marvel', 'price': 13, 'show_type': '3d', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12', 'show_date': '2023-10-10', 'show_time': '22:30'}, {'genre': 'Adventure', 'location': 'Newark', 'movie_name': 'Captain Marvel', 'price': 13, 'show_type': '3d', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12', 'show_date': '2023-10-10', 'show_time': '21:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

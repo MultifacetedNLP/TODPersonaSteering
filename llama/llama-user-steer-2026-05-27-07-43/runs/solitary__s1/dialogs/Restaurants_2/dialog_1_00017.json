@@ -1,0 +1,68 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Mountain View', 'number_of_seats': '2', 'restaurant_name': 'Sushi 85', 'time': '19:00'})"
+  ],
+  "user_req_slots": [
+    [
+      "address",
+      "phone_number"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you book a table at a restaurant for me?\nSystem: What is the location and time for the booking?\nUser: I am looking for restaurants in Mountain View for the reservation at seven pm.\nSystem: What is the name of your preferred restaurant?\nUser: I would like to go with Sushi 85.\nSystem: Please confirm: You want me to book a table for 2 people at Sushi 85 located Mountain View at 7 pm on March 1st.\nUser: Okay, That sounds great! Find me the address please.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Mountain View', 'number_of_seats': '2', 'restaurant_name': 'Sushi 85', 'time': '19:00'})\nSearch Results\n[{'address': '1350 Grant Road', 'category': 'Japanese', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Mountain View', 'number_of_seats': '2', 'phone_number': '650-965-8898', 'price_range': 'moderate', 'rating': '3.80', 'restaurant_name': 'Sushi 85', 'time': '19:00'}]\nEnd Search Results\nSystem: I have successfully booked the table and the address is 1350 Grant Road.\nUser: Can you find me their phone number?\nSystem: You can call them on 650-965-8898.\nUser: Okay, Thank you for the help!\nSystem: Is there anything else I can help you with?\nLast User Utterance:No. That will be all. Thank you!\nLast System Utterance: I am glad I could help. Have a nice day!",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Can you book a table at a restaurant for me?",
+    "System: I'd be happy to help you book a table at a restaurant. What type of cuisine are you interested in?",
+    "User: I'm looking for a Japanese restaurant, specifically sushi.",
+    "System: Great, sushi sounds delicious! Can you please tell me the location where you'd like to book the table?",
+    "User: I'm looking for a place in Mountain View.",
+    "System: Mountain View is a big place, can you please specify the exact location or area where you'd like to book the table?",
+    "User: I'm looking for a place near the downtown area, is that Sushi 85 on Main Street?",
+    "System: That sounds like a great location. Is Sushi 85 on Main Street the restaurant you're looking for?",
+    "User: Yes, that's the one I'm looking for.",
+    "System: Great, sushi sounds delicious! Can you please tell me the location where you'd like to book the table?",
+    "User: I'm looking for a place near the downtown area, is that Sushi 85 on Main Street?",
+    "System: I've found Sushi 85 on Main Street in Mountain View. Is that the restaurant you're looking for?",
+    "User: What's the address of Sushi 85 on Main Street in Mountain View?",
+    "System: I've found Sushi 85 on Main Street in Mountain View. Is that the restaurant you're looking for?",
+    "User: What's the address of Sushi 85 on Main Street in Mountain View?",
+    "System: I'd be happy to help you book a table at a restaurant. What type of cuisine are you interested in?",
+    "User: I'm looking for a Japanese restaurant, specifically sushi.",
+    "System: I'd be happy to help you book a table at a restaurant. What type of cuisine are you interested in?",
+    "User: I'm looking for a Japanese restaurant, specifically sushi.",
+    "System: I'd be happy to help you book a table at a restaurant. What type of cuisine are you interested in?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '1350 Grant Road', 'category': 'Japanese', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Mountain View', 'number_of_seats': '2', 'phone_number': '650-965-8898', 'price_range': 'moderate', 'rating': '3.80', 'restaurant_name': 'Sushi 85', 'time': '19:00'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

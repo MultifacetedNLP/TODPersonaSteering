@@ -1,0 +1,73 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Cloverdale', 'number_of_seats': '2', 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'})"
+  ],
+  "user_req_slots": [
+    [
+      "rating"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I want to make a restaurant reservation.\nSystem: What's the name of the restaurant and what time would you like the reservation?\nUser: It's name is La Hacienda and I want the reservation for 2 o\"clock in the afternoon.\nSystem: And where is the restaurant located?\nUser: It's in Cloverdale.\nSystem: I'll make a reservation for La Hacienda Mexican Restaurant in Cloverdale for March 1st at 2 pm for 2 people, is that good for you?\nUser: Yeah,that's good. What's the user rating of the restaurant?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Cloverdale', 'number_of_seats': '2', 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'})\nSearch Results\n\nEnd Search Results\nSystem: I'm sorry, but the reservation couldn't be completed. Is there anything else you need?\nLast User Utterance:No, thanks a lot.\nLast System Utterance: You're welcome, have a fine day.",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'Mexican', 'location': 'San Francisco'})",
+    "APICall(method='FindRestaurants', parameters={'category': 'Mexican', 'location': 'San Francisco'})"
+  ],
+  "generated_dialog": [
+    "User: I want to make a restaurant reservation.",
+    "System: Sure, I can help with that. Could you please tell me the name of the restaurant you're interested in?",
+    "User: I'd like to reserve a table at La Hacienda Mexican Restaurant. Can you also find out what the rating is before we confirm the reservation?",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'Mexican', 'location': 'San Francisco'})",
+    "Search Results\n[{'address': \"599 O'Farrell Street\", 'category': 'Mexican', 'date': '2019-03-01', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-202-0530', 'price_range': 'cheap', 'rating': 3.8, 'restaurant_name': 'El Tesoro Taqueria & Grill', 'time': '12:00'}, {'address': '141 Hickey Boulevard', 'category': 'Mexican', 'has_seating_outdoors': True, 'has_vegetarian_options': False, 'location': 'South San Francisco', 'phone_number': '650-755-0614', 'price_range': 'moderate', 'rating': 3.9, 'restaurant_name': 'Chevys Fresh Mex'}, {'address': '141 Hickey Boulevard', 'category': 'Mexican', 'date': '2019-03-13', 'has_seating_outdoors': True, 'has_vegetarian_options': False, 'location': 'South San Francisco', 'number_of_seats': 4, 'phone_number': '650-755-0614', 'price_range': 'moderate', 'rating': 3.9, 'restaurant_name': 'Chevys Fresh Mex', 'time': '13:30'}]\nEnd Search Results",
+    "System: El Tesoro Taqueria & Grill has a rating of 3.8. Would you like to proceed with this restaurant or consider another one?",
+    "User: I think I meant to reserve at La Hacienda Mexican Restaurant. Can you check its rating for me?",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'Mexican', 'location': 'San Francisco'})",
+    "Search Results\n[{'address': \"599 O'Farrell Street\", 'category': 'Mexican', 'date': '2019-03-01', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-202-0530', 'price_range': 'cheap', 'rating': 3.8, 'restaurant_name': 'El Tesoro Taqueria & Grill', 'time': '12:00'}, {'address': '141 Hickey Boulevard', 'category': 'Mexican', 'has_seating_outdoors': True, 'has_vegetarian_options': False, 'location': 'South San Francisco', 'phone_number': '650-755-0614', 'price_range': 'moderate', 'rating': 3.9, 'restaurant_name': 'Chevys Fresh Mex'}, {'address': '141 Hickey Boulevard', 'category': 'Mexican', 'date': '2019-03-13', 'has_seating_outdoors': True, 'has_vegetarian_options': False, 'location': 'South San Francisco', 'number_of_seats': 4, 'phone_number': '650-755-0614', 'price_range': 'moderate', 'rating': 3.9, 'restaurant_name': 'Chevys Fresh Mex', 'time': '13:30'}]\nEnd Search Results"
+  ],
+  "search_results": [
+    ""
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': \"599 O'Farrell Street\", 'category': 'Mexican', 'date': '2019-03-01', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-202-0530', 'price_range': 'cheap', 'rating': 3.8, 'restaurant_name': 'El Tesoro Taqueria & Grill', 'time': '12:00'}, {'address': '141 Hickey Boulevard', 'category': 'Mexican', 'has_seating_outdoors': True, 'has_vegetarian_options': False, 'location': 'South San Francisco', 'phone_number': '650-755-0614', 'price_range': 'moderate', 'rating': 3.9, 'restaurant_name': 'Chevys Fresh Mex'}, {'address': '141 Hickey Boulevard', 'category': 'Mexican', 'date': '2019-03-13', 'has_seating_outdoors': True, 'has_vegetarian_options': False, 'location': 'South San Francisco', 'number_of_seats': 4, 'phone_number': '650-755-0614', 'price_range': 'moderate', 'rating': 3.9, 'restaurant_name': 'Chevys Fresh Mex', 'time': '13:30'}]\nEnd Search Results",
+    "Search Results\n[{'address': \"599 O'Farrell Street\", 'category': 'Mexican', 'date': '2019-03-01', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-202-0530', 'price_range': 'cheap', 'rating': 3.8, 'restaurant_name': 'El Tesoro Taqueria & Grill', 'time': '12:00'}, {'address': '141 Hickey Boulevard', 'category': 'Mexican', 'has_seating_outdoors': True, 'has_vegetarian_options': False, 'location': 'South San Francisco', 'phone_number': '650-755-0614', 'price_range': 'moderate', 'rating': 3.9, 'restaurant_name': 'Chevys Fresh Mex'}, {'address': '141 Hickey Boulevard', 'category': 'Mexican', 'date': '2019-03-13', 'has_seating_outdoors': True, 'has_vegetarian_options': False, 'location': 'South San Francisco', 'number_of_seats': 4, 'phone_number': '650-755-0614', 'price_range': 'moderate', 'rating': 3.9, 'restaurant_name': 'Chevys Fresh Mex', 'time': '13:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"Sure, I can help with that. Could you please tell me the name of the restaurant you're interested in?\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"Mexican\", \"location\": \"San Francisco\"}}",
+    "{\"type\": \"message\", \"content\": \"El Tesoro Taqueria & Grill has a rating of 3.8. Would you like to proceed with this restaurant or consider another one?\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"Mexican\", \"location\": \"San Francisco\"}}"
+  ],
+  "dialog_completed": false
+}

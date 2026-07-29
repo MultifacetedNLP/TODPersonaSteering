@@ -1,0 +1,12 @@
+Speaker,Utterance
+dialogue_id:, 36_00049
+USER,"""I need to see a doctor, can you find me one?"""
+SYSTEM,"""Of course. What date and time would you like to have your appointment? Do you have a preferred doctor?"""
+USER,"""I'd like to see Dr. Thomas Stodgel at morning 11 on the 8th, is he free?"""
+SYSTEM,"""Please confirm that you'd like me to schedule an appointment with Dr. Thomas O. Stodgel, MD at 11 am next Friday."""
+USER,"""Yes, thanks. What is his rating?"""
+SYSTEM,"""APICall(method='BookAppointment', parameters={ appointment_date: 2019-03-08, appointment_time: 11:00, doctor_name: Dr. Thomas O. Stodgel, MD })"""
+Tool,"""Search Results\n[{ appointment_date: 2019-03-08, appointment_time: 11:00, average_rating: 5.00, doctor_name: Dr. Thomas O. Stodgel, MD, phone_number: 650-344-7802, street_address: 1820 Ogden Avenue Floor, 2, type: Gynecologist }]\nEnd Search Results"""
+SYSTEM,"""Your appointment has been booked. He's rated 5.0."""
+USER,"""Thank you, that's all."""
+SYSTEM,"""Okay, see you."""

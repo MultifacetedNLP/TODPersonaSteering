@@ -1,0 +1,54 @@
+experiment_id: llama-user-steer-2026-05-27-07-43
+experiment_dir: /work/hdd/beto/balvesrodrigues/persona_vectors/Persona-TOD/output/llama-user-steer-2026-05-27-07-43
+output_root: /work/hdd/beto/balvesrodrigues/persona_vectors/Persona-TOD/output
+vector_dir: /work/hdd/beto/balvesrodrigues/persona_vectors/persona/vectors/Llama-3.1-8B-Instruct
+user_layer: 20
+config_name: tod_inference
+test_domains: [["Restaurants_2"],["Movies_1","Movies_3"]]
+experiment_description: User-steering TOD sweep
+command: sbatch /var/spool/slurmd/job18526464/slurm_script  
+submitted_at: 2026-05-27T07:43:14-05:00
+
+task_id | trait                | scalar | run_label
+--------|----------------------|--------|------------------------------
+0       | calm                 | -1     | calm__s-1
+1       | calm                 | 0      | calm__s0
+2       | calm                 | 1      | calm__s1
+3       | calm                 | 2      | calm__s2
+4       | careless             | -1     | careless__s-1
+5       | careless             | 0      | careless__s0
+6       | careless             | 1      | careless__s1
+7       | careless             | 2      | careless__s2
+8       | compassionate        | -1     | compassionate__s-1
+9       | compassionate        | 0      | compassionate__s0
+10      | compassionate        | 1      | compassionate__s1
+11      | compassionate        | 2      | compassionate__s2
+12      | consistent           | -1     | consistent__s-1
+13      | consistent           | 0      | consistent__s0
+14      | consistent           | 1      | consistent__s1
+15      | consistent           | 2      | consistent__s2
+16      | dependable           | -1     | dependable__s-1
+17      | dependable           | 0      | dependable__s0
+18      | dependable           | 1      | dependable__s1
+19      | dependable           | 2      | dependable__s2
+20      | inventive            | -1     | inventive__s-1
+21      | inventive            | 0      | inventive__s0
+22      | inventive            | 1      | inventive__s1
+23      | inventive            | 2      | inventive__s2
+24      | nervous              | -1     | nervous__s-1
+25      | nervous              | 0      | nervous__s0
+26      | nervous              | 1      | nervous__s1
+27      | nervous              | 2      | nervous__s2
+28      | outgoing             | -1     | outgoing__s-1
+29      | outgoing             | 0      | outgoing__s0
+30      | outgoing             | 1      | outgoing__s1
+31      | outgoing             | 2      | outgoing__s2
+32      | self-interested      | -1     | self-interested__s-1
+33      | self-interested      | 0      | self-interested__s0
+34      | self-interested      | 1      | self-interested__s1
+35      | self-interested      | 2      | self-interested__s2
+36      | solitary             | -1     | solitary__s-1
+37      | solitary             | 0      | solitary__s0
+38      | solitary             | 1      | solitary__s1
+39      | solitary             | 2      | solitary__s2
+array_job_id: 18526470

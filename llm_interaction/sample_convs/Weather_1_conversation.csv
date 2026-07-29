@@ -1,0 +1,16 @@
+Speaker,Utterance
+dialogue_id:, 3_00076
+USER,"""I want to check the weather in El Sobrante on the 6th of March 2019."""
+SYSTEM,"""APICall(method='GetWeather', parameters={ city: El Sobrante, date: 2019-03-06 })"""
+Tool,"""Search Results\n[{ city: El Sobrante, date: 2019-03-06, humidity: 22, precipitation: 9, temperature: 76, wind: 12 }]\nEnd Search Results"""
+SYSTEM,"""The average temperature for the day should be 76 degrees Fahrenheit, with a 9 percent chance of rain."""
+USER,"""Okay, how about the weather in Guerneville on the 1st of March 2019?"""
+SYSTEM,"""APICall(method='GetWeather', parameters={ city: Guerneville, date: 2019-03-01 })"""
+Tool,"""Search Results\n[{ city: Guerneville, date: 2019-03-01, humidity: 28, precipitation: 11, temperature: 89, wind: 2 }]\nEnd Search Results"""
+SYSTEM,"""The average temperature for the day should be 89 degrees Fahrenheit with an 11 percent chance of rain."""
+USER,"""How humid is it supposed to be?"""
+SYSTEM,"""There should be around 28 percent humidity."""
+USER,"""Okay."""
+SYSTEM,"""Do you need anything else?"""
+USER,"""No, that's all. Thanks."""
+SYSTEM,"""Goodbye."""

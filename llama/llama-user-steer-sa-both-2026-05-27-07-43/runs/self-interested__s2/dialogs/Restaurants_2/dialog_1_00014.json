@@ -1,0 +1,78 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-11', 'location': 'Santa Clara', 'number_of_seats': '2', 'restaurant_name': 'Thai Chili Cuisine', 'time': '17:45'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-11', 'location': 'Santa Clara', 'number_of_seats': '2', 'restaurant_name': 'Thai Chili Cuisine', 'time': '18:00'})"
+  ],
+  "user_req_slots": [
+    [],
+    []
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you help me book a table at Thai Chili on March 11th? Please find restaurants in Santa Clara.\nSystem: What time do you prefer?\nUser: I want 5:45 in the evening.\nSystem: Okay, you want to book a table for 2 people at Thai Chili Cuisine in Santa Clara on March 11th at 5:45 pm. Please confirm.\nUser: Yes, that's good.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-11', 'location': 'Santa Clara', 'number_of_seats': '2', 'restaurant_name': 'Thai Chili Cuisine', 'time': '17:45'})\nSearch Results\n[{'address': '1550 Halford Avenue', 'category': 'Thai', 'date': '2019-03-11', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Santa Clara', 'number_of_seats': '2', 'phone_number': '408-615-9199', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Thai Chili Cuisine', 'time': '18:00'}]\nEnd Search Results\nSystem: Sorry, I fail to make a reservation. Thai Chili Cuisine is a good restaurant, do you want me to book a reservation for 2 again on March 11th at 6 pm?\nUser: Yes, that's fine.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-11', 'location': 'Santa Clara', 'number_of_seats': '2', 'restaurant_name': 'Thai Chili Cuisine', 'time': '18:00'})\nSearch Results\n[{'address': '1550 Halford Avenue', 'category': 'Thai', 'date': '2019-03-11', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Santa Clara', 'number_of_seats': '2', 'phone_number': '408-615-9199', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Thai Chili Cuisine', 'time': '18:00'}]\nEnd Search Results\nSystem: Your booking is now confirmed!\nLast User Utterance:Thanks a lot.\nLast System Utterance: You are welcome!",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Can you help me book a table at Thai Chili on March 11th? Please find restaurants in Santa Clara.",
+    "System: I'd be happy to help you book a table. Can you please confirm the date you'd like to book the table for?",
+    "User: Yes, that's March 11th, I'm looking to book a table for 2 people.",
+    "System: What time would you like to book the table for on March 11th?",
+    "User: I was thinking 5:45 PM, is that available?",
+    "System: I'd be happy to help you book a table. Can you please confirm the date you'd like to book the table for?",
+    "User: Yes, that's March 11th, I'm looking to book a table for 2 people.",
+    "System: I'd be happy to help you book a table. Can you please confirm the date you'd like to book the table for?",
+    "User: Yes, that's March 11th, I'm looking to book a table for 2 people at 5:45 PM.",
+    "System: I'd be happy to help you book a table. Can you please confirm the date you'd like to book the table for?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '1550 Halford Avenue', 'category': 'Thai', 'date': '2019-03-11', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Santa Clara', 'number_of_seats': '2', 'phone_number': '408-615-9199', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Thai Chili Cuisine', 'time': '18:00'}]",
+    "[{'address': '1550 Halford Avenue', 'category': 'Thai', 'date': '2019-03-11', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Santa Clara', 'number_of_seats': '2', 'phone_number': '408-615-9199', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Thai Chili Cuisine', 'time': '18:00'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 2.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"What type of food are you interested in and where should it be?\"}",
+    "{\"type\": \"message\", \"content\": \"What time would you like to book the table for?\"}",
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you book a table. Can you please confirm the date you'd like to book the table for?\"}\n\n{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"Thai\", \"location\": \"Santa Clara\"}} \n\n(Note: The search results will be provided externally after the API call)",
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you book a table. Can you please confirm the date you'd like to book the table for?\"}\n\nPlease respond with the date you'd like to book the table for.",
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you book a table. Can you please confirm the date you'd like to book the table for?\"}\n\n# I noticed that the user has already confirmed the date (March 11th) and the number of people (2) in the previous turns. I should not ask for these slots again. \n\n{\"type\": \"message\", \"content\": \"You've already confirmed the date as March 11th and the number of people as 2. What time would you like to book the table for on March 11th?\"}\n\n# The user has confirmed the time as 5:45 PM. I should now make an API call to book the table.\n\n{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2024-07-11\", \"location\": \"Santa Clara\", \"number_of_seats\": \"2\", \"restaurant_name\": \"Thai Chili\", \"time\": \"17:45\"}}"
+  ],
+  "dialog_completed": false
+}

@@ -1,0 +1,16 @@
+Speaker,Utterance
+dialogue_id:, 36_00001
+USER,"""I'd like to book an appointment at a salon March 8th at 16:45."""
+SYSTEM,"""Tell me the name of the salon please."""
+USER,"""The salon is named Great Clips in Blackhawk, Danville."""
+SYSTEM,"""Please let me know if the following details are confirmed. The hair stylist will be Great Clips in Blackhawk, Danville at 4:45 pm next Friday."""
+USER,"""I'd like the appointment Tuesday next week at evening 6:30."""
+SYSTEM,"""Tell me if my appointment at 6:30 pm next Tuesday is confirmed."""
+USER,"""Yes, that is great. Tell me the contact number please."""
+SYSTEM,"""APICall(method='BookAppointment', parameters={ appointment_date: 2019-03-05, appointment_time: 18:30, stylist_name: Great Clips In Blackhawk, Danville })"""
+Tool,"""Search Results\n[{ appointment_date: 2019-03-05, appointment_time: 18:30, average_rating: 4.20, is_unisex: True, phone_number: 925-718-7118, street_address: 3478 Camino Tassajara Ste B, stylist_name: Great Clips In Blackhawk, Danville }]\nEnd Search Results"""
+SYSTEM,"""The appointment is confirmed for 925-718-7118."""
+USER,"""Tell me the address and if it's unisex."""
+SYSTEM,"""The address is 3478 Camino Tassajara Ste B and it is a unisex salon."""
+USER,"""That's all for now. Thanks!"""
+SYSTEM,"""Have a great day."""

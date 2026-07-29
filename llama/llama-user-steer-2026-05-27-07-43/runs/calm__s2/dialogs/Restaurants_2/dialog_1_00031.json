@@ -1,0 +1,79 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-14', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': \"Schroeder's\", 'time': '13:30'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Hi there, could you get me a table at a restaurant on the 14th of March at 1:30 pm please?\nSystem: Sure, any particular restaurant are you interested in ?\nUser: Could you get me a reservation at Schroeder's please?\nSystem: Sure, and which location would you prefer?\nUser: A table for two at San Francisco will be fine.\nSystem: Please confirm you reservation at Schroeder's in San Francisco for 2 at 1:30 pm on the March 14th.\nUser: That sounds great to me!\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-14', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': \"Schroeder's\", 'time': '13:30'})\nSearch Results\n[{'address': '240 Front Street', 'category': 'European', 'date': '2019-03-14', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-421-4778', 'price_range': 'moderate', 'rating': '4.20', 'restaurant_name': \"Schroeder's\", 'time': '13:30'}]\nEnd Search Results\nSystem: Your reservation has been made.\nUser: Thank you so much!\nSystem: Do you require any further assistance?\nLast User Utterance:No, that is all I need. Really appreciate it!\nLast System Utterance: No worries, have a great day!",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'date': '2024-03-14', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Schroeder's', 'time': '13:30'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2024-03-14', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Schroeder's', 'time': '13:30'})"
+  ],
+  "generated_dialog": [
+    "User: Hi there, could you get me a table at a restaurant on the 14th of March at 1:30 pm please?",
+    "System: What type of restaurant are you looking for?",
+    "User: I'm looking for a casual dining experience, perhaps something with a relaxed atmosphere.",
+    "System: That sounds like a great experience. Are you looking for a specific type of cuisine?",
+    "User: I'm open to trying something new, perhaps Italian or Mexican cuisine would be a good fit.",
+    "System: Italian or Mexican cuisine sounds like a great choice. Are you looking for a specific location for the restaurant?",
+    "User: I'd prefer a location in San Francisco, if possible.",
+    "System: Italian or Mexican cuisine in San Francisco sounds like a great choice. What type of location are you looking for, such as near a specific landmark or in a particular neighborhood?",
+    "User: I'd prefer a location near Fisherman's Wharf, if possible.",
+    "System: Italian or Mexican cuisine in San Francisco near Fisherman's Wharf sounds like a great choice. What type of restaurant are you looking for, such as a high-end or casual dining experience?",
+    "User: I'm looking for a casual dining experience, as we discussed earlier.",
+    "System: Italian or Mexican cuisine in San Francisco near Fisherman's Wharf sounds like a great choice. What type of restaurant are you looking for, such as a high-end or casual dining experience?",
+    "User: I'd prefer a casual dining experience, as we discussed earlier.",
+    "System: To book a table, I'll need to know the restaurant name. Can you please tell me the name of the Italian or Mexican restaurant you're interested in?",
+    "User: I've been eyeing Schroeder's, which I believe is a casual dining experience. Would that be a good fit for what we've discussed?",
+    "System: Schroeder's sounds like a great choice. Is that the restaurant you'd like to book a table at?",
+    "User: That's the one I'm interested in booking a table for.",
+    "System: To book a table, I'll need to know the restaurant name. Can you please tell me the name of the Italian or Mexican restaurant you're interested in?",
+    "User: I've been eyeing Schroeder's, which I believe is a casual dining experience. Would that be a good fit for what we've discussed?",
+    "System: To book a table, I'll need to know the restaurant name. Can you please tell me the name of the Italian or Mexican restaurant you're interested in?",
+    "User: Schroeder's is a well-known restaurant, and I believe it's the one we've been discussing.",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2024-03-14', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Schroeder's', 'time': '13:30'})",
+    "Search Results\n[{'address': '240 Front Street', 'category': 'European', 'date': '2024-03-14', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-421-4778', 'price_range': 'moderate', 'rating': 4.2, 'restaurant_name': \"Schroeder's\", 'time': '13:30'}]\nEnd Search Results",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2024-03-14', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Schroeder's', 'time': '13:30'})",
+    "Search Results\n[{'address': '240 Front Street', 'category': 'European', 'date': '2024-03-14', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-421-4778', 'price_range': 'moderate', 'rating': 4.2, 'restaurant_name': \"Schroeder's\", 'time': '13:30'}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'address': '240 Front Street', 'category': 'European', 'date': '2019-03-14', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-421-4778', 'price_range': 'moderate', 'rating': '4.20', 'restaurant_name': \"Schroeder's\", 'time': '13:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '240 Front Street', 'category': 'European', 'date': '2024-03-14', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-421-4778', 'price_range': 'moderate', 'rating': 4.2, 'restaurant_name': \"Schroeder's\", 'time': '13:30'}]\nEnd Search Results",
+    "Search Results\n[{'address': '240 Front Street', 'category': 'European', 'date': '2024-03-14', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-421-4778', 'price_range': 'moderate', 'rating': 4.2, 'restaurant_name': \"Schroeder's\", 'time': '13:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

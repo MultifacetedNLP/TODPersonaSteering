@@ -1,0 +1,41 @@
+{
+  "api_calls": [
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'Union City', 'movie_name': 'IT Chapter Two', 'number_of_tickets': '1', 'show_date': '2019-03-03', 'show_time': '23:00', 'show_type': 'regular'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: I would like to buy some movie tickets.\nSystem: How many tickets would you like?\nUser: I will need 2 tickets, please.\nSystem: What movie would you like to watch? What date and city should I search for?\nUser: I would like 1 ticket for IT Chapter Two in Union City on the 3rd of this month.\nSystem: Would you prefer the 3d or regular showing? What time would you like the ticket for?\nUser: I prefer a regular showing. Please get a ticket for the showing at 11 in the night.\nSystem: You would like 1 ticket for a regular screening of IT Chapter Two in Union City on March 3rd at 11 pm, is this correct.\nUser: Yes, that all sounds correct.\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'Union City', 'movie_name': 'IT Chapter Two', 'number_of_tickets': '1', 'show_date': '2019-03-03', 'show_time': '23:00', 'show_type': 'regular'})\nSearch Results\n\nEnd Search Results\nSystem: Sorry, I was unable to reserve a ticket for that showing. Is there anything else I can help you with?\nLast User Utterance:No, I'm all set, thank you.\nLast System Utterance: Have a great day!",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: I would like to buy some movie tickets.",
+    "System: What movie would you like to buy tickets for?",
+    "User: I'd like to buy tickets for IT Chapter Two.",
+    "System: What date would you like to watch IT Chapter Two?",
+    "User: I was thinking of watching it on March 3rd.",
+    "System: What location would you like to watch IT Chapter Two?",
+    "User: Union City.",
+    "System: What time would you like to watch IT Chapter Two?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    ""
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

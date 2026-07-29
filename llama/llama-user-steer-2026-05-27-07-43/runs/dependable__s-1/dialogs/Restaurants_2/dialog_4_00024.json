@@ -1,0 +1,70 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'Korean', 'location': 'San Francisco'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Aato', 'time': '10:30'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Aato', 'time': '19:00'})"
+  ],
+  "user_req_slots": [
+    [
+      "has_seating_outdoors",
+      "rating"
+    ],
+    [],
+    []
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I need help searching for a place to eat.\nSystem: Is there a type of food you prefer? And where do you want to search.\nUser: I want to look for Korean Barbeque in SFO.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'Korean', 'location': 'San Francisco'})\nSearch Results\n[{'address': '1449 Lombard Street', 'category': 'Korean', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'phone_number': '415-292-2368', 'price_range': 'moderate', 'rating': '3.60', 'restaurant_name': 'Aato'}]\nEnd Search Results\nSystem: There are 10 restaurants I've found. Aato is a nice spot in San Francisco.\nUser: Is there outdoor seating? And what's their user rating?\nSystem: There is not outdoor seating. Their user rating is 3.6.\nUser: Okay, that can work. Please book me a table.\nSystem: What time do you want the table?\nUser: I want it for half past 10 in the morning.\nSystem: I'll book you a table for 2 at Aato in San Francisco for March 1st at 10:30 am. Is that right?\nUser: That is right.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Aato', 'time': '10:30'})\nSearch Results\n\nEnd Search Results\nSystem: I'm sorry, but that time is all booked. Do you need anything else?\nUser: Can we try for a table at 7 pm?\nSystem: I'll book you a table for 2 at Aato in San Francisco for March 1st at 7 pm. Is that right?\nUser: That is right.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Aato', 'time': '19:00'})\nSearch Results\n[{'address': '1449 Lombard Street', 'category': 'Korean', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-292-2368', 'price_range': 'moderate', 'rating': '3.60', 'restaurant_name': 'Aato', 'time': '19:00'}]\nEnd Search Results\nSystem: I have made the reservation.\nUser: Thanks a lot.\nSystem: What else can I assist you with?\nLast User Utterance:Nothing else, thanks a lot.\nLast System Utterance: Have a pleasant day.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: I need help searching for a place to eat.",
+    "System: What type of food are you interested in and where should it be?",
+    "User: I'm really craving Korean food, and I'm in San Francisco, so that would be great.",
+    "System: Korean food in San Francisco sounds delicious. What category of Korean food are you in the mood for?",
+    "User: I'm really in the mood for something spicy, like bibimbap.",
+    "System: Bibimbap is a great choice. Would you like to find a restaurant that serves Korean BBQ as well?",
+    "User: I think I'd love to find a place with outdoor seating, that way I can enjoy the view of the city while I'm eating.",
+    "System: Bibimbap and Korean BBQ sound like a great combination. Would you like to find a restaurant that serves both in San Francisco with outdoor seating?",
+    "User: I think a place with outdoor seating would be perfect for a view of the city, but I'm not sure if I want to go somewhere super fancy or just a casual spot.",
+    "System: Bibimbap and Korean BBQ sound like a great combination. Would you like to find a restaurant that serves both in San Francisco with outdoor seating?",
+    "User: I guess I'd want to find a place that's not too fancy, but still has a good view, so maybe something with a high rating would be nice.",
+    "System: What category of Korean food are you in the mood for?",
+    "User: I'm really in the mood for something spicy, like bibimbap.",
+    "System: You're looking for Korean food in San Francisco. I'd like to confirm the category of Korean food you're interested in. Are you in the mood for something spicy, like bibimbap?",
+    "User: I'm really in the mood for something spicy, like bibimbap.",
+    "System: You're looking for Korean food in San Francisco. I'd like to confirm the category of Korean food you're interested in. Are you in the mood for something spicy, like bibimbap?",
+    "User: I'm really in the mood for something spicy, like bibimbap.",
+    "System: You're looking for Korean food in San Francisco. I'd like to confirm the category of Korean food you're interested in. Are you in the mood for something spicy, like bibimbap?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '1449 Lombard Street', 'category': 'Korean', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'phone_number': '415-292-2368', 'price_range': 'moderate', 'rating': '3.60', 'restaurant_name': 'Aato'}]",
+    "",
+    "[{'address': '1449 Lombard Street', 'category': 'Korean', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-292-2368', 'price_range': 'moderate', 'rating': '3.60', 'restaurant_name': 'Aato', 'time': '19:00'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

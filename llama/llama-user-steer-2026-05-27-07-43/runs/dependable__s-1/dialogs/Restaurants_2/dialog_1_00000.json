@@ -1,0 +1,47 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-08', 'location': 'Corte Madera', 'number_of_seats': '2', 'restaurant_name': \"P.f. Chang's\", 'time': '12:00'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-08', 'location': 'Corte Madera', 'number_of_seats': '2', 'restaurant_name': 'Benissimo Restaurant & Bar', 'time': '12:00'})"
+  ],
+  "user_req_slots": [
+    [],
+    [
+      "price_range",
+      "has_vegetarian_options"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Hi, could you get me a restaurant booking on the 8th please?\nSystem: Any preference on the restaurant, location and time?\nUser: Could you get me a reservation at P.f. Chang's in Corte Madera at afternoon 12?\nSystem: Please confirm your reservation at P.f. Chang's in Corte Madera at 12 pm for 2 on March 8th.\nUser: Sure, that is great.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-08', 'location': 'Corte Madera', 'number_of_seats': '2', 'restaurant_name': \"P.f. Chang's\", 'time': '12:00'})\nSearch Results\n\nEnd Search Results\nSystem: Sorry, your reservation could not be made. Could I help you with something else?\nUser: Could you try booking a table at Benissimo instead?\nSystem: Sure, please confirm your reservation at Benissimo Restaurant & Bar in Corte Madera at 12 pm for 2 on March 8th.\nUser: Sure, may I know if they have vegetarian options and how expensive is their food?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-08', 'location': 'Corte Madera', 'number_of_seats': '2', 'restaurant_name': 'Benissimo Restaurant & Bar', 'time': '12:00'})\nSearch Results\n[{'address': '18 Tamalpais Drive', 'category': 'Italian', 'date': '2019-03-08', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Corte Madera', 'number_of_seats': '2', 'phone_number': '415-927-2316', 'price_range': 'moderate', 'rating': '4.10', 'restaurant_name': 'Benissimo Restaurant & Bar', 'time': '12:00'}]\nEnd Search Results\nSystem: Your reservation has been made. Unfortunately, they do not serve vegetarian options, although they are moderate priced.\nUser: I see, thanks alot!\nSystem: No worries, could I further assist you?\nLast User Utterance:No, that is all. Thank you!\nLast System Utterance: Have a great day ahead!",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Hi, could you get me a restaurant booking on the 8th please?",
+    "System: What date would you like to book the restaurant for?",
+    "User: I was thinking of booking it for the 8th, like I said before.",
+    "System: I've noted the date as the 8th. What time would you like to book the restaurant for?",
+    "User: I was thinking of booking it for 12, is that okay?",
+    "System: I've noted the date as the 8th. What time would you like to book the restaurant for?",
+    "User: I was thinking of booking it for 12, is that okay?",
+    "System: I've noted the date as the 8th. What time would you like to book the restaurant for?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "",
+    "[{'address': '18 Tamalpais Drive', 'category': 'Italian', 'date': '2019-03-08', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Corte Madera', 'number_of_seats': '2', 'phone_number': '415-927-2316', 'price_range': 'moderate', 'rating': '4.10', 'restaurant_name': 'Benissimo Restaurant & Bar', 'time': '12:00'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

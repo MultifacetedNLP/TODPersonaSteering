@@ -1,0 +1,49 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Pittsburg', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '12:00'})"
+  ],
+  "user_req_slots": [
+    [
+      "price_range"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I want to have a table booked for me at a restaurant, because I want to have a meal.\nSystem: Can you tell me the restaurant you are interested to have a table booked at?\nUser: Can you check if you can make a booking of a table at Castle Rock?\nSystem: Can you tell me the time that you want to have the table booked for you?\nUser: I prefer to have the booking be made for 12:00.\nSystem: Is there a specific location you are looking for?\nUser: I am interested in restaurants which are located in Livermore.\nSystem: Can you please confirm that you want to book a table for 2 people at Castle Rock Restaurant in Livermore, and that you want the table to be booked for you for 12 pm on March 1st?\nUser: That is not right. Could you please see if you can make a booking at Mcdonald's?\nSystem: Can you please confirm that you want to have a table booked for you on March 1st at Mcdonald's?\nUser: I don't want that either. See if you can find me restaurants in Pittsburg.\nSystem: Can you please confirm that you want to have a table booked for you at 12 pm in the city of Pittsburg?\nUser: Yes that suits me well. Could you inform me about the fact how expensive is the restaurant?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Pittsburg', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '12:00'})\nSearch Results\n[{'address': '2203 Loveridge Road', 'category': 'Sandwich', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Pittsburg', 'number_of_seats': '2', 'phone_number': '925-439-5289', 'price_range': 'cheap', 'rating': '3.50', 'restaurant_name': \"Mcdonald's\", 'time': '12:00'}]\nEnd Search Results\nSystem: Your requested booking has been made, and the restaurant is considered as cheap.\nLast User Utterance:I appreciate it very much. That would be all.\nLast System Utterance: Have a wonderful day.",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'McDonald's', 'time': '12:00'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'McDonald's', 'time': '12:00'})"
+  ],
+  "generated_dialog": [
+    "User: I want to have a table booked for me at a restaurant, because I want to have a meal.",
+    "System: Sure, I can help with that. Could you please tell me the name of the restaurant you prefer?",
+    "User: I really want to go to McDonald's! Can you check if they have a table for 2 at 12:00 on March 1st? And maybe something in the cheap range?",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'McDonald's', 'time': '12:00'})",
+    "Search Results\n[{'address': '16 Mint Plaza', 'category': 'Italian', 'date': '2019-03-01', 'has_seating_outdoors': np.True_, 'has_vegetarian_options': np.True_, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-543-5100', 'price_range': 'moderate', 'rating': np.float64(4.4), 'restaurant_name': \"McDonald's\", 'time': '12:00'}]\nEnd Search Results",
+    "System: I couldn't find a McDonald's in San Francisco for the specified date and time. However, there is an Italian restaurant nearby that might interest you. Would you like to proceed with a reservation at 16 Mint Plaza?",
+    "User: That sounds okay, but can you check if they have something cheaper? I don't want to spend too much.",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'McDonald's', 'time': '12:00'})",
+    "Search Results\n[{'address': '16 Mint Plaza', 'category': 'Italian', 'date': '2019-03-01', 'has_seating_outdoors': np.True_, 'has_vegetarian_options': np.True_, 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-543-5100', 'price_range': 'moderate', 'rating': np.float64(4.4), 'restaurant_name': \"McDonald's\", 'time': '12:00'}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'address': '2203 Loveridge Road', 'category': 'Sandwich', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Pittsburg', 'number_of_seats': '2', 'phone_number': '925-439-5289', 'price_range': 'cheap', 'rating': '3.50', 'restaurant_name': \"Mcdonald's\", 'time': '12:00'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '16 Mint Plaza', 'category': 'Italian', 'date': '2019-03-01', 'has_seating_outdoors': np.True_, 'has_vegetarian_options': np.True_, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-543-5100', 'price_range': 'moderate', 'rating': np.float64(4.4), 'restaurant_name': \"McDonald's\", 'time': '12:00'}]\nEnd Search Results",
+    "Search Results\n[{'address': '16 Mint Plaza', 'category': 'Italian', 'date': '2019-03-01', 'has_seating_outdoors': np.True_, 'has_vegetarian_options': np.True_, 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-543-5100', 'price_range': 'moderate', 'rating': np.float64(4.4), 'restaurant_name': \"McDonald's\", 'time': '12:00'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

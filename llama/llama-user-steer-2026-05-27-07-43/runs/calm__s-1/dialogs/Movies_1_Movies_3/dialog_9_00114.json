@@ -1,0 +1,56 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'genre': 'Drama'})",
+    "ApiCall(method='FindMovies', parameters={'directed_by': 'Hari Sama', 'genre': 'Drama'})"
+  ],
+  "user_req_slots": [
+    [],
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: My friend and I want to go see a movie but we can't find one we like. We really want to see a Drama.\nSystem: ApiCall(method='FindMovies', parameters={'genre': 'Drama'})\nSearch Results\n[{'cast': 'Bakary Sangare', 'directed_by': 'Louis Garrel', 'genre': 'Drama', 'movie_title': 'A Faithful Man', 'percent_rating': '78'}]\nEnd Search Results\nSystem: Have you heard of A Faithful Man? It is highly rated at 78 percent.\nUser: Yeah, we already saw that one. Is there anything directed by Hari Sama?\nSystem: ApiCall(method='FindMovies', parameters={'directed_by': 'Hari Sama', 'genre': 'Drama'})\nSearch Results\n[{'cast': 'Xabiani Ponce de Leon', 'directed_by': 'Hari Sama', 'genre': 'Drama', 'movie_title': 'This Is Not Berlin', 'percent_rating': '86'}]\nEnd Search Results\nSystem: Sure, you might like This Is Not Berlin. It's rating is 86 percent.\nLast User Utterance:Yes, that one sounds really good. That's all I needed today.\nLast System Utterance: Glad I could help you! Have a great day!",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: My friend and I want to go see a movie but we can't find one we like. We really want to see a Drama.",
+    "System: What type of drama are you and your friend interested in? Would you like to see a classic drama or something more modern?",
+    "User: We're really into period dramas, so something from like the 19th century would be great.",
+    "System: That sounds interesting. Are you looking for a specific director or cast for the period drama?",
+    "User: We're really into period dramas with strong female leads, do you have any recommendations?",
+    "System: We can help you find a period drama with a strong female lead. Can you tell me the name of a director you'd like to see work on this type of movie?",
+    "User: We're really into period dramas with strong female leads, do you have any recommendations by Jane Austen?",
+    "System: We can help you find a period drama with a strong female lead. Can you tell me the name of a director you'd like to see work on this type of movie?",
+    "User: Jane Austen is a great author, but I think I'd rather see a movie based on one of her novels, not necessarily directed by her.",
+    "System: We have authors like Jane Austen who have written many great novels. Can you tell me the name of a novel by Jane Austen that you'd like to see adapted into a movie?",
+    "User: I think it would be great to see a movie based on \"Pride and Prejudice\", it's one of her most famous novels.",
+    "System: We have authors like Jane Austen who have written many great novels. Can you tell me the name of a novel by Jane Austen that you'd like to see adapted into a movie?",
+    "User: \"Pride and Prejudice is a great choice, I think it would be amazing to see it on the big screen, do you have any movies based on that novel?\"",
+    "System: We have authors like Jane Austen who have written many great novels. Can you tell me the name of a novel by Jane Austen that you'd like to see adapted into a movie?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'cast': 'Bakary Sangare', 'directed_by': 'Louis Garrel', 'genre': 'Drama', 'movie_title': 'A Faithful Man', 'percent_rating': '78'}]",
+    "[{'cast': 'Xabiani Ponce de Leon', 'directed_by': 'Hari Sama', 'genre': 'Drama', 'movie_title': 'This Is Not Berlin', 'percent_rating': '86'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

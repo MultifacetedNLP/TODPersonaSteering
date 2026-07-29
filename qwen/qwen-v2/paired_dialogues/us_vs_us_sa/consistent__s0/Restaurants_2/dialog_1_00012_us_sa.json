@@ -1,0 +1,37 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-05', 'location': 'San Francisco', 'number_of_seats': '3', 'restaurant_name': \"Ming's Diner\", 'time': '18:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "rating"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: My boss from headquarters is coming to town and I would like to treat him and his wife to dinner. Can you help me find a restaurant in San Francisco with available seating for four people, next Tuesday?\nSystem: That shouldn't be a problem. Is there a specific time you had in mind?\nUser: Yes, a general dinner time is fine, so let's try to book a table for 6:30 pm.\nSystem: Okay, and what about the venue, Is there a particular restaurant you want me to search for first?\nUser: Yes, I'm told that Aq is very good. Let's try that one first.\nSystem: No problem, before I check into reservations, let me just make sure that the details I have are correct. You would like a table for 4 at Aq, located in San Francisco, on March 5th, at 6:30 pm. Is that right?\nUser: No, I'm sorry, I forgot he is not bring his wife so lets book a table for 3 at Ming's instead.\nSystem: Okay, I've changed those details to a table for 3 at Ming's Diner. Is that correct?\nUser: Perfect, and can you also tell me the the establishment's rating as well?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-05', 'location': 'San Francisco', 'number_of_seats': '3', 'restaurant_name': \"Ming's Diner\", 'time': '18:30'})\nSearch Results\n[{'address': '2129 Taraval', 'category': 'Chinese', 'date': '2019-03-05', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'number_of_seats': '3', 'phone_number': '415-242-0811', 'price_range': 'cheap', 'rating': '4.00', 'restaurant_name': \"Ming's Diner\", 'time': '18:30'}]\nEnd Search Results\nSystem: The rating of the restaurant I was able to confirm your reservation for is 4.0.\nLast User Utterance:Great, I believe that will be all fr now. Thanks!\nLast System Utterance: My pleasure, enjoy the rest of your day!",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: My boss from headquarters is coming to town and I would like to treat him and his wife to dinner. Can you help me find a restaurant in San Francisco with available seating for four people, next Tuesday?",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'dontcare', 'location': 'San Francisco', 'price_range': 'dontcare', 'has_seating_outdoors': 'dontcare', 'has_vegetarian_options': 'dontcare', 'number_of_seats': '4', 'date': '2023-11-14'})",
+    "<Failed Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '2129 Taraval', 'category': 'Chinese', 'date': '2019-03-05', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'number_of_seats': '3', 'phone_number': '415-242-0811', 'price_range': 'cheap', 'rating': '4.00', 'restaurant_name': \"Ming's Diner\", 'time': '18:30'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 2.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"dontcare\", \"location\": \"San Francisco\", \"price_range\": \"dontcare\", \"has_seating_outdoors\": \"dontcare\", \"has_vegetarian_options\": \"dontcare\", \"number_of_seats\": 4, \"date\": \"2023-11-14\"}}"
+  ],
+  "dialog_completed": false
+}

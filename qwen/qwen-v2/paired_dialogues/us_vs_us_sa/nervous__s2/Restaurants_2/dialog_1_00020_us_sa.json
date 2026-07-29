@@ -1,0 +1,112 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-04', 'location': 'Morgan Hill', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "has_seating_outdoors",
+      "phone_number"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you help me to book a table at a restaurant for 2 people at evening 6:30\nSystem: Is there any choice of restaurant you want to book?\nUser: Would you kindly book the table at Mcdonalds?\nSystem: In which place you want me to search?\nUser: Search restaurants in Morgan Hill and it is for next monday\nSystem: Please give the confirmation details:your table booking at Mcdonalds in the city Morgan Hill on march 4th for 2 people at 6:30 pm.\nUser: Okay..this is cool\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-04', 'location': 'Morgan Hill', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'})\nSearch Results\n[{'address': '201 Vineyard Town Ctr', 'category': 'American', 'date': '2019-03-04', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Morgan Hill', 'number_of_seats': '2', 'phone_number': '408-779-8182', 'price_range': 'cheap', 'rating': '3.40', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]\nEnd Search Results\nSystem: Your booking is confirmed.\nUser: Is there outdoor seating in that restaurant and can i know the phone number\nSystem: There is no outdoor seating and telephone number is 408-779-8182.\nLast User Utterance:This is cool..thanks a lot.\nLast System Utterance: Have a nice day.",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'McDonald's', 'location': 'Morgan Hill', 'time': '18:30'})"
+  ],
+  "generated_dialog": [
+    "User: Can you help me to book a table at a restaurant for 2 people at evening 6:30",
+    "System: Sure, I can help with that. Which restaurant would you like to reserve a table at in New York?",
+    "User: Oh, um, I was thinking maybe something like... Mcdonald's in Morgan Hill, you know, just somewhere really quick and easy... Not sure if they even have indoor seating though, you know, with this whole outdoor thing going on lately... And I guess I forgot to mention, I don't know if they have like, those uh, like, those tables outside, you know, like, you know, like, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you",
+    "System: Sure, I can help with that. Do you have a specific restaurant in mind, or should I suggest one? Also, do you prefer indoor or outdoor seating?",
+    "User: Oh, you know, I'm not really sure about the outdoor stuff, to be honest... I just want something super quick and dirty, you know? Like, I don't know, do they even have like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those,",
+    "System: No problem. Let's find a quick and easy place for you. How about we look for a restaurant in Morgan Hill that's convenient and has indoor seating?",
+    "User: Oh, yeah, you know, that sounds like it might work... I just hope they have like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know",
+    "System: Alright, let's find a quick and easy place with indoor seating in Morgan Hill. Do you have any specific type of cuisine in mind, or should I suggest a popular option?",
+    "User: Um, you know, I don't really care about the, like, the, you know, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the,",
+    "System: Sure, no problem. Since you don't have a preference for cuisine, I'll suggest a popular quick service restaurant. How about McDonald's in Morgan Hill? They usually have indoor seating.",
+    "User: Oh, yeah, you know, that sounds like it could work... I mean, I don't know, like, you know, like, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know,",
+    "System: APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'McDonald's', 'location': 'Morgan Hill', 'time': '18:30'})",
+    "Search Results\n[{'address': '201 Vineyard Town Ctr', 'category': 'American', 'date': '2019-03-04', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Morgan Hill', 'number_of_seats': 2, 'phone_number': '408-779-8182', 'price_range': 'cheap', 'rating': 3.4, 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]\nEnd Search Results",
+    "System: Great! Your table at McDonald's in Morgan Hill is booked for 6:30 PM. Is there anything else you need help with?",
+    "User: No, that's all, thanks.",
+    "System: You're welcome! Enjoy your meal at McDonald's. If you need any more assistance in the future, feel free to ask.",
+    "User: Oh, you know, I just hope they have like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like, those, you know, like"
+  ],
+  "search_results": [
+    "[{'address': '201 Vineyard Town Ctr', 'category': 'American', 'date': '2019-03-04', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Morgan Hill', 'number_of_seats': '2', 'phone_number': '408-779-8182', 'price_range': 'cheap', 'rating': '3.40', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '201 Vineyard Town Ctr', 'category': 'American', 'date': '2019-03-04', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Morgan Hill', 'number_of_seats': 2, 'phone_number': '408-779-8182', 'price_range': 'cheap', 'rating': 3.4, 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2023-10-10\", \"location\": \"New York\", \"number_of_seats\": 2, \"restaurant_name\": \"\", \"time\": \"18:30\"}}",
+    "{\"type\": \"message\", \"content\": \"Sure, I can help with that. Do you have a specific restaurant in mind, or should I suggest one? Also, do you prefer indoor or outdoor seating?\"}",
+    "{\"type\": \"message\", \"content\": \"No problem. Since you're looking for a quick and easy option, let's focus on indoor seating. How about we try McDonald's in Morgan Hill? Is that okay?\"}",
+    "{\"type\": \"message\", \"content\": \"Alright, let's find a quick and easy place with indoor seating in Morgan Hill. Do you have any specific type of cuisine in mind, or should I suggest a popular option?\"}",
+    "{\"type\": \"message\", \"content\": \"Sure, no problem. Since you don't have a preference for cuisine, I'll suggest a popular quick service restaurant. How about McDonald's in Morgan Hill? They usually have indoor seating.\"}",
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"restaurant_name\": \"McDonald's\", \"location\": \"Morgan Hill\", \"time\": \"18:30\"}}",
+    "{\"type\": \"message\", \"content\": \"Great! Your table at McDonald's in Morgan Hill is booked for 6:30 PM. Is there anything else you need help with?\"}",
+    "{\"type\": \"message\", \"content\": \"You're welcome! Enjoy your meal at McDonald's. If you need any more assistance in the future, feel free to ask.\"}"
+  ],
+  "dialog_completed": false
+}

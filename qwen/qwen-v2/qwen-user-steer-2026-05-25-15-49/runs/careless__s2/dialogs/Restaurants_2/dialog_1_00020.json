@@ -1,0 +1,48 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-04', 'location': 'Morgan Hill', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "has_seating_outdoors",
+      "phone_number"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you help me to book a table at a restaurant for 2 people at evening 6:30\nSystem: Is there any choice of restaurant you want to book?\nUser: Would you kindly book the table at Mcdonalds?\nSystem: In which place you want me to search?\nUser: Search restaurants in Morgan Hill and it is for next monday\nSystem: Please give the confirmation details:your table booking at Mcdonalds in the city Morgan Hill on march 4th for 2 people at 6:30 pm.\nUser: Okay..this is cool\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-04', 'location': 'Morgan Hill', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'})\nSearch Results\n[{'address': '201 Vineyard Town Ctr', 'category': 'American', 'date': '2019-03-04', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Morgan Hill', 'number_of_seats': '2', 'phone_number': '408-779-8182', 'price_range': 'cheap', 'rating': '3.40', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]\nEnd Search Results\nSystem: Your booking is confirmed.\nUser: Is there outdoor seating in that restaurant and can i know the phone number\nSystem: There is no outdoor seating and telephone number is 408-779-8182.\nLast User Utterance:This is cool..thanks a lot.\nLast System Utterance: Have a nice day.",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'burger', 'location': 'New York'})"
+  ],
+  "generated_dialog": [
+    "User: Can you help me to book a table at a restaurant for 2 people at evening 6:30",
+    "System: Sure, I can help with that. Which restaurant would you like to reserve a table at in New York?",
+    "User: Oh, you know, like that whole burger place, you know, like, yknow, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'burger', 'location': 'New York'})",
+    "Search Results\n\nEnd Search Results",
+    "System: Got it! Let's find a great burger place for you in New York.",
+    "User: Oh, you know, like that whole burger place, like, yknow, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like,",
+    "System: I understand you're looking for a burger place. Could you please specify the name of the restaurant or any other preferences you might have?",
+    "User: Like, ya know, McD's like, yknow, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like,"
+  ],
+  "search_results": [
+    "[{'address': '201 Vineyard Town Ctr', 'category': 'American', 'date': '2019-03-04', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Morgan Hill', 'number_of_seats': '2', 'phone_number': '408-779-8182', 'price_range': 'cheap', 'rating': '3.40', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

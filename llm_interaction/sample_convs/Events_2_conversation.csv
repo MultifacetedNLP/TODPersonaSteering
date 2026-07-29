@@ -1,0 +1,16 @@
+Speaker,Utterance
+dialogue_id:, 15_00011
+USER,"""Can you get me event tickets?"""
+SYSTEM,"""Of course. What day? How many tickets do you need?"""
+USER,"""I'll go on the 3rd. There are two of us."""
+SYSTEM,"""What city?"""
+USER,"""In LA. I'm thinking Starset"""
+SYSTEM,"""Please confirm: 2 tickets for Starset in Los Angeles the day after tomorrow"""
+USER,"""Actually, make it three tickets"""
+SYSTEM,"""Ok. Please confirm 3 tickets for Starset"""
+USER,"""Yes that's fine. When does it start? Where is it?"""
+SYSTEM,"""APICall(method='BuyEventTickets', parameters={ city: Los Angeles, date: 2019-03-03, event_name: Starset, number_of_tickets: 3 })"""
+Tool,"""Search Results\n[{ city: Los Angeles, date: 2019-03-03, event_name: Starset, number_of_tickets: 3, time: 18:00, venue: Regent Theater DTLA, venue_address: 448 South Main Street }]\nEnd Search Results"""
+SYSTEM,"""Your reservation has been confirmed for Starset at the Regent Theater DTLA at 6 pm."""
+USER,"""Thanks for the help."""
+SYSTEM,"""Have a wonderful day."""

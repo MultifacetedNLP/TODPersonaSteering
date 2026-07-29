@@ -1,0 +1,71 @@
+{
+  "api_calls": [
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'Newark', 'movie_name': 'Hustlers', 'number_of_tickets': '4', 'show_date': '2019-03-06', 'show_time': '22:15', 'show_type': 'imax'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: Search please some movies shown in Newark on Wednesday next week because I want to buy tickets.\nSystem: Would you like to watch imax or 3d shows?\nUser: Imax show will be perfect.\nSystem: When you want and shat movie?Number of tickets is?\nUser: Hustlers will be perfect for four people at 22:15.\nSystem: You want 4 tickets at Hustlers in Newark on March 6th at 10:15 pm.This is a imax movie.Is that okay?\nUser: Yes is perfect for me.\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'Newark', 'movie_name': 'Hustlers', 'number_of_tickets': '4', 'show_date': '2019-03-06', 'show_time': '22:15', 'show_type': 'imax'})\nSearch Results\n[{'genre': 'Drama', 'location': 'Newark', 'movie_name': 'Hustlers', 'number_of_tickets': '4', 'price': '7', 'show_date': '2019-03-06', 'show_time': '22:30', 'show_type': 'imax', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12'}]\nEnd Search Results\nSystem: Tickets were purchased\nLast User Utterance:Thank you.That is all for now.\nLast System Utterance: Have a great day!",
+  "predicted_api_calls": [
+    "APICall(method='GetTimesForMovie', parameters={'movie_name': 'Hustlers', 'location': 'Newark', 'show_date': '2023-10-11', 'show_type': 'imax'})",
+    "APICall(method='BuyMovieTickets', parameters={'movie_name': 'Hustlers', 'number_of_tickets': '4', 'show_date': '2023-10-11', 'location': 'Newark', 'show_time': '22:30', 'show_type': 'imax'})"
+  ],
+  "generated_dialog": [
+    "User: Search please some movies shown in Newark on Wednesday next week because I want to buy tickets.",
+    "System: Sure, let's find some movies showing in Newark on Wednesday next week. What movie are you interested in, or shall we just look for popular options?",
+    "User: I'm interested in \"Hustlers\", and I'd like to see if there are any IMAX showings at 10 PM.",
+    "System: APICall(method='GetTimesForMovie', parameters={'movie_name': 'Hustlers', 'location': 'Newark', 'show_date': '2023-10-11', 'show_type': 'imax'})",
+    "Search Results\n[{'genre': 'Drama', 'location': 'Newark', 'movie_name': 'Hustlers', 'price': 7, 'show_type': 'imax', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12', 'show_date': '2023-10-11', 'show_time': '22:30', 'number_of_tickets': 4}]\nEnd Search Results",
+    "System: I found an IMAX showing of Hustlers at 10:30 PM on Wednesday next week at AMC NewPark 12. There are 4 tickets available. Would you like to proceed with buying tickets?",
+    "User: Yes, that sounds perfect! Go ahead and book those tickets for me.",
+    "System: APICall(method='BuyMovieTickets', parameters={'movie_name': 'Hustlers', 'number_of_tickets': '4', 'show_date': '2023-10-11', 'location': 'Newark', 'show_time': '22:30', 'show_type': 'imax'})",
+    "Search Results\n[{'genre': 'Drama', 'location': 'Newark', 'movie_name': 'Hustlers', 'price': 7, 'show_type': 'imax', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12', 'show_date': '2023-10-11', 'show_time': '22:30', 'number_of_tickets': 4}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'genre': 'Drama', 'location': 'Newark', 'movie_name': 'Hustlers', 'number_of_tickets': '4', 'price': '7', 'show_date': '2019-03-06', 'show_time': '22:30', 'show_type': 'imax', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'genre': 'Drama', 'location': 'Newark', 'movie_name': 'Hustlers', 'price': 7, 'show_type': 'imax', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12', 'show_date': '2023-10-11', 'show_time': '22:30', 'number_of_tickets': 4}]\nEnd Search Results",
+    "Search Results\n[{'genre': 'Drama', 'location': 'Newark', 'movie_name': 'Hustlers', 'price': 7, 'show_type': 'imax', 'street_address': '400 Newpark Mall', 'theater_name': 'AMC NewPark 12', 'show_date': '2023-10-11', 'show_time': '22:30', 'number_of_tickets': 4}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 2.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"GetTimesForMovie\", \"parameters\": {\"movie_name\": \"dontcare\", \"location\": \"Newark\", \"show_date\": \"2023-10-11\", \"show_type\": \"dontcare\", \"theater_name\": \"dontcare\"}}",
+    "{\"type\": \"api_call\", \"method\": \"GetTimesForMovie\", \"parameters\": {\"movie_name\": \"Hustlers\", \"location\": \"Newark\", \"show_date\": \"2023-10-11\", \"show_type\": \"imax\"}}",
+    "{\"type\": \"message\", \"content\": \"I found an IMAX showing of Hustlers at 10:30 PM on Wednesday next week at AMC NewPark 12. There are 4 tickets available. Would you like to proceed with buying tickets?\"}",
+    "{\"type\": \"api_call\", \"method\": \"BuyMovieTickets\", \"parameters\": {\"movie_name\": \"Hustlers\", \"number_of_tickets\": \"4\", \"show_date\": \"2023-10-11\", \"location\": \"Newark\", \"show_time\": \"22:30\", \"show_type\": \"imax\"}}"
+  ],
+  "dialog_completed": false
+}

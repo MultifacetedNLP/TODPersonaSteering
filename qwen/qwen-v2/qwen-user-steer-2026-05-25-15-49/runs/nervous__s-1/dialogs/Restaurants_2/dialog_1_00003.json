@@ -1,0 +1,65 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Jose', 'number_of_seats': '2', 'restaurant_name': 'Little Hunan', 'time': '20:00'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Jose', 'number_of_seats': '2', 'restaurant_name': 'Little Hunan', 'time': '17:15'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Jose', 'number_of_seats': '2', 'restaurant_name': 'Little Hunan', 'time': '17:00'})"
+  ],
+  "user_req_slots": [
+    [],
+    [],
+    [
+      "rating",
+      "has_vegetarian_options"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I need to book a dinner reservation for a date. Help me reserve a table at a restaurant.\nSystem: What time and location do you have in mind?\nUser: Something around 8 in the night should be fine. Oh, and look in the San Jose area.\nSystem: Do you have a specific restaurant in mind?\nUser: Let's try booking a table at Little Hunan.\nSystem: You wish to reserve a table for 2 at Little Hunan in San Jose on March 1st at 8 pm. Is that correct?\nUser: It sure is. Please make the reservation right away.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Jose', 'number_of_seats': '2', 'restaurant_name': 'Little Hunan', 'time': '20:00'})\nSearch Results\n\nEnd Search Results\nSystem: I was not able to process your reservation. I apologize for any inconvenience.\nUser: Okay. Try booking a table at Little Hunan again but make it at a quarter past 5 in the evening.\nSystem: Booking a table at Little Hunan located in San Jose. The reservation is for 2 people on March 1st at 5:15 pm. Is that right?\nUser: That's correct. Let's hope the reservation goes through this time.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Jose', 'number_of_seats': '2', 'restaurant_name': 'Little Hunan', 'time': '17:15'})\nSearch Results\n[{'address': '1882 Curtner Avenue', 'category': 'Chinese', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Jose', 'number_of_seats': '2', 'phone_number': '408-371-2968', 'price_range': 'cheap', 'rating': '3.90', 'restaurant_name': 'Little Hunan', 'time': '17:00'}]\nEnd Search Results\nSystem: I was unable to book your table with those details. If you like, I can make a reservation for you at Little Hunan on March 1st at 5 pm for 2 people.\nUser: Really? That'll work just fine. Please try that.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Jose', 'number_of_seats': '2', 'restaurant_name': 'Little Hunan', 'time': '17:00'})\nSearch Results\n[{'address': '1882 Curtner Avenue', 'category': 'Chinese', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Jose', 'number_of_seats': '2', 'phone_number': '408-371-2968', 'price_range': 'cheap', 'rating': '3.90', 'restaurant_name': 'Little Hunan', 'time': '17:00'}]\nEnd Search Results\nSystem: I have made your reservation and successfully reserved your table.\nUser: At last. Thank you so much. Before I let you go, can you tell me the restaurant's user rating?\nSystem: The user rating for Little Hunan is 3.9.\nUser: Are there any vegetarian dishes available at that restaurant?\nSystem: I apologize but they do not have vegetarian dishes.\nUser: That's alright. Thanks for the information.\nSystem: My pleasure. What else do you require?\nLast User Utterance:Oh nothing. Booking the table was all I needed. Thanks again.\nLast System Utterance: Have a wonderful evening.",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'date': '2023-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Little Hunan', 'time': '20:00'})"
+  ],
+  "generated_dialog": [
+    "User: I need to book a dinner reservation for a date. Help me reserve a table at a restaurant.",
+    "System: Sure, I can help with that. Could you please tell me the name of the restaurant you're interested in?",
+    "User: I want to reserve a table at Little Hunan.",
+    "System: Sure, I can help with that. Could you please also provide the date and time you'd like to reserve the table?",
+    "User: I want to reserve the table for March 1st at 8:00 PM.",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2023-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Little Hunan', 'time': '20:00'})",
+    "Search Results\n[{'address': '335 Powell Street', 'category': 'Steakhouse', 'date': '2023-03-01', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.False_, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-397-3003', 'price_range': 'ultra high-end', 'rating': np.float64(3.8), 'restaurant_name': 'Little Hunan', 'time': '20:00'}]\nEnd Search Results",
+    "System: Your table at Little Hunan has been reserved for March 1st at 8:00 PM. Is there anything else you need help with?",
+    "User: That's perfect, thank you. I'll see you at Little Hunan on March 1st at 8:00 PM.",
+    "System: You're welcome! See you at Little Hunan on March 1st at 8:00 PM. Enjoy your dinner!",
+    "User: That sounds great. I'll see you there.",
+    "System: Great! Looking forward to seeing you at Little Hunan on March 1st at 8:00 PM. Enjoy your meal!",
+    "User: That's confirmed. I'll see you at Little Hunan on March 1st at 8:00 PM.",
+    "System: That's confirmed! See you at Little Hunan on March 1st at 8:00 PM. Enjoy your dinner!"
+  ],
+  "search_results": [
+    "",
+    "[{'address': '1882 Curtner Avenue', 'category': 'Chinese', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Jose', 'number_of_seats': '2', 'phone_number': '408-371-2968', 'price_range': 'cheap', 'rating': '3.90', 'restaurant_name': 'Little Hunan', 'time': '17:00'}]",
+    "[{'address': '1882 Curtner Avenue', 'category': 'Chinese', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Jose', 'number_of_seats': '2', 'phone_number': '408-371-2968', 'price_range': 'cheap', 'rating': '3.90', 'restaurant_name': 'Little Hunan', 'time': '17:00'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '335 Powell Street', 'category': 'Steakhouse', 'date': '2023-03-01', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.False_, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-397-3003', 'price_range': 'ultra high-end', 'rating': np.float64(3.8), 'restaurant_name': 'Little Hunan', 'time': '20:00'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": true
+}

@@ -1,0 +1,60 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'Indian', 'location': 'San Carlos'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-13', 'location': 'San Carlos', 'number_of_seats': '3', 'restaurant_name': \"Kamakshi's Kitchen Restaurant\", 'time': '11:00'})"
+  ],
+  "user_req_slots": [
+    [],
+    [
+      "address"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Hey, do you think you could help me find a nice place to eat?\nSystem: Sure thing. What city would you like me to search in? Do you have any particular type of food you were thinking about?\nUser: Yeah, I could really go for some Punjabi right now. Can you find me something in San Carlos?\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'Indian', 'location': 'San Carlos'})\nSearch Results\n[{'address': '601 Old County Road', 'category': 'Indian', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'San Carlos', 'phone_number': '650-401-6564', 'price_range': 'moderate', 'rating': '4.00', 'restaurant_name': \"Kamakshi's Kitchen Restaurant\"}]\nEnd Search Results\nSystem: I hear Kamakshi's Kitchen Restaurant is really nice. They have a location right in San Carlos\nUser: Awesome! That sounds great.\nSystem: Would you like to reserve a table there?\nUser: Yes I would. Can you reserve a table for three at eleven AM on the 13th of this month?\nSystem: I will see what I can do but first please confirm the following for me. You are booking a table for 3 at Kamakshi's Kitchen Restaurant in San Carlos for 11 am on March 13th. Is this correct?\nUser: Yes, that's right.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-13', 'location': 'San Carlos', 'number_of_seats': '3', 'restaurant_name': \"Kamakshi's Kitchen Restaurant\", 'time': '11:00'})\nSearch Results\n[{'address': '601 Old County Road', 'category': 'Indian', 'date': '2019-03-13', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'San Carlos', 'number_of_seats': '3', 'phone_number': '650-401-6564', 'price_range': 'moderate', 'rating': '4.00', 'restaurant_name': \"Kamakshi's Kitchen Restaurant\", 'time': '11:00'}]\nEnd Search Results\nSystem: Okay your reservation was a success. Anything else?\nUser: Yeah, can you get their address for me?\nSystem: No problem. Their address is 601 Old County Road.\nUser: Okay, thank you so much!\nSystem: Anything else I can help you with today?\nLast User Utterance:No that is all. Thank you very much.\nLast System Utterance: My pleasure, have a good day.",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'Indian', 'location': 'San Carlos'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2019-03-13', 'location': 'San Carlos', 'number_of_seats': '3', 'restaurant_name': 'Kamakshi's Kitchen Restaurant', 'time': '11:00'})"
+  ],
+  "generated_dialog": [
+    "User: Hey, do you think you could help me find a nice place to eat?",
+    "System: Of course! What type of cuisine are you in the mood for and where would you like to eat?",
+    "User: I'm in the mood for Indian food, actually. And since I'm already in San Carlos, let's stick with places there.",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'Indian', 'location': 'San Carlos'})",
+    "Search Results\n[{'address': '601 Old County Road', 'category': 'Indian', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'San Carlos', 'phone_number': '650-401-6564', 'price_range': 'moderate', 'rating': 4.0, 'restaurant_name': \"Kamakshi's Kitchen Restaurant\"}, {'address': '1143 San Carlos Avenue', 'category': 'Indian', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Carlos', 'phone_number': '650-593-4269', 'price_range': 'moderate', 'rating': 4.2, 'restaurant_name': 'Saffron Indian Bistro'}, {'address': '601 Old County Road', 'category': 'Indian', 'date': '2019-03-13', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'San Carlos', 'number_of_seats': 3, 'phone_number': '650-401-6564', 'price_range': 'moderate', 'rating': 4.0, 'restaurant_name': \"Kamakshi's Kitchen Restaurant\", 'time': '11:00'}]\nEnd Search Results",
+    "System: I found a couple of options for you. The first one is 'Kamakshi's Kitchen Restaurant' located at 601 Old County Road. They have outdoor seating and vegetarian options. The second one is 'Saffron Indian Bistro' at 1143 San Carlos Avenue, which doesn't have outdoor seating but also offers vegetarian options. Which one would you prefer?",
+    "User: I think I'll go with Kamakshi's Kitchen Restaurant. Can you reserve a table for three people at 11:00 on March 13th?",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2019-03-13', 'location': 'San Carlos', 'number_of_seats': '3', 'restaurant_name': 'Kamakshi's Kitchen Restaurant', 'time': '11:00'})",
+    "Search Results\n[{'address': '601 Old County Road', 'category': 'Indian', 'date': '2019-03-13', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'San Carlos', 'number_of_seats': 3, 'phone_number': '650-401-6564', 'price_range': 'moderate', 'rating': 4.0, 'restaurant_name': \"Kamakshi's Kitchen Restaurant\", 'time': '11:00'}]\nEnd Search Results",
+    "System: Your table for three people at Kamakshi's Kitchen Restaurant on March 13th at 11:00 AM is reserved. Enjoy your meal!",
+    "User: That sounds perfect. Thank you for the reservation.",
+    "System: You're welcome! If you need any more assistance, feel free to ask.",
+    "User: No, that's all, thanks."
+  ],
+  "search_results": [
+    "[{'address': '601 Old County Road', 'category': 'Indian', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'San Carlos', 'phone_number': '650-401-6564', 'price_range': 'moderate', 'rating': '4.00', 'restaurant_name': \"Kamakshi's Kitchen Restaurant\"}]",
+    "[{'address': '601 Old County Road', 'category': 'Indian', 'date': '2019-03-13', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'San Carlos', 'number_of_seats': '3', 'phone_number': '650-401-6564', 'price_range': 'moderate', 'rating': '4.00', 'restaurant_name': \"Kamakshi's Kitchen Restaurant\", 'time': '11:00'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '601 Old County Road', 'category': 'Indian', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'San Carlos', 'phone_number': '650-401-6564', 'price_range': 'moderate', 'rating': 4.0, 'restaurant_name': \"Kamakshi's Kitchen Restaurant\"}, {'address': '1143 San Carlos Avenue', 'category': 'Indian', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Carlos', 'phone_number': '650-593-4269', 'price_range': 'moderate', 'rating': 4.2, 'restaurant_name': 'Saffron Indian Bistro'}, {'address': '601 Old County Road', 'category': 'Indian', 'date': '2019-03-13', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'San Carlos', 'number_of_seats': 3, 'phone_number': '650-401-6564', 'price_range': 'moderate', 'rating': 4.0, 'restaurant_name': \"Kamakshi's Kitchen Restaurant\", 'time': '11:00'}]\nEnd Search Results",
+    "Search Results\n[{'address': '601 Old County Road', 'category': 'Indian', 'date': '2019-03-13', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'San Carlos', 'number_of_seats': 3, 'phone_number': '650-401-6564', 'price_range': 'moderate', 'rating': 4.0, 'restaurant_name': \"Kamakshi's Kitchen Restaurant\", 'time': '11:00'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

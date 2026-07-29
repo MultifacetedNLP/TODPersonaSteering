@@ -1,0 +1,39 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-11', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Butterfly Restaurant', 'time': '11:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "category",
+      "price_range",
+      "rating"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you book a table for me at the Ancient Szechuan for the 11th of this month at 11:30 am?\nSystem: In which city are you trying to book the table?\nUser: Can you book a table at the Butterfly restaurant in San Francisco?\nSystem: Please confirm that you need a table for 2 at the Butterfly Restaurant in San Francisco at 11:30 am on March 11th.\nUser: That's perfect. What cuisine do they offer?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-11', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Butterfly Restaurant', 'time': '11:30'})\nSearch Results\n[{'address': '33 The Embarcadero', 'category': 'Asian', 'date': '2019-03-11', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-864-8999', 'price_range': 'moderate', 'rating': '4.00', 'restaurant_name': 'Butterfly Restaurant', 'time': '11:30'}]\nEnd Search Results\nSystem: Your table has been booked successfully and they serve Asian cuisine.\nUser: Can you get me the user rating of the restaurant? Is it expensive?\nSystem: Their prices are moderate and they have a user rating of 4.0.\nUser: Thanks a bunch!\nSystem: Is there anything else I can do for you?\nLast User Utterance:No. Thank you. That's all I need.\nLast System Utterance: Have a great day!",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Can you book a table for me at the Ancient Szechuan for the 11th of this month at 11:30 am?",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2023-10-11', 'location': 'Ancient Szechuan', 'time': '11:30'})",
+    "<Failed Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '33 The Embarcadero', 'category': 'Asian', 'date': '2019-03-11', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-864-8999', 'price_range': 'moderate', 'rating': '4.00', 'restaurant_name': 'Butterfly Restaurant', 'time': '11:30'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 2.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2023-10-11\", \"location\": \"Ancient Szechuan\", \"time\": \"11:30\"}}"
+  ],
+  "dialog_completed": false
+}

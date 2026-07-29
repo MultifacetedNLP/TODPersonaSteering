@@ -1,0 +1,107 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Cloverdale', 'number_of_seats': '2', 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'})"
+  ],
+  "user_req_slots": [
+    [
+      "rating"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I want to make a restaurant reservation.\nSystem: What's the name of the restaurant and what time would you like the reservation?\nUser: It's name is La Hacienda and I want the reservation for 2 o\"clock in the afternoon.\nSystem: And where is the restaurant located?\nUser: It's in Cloverdale.\nSystem: I'll make a reservation for La Hacienda Mexican Restaurant in Cloverdale for March 1st at 2 pm for 2 people, is that good for you?\nUser: Yeah,that's good. What's the user rating of the restaurant?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Cloverdale', 'number_of_seats': '2', 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'})\nSearch Results\n\nEnd Search Results\nSystem: I'm sorry, but the reservation couldn't be completed. Is there anything else you need?\nLast User Utterance:No, thanks a lot.\nLast System Utterance: You're welcome, have a fine day.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: I want to make a restaurant reservation.",
+    "System: Great! To make a reservation, I'll need to know the name of the restaurant, the location, and the time you'd like to dine. Can you please tell me the name of the restaurant?",
+    "User: I think I'm going to reserve La Hacienda Mexican Restaurant, it's like, my favorite...",
+    "System: Great choice! Can you please tell me the location of La Hacienda Mexican Restaurant?",
+    "User: I think it's in Cloverdale...",
+    "System: What is the location of La Hacienda Mexican Restaurant?",
+    "User: I think I said it's in Cloverdale...",
+    "System: To confirm, you'd like to reserve a table at La Hacienda Mexican Restaurant in Cloverdale. Is that correct?",
+    "User: I don't know, I thought you said you were going to ask about the time...",
+    "System: You're right, I did say that. Can you please tell me the time you'd like to dine at La Hacienda Mexican Restaurant?",
+    "User: I don't know, I thought you said you were going to ask about the time...",
+    "System: To make a reservation, I'll need to know the name of the restaurant, the location, and the time you'd like to dine. Can you please tell me the name of the restaurant?",
+    "User: I don't know, I thought you said you were going to ask about the time...",
+    "System: To make a reservation, I'll need to know the name of the restaurant, the location, and the time you'd like to dine. Can you please tell me the name of the restaurant?",
+    "User: I don't know, I thought you said you were going to ask about the time...",
+    "System: To make a reservation, I'll need to know the name of the restaurant, the location, and the time you'd like to dine. Can you please tell me the name of the restaurant?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    ""
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"To make a reservation, I'll need to know the name of the restaurant, the location, and the time you'd like to dine. Can you please tell me the name of the restaurant?\"}",
+    "{\"type\": \"message\", \"content\": \"Great choice! Can you please tell me the location of La Hacienda Mexican Restaurant?\"}",
+    "{\"type\": \"message\", \"content\": \"What is the location of La Hacienda Mexican Restaurant?\"}",
+    "{\"type\": \"message\", \"content\": \"To confirm, you'd like to reserve a table at La Hacienda Mexican Restaurant in Cloverdale. Is that correct?\"}\n\nPlease respond with the location of La Hacienda Mexican Restaurant.",
+    "{\"type\": \"message\", \"content\": \"You're right, I did say that. Can you please tell me the time you'd like to dine at La Hacienda Mexican Restaurant?\"}",
+    "{\"type\": \"message\", \"content\": \"To make a reservation, I'll need to know the name of the restaurant, the location, and the time you'd like to dine. Can you please tell me the name of the restaurant?\"}",
+    "{\"type\": \"message\", \"content\": \"To make a reservation, I'll need to know the name of the restaurant, the location, and the time you'd like to dine. Can you please tell me the name of the restaurant?\"}",
+    "{\"type\": \"message\", \"content\": \"To make a reservation, I'll need to know the name of the restaurant. Can you please tell me the name of the restaurant?\"}"
+  ],
+  "dialog_completed": false
+}

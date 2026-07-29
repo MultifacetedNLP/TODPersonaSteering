@@ -1,0 +1,51 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Cloverdale', 'number_of_seats': '2', 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'})"
+  ],
+  "user_req_slots": [
+    [
+      "rating"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I want to make a restaurant reservation.\nSystem: What's the name of the restaurant and what time would you like the reservation?\nUser: It's name is La Hacienda and I want the reservation for 2 o\"clock in the afternoon.\nSystem: And where is the restaurant located?\nUser: It's in Cloverdale.\nSystem: I'll make a reservation for La Hacienda Mexican Restaurant in Cloverdale for March 1st at 2 pm for 2 people, is that good for you?\nUser: Yeah,that's good. What's the user rating of the restaurant?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Cloverdale', 'number_of_seats': '2', 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'})\nSearch Results\n\nEnd Search Results\nSystem: I'm sorry, but the reservation couldn't be completed. Is there anything else you need?\nLast User Utterance:No, thanks a lot.\nLast System Utterance: You're welcome, have a fine day.",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'La Hacienda Mexican Restaurant', 'location': 'San Francisco', 'time': '12:30', 'date': '2023-10-15', 'number_of_seats': '4'})"
+  ],
+  "generated_dialog": [
+    "User: I want to make a restaurant reservation.",
+    "System: Sure, I can help with that. Could you please tell me the name of the restaurant you're interested in?",
+    "User: I would like to reserve a table at La Hacienda Mexican Restaurant. Can you confirm the details for me?",
+    "System: Sure, I can help with that. Could you please tell me the location and the time you prefer for the reservation?",
+    "User: Could you confirm the date and the number of seats I should reserve, please?",
+    "System: APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'La Hacienda Mexican Restaurant', 'location': 'San Francisco', 'time': '12:30', 'date': '2023-10-15', 'number_of_seats': '4'})",
+    "Search Results\n[{'address': '127 Clement Street', 'category': 'Burmese', 'date': '2023-10-15', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.True_, 'location': 'San Francisco', 'number_of_seats': 4, 'phone_number': '415-933-9900', 'price_range': 'moderate', 'rating': np.float64(4.4), 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '12:30'}]\nEnd Search Results",
+    "System: Your table is reserved at La Hacienda Mexican Restaurant in San Francisco on October 15, 2023, at 12:30 PM for 4 people.",
+    "User: That sounds good. Could you also let me know what the rating of the restaurant is?",
+    "System: The rating of La Hacienda Mexican Restaurant is 4.4 out of 5.",
+    "User: Thank you for confirming the details. That rating is satisfactory."
+  ],
+  "search_results": [
+    ""
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '127 Clement Street', 'category': 'Burmese', 'date': '2023-10-15', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.True_, 'location': 'San Francisco', 'number_of_seats': 4, 'phone_number': '415-933-9900', 'price_range': 'moderate', 'rating': np.float64(4.4), 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '12:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

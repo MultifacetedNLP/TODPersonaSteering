@@ -1,0 +1,121 @@
+service_name: restaurants
+
+Intents:
+intents_1 
+	name: restaurants_booking
+	is_transactional: True
+	required_slots: user_name, number_of_people, name, time, date
+
+intents_2
+	name: restaurants_search
+	is_transactional: False
+	required_slots: None
+
+Slots:
+	slot_name: dietary_restrictions
+		possible_values: Kosher, Halal, don't care, Vegetarian Friendly, Gluten Free Options, Vegan Options
+
+	slot_name: cuisine
+		possible_values: Cajun and Creole, American, don't care, Canadian, Albanian, Lebanese, Healthy, Neapolitan, Mongolian, Cafe, Israeli, Turkish, Northern-Italian, Native American, Contemporary, Portuguese, Malaysian, Central Italian, Egyptian, Belgian, Caribbean, Barbecue, Asian, Brazilian, Australian, European, Norwegian, Campania, Filipino, Persian, International, Grill, Fast Food, Taiwanese, Thai, Argentinean, North Italian, Bar, Singaporean, Nepali, Deli, Peruvian, Afghani, African, Catalan, Indian, Central-Italian, Romana, British, Latin, Fujian, Sri Lankan, Indonesian, Scandinavian, Cajun & Creole, Japanese Fusion, Mediterranean, South American, Sicilian, Lazio, Czech, Greek, Chilean, Steakhouse, Seafood, Burmese, Irish, Beer restaurants, Russian, Central Asian, Yunnan, Colombian, Arabic, Italian, Moroccan, Pakistani, Mexican, Spanish, German, Japanese sweets parlour, Vietnamese, Polynesian, Dining bars, Dutch, Kaiseki, Middle Eastern, Eastern European, Brew Pub, Diner, Cuban, Fusion, Austrian, New Zealand, Beijing cuisine, Soups, Korean, Central European, Pub, Pizza, Gastropub, Armenian, French, Medicinal foods, Kappo, Swiss, Hawaiian, Ukrainian, Southern-Italian, Central American, Street Food, Swedish, Caucasian, Tuscan, Southwestern, Sushi, Wine Bar, Chinese, Japanese
+
+	slot_name: price_level
+		possible_values: don't care, cheap, expensive, moderate
+	
+	slot_name: rating
+
+	slot_name: location
+
+	slot_name: name
+
+	slot_name: user_name
+
+	slot_name: time
+
+	slot_name: date
+
+	slot_name: number_of_people
+
+
+service_name: attractions
+
+Intents:
+intents_1
+	name: attractions_search
+	is_transactional: False
+	required_slots: None
+
+Slots:
+	slot_name: type
+		possible_values: Fun and Games, Museums, Outdoor Activities, don't care, Water & Amusement Parks, Zoos and Aquariums, Food & Drink, Shopping, Events, Concerts & Shows, Water and Amusement Parks, Nature and Parks, Sights & Landmarks, Casinos and Gambling, Food and Drink, Transportation, Zoos & Aquariums, Sights and Landmarks, Concerts and Shows, Tours, Traveler Resources, Nature & Parks, Casinos & Gambling, Other, Fun & Games
+
+	slot_name: rating
+
+	slot_name: location
+
+	slot_name: name
+
+
+service_name: HKMTR
+
+Intents:
+intents_1
+	name: HKMTR
+	is_transactional: False
+	required_slots: departure, destination
+
+Slots:
+	slot_name: destination
+
+	slot_name: departure
+
+
+service_name: weathers
+
+Intents:
+intents_1
+	name: weathers_search
+	is_transactional: False
+	required_slots: day, city
+
+Slots:
+	slot_name: city
+
+	slot_name: day
+
+
+service_name: hotels
+
+Intents:
+intents_1 
+	name: hotels_search
+	is_transactional: False
+	required_slots: None
+
+intents_2 
+	name: hotels_booking
+	is_transactional: True
+	required_slots: user_name, name, number_of_rooms, start_day, start_month, number_of_nights
+
+Slots:
+	slot_name: price_level
+		possible_values: don't care, moderate, expensive, cheap
+
+	slot_name: start_day
+		possible_values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+
+	slot_name: start_month
+		possible_values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+	
+	slot_name: location
+
+	slot_name: rating
+
+	slot_name: name
+
+	slot_name: number_of_rooms
+
+	slot_name: user_name
+
+	slot_name: number_of_nights
+
+	slot_name: stars

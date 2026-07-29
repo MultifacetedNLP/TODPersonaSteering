@@ -1,0 +1,68 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={})"
+  ],
+  "user_req_slots": [
+    [
+      "cast",
+      "genre"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: I would like to find a movie I can watch.\nSystem: ApiCall(method='FindMovies', parameters={})\nSearch Results\n[{'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': '98'}]\nEnd Search Results\nSystem: What do you think of Rojo? It has an average rating of 98 percent.\nUser: Who acted in this movie and what genre is it?\nSystem: This movie is a Thriller and Rudy Chernicoff is one of the actors.\nLast User Utterance:That sounds fine. That's all I needed.\nLast System Utterance: I'm glad to have helped you.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: I would like to find a movie I can watch.",
+    "System: What type of movie are you in the mood for?",
+    "User: I'm not really sure, I was thinking maybe something with a good cast.",
+    "System: What kind of cast are you looking for? A specific actor or actress?",
+    "User: I'm not sure, I was thinking maybe something with a good cast, like a lot of well-known actors.",
+    "System: What kind of genre are you interested in? For example, action, comedy, drama, etc.",
+    "User: I'm not really sure about the genre, but something like an action movie with a lot of well-known actors would be great.",
+    "System: To find an action movie with a good cast, I'll need to know the genre and the type of cast you're looking for. Can you tell me if you have a preferred actor or actress in mind?",
+    "User: I think it would be great if the movie had Tom Cruise in it, he's always in action movies.",
+    "System: To find an action movie with Tom Cruise, I'll need to know the genre. Is it action, adventure, or something else?",
+    "User: I think action is a good fit, but I'm not sure if it's the only genre that would work with Tom Cruise.",
+    "System: What kind of cast are you looking for? A specific actor or actress?",
+    "User: Tom Cruise is a good example, but I'm not sure if I want to stick with just action movies.",
+    "System: What kind of genre are you interested in? For example, action, comedy, drama, etc.",
+    "User: I think action is a good fit, but I'm not sure if it's the only genre that would work with Tom Cruise.",
+    "System: What type of movie are you in the mood for?",
+    "User: I'm still thinking about that, but I do know I want to see Tom Cruise in it.",
+    "System: What type of movie are you in the mood for?",
+    "User: I'm still thinking about that, but I do know I want to see Tom Cruise in it.",
+    "System: What type of movie are you in the mood for?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': '98'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

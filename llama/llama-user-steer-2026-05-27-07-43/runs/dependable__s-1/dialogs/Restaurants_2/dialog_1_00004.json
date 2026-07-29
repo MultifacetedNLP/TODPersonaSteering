@@ -1,0 +1,63 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'American Canyon', 'number_of_seats': '2', 'restaurant_name': 'Mi Zacatecas Family Restaurant', 'time': '17:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "category"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you book a reservation for a restaurant at this evening 5:30?\nSystem: At which restaurant would you like to make a reservation?\nUser: See if you can get a table at Mi Zacatecas.\nSystem: In which location is Mi Zacatecas?\nUser: It's in American Canyon.\nSystem: Please confirm the following: Book 1 table at Mi Zacatecas Family Restaurant in American Canyon for 2 at 5:30 pm on March 1st.\nUser: Confirm. Can you tell me what type of food they serve there?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'American Canyon', 'number_of_seats': '2', 'restaurant_name': 'Mi Zacatecas Family Restaurant', 'time': '17:30'})\nSearch Results\n[{'address': '100 West American Canyon Road', 'category': 'Mexican', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'American Canyon', 'number_of_seats': '2', 'phone_number': '707-645-7459', 'price_range': 'moderate', 'rating': '4.00', 'restaurant_name': 'Mi Zacatecas Family Restaurant', 'time': '17:30'}]\nEnd Search Results\nSystem: The reservation has successfully been made. They serve Mexican food.\nLast User Utterance:Great, that will be all.\nLast System Utterance: Enjoy the rest of your day.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Can you book a reservation for a restaurant at this evening 5:30?",
+    "System: What restaurant would you like to book a reservation for?",
+    "User: I'm looking for a Mexican restaurant.",
+    "System: What's the name of the Mexican restaurant you're interested in?",
+    "User: I think it's Mi Zacatecas Family Restaurant, I've heard good things about it.",
+    "System: Great choice! To confirm, you'd like to book a reservation for Mi Zacatecas Family Restaurant. Is that correct?",
+    "User: I think it's a Mexican restaurant, but I'm not sure if it's the right category for Mi Zacatecas Family Restaurant.",
+    "System: To confirm, you'd like to book a reservation for Mi Zacatecas Family Restaurant. Is that correct?",
+    "User: I'm pretty sure it's a Mexican restaurant, but I want to make sure it's not, like, Tex-Mex or something. Is Mi Zacatecas Family Restaurant more like a traditional Mexican place?",
+    "System: Mi Zacatecas Family Restaurant is a Mexican restaurant. Is that correct?",
+    "User: I've heard it's more like a family-style place, you know, like my abuela used to make.",
+    "System: Mi Zacatecas Family Restaurant is a Mexican restaurant. Is that correct?",
+    "User: I guess it's more like a traditional Mexican place, not Tex-Mex or anything.",
+    "System: To confirm, you'd like to book a reservation for a traditional Mexican restaurant, Mi Zacatecas Family Restaurant, at this evening 5:30. Is that correct?",
+    "User: I think it's more like a traditional Mexican place, not Tex-Mex or anything.",
+    "System: To confirm, you'd like to book a reservation for a traditional Mexican restaurant, Mi Zacatecas Family Restaurant, at this evening 5:30. Is that correct?",
+    "User: I think it's more like a traditional Mexican place, not Tex-Mex or anything.",
+    "System: To confirm, you'd like to book a reservation for a traditional Mexican restaurant, Mi Zacatecas Family Restaurant, at this evening 5:30. Is that correct?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '100 West American Canyon Road', 'category': 'Mexican', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'American Canyon', 'number_of_seats': '2', 'phone_number': '707-645-7459', 'price_range': 'moderate', 'rating': '4.00', 'restaurant_name': 'Mi Zacatecas Family Restaurant', 'time': '17:30'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

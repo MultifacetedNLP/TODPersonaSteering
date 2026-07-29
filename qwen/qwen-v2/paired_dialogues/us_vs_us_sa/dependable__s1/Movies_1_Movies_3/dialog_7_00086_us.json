@@ -1,0 +1,47 @@
+{
+  "api_calls": [
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'San Jose', 'movie_name': 'Angel Has Fallen', 'number_of_tickets': '3', 'show_date': '2019-03-03', 'show_time': '23:00', 'show_type': 'regular'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: I would like to buy a movie ticket in San Jose at 11 o\"clock in the night.\nSystem: How many tickets are you looking to buy? Also which type of show are you looking for?\nUser: I want to book three tickets for regular show.\nSystem: Which movie do you want to watch and on which date do you want to watch it?\nUser: I want to want Angel has fallen on day after tomorrow.\nSystem: Can you please confirm the details- Movie is Angel Has Fallen for March 3rd in San Jose for 3 people starting at 11 pm and it is a regular movie.\nUser: Yes. This sounds good.\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'San Jose', 'movie_name': 'Angel Has Fallen', 'number_of_tickets': '3', 'show_date': '2019-03-03', 'show_time': '23:00', 'show_type': 'regular'})\nSearch Results\n\nEnd Search Results\nSystem: Unfortunately, the ticket were not booked. Is there anything else I can help you with?\nLast User Utterance:No. Thanks for all your help.\nLast System Utterance: Have a nice day.",
+  "predicted_api_calls": [
+    "APICall(method='GetTimesForMovie', parameters={'movie_name': 'Angel Has Fallen', 'location': 'San Jose', 'show_date': '2023-10-05'})",
+    "APICall(method='BuyMovieTickets', parameters={'movie_name': 'Angel Has Fallen', 'number_of_tickets': '1', 'show_date': '2023-10-05', 'location': 'San Jose', 'show_time': '23:00', 'show_type': 'regular', 'theater_name': 'Century 20 Oakridge and XD'})"
+  ],
+  "generated_dialog": [
+    "User: I would like to buy a movie ticket in San Jose at 11 o\"clock in the night.",
+    "System: I need the name of the movie you want to watch to find the available times. Could you provide that?",
+    "User: I want to watch \"Angel Has Fallen\".",
+    "System: APICall(method='GetTimesForMovie', parameters={'movie_name': 'Angel Has Fallen', 'location': 'San Jose', 'show_date': '2023-10-05'})",
+    "Search Results\n[{'genre': 'Action', 'location': 'San Jose', 'movie_name': 'Angel Has Fallen', 'price': 7, 'show_type': '3d', 'street_address': '700 El Paseo de Saratoga', 'theater_name': 'AMC Saratoga 14', 'show_date': '2023-10-05'}, {'genre': 'Action', 'location': 'San Jose', 'movie_name': 'Angel Has Fallen', 'price': 7, 'show_type': 'imax', 'street_address': '700 El Paseo de Saratoga', 'theater_name': 'AMC Saratoga 14', 'show_date': '2023-10-05'}, {'genre': 'Action', 'location': 'San Jose', 'movie_name': 'Angel Has Fallen', 'price': 12, 'show_type': 'regular', 'street_address': '925 Blossom Hill Road Suite 2000', 'theater_name': 'Century 20 Oakridge and XD', 'show_date': '2023-10-05'}]\nEnd Search Results",
+    "System: I found several showings of 'Angel Has Fallen' at different theaters. Here are the options: \n- AMC Saratoga 14 at 700 El Paseo de Saratoga with 3D and IMAX screenings at 11 PM.\n- Century 20 Oakridge and XD at 925 Blossom Hill Road Suite 2000 with a regular screening at 11 PM.\nWhich one would you prefer?",
+    "User: I prefer the Century 20 Oakridge and XD with a regular screening.",
+    "System: APICall(method='BuyMovieTickets', parameters={'movie_name': 'Angel Has Fallen', 'number_of_tickets': '1', 'show_date': '2023-10-05', 'location': 'San Jose', 'show_time': '23:00', 'show_type': 'regular', 'theater_name': 'Century 20 Oakridge and XD'})",
+    "Search Results\n[{'genre': 'Fantasy', 'location': 'San Jose', 'movie_name': 'Angel Has Fallen', 'price': np.int64(11), 'show_type': 'regular', 'street_address': '925 Blossom Hill Road Suite 2000', 'theater_name': 'Century 20 Oakridge and XD', 'show_date': '2023-10-05', 'show_time': '23:00', 'number_of_tickets': '1'}]\nEnd Search Results"
+  ],
+  "search_results": [
+    ""
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'genre': 'Action', 'location': 'San Jose', 'movie_name': 'Angel Has Fallen', 'price': 7, 'show_type': '3d', 'street_address': '700 El Paseo de Saratoga', 'theater_name': 'AMC Saratoga 14', 'show_date': '2023-10-05'}, {'genre': 'Action', 'location': 'San Jose', 'movie_name': 'Angel Has Fallen', 'price': 7, 'show_type': 'imax', 'street_address': '700 El Paseo de Saratoga', 'theater_name': 'AMC Saratoga 14', 'show_date': '2023-10-05'}, {'genre': 'Action', 'location': 'San Jose', 'movie_name': 'Angel Has Fallen', 'price': 12, 'show_type': 'regular', 'street_address': '925 Blossom Hill Road Suite 2000', 'theater_name': 'Century 20 Oakridge and XD', 'show_date': '2023-10-05'}]\nEnd Search Results",
+    "Search Results\n[{'genre': 'Fantasy', 'location': 'San Jose', 'movie_name': 'Angel Has Fallen', 'price': np.int64(11), 'show_type': 'regular', 'street_address': '925 Blossom Hill Road Suite 2000', 'theater_name': 'Century 20 Oakridge and XD', 'show_date': '2023-10-05', 'show_time': '23:00', 'number_of_tickets': '1'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

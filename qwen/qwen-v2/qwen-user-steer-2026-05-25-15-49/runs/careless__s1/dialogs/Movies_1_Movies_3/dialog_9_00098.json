@@ -1,0 +1,46 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={})"
+  ],
+  "user_req_slots": [
+    [
+      "cast",
+      "genre"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: I would like to find a movie I can watch.\nSystem: ApiCall(method='FindMovies', parameters={})\nSearch Results\n[{'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': '98'}]\nEnd Search Results\nSystem: What do you think of Rojo? It has an average rating of 98 percent.\nUser: Who acted in this movie and what genre is it?\nSystem: This movie is a Thriller and Rudy Chernicoff is one of the actors.\nLast User Utterance:That sounds fine. That's all I needed.\nLast System Utterance: I'm glad to have helped you.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'genre': 'Action', 'cast': 'Chris Evans,Scarlett Johansson'})",
+    "APICall(method='FindMovies', parameters={'genre': 'Action', 'cast': 'Chris Evans,Scarlett Johansson'})"
+  ],
+  "generated_dialog": [
+    "User: I would like to find a movie I can watch.",
+    "System: Sure, what type of movie are you interested in? For example, thriller, comedy, or drama.",
+    "User: Oh, how about something with some action and maybe a bit of romance thrown in? You know, like those Avengers movies but a little more... I don't know, less superhero stuff? Just something fun with some hot guys and girls, you know? Like Chris Evans and Scarlett Johansson!",
+    "System: APICall(method='FindMovies', parameters={'genre': 'Action', 'cast': 'Chris Evans,Scarlett Johansson'})",
+    "Search Results\n\nEnd Search Results",
+    "System: APICall(method='FindMovies', parameters={'genre': 'Action', 'cast': 'Chris Evans,Scarlett Johansson'})",
+    "Search Results\n\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': '98'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n\nEnd Search Results",
+    "Search Results\n\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

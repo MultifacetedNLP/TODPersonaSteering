@@ -1,0 +1,536 @@
+{
+  "scale": {
+    "1": "Strongly disagree",
+    "2": "A little disagree",
+    "3": "Neither agree nor disagree",
+    "4": "A little agree",
+    "5": "Strongly agree"
+  },
+  "scoring": {
+    "reverse_score_formula": "reverse_score = 6 - original_score",
+    "trait_score": "average of scored item values after reverse scoring",
+    "intended_direction_score": "for high-pole traits, use trait_score; for low-pole traits, use 6 - trait_score"
+  },
+  "traits": {
+    "extraversion": {
+      "target_trait": "Extraversion",
+      "bfi_dimension": "Extraversion",
+      "direction": "high",
+      "definition": "A highly extraverted person is sociable, energetic, talkative, assertive, enthusiastic, outgoing, and comfortable in group interactions.",
+      "items": [
+        {
+          "number": 1,
+          "text": "Talks a lot.",
+          "reverse": false
+        },
+        {
+          "number": 6,
+          "text": "Keeps their thoughts to themselves.",
+          "reverse": true
+        },
+        {
+          "number": 11,
+          "text": "Has a lot of energy.",
+          "reverse": false
+        },
+        {
+          "number": 16,
+          "text": "Makes things exciting.",
+          "reverse": false
+        },
+        {
+          "number": 21,
+          "text": "Tends to be quiet.",
+          "reverse": true
+        },
+        {
+          "number": 26,
+          "text": "Has a good, strong personality.",
+          "reverse": false
+        },
+        {
+          "number": 31,
+          "text": "Is kind of shy.",
+          "reverse": true
+        },
+        {
+          "number": 36,
+          "text": "Is outgoing; likes to be with people.",
+          "reverse": false
+        }
+      ]
+    },
+    "introversive": {
+      "target_trait": "introversive",
+      "bfi_dimension": "Extraversion",
+      "direction": "low",
+      "definition": "An introversive person is reserved, quiet, socially restrained, reflective, less talkative, and less motivated by large social gatherings or external stimulation.",
+      "items": [
+        {
+          "number": 1,
+          "text": "Talks a lot.",
+          "reverse": false
+        },
+        {
+          "number": 6,
+          "text": "Keeps their thoughts to themselves.",
+          "reverse": true
+        },
+        {
+          "number": 11,
+          "text": "Has a lot of energy.",
+          "reverse": false
+        },
+        {
+          "number": 16,
+          "text": "Makes things exciting.",
+          "reverse": false
+        },
+        {
+          "number": 21,
+          "text": "Tends to be quiet.",
+          "reverse": true
+        },
+        {
+          "number": 26,
+          "text": "Has a good, strong personality.",
+          "reverse": false
+        },
+        {
+          "number": 31,
+          "text": "Is kind of shy.",
+          "reverse": true
+        },
+        {
+          "number": 36,
+          "text": "Is outgoing; likes to be with people.",
+          "reverse": false
+        }
+      ]
+    },
+    "agreeableness": {
+      "target_trait": "Agreeableness",
+      "bfi_dimension": "Agreeableness",
+      "direction": "high",
+      "definition": "A highly agreeable person is kind, cooperative, sympathetic, trusting, forgiving, considerate, helpful, and concerned with maintaining positive relationships.",
+      "items": [
+        {
+          "number": 2,
+          "text": "Notices other people’s weak points.",
+          "reverse": true
+        },
+        {
+          "number": 7,
+          "text": "Is helpful and not selfish with others.",
+          "reverse": false
+        },
+        {
+          "number": 12,
+          "text": "Starts arguments with others.",
+          "reverse": true
+        },
+        {
+          "number": 17,
+          "text": "Forgives others easily.",
+          "reverse": false
+        },
+        {
+          "number": 22,
+          "text": "Usually trusts people.",
+          "reverse": false
+        },
+        {
+          "number": 27,
+          "text": "Can be cold and distant with others.",
+          "reverse": true
+        },
+        {
+          "number": 32,
+          "text": "Kind and considerate to almost everyone.",
+          "reverse": false
+        },
+        {
+          "number": 37,
+          "text": "Is sometimes rude to others.",
+          "reverse": true
+        },
+        {
+          "number": 42,
+          "text": "Likes to cooperate; goes along with others.",
+          "reverse": false
+        }
+      ]
+    },
+    "disagreeable": {
+      "target_trait": "disagreeable",
+      "bfi_dimension": "Agreeableness",
+      "direction": "low",
+      "definition": "A disagreeable person is skeptical, critical, competitive, blunt, less cooperative, less trusting, and less concerned with pleasing others or avoiding interpersonal conflict.",
+      "items": [
+        {
+          "number": 2,
+          "text": "Notices other people’s weak points.",
+          "reverse": true
+        },
+        {
+          "number": 7,
+          "text": "Is helpful and not selfish with others.",
+          "reverse": false
+        },
+        {
+          "number": 12,
+          "text": "Starts arguments with others.",
+          "reverse": true
+        },
+        {
+          "number": 17,
+          "text": "Forgives others easily.",
+          "reverse": false
+        },
+        {
+          "number": 22,
+          "text": "Usually trusts people.",
+          "reverse": false
+        },
+        {
+          "number": 27,
+          "text": "Can be cold and distant with others.",
+          "reverse": true
+        },
+        {
+          "number": 32,
+          "text": "Kind and considerate to almost everyone.",
+          "reverse": false
+        },
+        {
+          "number": 37,
+          "text": "Is sometimes rude to others.",
+          "reverse": true
+        },
+        {
+          "number": 42,
+          "text": "Likes to cooperate; goes along with others.",
+          "reverse": false
+        }
+      ]
+    },
+    "conscientiousness": {
+      "target_trait": "Conscientiousness",
+      "bfi_dimension": "Conscientiousness",
+      "direction": "high",
+      "definition": "A highly conscientious person is organized, responsible, disciplined, careful, reliable, goal-oriented, and attentive to duties and details.",
+      "items": [
+        {
+          "number": 3,
+          "text": "Does things carefully and completely.",
+          "reverse": false
+        },
+        {
+          "number": 8,
+          "text": "Can be kind of careless.",
+          "reverse": true
+        },
+        {
+          "number": 13,
+          "text": "Is a good, hard worker.",
+          "reverse": false
+        },
+        {
+          "number": 18,
+          "text": "Isn’t very organized.",
+          "reverse": true
+        },
+        {
+          "number": 23,
+          "text": "Tends to be lazy.",
+          "reverse": true
+        },
+        {
+          "number": 28,
+          "text": "Keeps working until things are done.",
+          "reverse": false
+        },
+        {
+          "number": 33,
+          "text": "Does things quickly and carefully.",
+          "reverse": false
+        },
+        {
+          "number": 38,
+          "text": "Makes plans and sticks to them.",
+          "reverse": false
+        },
+        {
+          "number": 43,
+          "text": "Has trouble paying attention.",
+          "reverse": true
+        }
+      ]
+    },
+    "unconscientious": {
+      "target_trait": "unconscientious",
+      "bfi_dimension": "Conscientiousness",
+      "direction": "low",
+      "definition": "An unconscientious person is disorganized, careless, inconsistent, easily distracted, less disciplined, less reliable, and less focused on planning or completing tasks carefully.",
+      "items": [
+        {
+          "number": 3,
+          "text": "Does things carefully and completely.",
+          "reverse": false
+        },
+        {
+          "number": 8,
+          "text": "Can be kind of careless.",
+          "reverse": true
+        },
+        {
+          "number": 13,
+          "text": "Is a good, hard worker.",
+          "reverse": false
+        },
+        {
+          "number": 18,
+          "text": "Isn’t very organized.",
+          "reverse": true
+        },
+        {
+          "number": 23,
+          "text": "Tends to be lazy.",
+          "reverse": true
+        },
+        {
+          "number": 28,
+          "text": "Keeps working until things are done.",
+          "reverse": false
+        },
+        {
+          "number": 33,
+          "text": "Does things quickly and carefully.",
+          "reverse": false
+        },
+        {
+          "number": 38,
+          "text": "Makes plans and sticks to them.",
+          "reverse": false
+        },
+        {
+          "number": 43,
+          "text": "Has trouble paying attention.",
+          "reverse": true
+        }
+      ]
+    },
+    "neuroticism": {
+      "target_trait": "Neuroticism",
+      "bfi_dimension": "Neuroticism",
+      "direction": "high",
+      "definition": "A highly neurotic person is emotionally reactive, anxious, worried, insecure, vulnerable to stress, easily upset, and prone to negative emotions.",
+      "items": [
+        {
+          "number": 4,
+          "text": "Is sad, depressed.",
+          "reverse": false
+        },
+        {
+          "number": 9,
+          "text": "Is relaxed, handles stress well.",
+          "reverse": true
+        },
+        {
+          "number": 14,
+          "text": "Can be tense; not always easy going.",
+          "reverse": false
+        },
+        {
+          "number": 19,
+          "text": "Worries a lot.",
+          "reverse": false
+        },
+        {
+          "number": 24,
+          "text": "Doesn’t get upset easily; steady.",
+          "reverse": true
+        },
+        {
+          "number": 29,
+          "text": "Can be moody.",
+          "reverse": false
+        },
+        {
+          "number": 34,
+          "text": "Stays calm in difficult situations.",
+          "reverse": true
+        },
+        {
+          "number": 39,
+          "text": "Gets nervous easily.",
+          "reverse": false
+        }
+      ]
+    },
+    "stable": {
+      "target_trait": "stable",
+      "bfi_dimension": "Neuroticism",
+      "direction": "low",
+      "definition": "An emotionally stable person is calm, relaxed, secure, resilient, confident under pressure, and less likely to experience anxiety, worry, or emotional volatility.",
+      "items": [
+        {
+          "number": 4,
+          "text": "Is sad, depressed.",
+          "reverse": false
+        },
+        {
+          "number": 9,
+          "text": "Is relaxed, handles stress well.",
+          "reverse": true
+        },
+        {
+          "number": 14,
+          "text": "Can be tense; not always easy going.",
+          "reverse": false
+        },
+        {
+          "number": 19,
+          "text": "Worries a lot.",
+          "reverse": false
+        },
+        {
+          "number": 24,
+          "text": "Doesn’t get upset easily; steady.",
+          "reverse": true
+        },
+        {
+          "number": 29,
+          "text": "Can be moody.",
+          "reverse": false
+        },
+        {
+          "number": 34,
+          "text": "Stays calm in difficult situations.",
+          "reverse": true
+        },
+        {
+          "number": 39,
+          "text": "Gets nervous easily.",
+          "reverse": false
+        }
+      ]
+    },
+    "openness": {
+      "target_trait": "Openness",
+      "bfi_dimension": "Openness",
+      "direction": "high",
+      "definition": "A highly open person is imaginative, intellectually curious, creative, emotionally receptive to art and beauty, interested in abstract ideas, and willing to explore unfamiliar experiences.",
+      "items": [
+        {
+          "number": 5,
+          "text": "Is original, comes up with new ideas.",
+          "reverse": false
+        },
+        {
+          "number": 10,
+          "text": "Is curious about lots of different things.",
+          "reverse": false
+        },
+        {
+          "number": 15,
+          "text": "Clever; thinks a lot.",
+          "reverse": false
+        },
+        {
+          "number": 20,
+          "text": "Has a good, active imagination.",
+          "reverse": false
+        },
+        {
+          "number": 25,
+          "text": "Is creative and inventive.",
+          "reverse": false
+        },
+        {
+          "number": 30,
+          "text": "Likes artistic and creative experiences.",
+          "reverse": false
+        },
+        {
+          "number": 35,
+          "text": "Likes work that is the same every time.",
+          "reverse": true
+        },
+        {
+          "number": 40,
+          "text": "Likes to think and play with ideas.",
+          "reverse": false
+        },
+        {
+          "number": 41,
+          "text": "Doesn’t like artistic things, such as plays or music.",
+          "reverse": true
+        },
+        {
+          "number": 44,
+          "text": "Knows a lot about art, music and books.",
+          "reverse": false
+        }
+      ]
+    },
+    "closed": {
+      "target_trait": "closed",
+      "bfi_dimension": "Openness",
+      "direction": "low",
+      "definition": "A closed person is conventional, practical, routine-oriented, less interested in abstract ideas, less drawn to artistic or imaginative activities, and more comfortable with familiar experiences than novelty.",
+      "items": [
+        {
+          "number": 5,
+          "text": "Is original, comes up with new ideas.",
+          "reverse": false
+        },
+        {
+          "number": 10,
+          "text": "Is curious about lots of different things.",
+          "reverse": false
+        },
+        {
+          "number": 15,
+          "text": "Clever; thinks a lot.",
+          "reverse": false
+        },
+        {
+          "number": 20,
+          "text": "Has a good, active imagination.",
+          "reverse": false
+        },
+        {
+          "number": 25,
+          "text": "Is creative and inventive.",
+          "reverse": false
+        },
+        {
+          "number": 30,
+          "text": "Likes artistic and creative experiences.",
+          "reverse": false
+        },
+        {
+          "number": 35,
+          "text": "Likes work that is the same every time.",
+          "reverse": true
+        },
+        {
+          "number": 40,
+          "text": "Likes to think and play with ideas.",
+          "reverse": false
+        },
+        {
+          "number": 41,
+          "text": "Doesn’t like artistic things, such as plays or music.",
+          "reverse": true
+        },
+        {
+          "number": 44,
+          "text": "Knows a lot about art, music and books.",
+          "reverse": false
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'genre': 'Drama'})"
+  ],
+  "user_req_slots": [
+    [
+      "directed_by"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: Can you help me find a movie to stream in the Play genre?\nSystem: ApiCall(method='FindMovies', parameters={'genre': 'Drama'})\nSearch Results\n[{'cast': 'Bakary Sangare', 'directed_by': 'Louis Garrel', 'genre': 'Drama', 'movie_title': 'A Faithful Man', 'percent_rating': '78'}]\nEnd Search Results\nSystem: I'd be happy to help. I have 10 movies you might be interested in. May I recommend A Faithful Man? It is a well reviewed movie with an average score of 78 percent.\nUser: Can you tell me who directed it?\nSystem: Yes, Louis Garrel directed the film.\nLast User Utterance:I like his movies! Thank you for the help.\nLast System Utterance: I'm happy to be of assistance.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'genre': 'Play'})"
+  ],
+  "generated_dialog": [
+    "User: Can you help me find a movie to stream in the Play genre?",
+    "System: APICall(method='FindMovies', parameters={'genre': 'Play'})",
+    "Search Results\n\nEnd Search Results",
+    "System: I couldn't find any movies in the Play genre. Would you like to try another genre?",
+    "User: Oh, drama sounds more my type! Like, you know, something like that whole like, you know, like, you know, like, you know, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like,",
+    "System: Sure thing! Let's try the Drama genre then.",
+    "User: like, you know, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you're like, like, like, you"
+  ],
+  "search_results": [
+    "[{'cast': 'Bakary Sangare', 'directed_by': 'Louis Garrel', 'genre': 'Drama', 'movie_title': 'A Faithful Man', 'percent_rating': '78'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"FindMovies\", \"parameters\": {\"genre\": \"Play\"}}",
+    "{\"type\": \"message\", \"content\": \"I couldn't find any movies in the Play genre. Would you like to try another genre?\"}",
+    "{\"type\": \"message\", \"content\": \"Sure thing! Let's try the Drama genre then.\"}"
+  ],
+  "dialog_completed": false
+}

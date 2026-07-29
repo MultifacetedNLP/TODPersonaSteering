@@ -1,0 +1,47 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Cloverdale', 'number_of_seats': '2', 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'})"
+  ],
+  "user_req_slots": [
+    [
+      "rating"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I want to make a restaurant reservation.\nSystem: What's the name of the restaurant and what time would you like the reservation?\nUser: It's name is La Hacienda and I want the reservation for 2 o\"clock in the afternoon.\nSystem: And where is the restaurant located?\nUser: It's in Cloverdale.\nSystem: I'll make a reservation for La Hacienda Mexican Restaurant in Cloverdale for March 1st at 2 pm for 2 people, is that good for you?\nUser: Yeah,that's good. What's the user rating of the restaurant?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Cloverdale', 'number_of_seats': '2', 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'})\nSearch Results\n\nEnd Search Results\nSystem: I'm sorry, but the reservation couldn't be completed. Is there anything else you need?\nLast User Utterance:No, thanks a lot.\nLast System Utterance: You're welcome, have a fine day.",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Cloverdale', 'number_of_seats': '2', 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'})"
+  ],
+  "generated_dialog": [
+    "User: I want to make a restaurant reservation.",
+    "System: Sure, I can help with that. Could you please tell me the name of the restaurant you're interested in?",
+    "User: I would like to reserve a table at La Hacienda Mexican Restaurant.\nRequest for Rating: What is your preferred rating for the restaurant?\nNext API Call: ReserveRestaurant\n\nUser: The restaurant has a good rating.\nNext API Call: ReserveRestaurant\n\nUser: Confirm the reservation details: Date: March 1, 2019, Time: 14:00, Location: Cloverdale, Number of Seats: 2, and Restaurant Name: La Hacienda Mexican Restaurant.\nNext API Call: ReserveRestaurant\n\nUser: Confirmation of the reservation: Date: March 1, 2019, Time: 14:00, Location: Cloverdale, Number of Seats: 2, and Restaurant Name: La Hacienda Mexican Restaurant.\nNext API Call: ReserveRestaurant\n\nUser: Confirmation of the reservation: Date: March 1, 2019, Time: 14:00, Location: Cloverdale, Number of Seats: 2, and Restaurant Name: La Hacienda Mexican Restaurant.\nNext API Call: ReserveRestaurant\n\nUser: Confirmation of the reservation: Date: March 1, 2019, Time: 14:00, Location: Clover",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Cloverdale', 'number_of_seats': '2', 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'})",
+    "Search Results\n[{'address': '25 Ward Street', 'category': 'American', 'date': '2019-03-01', 'has_seating_outdoors': np.True_, 'has_vegetarian_options': np.True_, 'location': 'Cloverdale', 'number_of_seats': 2, 'phone_number': '415-891-8577', 'price_range': 'moderate', 'rating': np.float64(4.6), 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'}]\nEnd Search Results",
+    "System: Your table is booked at La Hacienda Mexican Restaurant in Cloverdale on March 1, 2019, at 14:00 for 2 people.",
+    "User: Thank you for confirming the reservation.",
+    "System: You're welcome! If you need any more assistance, feel free to ask.",
+    "User: Thank you for the confirmation. I look forward to the reservation."
+  ],
+  "search_results": [
+    ""
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '25 Ward Street', 'category': 'American', 'date': '2019-03-01', 'has_seating_outdoors': np.True_, 'has_vegetarian_options': np.True_, 'location': 'Cloverdale', 'number_of_seats': 2, 'phone_number': '415-891-8577', 'price_range': 'moderate', 'rating': np.float64(4.6), 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

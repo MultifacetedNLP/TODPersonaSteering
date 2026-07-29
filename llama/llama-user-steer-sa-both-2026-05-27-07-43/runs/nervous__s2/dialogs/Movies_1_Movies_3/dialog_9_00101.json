@@ -1,0 +1,87 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'directed_by': 'James Gray'})"
+  ],
+  "user_req_slots": [
+    [
+      "cast"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: Can you find me a nice movie directed by James Gray to watch?\nSystem: ApiCall(method='FindMovies', parameters={'directed_by': 'James Gray'})\nSearch Results\n[{'cast': 'Jamie Kennedy', 'directed_by': 'James Gray', 'genre': 'Sci-fi', 'movie_title': 'Ad Astra', 'percent_rating': '84'}]\nEnd Search Results\nSystem: There is 1 movie called Ad Astra with an average rating of 84 percent.\nUser: Who is the actor in the movie?\nSystem: The actor of this movie is Jamie Kennedy.\nLast User Utterance:That sounds great. That is all I need for now.\nLast System Utterance: I am glad I could help. Have a great day!",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Can you find me a nice movie directed by James Gray to watch?",
+    "System: What genre of movie are you in the mood for?",
+    "User: I don't know, I just like James Gray's movies, what's he directed again?",
+    "System: James Gray has directed films like 'The Immigrant', 'The Lost City of Z', and 'Ad Astra'. Which one of these sounds interesting to you?",
+    "User: I don't know, I just like James Gray's movies, what's he directed again?",
+    "System: James Gray has directed films like 'The Immigrant', 'The Lost City of Z', and 'Ad Astra'. Which one of these sounds interesting to you?",
+    "User: I don't know, I just like James Gray's movies, what's he directed again?",
+    "System: James Gray has directed many films. Can you give me a specific movie of his that you're interested in?",
+    "User: I don't know, I just like James Gray's movies, what's he directed again?",
+    "System: James Gray has directed many films. Can you give me a specific movie of his that you're interested in?",
+    "User: I don't know, what if I just watch one of his movies with... like, what's that one with...",
+    "System: James Gray has directed many films. Can you give me a specific movie of his that you're interested in?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'cast': 'Jamie Kennedy', 'directed_by': 'James Gray', 'genre': 'Sci-fi', 'movie_title': 'Ad Astra', 'percent_rating': '84'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"What genre of movie are you in the mood for?\"}",
+    "{\"type\": \"message\", \"content\": \"James Gray has directed films like The Immigrant, The Lost City of Z, and Ad Astra. He's known for his work in drama and science fiction genres. Would you like to explore those genres?\"}",
+    "{\"type\": \"message\", \"content\": \"James Gray has directed films like 'The Immigrant', 'The Lost City of Z', and 'Ad Astra'. Which one of these sounds interesting to you?\"}",
+    "{\"type\": \"message\", \"content\": \"James Gray has directed several films. Can you give me a specific title or genre you're interested in?\"}",
+    "Based on the conversation history, it seems like the user is having trouble recalling specific movies directed by James Gray. To help the user, I'll ask for more information about their preferences.\n\n{\"type\": \"message\", \"content\": \"James Gray has directed many films. Can you give me a specific movie of his that you're interested in?\"}",
+    "Based on the provided conversation history, I will respond as the System."
+  ],
+  "dialog_completed": false
+}

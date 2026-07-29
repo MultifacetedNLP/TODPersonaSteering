@@ -1,0 +1,73 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Cloverdale', 'number_of_seats': '2', 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'})"
+  ],
+  "user_req_slots": [
+    [
+      "rating"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I want to make a restaurant reservation.\nSystem: What's the name of the restaurant and what time would you like the reservation?\nUser: It's name is La Hacienda and I want the reservation for 2 o\"clock in the afternoon.\nSystem: And where is the restaurant located?\nUser: It's in Cloverdale.\nSystem: I'll make a reservation for La Hacienda Mexican Restaurant in Cloverdale for March 1st at 2 pm for 2 people, is that good for you?\nUser: Yeah,that's good. What's the user rating of the restaurant?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Cloverdale', 'number_of_seats': '2', 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'})\nSearch Results\n\nEnd Search Results\nSystem: I'm sorry, but the reservation couldn't be completed. Is there anything else you need?\nLast User Utterance:No, thanks a lot.\nLast System Utterance: You're welcome, have a fine day.",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'Mexican', 'location': 'Cloverdale'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Cloverdale', 'number_of_seats': '2', 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'})"
+  ],
+  "generated_dialog": [
+    "User: I want to make a restaurant reservation.",
+    "System: Sure, I can help with that. Could you please tell me the name of the restaurant you're interested in?",
+    "User: La Hacienda Mexican Restaurant sounds great! Can you also find one in Cloverdale?",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'Mexican', 'location': 'Cloverdale'})",
+    "Search Results\n\nEnd Search Results",
+    "System: I found La Hacienda Mexican Restaurant in Cloverdale. Would you like to make a reservation there?",
+    "User: That sounds perfect! Can we reserve a table for two at 2 PM on March 1st?",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Cloverdale', 'number_of_seats': '2', 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'})",
+    "Search Results\n[{'address': '25 Ward Street', 'category': 'American', 'date': '2019-03-01', 'has_seating_outdoors': np.True_, 'has_vegetarian_options': np.True_, 'location': 'Cloverdale', 'number_of_seats': 2, 'phone_number': '415-891-8577', 'price_range': 'moderate', 'rating': np.float64(4.6), 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'}]\nEnd Search Results"
+  ],
+  "search_results": [
+    ""
+  ],
+  "predicted_search_results": [
+    "Search Results\n\nEnd Search Results",
+    "Search Results\n[{'address': '25 Ward Street', 'category': 'American', 'date': '2019-03-01', 'has_seating_outdoors': np.True_, 'has_vegetarian_options': np.True_, 'location': 'Cloverdale', 'number_of_seats': 2, 'phone_number': '415-891-8577', 'price_range': 'moderate', 'rating': np.float64(4.6), 'restaurant_name': 'La Hacienda Mexican Restaurant', 'time': '14:00'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"Sure, I can help with that. Could you please tell me the name of the restaurant you're interested in?\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"Mexican\", \"location\": \"Cloverdale\"}}",
+    "{\"type\": \"message\", \"content\": \"I found La Hacienda Mexican Restaurant in Cloverdale. Would you like to make a reservation there?\"}",
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2019-03-01\", \"location\": \"Cloverdale\", \"number_of_seats\": 2, \"restaurant_name\": \"La Hacienda Mexican Restaurant\", \"time\": \"14:00\"}}"
+  ],
+  "dialog_completed": false
+}

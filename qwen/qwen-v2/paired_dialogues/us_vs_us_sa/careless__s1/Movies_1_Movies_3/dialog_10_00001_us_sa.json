@@ -1,0 +1,63 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'genre': 'Drama'})"
+  ],
+  "user_req_slots": [
+    [
+      "directed_by"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: Can you help me find a movie to stream in the Play genre?\nSystem: ApiCall(method='FindMovies', parameters={'genre': 'Drama'})\nSearch Results\n[{'cast': 'Bakary Sangare', 'directed_by': 'Louis Garrel', 'genre': 'Drama', 'movie_title': 'A Faithful Man', 'percent_rating': '78'}]\nEnd Search Results\nSystem: I'd be happy to help. I have 10 movies you might be interested in. May I recommend A Faithful Man? It is a well reviewed movie with an average score of 78 percent.\nUser: Can you tell me who directed it?\nSystem: Yes, Louis Garrel directed the film.\nLast User Utterance:I like his movies! Thank you for the help.\nLast System Utterance: I'm happy to be of assistance.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'genre': 'Play'})",
+    "APICall(method='FindMovies', parameters={'genre': 'Drama'})"
+  ],
+  "generated_dialog": [
+    "User: Can you help me find a movie to stream in the Play genre?",
+    "System: APICall(method='FindMovies', parameters={'genre': 'Play'})",
+    "Search Results\n\nEnd Search Results",
+    "System: I couldn't find any movies in the Play genre. Would you like to try another genre?",
+    "User: Sure, how about something in the Drama genre?",
+    "System: APICall(method='FindMovies', parameters={'genre': 'Drama'})",
+    "Search Results\n[{'cast': 'Javier Bardem', 'directed_by': 'Pedro Almodovar', 'genre': 'Drama', 'movie_title': 'Live Flesh', 'percent_rating': 80}, {'cast': 'Doris McCarthy', 'directed_by': 'Bart Freundlich', 'genre': 'Drama', 'movie_title': 'After The Wedding', 'percent_rating': 43}, {'cast': 'Michaela Watkins', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'cast': 'Bakary Sangare', 'directed_by': 'Louis Garrel', 'genre': 'Drama', 'movie_title': 'A Faithful Man', 'percent_rating': '78'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n\nEnd Search Results",
+    "Search Results\n[{'cast': 'Javier Bardem', 'directed_by': 'Pedro Almodovar', 'genre': 'Drama', 'movie_title': 'Live Flesh', 'percent_rating': 80}, {'cast': 'Doris McCarthy', 'directed_by': 'Bart Freundlich', 'genre': 'Drama', 'movie_title': 'After The Wedding', 'percent_rating': 43}, {'cast': 'Michaela Watkins', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"FindMovies\", \"parameters\": {\"genre\": \"Play\"}}",
+    "{\"type\": \"message\", \"content\": \"I couldn't find any movies in the Play genre. Would you like to try another genre?\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindMovies\", \"parameters\": {\"genre\": \"Drama\"}}"
+  ],
+  "dialog_completed": false
+}

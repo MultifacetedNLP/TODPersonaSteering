@@ -1,0 +1,73 @@
+{
+  "api_calls": [
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'Livermore', 'movie_name': 'Hustlers', 'number_of_tickets': '2', 'show_date': '2019-03-06', 'show_time': '21:45', 'show_type': 'regular'})"
+  ],
+  "user_req_slots": [
+    [
+      "genre"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: Hey. Can you help me purchase two movie tickets to a showing Wednesday next week in Santa Rosa?\nSystem: Sure. Would you like to see an Imax or 3d show? Also at what time would you like to see the show and what show would you like to see?\nUser: I would like to see a regular showing of Hustlers. Look for something in Livermore around 21:45.\nSystem: Please confirm the following: You would like 2 tickets to Hustlers on March 6th at 9:45 pm in Livermore. The movie is a regular showing.\nUser: Yes, confirmed. What genre is Hustlers?\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'Livermore', 'movie_name': 'Hustlers', 'number_of_tickets': '2', 'show_date': '2019-03-06', 'show_time': '21:45', 'show_type': 'regular'})\nSearch Results\n[{'genre': 'Drama', 'location': 'Livermore', 'movie_name': 'Hustlers', 'number_of_tickets': '2', 'price': '10', 'show_date': '2019-03-06', 'show_time': '21:30', 'show_type': 'regular', 'street_address': '2490 First Street', 'theater_name': 'Livermore 13 Cinema'}]\nEnd Search Results\nSystem: The tickets have been purchased. Hustlers is a Drama movie.\nUser: Awesome, thank you for your help.\nSystem: No problem. Will that be all you need?\nLast User Utterance:Yes, that will be all for now.\nLast System Utterance: Okay, have a nice day.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'location': 'Santa Rosa', 'genre': 'Action'})",
+    "APICall(method='GetTimesForMovie', parameters={'movie_name': 'How to Train Your Dragon: The Hidden World', 'location': 'Santa Rosa', 'show_date': '2019-03-06', 'show_type': 'regular'})"
+  ],
+  "generated_dialog": [
+    "User: Hey. Can you help me purchase two movie tickets to a showing Wednesday next week in Santa Rosa?",
+    "System: Sure, I can help with that. Let's find some movies playing in Santa Rosa next Wednesday. Do you have a specific movie in mind, or should I suggest some options?",
+    "User: I'm actually more interested in action movies. Do you have any action films showing next Wednesday in Santa Rosa?",
+    "System: APICall(method='FindMovies', parameters={'location': 'Santa Rosa', 'genre': 'Action'})",
+    "Search Results\n[{'genre': 'Animation', 'location': 'Santa Rosa', 'movie_name': 'How to Train Your Dragon: The Hidden World', 'price': 18, 'show_type': '3d', 'street_address': '620 3rd Street', 'theater_name': '3rd Street Cinema'}, {'genre': 'Animation', 'location': 'Santa Rosa', 'movie_name': 'How to Train Your Dragon: The Hidden World', 'price': 18, 'show_type': '3d', 'street_address': '620 3rd Street', 'theater_name': '3rd Street Cinema', 'show_date': '2019-03-02', 'show_time': '21:00'}, {'genre': 'Animation', 'location': 'Santa Rosa', 'movie_name': 'How to Train Your Dragon: The Hidden World', 'price': 18, 'show_type': '3d', 'street_address': '620 3rd Street', 'theater_name': '3rd Street Cinema', 'show_date': '2019-03-05', 'show_time': '21:00'}]\nEnd Search Results",
+    "System: I found 'How to Train Your Dragon: The Hidden World' in 3D playing at 3rd Street Cinema on Wednesday, March 6th at 21:00. Would you like to proceed with purchasing two tickets for this showing?",
+    "User: That sounds good, but I prefer regular screenings over 3D. Can you find me a regular screening of an action movie instead?",
+    "System: APICall(method='GetTimesForMovie', parameters={'movie_name': 'How to Train Your Dragon: The Hidden World', 'location': 'Santa Rosa', 'show_date': '2019-03-06', 'show_type': 'regular'})",
+    "Search Results\n\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'genre': 'Drama', 'location': 'Livermore', 'movie_name': 'Hustlers', 'number_of_tickets': '2', 'price': '10', 'show_date': '2019-03-06', 'show_time': '21:30', 'show_type': 'regular', 'street_address': '2490 First Street', 'theater_name': 'Livermore 13 Cinema'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'genre': 'Animation', 'location': 'Santa Rosa', 'movie_name': 'How to Train Your Dragon: The Hidden World', 'price': 18, 'show_type': '3d', 'street_address': '620 3rd Street', 'theater_name': '3rd Street Cinema'}, {'genre': 'Animation', 'location': 'Santa Rosa', 'movie_name': 'How to Train Your Dragon: The Hidden World', 'price': 18, 'show_type': '3d', 'street_address': '620 3rd Street', 'theater_name': '3rd Street Cinema', 'show_date': '2019-03-02', 'show_time': '21:00'}, {'genre': 'Animation', 'location': 'Santa Rosa', 'movie_name': 'How to Train Your Dragon: The Hidden World', 'price': 18, 'show_type': '3d', 'street_address': '620 3rd Street', 'theater_name': '3rd Street Cinema', 'show_date': '2019-03-05', 'show_time': '21:00'}]\nEnd Search Results",
+    "Search Results\n\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"GetTimesForMovie\", \"parameters\": {\"movie_name\": \"\", \"location\": \"Santa Rosa\", \"show_date\": \"2023-11-08\", \"show_type\": \"dontcare\", \"theater_name\": \"dontcare\"}}",
+    "{\"type\": \"api_call\", \"method\": \"FindMovies\", \"parameters\": {\"location\": \"Santa Rosa\", \"genre\": \"Action\"}}",
+    "{\"type\": \"message\", \"content\": \"I found 'How to Train Your Dragon: The Hidden World' in 3D playing at 3rd Street Cinema on Wednesday, March 6th at 21:00. Would you like to book those tickets?\"}",
+    "{\"type\": \"api_call\", \"method\": \"GetTimesForMovie\", \"parameters\": {\"movie_name\": \"How to Train Your Dragon: The Hidden World\", \"location\": \"Santa Rosa\", \"show_date\": \"2019-03-06\", \"show_type\": \"regular\"}}"
+  ],
+  "dialog_completed": false
+}

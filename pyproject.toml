@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "activation-steered-personas"
+version = "0.0.0"
+requires-python = ">=3.10"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+extend-exclude = [
+  "analysis",
+  "config_files/tmp_configs",
+  "config_files/tod_runs/tmp_configs",
+  "hf_cache",
+  "logs",
+  "results",
+  "storage",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.ruff.lint.isort]
+known-first-party = [
+  "big5_evaluation",
+  "configs",
+  "data_prep",
+  "dstc",
+  "generation",
+  "llm_interaction",
+  "logger",
+  "metric_managers",
+  "metrics",
+  "prompts",
+  "sgd_dstc8_data_model",
+  "tod",
+  "tools",
+  "utilities",
+]

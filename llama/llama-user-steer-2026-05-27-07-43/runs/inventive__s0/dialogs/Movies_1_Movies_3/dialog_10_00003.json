@@ -1,0 +1,43 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'directed_by': 'Peter Jackson', 'genre': 'Fantasy'})"
+  ],
+  "user_req_slots": [
+    [
+      "cast"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: I want to see a movie by Peter Jackson that is a Fantasy.\nSystem: ApiCall(method='FindMovies', parameters={'directed_by': 'Peter Jackson', 'genre': 'Fantasy'})\nSearch Results\n[{'cast': 'Liv Tyler', 'directed_by': 'Peter Jackson', 'genre': 'Fantasy', 'movie_title': 'The Lord of the Rings: The Return of the King', 'percent_rating': '93'}]\nEnd Search Results\nSystem: Well, it sounds like you are talking about The Lord of the Rings: The Return of the King. it has a 93 % rating.\nUser: Who was in that?\nSystem: Liv Tyler was in it.\nLast User Utterance:Fine, I appreciate the idea.\nLast System Utterance: enjoy the film.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: I want to see a movie by Peter Jackson that is a Fantasy.",
+    "System: What movie by Peter Jackson are you interested in?",
+    "User: I'm interested in Lord of the Rings, does it have a good cast?",
+    "System: What do you mean by a good cast?",
+    "User: I'm thinking of the cast of the Fellowship of the Ring, are they well-known actors?",
+    "System: What do you mean by a good cast?",
+    "User: I'm thinking of the cast of the Fellowship of the Ring, are they well-known actors?",
+    "System: What do you mean by a good cast?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'cast': 'Liv Tyler', 'directed_by': 'Peter Jackson', 'genre': 'Fantasy', 'movie_title': 'The Lord of the Rings: The Return of the King', 'percent_rating': '93'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

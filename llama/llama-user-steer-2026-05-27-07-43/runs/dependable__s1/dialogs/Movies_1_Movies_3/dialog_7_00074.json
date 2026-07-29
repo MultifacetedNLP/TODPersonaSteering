@@ -1,0 +1,57 @@
+{
+  "api_calls": [
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'San Leandro', 'movie_name': 'Hobbs and Shaw', 'number_of_tickets': '1', 'show_date': '2019-03-06', 'show_time': '22:30', 'show_type': 'imax'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: Can you get me one ticket to the movie Hobbs and Shaw in San Leandro?\nSystem: What type of show are you interested in, on what date and at what time?\nUser: Can you find me an imax show on the 6th of this month at night 10:30?\nSystem: Please confirm that you want 1 ticket to an imax show of Hobbs and Shaw at 10:30 pm, on March 6th, in San Leandro.\nUser: That sounds perfect!\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'San Leandro', 'movie_name': 'Hobbs and Shaw', 'number_of_tickets': '1', 'show_date': '2019-03-06', 'show_time': '22:30', 'show_type': 'imax'})\nSearch Results\n\nEnd Search Results\nSystem: Sorry, the reservation was not successful. Is there anything else I can do for you?\nLast User Utterance:No. That'll be all.\nLast System Utterance: Have a great day!",
+  "predicted_api_calls": [
+    "APICall(method='BuyMovieTickets', parameters={'movie_name': 'Hobbs and Shaw', 'number_of_tickets': '1', 'show_date': '2019-03-06', 'location': 'San Leandro', 'show_time': '10:30 PM', 'show_type': 'IMAX'})"
+  ],
+  "generated_dialog": [
+    "User: Can you get me one ticket to the movie Hobbs and Shaw in San Leandro?",
+    "System: What date would you like to watch Hobbs and Shaw?",
+    "User: I'd like to watch it on the 6th of March.",
+    "System: What time would you like to watch Hobbs and Shaw on the 6th of March?",
+    "User: I'd like to watch it at 10:30 PM.",
+    "System: What type of movie experience would you prefer (regular, 3D, or IMAX)?",
+    "User: I'd prefer the IMAX experience.",
+    "System: You've chosen Hobbs and Shaw on March 6th at 10:30 PM. Is that correct?",
+    "User: Yes, that's correct.",
+    "System: APICall(method='BuyMovieTickets', parameters={'movie_name': 'Hobbs and Shaw', 'number_of_tickets': '1', 'show_date': '2019-03-06', 'location': 'San Leandro', 'show_time': '10:30 PM', 'show_type': 'IMAX'})",
+    "Search Results\n[{'genre': 'Drama', 'location': 'San Leandro', 'movie_name': 'Hobbs and Shaw', 'price': 13, 'show_type': 'IMAX', 'street_address': '15555 East 14th Street Suite 600', 'theater_name': 'Century 16 Bayfair Mall', 'show_date': '2019-03-06', 'show_time': '10:30 PM', 'number_of_tickets': '1'}]\nEnd Search Results",
+    "System: Based on the conversation history, I will respond as the system.",
+    "User: That sounds perfect, I'm all set then.",
+    "System: I'd be happy to help you with that. What date would you like to watch Hobbs and Shaw?",
+    "User: I'd like to watch it on the 6th of March."
+  ],
+  "search_results": [
+    ""
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'genre': 'Drama', 'location': 'San Leandro', 'movie_name': 'Hobbs and Shaw', 'price': 13, 'show_type': 'IMAX', 'street_address': '15555 East 14th Street Suite 600', 'theater_name': 'Century 16 Bayfair Mall', 'show_date': '2019-03-06', 'show_time': '10:30 PM', 'number_of_tickets': '1'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

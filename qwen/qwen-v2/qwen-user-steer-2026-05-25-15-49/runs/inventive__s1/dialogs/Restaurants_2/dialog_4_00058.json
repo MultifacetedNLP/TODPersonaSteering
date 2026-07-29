@@ -1,0 +1,68 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'Japanese', 'location': 'Mountain View'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-04', 'location': 'Mountain View', 'number_of_seats': '1', 'restaurant_name': 'Bushido', 'time': '11:00'})"
+  ],
+  "user_req_slots": [
+    [
+      "has_seating_outdoors",
+      "phone_number",
+      "rating"
+    ],
+    [
+      "price_range"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I'm planning to dine out soon. Can you help me select a restaurant in Mountain View?\nSystem: Do you have a specific type of cuisine in mind?\nUser: Sure, search for restaurants that have Ramen.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'Japanese', 'location': 'Mountain View'})\nSearch Results\n[{'address': '156 Castro Street', 'category': 'Japanese', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Mountain View', 'phone_number': '650-386-6821', 'price_range': 'moderate', 'rating': '4.10', 'restaurant_name': 'Bushido'}]\nEnd Search Results\nSystem: There are 9 such places in Mountain View that may suit your tastes. One such restaurant is Bushido\nUser: Can you tell me if they have seating available outside?\nSystem: This restaurant does not have seating outside.\nUser: What is the average user rating for this establishment? Also, can you give me their contact number?\nSystem: The restaurant has an average user rating of 4.1 and they can be reached at: 650-386-6821\nUser: Great, thanks!\nSystem: Do you want to make a reservation for this restaurant?\nUser: Sure, I'd like to make a reservation for 1 person at eleven in the morning on the 4th.\nSystem: So you would like to reserve a table for 1 at 11 am on March 4th at Bushido in Mountain View. Is this correct?\nUser: That is correct. Can you tell me the price range of this restaurant?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-04', 'location': 'Mountain View', 'number_of_seats': '1', 'restaurant_name': 'Bushido', 'time': '11:00'})\nSearch Results\n[{'address': '156 Castro Street', 'category': 'Japanese', 'date': '2019-03-04', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Mountain View', 'number_of_seats': '1', 'phone_number': '650-386-6821', 'price_range': 'moderate', 'rating': '4.10', 'restaurant_name': 'Bushido', 'time': '11:00'}]\nEnd Search Results\nSystem: Your table has been booked. The price range is moderate for this restaurant.\nLast User Utterance:Great, thanks for your help! That's it for me.\nLast System Utterance: Enjoy your day!",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'Japanese', 'location': 'Mountain View'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2023-03-04', 'location': 'Mountain View', 'number_of_seats': '1', 'restaurant_name': 'Bushido', 'time': '11:00'})"
+  ],
+  "generated_dialog": [
+    "User: I'm planning to dine out soon. Can you help me select a restaurant in Mountain View?",
+    "System: Of course! What type of cuisine are you in the mood for?",
+    "User: I feel like trying some Japanese cuisine tonight. Do they have outdoor seating available? And could you also give me the phone number and rating of the restaurant?",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'Japanese', 'location': 'Mountain View'})",
+    "Search Results\n[{'address': '156 Castro Street', 'category': 'Japanese', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'Mountain View', 'phone_number': '650-386-6821', 'price_range': 'moderate', 'rating': 4.1, 'restaurant_name': 'Bushido'}, {'address': '1943 West El Camino Real', 'category': 'Japanese', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Mountain View', 'phone_number': '650-965-8301', 'price_range': 'moderate', 'rating': 4.5, 'restaurant_name': 'Gochi Japanese Fusion Tapas'}, {'address': '1040 North Rengstorff Avenue', 'category': 'Japanese', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Mountain View', 'phone_number': '650-988-8686', 'price_range': 'moderate', 'rating': 4.1, 'restaurant_name': 'Hanabi Sushi'}]\nEnd Search Results",
+    "System: I found a couple of Japanese restaurants in Mountain View for you. The first one is Bushido with a rating of 4.1 and a phone number 650-386-6821. The second one is Gochi Japanese Fusion Tapas with a higher rating of 4.5 and a phone number 650-965-8301. Both don't have outdoor seating. Which one would you prefer?",
+    "User: I'll go with Bushido. Could you check if they have a price range available?",
+    "System: Bushido is a great choice with a moderate price range. Their phone number is 650-386-6821 and they have a rating of 4.1. Shall we proceed with making a reservation?",
+    "User: Sure, let's make the reservation for 1 person at 11:00 AM on March 4th.",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2023-03-04', 'location': 'Mountain View', 'number_of_seats': '1', 'restaurant_name': 'Bushido', 'time': '11:00'})",
+    "Search Results\n[{'address': '156 Castro Street', 'category': 'Japanese', 'date': '2023-03-04', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'Mountain View', 'number_of_seats': 1, 'phone_number': '650-386-6821', 'price_range': 'moderate', 'rating': 4.1, 'restaurant_name': 'Bushido', 'time': '11:00'}]\nEnd Search Results",
+    "System: Your table at Bushido is reserved for 1 person on March 4th at 11:00 AM. Enjoy your meal!",
+    "User: That sounds perfect! Can you remind me of the address as well?",
+    "System: Sure, Bushido is located at 156 Castro Street, Mountain View. Enjoy your dining experience!",
+    "User: That's great, thank you! Can you tell me what the menu looks like or suggest a dish?"
+  ],
+  "search_results": [
+    "[{'address': '156 Castro Street', 'category': 'Japanese', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Mountain View', 'phone_number': '650-386-6821', 'price_range': 'moderate', 'rating': '4.10', 'restaurant_name': 'Bushido'}]",
+    "[{'address': '156 Castro Street', 'category': 'Japanese', 'date': '2019-03-04', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Mountain View', 'number_of_seats': '1', 'phone_number': '650-386-6821', 'price_range': 'moderate', 'rating': '4.10', 'restaurant_name': 'Bushido', 'time': '11:00'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '156 Castro Street', 'category': 'Japanese', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'Mountain View', 'phone_number': '650-386-6821', 'price_range': 'moderate', 'rating': 4.1, 'restaurant_name': 'Bushido'}, {'address': '1943 West El Camino Real', 'category': 'Japanese', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Mountain View', 'phone_number': '650-965-8301', 'price_range': 'moderate', 'rating': 4.5, 'restaurant_name': 'Gochi Japanese Fusion Tapas'}, {'address': '1040 North Rengstorff Avenue', 'category': 'Japanese', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Mountain View', 'phone_number': '650-988-8686', 'price_range': 'moderate', 'rating': 4.1, 'restaurant_name': 'Hanabi Sushi'}]\nEnd Search Results",
+    "Search Results\n[{'address': '156 Castro Street', 'category': 'Japanese', 'date': '2023-03-04', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'Mountain View', 'number_of_seats': 1, 'phone_number': '650-386-6821', 'price_range': 'moderate', 'rating': 4.1, 'restaurant_name': 'Bushido', 'time': '11:00'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

@@ -1,0 +1,49 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-10', 'location': 'Petaluma', 'number_of_seats': '4', 'restaurant_name': 'Izakaya Kitaru', 'time': '17:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "has_seating_outdoors",
+      "phone_number",
+      "address"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I want to book a table for 4 people on March 10th in Petaluma.\nSystem: On what restaurant you want to be and at what time?\nUser: Try please at Izakaya Kitaru.At 17:30 will be very good for me.\nSystem: Book a table at Izakaya Kitaru in Petaluma for 4 people at 5:30 pm on March 10th.Is that okay for you?\nUser: Yes is okay.Outdoor seating are available?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-10', 'location': 'Petaluma', 'number_of_seats': '4', 'restaurant_name': 'Izakaya Kitaru', 'time': '17:30'})\nSearch Results\n[{'address': '212 Western Avenue', 'category': 'Japanese', 'date': '2019-03-10', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Petaluma', 'number_of_seats': '4', 'phone_number': '707-789-9068', 'price_range': 'moderate', 'rating': '4.60', 'restaurant_name': 'Izakaya Kitaru', 'time': '17:30'}]\nEnd Search Results\nSystem: The reservation was made.Outdoor seating is not available.\nUser: Tell me the phone number and the address.\nSystem: 707-789-9068 is the phone number and the address is 212 Western Avenue.\nLast User Utterance:Thanks for the help. That's what I wanted for the moment.\nLast System Utterance: Have a great day!",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'date': '2019-03-10', 'location': 'Petaluma', 'number_of_seats': '4', 'restaurant_name': 'Izakaya Kitaru', 'time': '18:00'})"
+  ],
+  "generated_dialog": [
+    "User: I want to book a table for 4 people on March 10th in Petaluma.",
+    "System: I'm almost ready to book your table. Could you please tell me the name of the restaurant you'd like to reserve?",
+    "User: Sure, I'd like to reserve a table at Izakaya Kitaru.",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2019-03-10', 'location': 'Petaluma', 'number_of_seats': '4', 'restaurant_name': 'Izakaya Kitaru', 'time': '18:00'})",
+    "Search Results\n[{'address': '212 Western Avenue', 'category': 'Japanese', 'date': '2019-03-10', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'Petaluma', 'number_of_seats': 4, 'phone_number': '707-789-9068', 'price_range': 'moderate', 'rating': 4.6, 'restaurant_name': 'Izakaya Kitaru', 'time': '18:00'}]\nEnd Search Results",
+    "System: Your table is booked at Izakaya Kitaru in Petaluma on March 10th at 18:00. Is there anything else you need help with?",
+    "User: No, that's all, thanks.",
+    "System: You're all set! Your table is booked at Izakaya Kitaru in Petaluma on March 10th at 18:00. Have a great dinner!",
+    "User: Great, thank you for helping me out!"
+  ],
+  "search_results": [
+    "[{'address': '212 Western Avenue', 'category': 'Japanese', 'date': '2019-03-10', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Petaluma', 'number_of_seats': '4', 'phone_number': '707-789-9068', 'price_range': 'moderate', 'rating': '4.60', 'restaurant_name': 'Izakaya Kitaru', 'time': '17:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '212 Western Avenue', 'category': 'Japanese', 'date': '2019-03-10', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'Petaluma', 'number_of_seats': 4, 'phone_number': '707-789-9068', 'price_range': 'moderate', 'rating': 4.6, 'restaurant_name': 'Izakaya Kitaru', 'time': '18:00'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

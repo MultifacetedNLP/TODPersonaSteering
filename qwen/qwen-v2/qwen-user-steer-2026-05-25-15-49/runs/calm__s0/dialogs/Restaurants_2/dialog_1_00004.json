@@ -1,0 +1,46 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'American Canyon', 'number_of_seats': '2', 'restaurant_name': 'Mi Zacatecas Family Restaurant', 'time': '17:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "category"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you book a reservation for a restaurant at this evening 5:30?\nSystem: At which restaurant would you like to make a reservation?\nUser: See if you can get a table at Mi Zacatecas.\nSystem: In which location is Mi Zacatecas?\nUser: It's in American Canyon.\nSystem: Please confirm the following: Book 1 table at Mi Zacatecas Family Restaurant in American Canyon for 2 at 5:30 pm on March 1st.\nUser: Confirm. Can you tell me what type of food they serve there?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'American Canyon', 'number_of_seats': '2', 'restaurant_name': 'Mi Zacatecas Family Restaurant', 'time': '17:30'})\nSearch Results\n[{'address': '100 West American Canyon Road', 'category': 'Mexican', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'American Canyon', 'number_of_seats': '2', 'phone_number': '707-645-7459', 'price_range': 'moderate', 'rating': '4.00', 'restaurant_name': 'Mi Zacatecas Family Restaurant', 'time': '17:30'}]\nEnd Search Results\nSystem: The reservation has successfully been made. They serve Mexican food.\nLast User Utterance:Great, that will be all.\nLast System Utterance: Enjoy the rest of your day.",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'Mi Zacatecas Family Restaurant', 'location': 'American Canyon', 'time': '17:30'})"
+  ],
+  "generated_dialog": [
+    "User: Can you book a reservation for a restaurant at this evening 5:30?",
+    "System: Sure, do you have a preferred restaurant and location in mind?",
+    "User: I'd like to reserve a spot at Mi Zacatecas Family Restaurant in American Canyon.",
+    "System: APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'Mi Zacatecas Family Restaurant', 'location': 'American Canyon', 'time': '17:30'})",
+    "Search Results\n[{'address': '100 West American Canyon Road', 'category': 'Mexican', 'date': '2019-03-01', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'American Canyon', 'number_of_seats': 2, 'phone_number': '707-645-7459', 'price_range': 'moderate', 'rating': 4.0, 'restaurant_name': 'Mi Zacatecas Family Restaurant', 'time': '17:30'}]\nEnd Search Results",
+    "System: Your reservation is confirmed at Mi Zacatecas Family Restaurant in American Canyon for this evening at 5:30 PM. Is there anything else you need help with?",
+    "User: No, that's all, thanks.",
+    "System: You're welcome! Enjoy your meal at Mi Zacatecas Family Restaurant. Have a great evening!"
+  ],
+  "search_results": [
+    "[{'address': '100 West American Canyon Road', 'category': 'Mexican', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'American Canyon', 'number_of_seats': '2', 'phone_number': '707-645-7459', 'price_range': 'moderate', 'rating': '4.00', 'restaurant_name': 'Mi Zacatecas Family Restaurant', 'time': '17:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '100 West American Canyon Road', 'category': 'Mexican', 'date': '2019-03-01', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'American Canyon', 'number_of_seats': 2, 'phone_number': '707-645-7459', 'price_range': 'moderate', 'rating': 4.0, 'restaurant_name': 'Mi Zacatecas Family Restaurant', 'time': '17:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": true
+}

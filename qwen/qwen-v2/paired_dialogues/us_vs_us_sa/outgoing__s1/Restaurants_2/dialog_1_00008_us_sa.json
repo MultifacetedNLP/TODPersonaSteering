@@ -1,0 +1,72 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-06', 'location': 'Oakland', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '18:45'})"
+  ],
+  "user_req_slots": [
+    [
+      "price_range",
+      "has_seating_outdoors"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I need to make a reservation for a restaurant in Oakland. The reservation should be for next Wednesday at 6:45 pm.\nSystem: Which restaurant would you like me to make a reservation for?\nUser: Can you book me a table at Mcdonald's?\nSystem: Please confirm: Reserve 1 table at Mcdonald's in Oakland for 2 people on March 6th at 6:45 pm.\nUser: That is correct. How expensive is the restaurant and does it have outdoor seating?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-06', 'location': 'Oakland', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '18:45'})\nSearch Results\n[{'address': '6300 East 14th Street', 'category': 'Sandwich', 'date': '2019-03-06', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Oakland', 'number_of_seats': '2', 'phone_number': '510-568-6471', 'price_range': 'cheap', 'rating': '3.50', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]\nEnd Search Results\nSystem: Your reservation has been made. It is a cheap restaurant. It does not have outdoor seating.\nUser: Thank you.\nSystem: Can I assist you with anything else?\nLast User Utterance:No thanks.\nLast System Utterance: Enjoy your day.",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'date': '2023-11-22', 'location': 'Oakland', 'restaurant_name': 'McDonald's', 'time': '18:45', 'has_seating_outdoors': 'True'})"
+  ],
+  "generated_dialog": [
+    "User: I need to make a reservation for a restaurant in Oakland. The reservation should be for next Wednesday at 6:45 pm.",
+    "System: Sure, I can help with that. Do you have a specific restaurant in mind for the reservation?",
+    "User: I want to reserve a spot at McDonald's! And while you're at it, can it be family-friendly with outdoor seating?",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2023-11-22', 'location': 'Oakland', 'restaurant_name': 'McDonald's', 'time': '18:45', 'has_seating_outdoors': 'True'})",
+    "Search Results\n[{'address': '4039 Piedmont Avenue', 'category': 'Mexican', 'date': '2023-11-22', 'has_seating_outdoors': 'True', 'has_vegetarian_options': np.True_, 'location': 'Oakland', 'number_of_seats': '', 'phone_number': '510-985-1200', 'price_range': 'moderate', 'rating': np.float64(4.1), 'restaurant_name': \"McDonald's\", 'time': '18:45'}]\nEnd Search Results",
+    "System: I found a suitable option for you. Your reservation is confirmed at McDonald's on Piedmont Avenue in Oakland. It will be for 6:45 pm on Wednesday with outdoor seating.",
+    "User: That sounds perfect! Can't wait to meet up there.",
+    "System: Great! Your reservation is set for Wednesday, November 22, 2023, at 6:45 pm at McDonald's on Piedmont Avenue in Oakland with outdoor seating. Enjoy your meal!",
+    "User: That's awesome, see you there!"
+  ],
+  "search_results": [
+    "[{'address': '6300 East 14th Street', 'category': 'Sandwich', 'date': '2019-03-06', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Oakland', 'number_of_seats': '2', 'phone_number': '510-568-6471', 'price_range': 'cheap', 'rating': '3.50', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '4039 Piedmont Avenue', 'category': 'Mexican', 'date': '2023-11-22', 'has_seating_outdoors': 'True', 'has_vegetarian_options': np.True_, 'location': 'Oakland', 'number_of_seats': '', 'phone_number': '510-985-1200', 'price_range': 'moderate', 'rating': np.float64(4.1), 'restaurant_name': \"McDonald's\", 'time': '18:45'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 2.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2023-11-22\", \"location\": \"Oakland\", \"time\": \"18:45\"}}",
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2023-11-22\", \"location\": \"Oakland\", \"restaurant_name\": \"McDonald's\", \"time\": \"18:45\", \"has_seating_outdoors\": \"True\"}}",
+    "{\"type\": \"message\", \"content\": \"I found a suitable option for you. Your reservation is confirmed at McDonald's on Piedmont Avenue in Oakland. It will be for 6:45 pm on Wednesday with outdoor seating.\"}",
+    "{\"type\": \"message\", \"content\": \"Great! Your reservation is set for Wednesday, November 22, 2023, at 6:45 pm at McDonald's on Piedmont Avenue in Oakland with outdoor seating. Enjoy your meal!\"}"
+  ],
+  "dialog_completed": false
+}

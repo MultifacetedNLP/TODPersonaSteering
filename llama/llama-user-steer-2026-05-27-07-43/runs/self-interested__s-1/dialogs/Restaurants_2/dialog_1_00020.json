@@ -1,0 +1,64 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-04', 'location': 'Morgan Hill', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "has_seating_outdoors",
+      "phone_number"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you help me to book a table at a restaurant for 2 people at evening 6:30\nSystem: Is there any choice of restaurant you want to book?\nUser: Would you kindly book the table at Mcdonalds?\nSystem: In which place you want me to search?\nUser: Search restaurants in Morgan Hill and it is for next monday\nSystem: Please give the confirmation details:your table booking at Mcdonalds in the city Morgan Hill on march 4th for 2 people at 6:30 pm.\nUser: Okay..this is cool\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-04', 'location': 'Morgan Hill', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'})\nSearch Results\n[{'address': '201 Vineyard Town Ctr', 'category': 'American', 'date': '2019-03-04', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Morgan Hill', 'number_of_seats': '2', 'phone_number': '408-779-8182', 'price_range': 'cheap', 'rating': '3.40', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]\nEnd Search Results\nSystem: Your booking is confirmed.\nUser: Is there outdoor seating in that restaurant and can i know the phone number\nSystem: There is no outdoor seating and telephone number is 408-779-8182.\nLast User Utterance:This is cool..thanks a lot.\nLast System Utterance: Have a nice day.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Can you help me to book a table at a restaurant for 2 people at evening 6:30",
+    "System: I'd be happy to help you book a table at a restaurant. Can you please tell me the name of the restaurant you're interested in?",
+    "User: I'm looking for a casual place like McDonald's, is that something you can help me with?",
+    "System: I can help you book a table at McDonald's. However, I need to confirm the location. Can you please tell me where you'd like to book the table in?",
+    "User: I'd like to book the table in Morgan Hill, is that correct?",
+    "System: Great, I've got the restaurant name and location. Now, let me confirm the time. You wanted to book a table for evening 6:30, correct?",
+    "User: Yes, that's correct, 6:30 in the evening.",
+    "System: Great, I've got the restaurant name and location. Now, let me confirm the time. You wanted to book a table for evening 6:30, correct?",
+    "User: Do you know if McDonald's in Morgan Hill has outdoor seating available?",
+    "System: I'd be happy to help you book a table at McDonald's. However, I need to confirm a few details. Can you please tell me if you'd like to book the table for a specific date?",
+    "User: Can you please tell me if McDonald's in Morgan Hill is open on March 4th?",
+    "System: To book a table at McDonald's in Morgan Hill, I need to confirm a few details. Can you please tell me if you'd like to book the table for a specific date?",
+    "User: Yes, I'd like to book the table for March 4th.",
+    "System: I'd be happy to help you book a table at a restaurant. Can you please tell me the name of the restaurant you're interested in?",
+    "User: McDonald's.",
+    "System: I'd be happy to help you book a table at a restaurant. Can you please tell me the name of the restaurant you're interested in?",
+    "User: Do you know if McDonald's in Morgan Hill has a phone number that I can reach them at?",
+    "System: I'd be happy to help you book a table at a restaurant. Can you please tell me the name of the restaurant you're interested in?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '201 Vineyard Town Ctr', 'category': 'American', 'date': '2019-03-04', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Morgan Hill', 'number_of_seats': '2', 'phone_number': '408-779-8182', 'price_range': 'cheap', 'rating': '3.40', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

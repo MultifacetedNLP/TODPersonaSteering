@@ -1,0 +1,95 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-14', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': \"Schroeder's\", 'time': '13:30'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Hi there, could you get me a table at a restaurant on the 14th of March at 1:30 pm please?\nSystem: Sure, any particular restaurant are you interested in ?\nUser: Could you get me a reservation at Schroeder's please?\nSystem: Sure, and which location would you prefer?\nUser: A table for two at San Francisco will be fine.\nSystem: Please confirm you reservation at Schroeder's in San Francisco for 2 at 1:30 pm on the March 14th.\nUser: That sounds great to me!\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-14', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': \"Schroeder's\", 'time': '13:30'})\nSearch Results\n[{'address': '240 Front Street', 'category': 'European', 'date': '2019-03-14', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-421-4778', 'price_range': 'moderate', 'rating': '4.20', 'restaurant_name': \"Schroeder's\", 'time': '13:30'}]\nEnd Search Results\nSystem: Your reservation has been made.\nUser: Thank you so much!\nSystem: Do you require any further assistance?\nLast User Utterance:No, that is all I need. Really appreciate it!\nLast System Utterance: No worries, have a great day!",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Hi there, could you get me a table at a restaurant on the 14th of March at 1:30 pm please?",
+    "System: I'd be happy to help you book a table. Can you please tell me the name of the restaurant you're interested in?",
+    "User: I'm looking for Schroeder's, is that the one you were thinking of?",
+    "System: Great, I've got Schroeder's. Can you please confirm the date and time you'd like to book the table for?",
+    "User: Yes, that's the 14th of March at 1:30 pm, is that correct?",
+    "System: Yes, that's correct. You want to book a table at Schroeder's on the 14th of March at 1:30 pm. Is that correct?",
+    "User: Yes, that's correct.",
+    "System: Great, I've got Schroeder's. Can you please confirm the date and time you'd like to book the table for?",
+    "User: Yes, that's the 14th of March at 1:30 pm, is that correct?",
+    "System: I'd be happy to help you book a table. Can you please tell me the name of the restaurant you're interested in?",
+    "User: I'm looking for Schroeder's, is that the one you were thinking of?",
+    "System: I'd be happy to help you book a table. Can you please tell me the name of the restaurant you're interested in?",
+    "User: I'm looking for Schroeder's, is that the one you were thinking of?",
+    "System: I'd be happy to help you book a table. Can you please tell me the name of the restaurant you're interested in?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '240 Front Street', 'category': 'European', 'date': '2019-03-14', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-421-4778', 'price_range': 'moderate', 'rating': '4.20', 'restaurant_name': \"Schroeder's\", 'time': '13:30'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 2.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"What type of restaurant are you looking for?\"}",
+    "{\"type\": \"message\", \"content\": \"Great, I've got Schroeder's. What location would you like the table to be in?\"}",
+    "{\"type\": \"message\", \"content\": \"Yes, that's correct. You want to book a table at Schroeder's on the 14th of March at 1:30 pm. Is that a reservation for 2 people?\"}",
+    "Based on the conversation history, I will respond as the system. \n\n{\"type\": \"message\", \"content\": \"Great, I've got Schroeder's. Can you please confirm the date and time you'd like to book the table for?\"}\n\nI need to confirm the date and time to proceed with the booking.",
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you book a table. Can you please tell me the name of the restaurant you're interested in?\"}\n\n# I need to gather the required slot'restaurant_name' from the user.\n\n{\"type\": \"message\", \"content\": \"I've got Schroeder's. Can you please confirm the date and time you'd like to book the table for?\"}\n\n# I need to gather the required slots 'date' and 'time' from the user.\n\n{\"type\": \"message\", \"content\": \"Yes, that's correct. You want to book a table at Schroeder's on the 14th of March at 1:30 pm. Is that correct?\"}\n\n# I need to confirm the required slots 'date' and 'time' with the user.\n\n{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2024-03-14\", \"location\": \"San Francisco\", \"number_of_seats\": \"2\", \"restaurant_name\": \"Schroeder's\", \"time\": \"13:30\"}}",
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you book a table. Can you please tell me the name of the restaurant you're interested in?\"}",
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you book a table. Can you please tell me the name of the restaurant you're interested in?\"}"
+  ],
+  "dialog_completed": false
+}

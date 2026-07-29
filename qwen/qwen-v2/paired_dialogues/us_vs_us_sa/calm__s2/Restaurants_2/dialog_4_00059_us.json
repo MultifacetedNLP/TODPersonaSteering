@@ -1,0 +1,65 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'Thai', 'location': 'San Francisco'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Baan Thai House & Wine Bar', 'time': '11:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "rating",
+      "has_vegetarian_options"
+    ],
+    []
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you help me find a place to eat?\nSystem: Sure. Where would you like me to look, and what kind of food are you interested in?\nUser: I feel like Thai food. Find me something in San Fran.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'Thai', 'location': 'San Francisco'})\nSearch Results\n[{'address': '534 Irving Street', 'category': 'Thai', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'phone_number': '415-379-4505', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Baan Thai House & Wine Bar'}]\nEnd Search Results\nSystem: I've found 10 restaurants that match that criteria. How about Baan Thai House & Wine Bar in San Francisco?\nUser: Depends. What's their rating? Also do they have vegetarian options?\nSystem: They have a user rating of 4.3 and good options for vegetarians.\nUser: Awesome. That sounds good to me.\nSystem: Would you like to make a reservation?\nUser: Yes, I do.\nSystem: What time would you like to make the reservation for?\nUser: Make it for 11:30 in the morning.\nSystem: Please confirm the following details: Book a table for 2 at Baan Thai House & Wine Bar in San Francisco for 11:30 am on March 1st.\nUser: Yes, confirmed.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Baan Thai House & Wine Bar', 'time': '11:30'})\nSearch Results\n[{'address': '534 Irving Street', 'category': 'Thai', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-379-4505', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Baan Thai House & Wine Bar', 'time': '11:30'}]\nEnd Search Results\nSystem: Your reservation has successfully been made.\nLast User Utterance:Great. Thank you.\nLast System Utterance: You're welcome. Enjoy the rest of your day.",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'Thai', 'location': 'San Francisco'})",
+    "APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'Baan Thai House & Wine Bar', 'location': 'San Francisco', 'time': '12:00', 'date': '2023-10-15', 'number_of_seats': '2'})"
+  ],
+  "generated_dialog": [
+    "User: Can you help me find a place to eat?",
+    "System: Of course! What type of cuisine are you in the mood for and where would you like to eat?",
+    "User: I am interested in Thai cuisine, and you can choose the location based on availability.",
+    "System: I'm looking for a Thai restaurant. Do you prefer a specific location or can I suggest some options based on availability?",
+    "User: Based on availability, you can suggest a location. San Francisco is a good choice.",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'Thai', 'location': 'San Francisco'})",
+    "Search Results\n[{'address': '534 Irving Street', 'category': 'Thai', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'phone_number': '415-379-4505', 'price_range': 'moderate', 'rating': 4.3, 'restaurant_name': 'Baan Thai House & Wine Bar'}, {'address': '1175 Folsom Street', 'category': 'Thai', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'phone_number': '415-552-8999', 'price_range': 'moderate', 'rating': 4.2, 'restaurant_name': 'Basil'}, {'address': '272 Claremont Boulevard', 'category': 'Thai', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'phone_number': '415-999-0345', 'price_range': 'moderate', 'rating': 4.3, 'restaurant_name': 'Chaiya Thai Restaurant'}]\nEnd Search Results",
+    "System: I found a couple of Thai restaurants in San Francisco for you. The first one is Baan Thai House & Wine Bar located at 534 Irving Street, with a rating of 4.3. The second one is Basil at 1175 Folsom Street, rated 4.2. Would you like more information on either of these or do you want to make a reservation?",
+    "User: Would you like to make a reservation at Baan Thai House & Wine Bar?",
+    "System: APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'Baan Thai House & Wine Bar', 'location': 'San Francisco', 'time': '12:00', 'date': '2023-10-15', 'number_of_seats': '2'})",
+    "Search Results\n[{'address': '534 Irving Street', 'category': 'Thai', 'date': '2023-10-15', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-379-4505', 'price_range': 'moderate', 'rating': 4.3, 'restaurant_name': 'Baan Thai House & Wine Bar', 'time': '12:00'}]\nEnd Search Results",
+    "System: Your table is reserved at Baan Thai House & Wine Bar in San Francisco for 2 people at 12:00 PM on October 15, 2023.",
+    "User: Thank you for the reservation. You can confirm the details with the restaurant if needed.",
+    "System: You're welcome! If you need any further assistance or want to confirm the details, feel free to reach out. Enjoy your meal at Baan Thai House & Wine Bar!",
+    "User: Thank you for the confirmation. You can contact the restaurant if needed."
+  ],
+  "search_results": [
+    "[{'address': '534 Irving Street', 'category': 'Thai', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'phone_number': '415-379-4505', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Baan Thai House & Wine Bar'}]",
+    "[{'address': '534 Irving Street', 'category': 'Thai', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-379-4505', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Baan Thai House & Wine Bar', 'time': '11:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '534 Irving Street', 'category': 'Thai', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'phone_number': '415-379-4505', 'price_range': 'moderate', 'rating': 4.3, 'restaurant_name': 'Baan Thai House & Wine Bar'}, {'address': '1175 Folsom Street', 'category': 'Thai', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'phone_number': '415-552-8999', 'price_range': 'moderate', 'rating': 4.2, 'restaurant_name': 'Basil'}, {'address': '272 Claremont Boulevard', 'category': 'Thai', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'phone_number': '415-999-0345', 'price_range': 'moderate', 'rating': 4.3, 'restaurant_name': 'Chaiya Thai Restaurant'}]\nEnd Search Results",
+    "Search Results\n[{'address': '534 Irving Street', 'category': 'Thai', 'date': '2023-10-15', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-379-4505', 'price_range': 'moderate', 'rating': 4.3, 'restaurant_name': 'Baan Thai House & Wine Bar', 'time': '12:00'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

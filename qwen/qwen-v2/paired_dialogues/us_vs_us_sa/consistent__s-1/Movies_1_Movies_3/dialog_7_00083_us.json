@@ -1,0 +1,54 @@
+{
+  "api_calls": [
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'Brentwood', 'movie_name': 'IT Chapter Two', 'number_of_tickets': '4', 'show_date': '2019-03-07', 'show_time': '20:30', 'show_type': 'regular'})"
+  ],
+  "user_req_slots": [
+    [
+      "genre",
+      "street_address"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: Hi, I'm wanting to see a movie. I want something at 8:30 pm.\nSystem: Do you prefer regular or 3d?\nUser: Just regular please.\nSystem: Where are you? Do you have a movie title in mind? How many?\nUser: I want IT two. I need 4 for the Brentwood theatre.\nSystem: When do you want to go?\nUser: I want tickets for March 7th.\nSystem: Ok, just to be clear: 4 for It Chapter Two on March 7th at Brentwood for the 8:30 pm show. You just want the regular movie?\nUser: That's a go.\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'Brentwood', 'movie_name': 'IT Chapter Two', 'number_of_tickets': '4', 'show_date': '2019-03-07', 'show_time': '20:30', 'show_type': 'regular'})\nSearch Results\n[{'genre': 'Supernatural', 'location': 'Brentwood', 'movie_name': 'IT Chapter Two', 'number_of_tickets': '4', 'price': '13', 'show_date': '2019-03-07', 'show_time': '20:00', 'show_type': 'regular', 'street_address': '2525 Sand Creek Road', 'theater_name': 'AMC Brentwood 14'}]\nEnd Search Results\nSystem: Your tickets are purchased now.\nUser: What style movie is this?\nSystem: It's Supernatural.\nUser: What is the street address?\nSystem: The theater is at 2525 Sand Creek Road.\nLast User Utterance:Thanks that's a real load off.\nLast System Utterance: Enjoy the scary show.",
+  "predicted_api_calls": [
+    "APICall(method='GetTimesForMovie', parameters={'movie_name': 'IT Chapter Two', 'location': 'Brentwood', 'show_date': '2019-08-08'})",
+    "APICall(method='BuyMovieTickets', parameters={'movie_name': 'IT Chapter Two', 'number_of_tickets': '4', 'show_date': '2019-08-08', 'location': 'Brentwood', 'show_time': '20:00', 'show_type': 'regular', 'theater_name': 'AMC Brentwood 14'})"
+  ],
+  "generated_dialog": [
+    "User: Hi, I'm wanting to see a movie. I want something at 8:30 pm.",
+    "System: Sure, where are you located?",
+    "User: I'm in Brentwood. Can you tell me about the genres available?",
+    "System: Sure, in Brentwood we have a variety of genres. What movie are you interested in seeing?",
+    "User: I'm interested in seeing \"IT Chapter Two\".",
+    "System: APICall(method='GetTimesForMovie', parameters={'movie_name': 'IT Chapter Two', 'location': 'Brentwood', 'show_date': '2019-08-08'})",
+    "Search Results\n[{'genre': 'Supernatural', 'location': 'Brentwood', 'movie_name': 'IT Chapter Two', 'price': 13, 'show_type': 'regular', 'street_address': '2525 Sand Creek Road', 'theater_name': 'AMC Brentwood 14', 'show_date': '2019-08-08', 'show_time': '20:00', 'number_of_tickets': 4}, {'genre': 'Supernatural', 'location': 'Brentwood', 'movie_name': 'IT Chapter Two', 'price': 13, 'show_type': 'regular', 'street_address': '2525 Sand Creek Road', 'theater_name': 'AMC Brentwood 14', 'show_date': '2019-08-08'}]\nEnd Search Results",
+    "System: IT Chapter Two is playing at AMC Brentwood 14 starting at 8:00 pm. There are 4 tickets available. Would you like to book these tickets?",
+    "User: Yes, please book those tickets for me. Can you also give me the street address of the theater?",
+    "System: APICall(method='BuyMovieTickets', parameters={'movie_name': 'IT Chapter Two', 'number_of_tickets': '4', 'show_date': '2019-08-08', 'location': 'Brentwood', 'show_time': '20:00', 'show_type': 'regular', 'theater_name': 'AMC Brentwood 14'})",
+    "Search Results\n[{'genre': 'Supernatural', 'location': 'Brentwood', 'movie_name': 'IT Chapter Two', 'price': 13, 'show_type': 'regular', 'street_address': '2525 Sand Creek Road', 'theater_name': 'AMC Brentwood 14', 'show_date': '2019-08-08', 'show_time': '20:00', 'number_of_tickets': 4}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'genre': 'Supernatural', 'location': 'Brentwood', 'movie_name': 'IT Chapter Two', 'number_of_tickets': '4', 'price': '13', 'show_date': '2019-03-07', 'show_time': '20:00', 'show_type': 'regular', 'street_address': '2525 Sand Creek Road', 'theater_name': 'AMC Brentwood 14'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'genre': 'Supernatural', 'location': 'Brentwood', 'movie_name': 'IT Chapter Two', 'price': 13, 'show_type': 'regular', 'street_address': '2525 Sand Creek Road', 'theater_name': 'AMC Brentwood 14', 'show_date': '2019-08-08', 'show_time': '20:00', 'number_of_tickets': 4}, {'genre': 'Supernatural', 'location': 'Brentwood', 'movie_name': 'IT Chapter Two', 'price': 13, 'show_type': 'regular', 'street_address': '2525 Sand Creek Road', 'theater_name': 'AMC Brentwood 14', 'show_date': '2019-08-08'}]\nEnd Search Results",
+    "Search Results\n[{'genre': 'Supernatural', 'location': 'Brentwood', 'movie_name': 'IT Chapter Two', 'price': 13, 'show_type': 'regular', 'street_address': '2525 Sand Creek Road', 'theater_name': 'AMC Brentwood 14', 'show_date': '2019-08-08', 'show_time': '20:00', 'number_of_tickets': 4}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

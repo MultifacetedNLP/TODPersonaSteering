@@ -1,0 +1,138 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Palo Alto', 'number_of_seats': '1', 'restaurant_name': 'Anatolian Kitchen', 'time': '12:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "category",
+      "has_vegetarian_options"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I want to make a restaurant reservation somewhere please.\nSystem: What is the location you'd like?\nUser: I am in Palo Alto.\nSystem: Is there a restaurant in particular you would like?\nUser: Yes, Anatolian please for 3 people, if you would.\nSystem: A reservation for what time please?\nUser: Would you try for 12:30?\nSystem: Confirming a table for 3 on March 1st at 12:30 pm in Palo Alto at Anatolian Kitchen.\nUser: Oops, please change that to one person.\nSystem: Confirming a 12:30 pm reservation for a party of 1.\nUser: Okay, thanks. I'm wondering if they have vegetarian choices on their menu. Also, what kind of menu do they have in general?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Palo Alto', 'number_of_seats': '1', 'restaurant_name': 'Anatolian Kitchen', 'time': '12:30'})\nSearch Results\n[{'address': '2323 Birch Street', 'category': 'Mediterranean', 'date': '2019-03-01', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Palo Alto', 'number_of_seats': '1', 'phone_number': '650-853-9700', 'price_range': 'moderate', 'rating': '4.20', 'restaurant_name': 'Anatolian Kitchen', 'time': '12:30'}]\nEnd Search Results\nSystem: They serve Mediterranean cuisine and they also do offer vegetarian selections. Congratulations, your table has been booked.\nUser: Wonderful. Thank you for helping me.\nSystem: Is there anything else you need?\nLast User Utterance:No, that's all I needed.\nLast System Utterance: Thank you very much.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: I want to make a restaurant reservation somewhere please.",
+    "System: What type of cuisine are you interested in?",
+    "User: I'm kind of in the mood for something Mediterranean.",
+    "System: Great choice! Which city or location are you looking to dine in?",
+    "User: I think Palo Alto would be fine, I've been there before.",
+    "System: Palo Alto is a great location. What type of Mediterranean cuisine are you interested in (e.g. Greek, Italian, Lebanese)?",
+    "User: Do you have any Greek restaurants in Palo Alto?",
+    "System: We have a few Greek restaurants in Palo Alto. Would you like me to list them out for you?",
+    "User: Do you have any Greek restaurants in Palo Alto that have vegetarian options?",
+    "System: We have a few Greek restaurants in Palo Alto that offer vegetarian options. Would you like me to list them out for you?",
+    "User: I'd like to see the list of Greek restaurants in Palo Alto that offer vegetarian options.",
+    "System: Here are some Greek restaurants in Palo Alto that offer vegetarian options. Would you like me to list them out for you?",
+    "User: I think Anatolian Kitchen sounds good, do they have any vegetarian options?",
+    "System: Anatolian Kitchen is a great choice. Do they have any vegetarian options?",
+    "User: Yes, they have vegetarian options, right?",
+    "System: What type of cuisine are you interested in?",
+    "User: I'm kind of in the mood for something Mediterranean.",
+    "System: You mentioned you're in the mood for Mediterranean cuisine. Which city or location are you looking to dine in?",
+    "User: Palo Alto.",
+    "System: You mentioned you're in the mood for Mediterranean cuisine. Which city or location are you looking to dine in?",
+    "User: Palo Alto.",
+    "System: You mentioned you're in the mood for Mediterranean cuisine. Which city or location are you looking to dine in?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '2323 Birch Street', 'category': 'Mediterranean', 'date': '2019-03-01', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Palo Alto', 'number_of_seats': '1', 'phone_number': '650-853-9700', 'price_range': 'moderate', 'rating': '4.20', 'restaurant_name': 'Anatolian Kitchen', 'time': '12:30'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"What type of cuisine are you interested in?\"}",
+    "{\"type\": \"message\", \"content\": \"Great choice! What city or area would you like to make the reservation in?\"}",
+    "{\"type\": \"message\", \"content\": \"Palo Alto is a great choice. What type of Mediterranean cuisine are you looking for, e.g. Greek, Italian, Lebanese?\"}",
+    "{\"type\": \"message\", \"content\": \"We have a few Greek restaurants in Palo Alto. Would you like me to list them out for you?\"}",
+    "{\"type\": \"message\", \"content\": \"We have a few Greek restaurants in Palo Alto. Would you like me to list them out for you?\"}\n\n{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"Greek\", \"location\": \"Palo Alto\", \"has_vegetarian_options\": \"True\"}}",
+    "{\"type\": \"message\", \"content\": \"Here are some Greek restaurants in Palo Alto that offer vegetarian options. Would you like me to list them out for you?\"}\n\n{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"Greek\", \"location\": \"Palo Alto\", \"has_vegetarian_options\": \"True\"}}",
+    "{\"type\": \"message\", \"content\": \"Anatolian Kitchen is a great choice. Do they have any vegetarian options?\"}\n\nPlease respond with one of the following:\n- A message to the user\n- An API call to gather more information about Anatolian Kitchen\n- A confirmation of the user's choice and a request for a specific time or date for the reservation",
+    "{\"type\": \"message\", \"content\": \"What type of cuisine are you interested in?\"}\n\n# Wait for user response",
+    "{\"type\": \"message\", \"content\": \"You mentioned you're in the mood for Mediterranean cuisine. Which city or location are you looking to dine in?\"}",
+    "{\"type\": \"message\", \"content\": \"You mentioned you're in the mood for Mediterranean cuisine. Which city or location are you looking to dine in?\"}\n\n{\"type\": \"message\", \"content\": \"I think Palo Alto would be fine, I've been there before.\"}\n\n{\"type\": \"message\", \"content\": \"Palo Alto is a great location. What type of Mediterranean cuisine are you interested in (e.g. Greek, Italian, Lebanese)?\"}\n\n{\"type\": \"message\", \"content\": \"Do you have any Greek restaurants in Palo Alto?\"}\n\n{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"Greek\", \"location\": \"Palo Alto\", \"has_vegetarian_options\": \"True\"}}",
+    "{\"type\": \"message\", \"content\": \"You mentioned you're in the mood for Mediterranean cuisine. Which city or location are you looking to dine in?\"}\n\n# I need to gather the location slot value from the user.\n# The required slot for the current intent is location.\n# I will ask the user for the location slot value.\n\n{\"type\": \"message\", \"content\": \"You mentioned you're in the mood for Mediterranean cuisine. Which city or location are you looking to dine in?\"}\n\n# I need to gather the location slot value from the user.\n# The required slot for the current intent is location.\n# I will ask the user for the location slot value.\n\n{\"type\": \"message\", \"content\": \"You mentioned you're in the mood for Mediterranean cuisine. Which city or location are you looking to dine in?\"}\n\n# I need to gather the location slot value from the user.\n# The required slot for the current intent is location.\n# I will ask the user for the location slot value.\n\n{\"type\": \"message\", \"content\": \"You mentioned you're in the mood for Mediterranean cuisine. Which city or location are you looking to dine in?\"}\n\n# I need to gather the location slot value from the user.\n# The required"
+  ],
+  "dialog_completed": false
+}

@@ -1,0 +1,61 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'directed_by': 'James Gray'})"
+  ],
+  "user_req_slots": [
+    [
+      "cast"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: Can you find me a nice movie directed by James Gray to watch?\nSystem: ApiCall(method='FindMovies', parameters={'directed_by': 'James Gray'})\nSearch Results\n[{'cast': 'Jamie Kennedy', 'directed_by': 'James Gray', 'genre': 'Sci-fi', 'movie_title': 'Ad Astra', 'percent_rating': '84'}]\nEnd Search Results\nSystem: There is 1 movie called Ad Astra with an average rating of 84 percent.\nUser: Who is the actor in the movie?\nSystem: The actor of this movie is Jamie Kennedy.\nLast User Utterance:That sounds great. That is all I need for now.\nLast System Utterance: I am glad I could help. Have a great day!",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'directed_by': 'James Gray', 'genre': 'dontcare', 'cast': 'dontcare'})"
+  ],
+  "generated_dialog": [
+    "User: Can you find me a nice movie directed by James Gray to watch?",
+    "System: APICall(method='FindMovies', parameters={'directed_by': 'James Gray', 'genre': 'dontcare', 'cast': 'dontcare'})",
+    "Search Results\n[{'cast': 'Jamie Kennedy', 'directed_by': 'James Gray', 'genre': 'Sci-fi', 'movie_title': 'Ad Astra', 'percent_rating': 84}]\nEnd Search Results",
+    "System: I found 'Ad Astra' directed by James Gray. It has a rating of 84%. Would you like more details on this movie?",
+    "User: Sure, can you tell me who's in the main cast?",
+    "System: The main cast includes Jamie Kennedy.",
+    "User: Oh, I've never heard of him... Can you maybe find someone with like, big names in it? Like, I don't know, Brad Pitt or something?"
+  ],
+  "search_results": [
+    "[{'cast': 'Jamie Kennedy', 'directed_by': 'James Gray', 'genre': 'Sci-fi', 'movie_title': 'Ad Astra', 'percent_rating': '84'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'cast': 'Jamie Kennedy', 'directed_by': 'James Gray', 'genre': 'Sci-fi', 'movie_title': 'Ad Astra', 'percent_rating': 84}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"FindMovies\", \"parameters\": {\"directed_by\": \"James Gray\", \"genre\": \"dontcare\", \"cast\": \"dontcare\"}}",
+    "{\"type\": \"message\", \"content\": \"I found 'Ad Astra' directed by James Gray. It has a rating of 84%. Would you like more details on this movie?\"}",
+    "{\"type\": \"message\", \"content\": \"The main cast includes Jamie Kennedy.\"}"
+  ],
+  "dialog_completed": false
+}

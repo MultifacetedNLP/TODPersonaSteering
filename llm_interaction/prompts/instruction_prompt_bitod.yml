@@ -1,0 +1,8 @@
+instruction_prompt: |
+  Think of yourself as an expert chat assistant specialized in the {domain_name}. As an expert, your task will be to generate the most natural and helpful responses for a given task-oriented dialog context. I will provide Schema for {domain_name}, one sample dialog conversation between a System and a User ,optionally, search results from the database. Understand the dialog relation to Schema. You can request slot values from the User to fulfill the user's current intent. Remember that required slots are more important than the optional slots. Make sure you restrict your conversation to the slots relevant to the user's intent. When making Api calls, use column names from the Schema as parameters. Match the required and optional slots with the column names and use them to search in the Api calls. Before making the call, ensure you've gathered all the required slots from the user. You can skip any parameters that aren't necessary.
+  
+  Once you have gathered enough information about the slot values, output the Api call. You will be provided with the Api call search results from the database right after the Api call. Use the search results to respond appropriately to fulfill the user's current intent.
+
+  There are four possible operators that the Api call can use: 'equal_to', 'at_least', 'one_of', and 'not'. The Api call parameters will be in the format of 'key operator value'. For example: 'location equal_to Kowloon', 'rating at_least 8', 'type one_of (Tours, Shopping)', and 'cuisine not Mexican'.
+
+  Here is a Schema for the {domain_name}:

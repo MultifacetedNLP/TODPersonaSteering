@@ -1,0 +1,81 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'American', 'location': 'Emeryville'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-10', 'location': 'Emeryville', 'number_of_seats': '1', 'restaurant_name': 'The Bureau 510', 'time': '11:45'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-10', 'location': 'Emeryville', 'number_of_seats': '1', 'restaurant_name': 'The Bureau 510', 'time': '12:00'})"
+  ],
+  "user_req_slots": [
+    [],
+    [],
+    []
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Hello, I was wondering if you could help me find a place to eat?\nSystem: Yes, I can certainly do that. Is there a city you would like to focus on? And what type of cuisine?\nUser: I would like to eat at a barbecue restaurant. Preferably somewhere in Emeryville.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'American', 'location': 'Emeryville'})\nSearch Results\n[{'address': '5800 Hollis Street', 'category': 'American', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Emeryville', 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'The Bureau 510'}]\nEnd Search Results\nSystem: I have found 1 restaurant that matches your inquiry. The Bureau 510 is a barbecue restaurant located in Emeryville.\nUser: Yes, that works for me. Can you help me book a table there? It will be a reservation for one person on March 10th at 11:45 am.\nSystem: Please confirm the reservation details: A table for 1 at The Bureau 510 in Emeryville for March 10th at 11:45 am.\nUser: Yes, that is correct.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-10', 'location': 'Emeryville', 'number_of_seats': '1', 'restaurant_name': 'The Bureau 510', 'time': '11:45'})\nSearch Results\n[{'address': '5800 Hollis Street', 'category': 'American', 'date': '2019-03-10', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Emeryville', 'number_of_seats': '1', 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'The Bureau 510', 'time': '12:00'}]\nEnd Search Results\nSystem: Sorry, it seems as though the 11:45 am time slot is unavailable. Would you be fine with a reservation for 1 at The Bureau 510 on March 10th at 12 pm instead?\nUser: Yes, I can do that.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-10', 'location': 'Emeryville', 'number_of_seats': '1', 'restaurant_name': 'The Bureau 510', 'time': '12:00'})\nSearch Results\n[{'address': '5800 Hollis Street', 'category': 'American', 'date': '2019-03-10', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Emeryville', 'number_of_seats': '1', 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'The Bureau 510', 'time': '12:00'}]\nEnd Search Results\nSystem: Your reservation has been booked.\nUser: Thank you for your help!\nSystem: Is there anything else I can do for you today?\nLast User Utterance:No, that will be all. Thank you again.\nLast System Utterance: Have a good day, goodbye!",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Hello, I was wondering if you could help me find a place to eat?",
+    "System: What type of food are you interested in and where should it be?",
+    "User: I'm in the mood for American food, and we're in Emeryville, so that's a great starting point!",
+    "System: American food is a great choice! Can you please tell me what price range you're looking for? (cheap, moderate, pricey, ultra high-end)",
+    "User: We're totally down for anything, but let's go for something super fun and not break the bank!",
+    "System: You're looking for American food in Emeryville. What price range are you interested in? (cheap, moderate, pricey, ultra high-end)",
+    "User: We're totally down for anything, but let's go for something super fun and not break the bank!",
+    "System: You're looking for American food in Emeryville. What price range are you interested in? (cheap, moderate, pricey, ultra high-end)",
+    "User: We're totally down for anything, but let's go for something super fun and not break the bank!",
+    "System: You're looking for American food in Emeryville. What price range are you interested in? (cheap, moderate, pricey, ultra high-end)",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '5800 Hollis Street', 'category': 'American', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Emeryville', 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'The Bureau 510'}]",
+    "[{'address': '5800 Hollis Street', 'category': 'American', 'date': '2019-03-10', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Emeryville', 'number_of_seats': '1', 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'The Bureau 510', 'time': '12:00'}]",
+    "[{'address': '5800 Hollis Street', 'category': 'American', 'date': '2019-03-10', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Emeryville', 'number_of_seats': '1', 'phone_number': '510-595-1000', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'The Bureau 510', 'time': '12:00'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"What type of food are you interested in and where should it be?\"}",
+    "{\"type\": \"message\", \"content\": \"American food in Emeryville sounds great. What's your preferred price range for the restaurant?\"}",
+    "{\"type\": \"message\", \"content\": \"You're looking for American food in Emeryville. What price range are you interested in? (cheap, moderate, pricey, ultra high-end)\"}\n\nPlease respond with one of the options: cheap, moderate, pricey, ultra high-end.",
+    "{\"type\": \"message\", \"content\": \"You're looking for American food in Emeryville. What price range are you interested in? (cheap, moderate, pricey, ultra high-end)\"}\n\n---\n\n{\"type\": \"message\", \"content\": \"You mentioned you're looking for something super fun and not breaking the bank. I'm assuming you're looking for something moderately priced. Is that correct?\"}\n\n---\n\n{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"American\", \"location\": \"Emeryville\", \"price_range\": \"moderate\"}}",
+    "{\"type\": \"message\", \"content\": \"You're looking for American food in Emeryville. What price range are you interested in? (cheap, moderate, pricey, ultra high-end)\"}\n\nPlease respond with one of the following options: cheap, moderate, pricey, ultra high-end."
+  ],
+  "dialog_completed": false
+}

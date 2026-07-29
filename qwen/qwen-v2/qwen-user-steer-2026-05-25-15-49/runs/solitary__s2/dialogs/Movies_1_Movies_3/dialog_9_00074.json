@@ -1,0 +1,69 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'location': 'Palo Alto'})",
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'number_of_tickets': '1', 'show_date': '2019-03-01', 'show_time': '19:45', 'show_type': '3d'})"
+  ],
+  "user_req_slots": [
+    [],
+    [
+      "theater_name",
+      "street_address"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: Can you help me find a movie?\nSystem: Sure. What is your location?\nUser: I want to find movies in Palo Alto.\nSystem: ApiCall(method='FindMovies', parameters={'location': 'Palo Alto'})\nSearch Results\n[{'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'Blinded by the Light', 'price': '7', 'show_type': 'regular', 'street_address': '3000 El Camino Real Bldg. #6', 'theater_name': 'CineArts at Palo Alto Square'}]\nEnd Search Results\nSystem: I found you 4 movies: Blinded by the Light, Brittany Runs a Marathon, and Stage Door.\nUser: Can you find something else?\nSystem: How about The Ladykillers?\nUser: Ladykillers is perfect. Can you buy me some tickets for quarter to 8 in the evening? I want to watch the movie in 3d.\nSystem: For what date?\nUser: Get me one ticket for March 1st.\nSystem: Confirming that you want 1 ticket for the 7:45 pm 3d showing of The Ladykillers on March 1st in Palo Alto.\nUser: That sounds good. What is the address of the theater?\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'number_of_tickets': '1', 'show_date': '2019-03-01', 'show_time': '19:45', 'show_type': '3d'})\nSearch Results\n[{'genre': 'Thriller', 'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'number_of_tickets': '1', 'price': '11', 'show_date': '2019-03-01', 'show_time': '19:30', 'show_type': '3d', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}]\nEnd Search Results\nSystem: The Stanford Theatre is located at 221 University Avenue. Your tickets have been confirmed.\nUser: Thanks for your help.\nSystem: Do you need anything else?\nLast User Utterance:No. Thanks for your help.\nLast System Utterance: You're welcome. Have a good day.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'location': 'Palo Alto'})",
+    "APICall(method='GetTimesForMovie', parameters={'movie_name': 'The Man Who Knew Too Much', 'location': 'Palo Alto', 'show_date': '2019-03-03'})"
+  ],
+  "generated_dialog": [
+    "User: Can you help me find a movie?",
+    "System: Of course! What location are you in or interested in?",
+    "User: I am in Palo Alto.",
+    "System: APICall(method='FindMovies', parameters={'location': 'Palo Alto'})",
+    "Search Results\n[{'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}, {'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'The Man Who Knew Too Much', 'price': 14, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}, {'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-05', 'show_time': '19:30'}]\nEnd Search Results",
+    "System: We have a couple of options for you. 'Pillow Talk' which is a Romance movie or 'The Man Who Knew Too Much', a Drama. Both are playing at the Stanford Theatre. Would you like to see 'Pillow Talk' or 'The Man Who Knew Too Much'?",
+    "User: I prefer 'The Ladykillers'. Could you please book a ticket for this movie?",
+    "System: I'm sorry, we don't have 'The Ladykillers' showing in Palo Alto right now. However, we do have 'Pillow Talk' and 'The Man Who Knew Too Much'. Which one would you like to see?",
+    "User: I will continue to seek information about 'The Ladykillers' and provide the necessary details for ticket purchase. \n\nThe Ladykillers is not currently available, but I would like to proceed with the details for the next available option. Can you provide information on the Stanford Theatre and its street address?",
+    "System: Sure! The next available options are 'Pillow Talk' and 'The Man Who Knew Too Much'. Since 'The Ladykillers' is not available, let's proceed with 'The Man Who Knew Too Much'. This movie is playing at the Stanford Theatre located at 221 University Avenue in Palo Alto. Would you like to see this movie?",
+    "User: Yes, I would like to see 'The Man Who Knew Too Much'. Please proceed with the ticket booking.",
+    "System: APICall(method='GetTimesForMovie', parameters={'movie_name': 'The Man Who Knew Too Much', 'location': 'Palo Alto', 'show_date': '2019-03-03'})",
+    "Search Results\n[{'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'The Man Who Knew Too Much', 'price': 14, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-03'}, {'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'The Man Who Knew Too Much', 'price': 14, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-03', 'show_time': '19:30'}, {'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'The Man Who Knew Too Much', 'price': 14, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-03', 'show_time': '19:30'}]\nEnd Search Results",
+    "System: We have two showtimes available for 'The Man Who Knew Too Much' at 19:30 on March 3rd. Would you like to book tickets for this time?",
+    "User: I prefer the later showtime at 19:45 on March 1st. Please proceed with the ticket booking.",
+    "System: I'm sorry, but there is no showtime at 19:45 on March 1st. The closest available time is 19:30 on March 3rd. Would you like to proceed with booking tickets for this time?",
+    "User: I understand that the specified time is not available. I will proceed with booking the ticket for the 19:30 showtime on March 3rd."
+  ],
+  "search_results": [
+    "[{'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'Blinded by the Light', 'price': '7', 'show_type': 'regular', 'street_address': '3000 El Camino Real Bldg. #6', 'theater_name': 'CineArts at Palo Alto Square'}]",
+    "[{'genre': 'Thriller', 'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'number_of_tickets': '1', 'price': '11', 'show_date': '2019-03-01', 'show_time': '19:30', 'show_type': '3d', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}, {'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'The Man Who Knew Too Much', 'price': 14, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}, {'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-05', 'show_time': '19:30'}]\nEnd Search Results",
+    "Search Results\n[{'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'The Man Who Knew Too Much', 'price': 14, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-03'}, {'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'The Man Who Knew Too Much', 'price': 14, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-03', 'show_time': '19:30'}, {'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'The Man Who Knew Too Much', 'price': 14, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-03', 'show_time': '19:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

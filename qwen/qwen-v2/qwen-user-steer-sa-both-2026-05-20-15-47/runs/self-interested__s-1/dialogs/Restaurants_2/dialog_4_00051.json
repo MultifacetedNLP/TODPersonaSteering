@@ -1,0 +1,135 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'Asian', 'location': 'San Francisco'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-05', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': '8 Immortals Restaurant', 'time': '12:30'})"
+  ],
+  "user_req_slots": [
+    [],
+    [
+      "price_range",
+      "address"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I'm searching for a location to dine at.\nSystem: what place ought I look in, and what sort of cuisine are you searching for?\nUser: Get me a diner in San Francisco that offers Asian cuisine.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'Asian', 'location': 'San Francisco'})\nSearch Results\n[{'address': '1433 Taraval', 'category': 'Asian', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'phone_number': '415-731-5515', 'price_range': 'cheap', 'rating': '4.00', 'restaurant_name': '8 Immortals Restaurant'}]\nEnd Search Results\nSystem: There is a lovely diner called 8 Immortals Restaurant in San Francisco.\nUser: Yeah, that's fine with me.\nSystem: Do you wish to book a spot there?\nUser: Yeah, I'd like to make a reservation on March 5th.\nSystem: When should I book for?\nUser: Make the booking for 12:30 pm.\nSystem: Please verify the following information: reserve a spot for 2 people at 8 Immortals Restaurant in San Francisco, with the date being March 5th 12:30 pm.\nUser: Yeah, that's fine. Is the diner cheap? Where is it located?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-05', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': '8 Immortals Restaurant', 'time': '12:30'})\nSearch Results\n[{'address': '1433 Taraval', 'category': 'Asian', 'date': '2019-03-05', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-731-5515', 'price_range': 'cheap', 'rating': '4.00', 'restaurant_name': '8 Immortals Restaurant', 'time': '12:30'}]\nEnd Search Results\nSystem: Your booking is complete, and yes - it is a cheap diner. The location is 1433 Taraval.\nUser: Thank you for your assistance.\nSystem: Could I assist you with something else?\nLast User Utterance:Nope; thank you for your help.\nLast System Utterance: Have a pleasant afternoon.",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'Asian', 'location': 'San Francisco'})"
+  ],
+  "generated_dialog": [
+    "User: I'm searching for a location to dine at.",
+    "System: Sure, what type of cuisine are you in the mood for?",
+    "User: I'd like to try some Asian cuisine.",
+    "System: Great! And where would you like to dine in terms of location?",
+    "User: I'm looking in San Francisco.",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'Asian', 'location': 'San Francisco'})",
+    "Search Results\n[{'address': '298 Gough Street', 'category': 'Asian', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'phone_number': '415-863-9335', 'price_range': 'moderate', 'rating': 3.7, 'restaurant_name': 'Bai Thong Thai'}, {'address': '(between 2nd & 3rd Ave)', 'category': 'Asian', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'phone_number': '415-474-5569', 'price_range': 'moderate', 'rating': 4.4, 'restaurant_name': 'Burmese Kitchen'}, {'address': '33 The Embarcadero', 'category': 'Asian', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'phone_number': '415-864-8999', 'price_range': 'moderate', 'rating': 4.0, 'restaurant_name': 'Butterfly Restaurant'}]\nEnd Search Results",
+    "System: I found a few options for you. The first one is Bai Thong Thai, located at 298 Gough Street. It has vegetarian options and a moderate price range. Another option is Burmese Kitchen, situated between 2nd & 3rd Ave, without vegetarian options but with a higher rating. The last one is Butterfly Restaurant at 33 The Embarcadero, also with vegetarian options.",
+    "User: Can you tell me the price range and address for 8 Immortals Restaurant please?",
+    "System: I couldn't find a restaurant named 8 Immortals Restaurant in our database. However, I can provide information on the restaurants I previously mentioned. Would you like details on any of those?",
+    "User: Sure, can you give me the price range and address for Bai Thong Thai?",
+    "System: Bai Thong Thai is located at 298 Gough Street and has a moderate price range.",
+    "User: That sounds good. Can you confirm the address and price range for 8 Immortals Restaurant again, even if it's not in the database? I might still be interested.",
+    "System: I understand. Since 8 Immortals Restaurant is not in our database, I don't have specific information about it. However, if you're interested in any of the other restaurants I mentioned, such as Bai Thong Thai, I can provide more details.",
+    "User: Sure, let's go with Bai Thong Thai. Can you confirm the address and price range one more time?",
+    "System: Sure, Bai Thong Thai is located at 298 Gough Street and has a moderate price range.",
+    "User: That works for me. Could you please confirm the address and price range one more time?",
+    "System: Sure, Bai Thong Thai is located at 298 Gough Street and has a moderate price range.",
+    "User: Great, can you confirm the address and price range for Bai Thong Thai one more time?",
+    "System: Absolutely, Bai Thong Thai is located at 298 Gough Street and has a moderate price range.",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '1433 Taraval', 'category': 'Asian', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'phone_number': '415-731-5515', 'price_range': 'cheap', 'rating': '4.00', 'restaurant_name': '8 Immortals Restaurant'}]",
+    "[{'address': '1433 Taraval', 'category': 'Asian', 'date': '2019-03-05', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-731-5515', 'price_range': 'cheap', 'rating': '4.00', 'restaurant_name': '8 Immortals Restaurant', 'time': '12:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '298 Gough Street', 'category': 'Asian', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'phone_number': '415-863-9335', 'price_range': 'moderate', 'rating': 3.7, 'restaurant_name': 'Bai Thong Thai'}, {'address': '(between 2nd & 3rd Ave)', 'category': 'Asian', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'phone_number': '415-474-5569', 'price_range': 'moderate', 'rating': 4.4, 'restaurant_name': 'Burmese Kitchen'}, {'address': '33 The Embarcadero', 'category': 'Asian', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'phone_number': '415-864-8999', 'price_range': 'moderate', 'rating': 4.0, 'restaurant_name': 'Butterfly Restaurant'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 2.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"Sure, what type of cuisine are you in the mood for?\"}",
+    "{\"type\": \"message\", \"content\": \"Great! And where would you like to locate your dining experience?\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"Asian\", \"location\": \"San Francisco\"}}",
+    "{\"type\": \"message\", \"content\": \"I found a few options for you. The first one is Bai Thong Thai, located at 298 Gough Street. It has vegetarian options and a moderate price range. Another option is Burmese Kitchen, situated between 2nd & 3rd Ave, without vegetarian options but with a higher rating. The last one is Butterfly Restaurant at 33 The Embarcadero, also with vegetarian options.\"}",
+    "{\"type\": \"message\", \"content\": \"I couldn't find a restaurant named 8 Immortals Restaurant in our database. However, I can provide information on the other options I mentioned earlier. Would you like details on Bai Thong Thai, Burmese Kitchen, or Butterfly Restaurant?\"}",
+    "{\"type\": \"message\", \"content\": \"Bai Thong Thai is located at 298 Gough Street and has a moderate price range.\"}",
+    "{\"type\": \"message\", \"content\": \"I couldn't find a restaurant named 8 Immortals Restaurant in our database. However, I can provide information on the restaurants I previously mentioned. Would you like details on Bai Thong Thai or any other restaurant?\"}",
+    "{\"type\": \"message\", \"content\": \"Sure, Bai Thong Thai is located at 298 Gough Street and has a moderate price range.\"}",
+    "{\"type\": \"message\", \"content\": \"Sure, Bai Thong Thai is located at 298 Gough Street and has a moderate price range.\"}",
+    "{\"type\": \"message\", \"content\": \"Absolutely, Bai Thong Thai is located at 298 Gough Street and has a moderate price range.\"}"
+  ],
+  "dialog_completed": false
+}

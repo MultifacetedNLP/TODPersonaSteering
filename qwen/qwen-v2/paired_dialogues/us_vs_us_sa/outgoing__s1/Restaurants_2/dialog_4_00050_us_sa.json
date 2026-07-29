@@ -1,0 +1,99 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'Italian', 'location': 'Belmont'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-14', 'location': 'Belmont', 'number_of_seats': '2', 'restaurant_name': 'Caprinos', 'time': '11:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "phone_number"
+    ],
+    [
+      "price_range",
+      "address"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Help me find somewhere to eat.\nSystem: Sure, where and what kind of food?\nUser: Find an Italian restaurant in Belmont.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'Italian', 'location': 'Belmont'})\nSearch Results\n[{'address': '1000 6th Avenue', 'category': 'Italian', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Belmont', 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': '3.20', 'restaurant_name': 'Caprinos'}]\nEnd Search Results\nSystem: There's 3 you may like. How about Caprinos in Belmont?\nUser: What's the phone number?\nSystem: They're at 650-591-4156.\nUser: Great, thank you.\nSystem: Should I reserve a table?\nUser: Yeah, reserve a table for 2 for the 14th of this month at morning 11:30.\nSystem: Sure, please confirm you'd like a table for 2 at Caprinos in Belmont at 11:30 am on March 14th.\nUser: Correct, is it cheap and what's their address?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-14', 'location': 'Belmont', 'number_of_seats': '2', 'restaurant_name': 'Caprinos', 'time': '11:30'})\nSearch Results\n[{'address': '1000 6th Avenue', 'category': 'Italian', 'date': '2019-03-14', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Belmont', 'number_of_seats': '2', 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': '3.20', 'restaurant_name': 'Caprinos', 'time': '11:30'}]\nEnd Search Results\nSystem: I've reserved your table. They are moderate and at 1000 6th Avenue.\nUser: Thank you again.\nSystem: Need anything else?\nLast User Utterance:Nope, thank you!\nLast System Utterance: My pleasure, enjoy your day.",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'Italian', 'location': 'Belmont'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2019-03-14', 'location': 'Belmont', 'number_of_seats': '2', 'restaurant_name': 'Vivace Ristorante', 'time': '11:30'})"
+  ],
+  "generated_dialog": [
+    "User: Help me find somewhere to eat.",
+    "System: Sure! What type of cuisine are you in the mood for and where would you like to eat?",
+    "User: I'm in the mood for some Italian food, and I heard Belmont has some great spots! Can you find me a place there?",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'Italian', 'location': 'Belmont'})",
+    "Search Results\n[{'address': '1000 6th Avenue', 'category': 'Italian', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Belmont', 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': 3.2, 'restaurant_name': 'Caprinos'}, {'address': '968 Ralston Avenue', 'category': 'Italian', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Belmont', 'phone_number': '650-620-9103', 'price_range': 'moderate', 'rating': 4.4, 'restaurant_name': 'Divino Ristorante'}, {'address': '1910 Ralston Avenue', 'category': 'Italian', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Belmont', 'phone_number': '650-637-0611', 'price_range': 'moderate', 'rating': 4.5, 'restaurant_name': 'Vivace Ristorante'}]\nEnd Search Results",
+    "System: I found a few Italian restaurants in Belmont for you. The first one is Divino Ristorante with a rating of 4.4, and Vivace Ristorante with a rating of 4.5. Which one would you like to try?",
+    "User: I think I'll go with Vivace Ristorante! Can you book us a table for two at 11:30 AM on March 14th?",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2019-03-14', 'location': 'Belmont', 'number_of_seats': '2', 'restaurant_name': 'Vivace Ristorante', 'time': '11:30'})",
+    "Search Results\n[{'address': '1000 6th Avenue', 'category': 'Italian', 'date': '2019-03-14', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.False_, 'location': 'Belmont', 'number_of_seats': 2, 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': np.float64(3.2), 'restaurant_name': 'Vivace Ristorante', 'time': '11:30'}]\nEnd Search Results",
+    "System: Great! Your table at Vivace Ristorante in Belmont for two people at 11:30 AM on March 14th is booked.",
+    "User: That sounds perfect! By the way, do you know if they have any special deals on pasta dishes?",
+    "System: I don't have specific information on current deals, but you can always check with Vivace Ristorante directly. Would you like me to provide the contact number?",
+    "User: Sure, can you give me their contact number so I can ask about any pasta specials?"
+  ],
+  "search_results": [
+    "[{'address': '1000 6th Avenue', 'category': 'Italian', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Belmont', 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': '3.20', 'restaurant_name': 'Caprinos'}]",
+    "[{'address': '1000 6th Avenue', 'category': 'Italian', 'date': '2019-03-14', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Belmont', 'number_of_seats': '2', 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': '3.20', 'restaurant_name': 'Caprinos', 'time': '11:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '1000 6th Avenue', 'category': 'Italian', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Belmont', 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': 3.2, 'restaurant_name': 'Caprinos'}, {'address': '968 Ralston Avenue', 'category': 'Italian', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Belmont', 'phone_number': '650-620-9103', 'price_range': 'moderate', 'rating': 4.4, 'restaurant_name': 'Divino Ristorante'}, {'address': '1910 Ralston Avenue', 'category': 'Italian', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Belmont', 'phone_number': '650-637-0611', 'price_range': 'moderate', 'rating': 4.5, 'restaurant_name': 'Vivace Ristorante'}]\nEnd Search Results",
+    "Search Results\n[{'address': '1000 6th Avenue', 'category': 'Italian', 'date': '2019-03-14', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.False_, 'location': 'Belmont', 'number_of_seats': 2, 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': np.float64(3.2), 'restaurant_name': 'Vivace Ristorante', 'time': '11:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"Sure! What type of cuisine are you in the mood for and where would you like to eat?\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"Italian\", \"location\": \"Belmont\"}}",
+    "{\"type\": \"message\", \"content\": \"I found a few Italian restaurants in Belmont for you. The first one is Divino Ristorante with a rating of 4.4, and Vivace Ristorante with a rating of 4.5. Which one would you like to try?\"}",
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2019-03-14\", \"location\": \"Belmont\", \"number_of_seats\": 2, \"restaurant_name\": \"Vivace Ristorante\", \"time\": \"11:30\"}}",
+    "{\"type\": \"message\", \"content\": \"Great! Your table for two at Vivace Ristorante in Belmont on March 14th at 11:30 AM is booked.\"}",
+    "{\"type\": \"message\", \"content\": \"I don't have specific information on current deals, but you can always check with Vivace Ristorante directly. Would you like me to provide the contact number?\"}"
+  ],
+  "dialog_completed": false
+}

@@ -1,0 +1,41 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'cast': 'Zoe Bell'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: I want to watch a Zoe Bell movie.\nSystem: ApiCall(method='FindMovies', parameters={'cast': 'Zoe Bell'})\nSearch Results\n[{'cast': 'Zoe Bell', 'directed_by': 'Quentin Tarantino', 'genre': 'Offbeat', 'movie_title': 'Once Upon a Time In Hollywood', 'percent_rating': '85'}]\nEnd Search Results\nSystem: I found 1 movie. Once Upon a Time in Hollywood has a 85 percent rating.\nUser: That's a good one.\nSystem: What else do you need help with?\nLast User Utterance:That's all. Thank you.\nLast System Utterance: Have a nice day.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'cast': 'Zoe Bell'})"
+  ],
+  "generated_dialog": [
+    "User: I want to watch a Zoe Bell movie.",
+    "System: APICall(method='FindMovies', parameters={'cast': 'Zoe Bell'})",
+    "Search Results\n[{'cast': 'Zoe Bell', 'directed_by': 'Quentin Tarantino', 'genre': 'Offbeat', 'movie_title': 'Once Upon a Time In Hollywood', 'percent_rating': 85}]\nEnd Search Results",
+    "System: I found a movie starring Zoe Bell. It's 'Once Upon a Time In Hollywood' directed by Quentin Tarantino with an 85% rating.",
+    "User: That sounds interesting! Can you tell me more about the plot?",
+    "System: Sure! 'Once Upon a Time In Hollywood' is a film set in Los Angeles in 1969. It follows TV star Rick Dalton (played by Leonardo DiCaprio) and his stunt double Cliff Booth (Brad Pitt) as they navigate a fading career and changing times. The movie also features significant cameos and references to real-life events and figures of the era.",
+    "User: That plot sounds intriguing. Could you tell me who else stars in the movie besides Leonardo DiCaprio and Brad Pitt?"
+  ],
+  "search_results": [
+    "[{'cast': 'Zoe Bell', 'directed_by': 'Quentin Tarantino', 'genre': 'Offbeat', 'movie_title': 'Once Upon a Time In Hollywood', 'percent_rating': '85'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'cast': 'Zoe Bell', 'directed_by': 'Quentin Tarantino', 'genre': 'Offbeat', 'movie_title': 'Once Upon a Time In Hollywood', 'percent_rating': 85}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

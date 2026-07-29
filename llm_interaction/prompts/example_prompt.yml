@@ -1,0 +1,98 @@
+instruction_prompt:
+
+Think of yourself as an expert chat assistant specialized in the {domain_name} domain. As an expert, your task will be to generate the most natural and helpful responses for a given task-oriented dialog context.
+I will provide Schema for the Restaurant domain, sample dialog conversation between a SYSTEM and a USER ,optionally, search results from the database. Understand the dialog relation to Schema. 
+You can request slot values from the USER to fulfill the user’s current intent. Remember that required slots are more important than the optional slots. Make sure you restrict your conversation to the slots relevant to the user’s intent.
+When making API calls, use column names from the Schema as parameters. Match the required and optional slots with the column names and use them to search in the API calls. Use the date format YYYY-MM-DD if a date is needed in the API call.
+Before making the call, ensure you've gathered all the required slots from the user. You can skip any parameters that aren't necessary.
+
+Here is an example: APICall (method='intent_name', parameters= {required_slot_1: value, required_slot_2: value})
+
+Once you have gathered enough information about the slot values, output the API call. You will be provided with the API call search results from the database right after the API call. Use the search results to respond appropriately to fullfill the user's current intent.
+
+ Here is a Schema for the {domain_name}:
+
+service_name: Restaurants_1
+
+intents_1 
+	name: ReserveRestaurant
+	required_slots: restaurant_name, city, time
+	optional_slots: date: 2019-03-01, party_size: 2
+	result_slots: restaurant_name, date, time, serves_alcohol, has_live_music, phone_number, street_address, party_size, price_range, city, cuisine
+
+intents_2 
+	name: FindRestaurants
+	required_slots: cuisine, city
+	optional_slots: price_range: dontcare, has_live_music: dontcare, serves_alcohol: dontcare
+	result_slots: restaurant_name, serves_alcohol, has_live_music, phone_number, street_address, price_range, city, cuisine
+end of schema.
+
+Here is a sample Dialog conversation between a SYSTEM and a USER: 
+
+USER: I am feeling hungry so I would like to find a place to eat.
+SYSTEM: Do you have a specific which you want the eating place to be located at?
+USER: I would like for it to be in San Jose.
+SYSTEM: Is there a specific cuisine type you enjoy, such as Mexican, Italian or something else?
+USER: I usually like eating the American type of food.
+SYSTEM: APICall (method='FindRestaurants', parameters= {city: San Jose, cuisine: American})
+SYSTEM: service_result_1: {city: San Jose, cuisine: American, has_live_music: False, phone_number: 408-971-8523, price_range: moderate, restaurant_name: 71 Saint Peter, serves_alcohol: True, street_address: 71 North San Pedro Street}
+SYSTEM: service_result_2: {city: San Jose, cuisine: American, has_live_music: False, phone_number: 408-261-5787, price_range: moderate, restaurant_name: Bazille, serves_alcohol: True, street_address: 2400 Forest Avenue}
+SYSTEM: I see that at 71 Saint Peter there is a good restaurant which is in San Jose.
+USER: Can you give me the address of this restaurant?
+SYSTEM: If you want to go to this restaurant, you can find it at 71 North San Pedro Street.
+USER: Can you give me the phone number that I can contact them with?
+SYSTEM: If you want to phone them you can at 408-971-8523.
+USER: Is there some other restaurant which you can suggest?
+SYSTEM: How would you like Bazille restaurant which is situated in San Jose.
+USER: Do you have another restaurant matching my needs? For example, a restaurant which is economical and is located in Palo Alto.
+SYSTEM: I see that 7 restaurants suit to what you requested. Bird Dog seems as a good restaurant and is located in Palo Alto.
+SYSTEM: APICall (method='FindRestaurants', parameters= {city: Palo Alto, cuisine: American, price_range: moderate})
+SYSTEM: service_result_1: {city: Palo Alto, cuisine: American, has_live_music: False, phone_number: 650-688-2614, price_range: moderate, restaurant_name: Bazille, serves_alcohol: True, street_address: 550 Stanford Shopping Center}
+SYSTEM: service_result_2: {city: Palo Alto, cuisine: American, has_live_music: False, phone_number: 650-656-8180, price_range: moderate, restaurant_name: Bird Dog, serves_alcohol: False, street_address: 420 Ramona Street}
+USER: Alright, that seems good. I would like to make a booking at this restaurant.
+SYSTEM: For which time do you want the booking to be?
+USER: I will be eating there at 11:30 am so make it for then.
+SYSTEM: Can you please confirm that you want to book a table for 2 at 11:30 am at the Bird Dog restaurant in Palo Alto for today.
+USER: That suits me well. Can you tell me if they feature live music?
+SYSTEM: Your booking has been made without errors, but unfortunately, they do not have live music.
+SYSTEM: APICall (method='ReserveRestaurant', parameters= {city: Palo Alto, date: 2019-03-01, party_size: 2, restaurant_name: Bird Dog, time: 11:30 })
+SYSTEM: service_result_1: {city: Palo Alto, cuisine: American, date: 2019-03-01, has_live_music: False, party_size: 2, phone_number: 650-656-8180, price_range: moderate, restaurant_name: Bird Dog, serves_alcohol: False, street_address: 420 Ramona Street, time: 11:30}
+USER: Will I be able to find liquor there? Can you give me the address of their location?
+SYSTEM: The restaurant is located at 420 Ramona Street. Unfortunately, they do not serve alcohol at the restaurant.
+USER: I appreciate it very much. That would be all.
+SYSTEM: Have a good time!
+end of dialog a sample conversation
+
+Understand the above structure of conversation between a USER and a SYSTEM. Learn how to interact with USER and generate most human-like conversational response to User's intent. You may need to make API calls and use the API call results.
+
+Now, you have to act as an expert for the Hotels domain. I will provide schema for the Hotels domain. Based on the above instructions and examples from the Restaurant domain, learn how to interact a user 
+to generate most human-like conversational response touser's current intent. 
+End of Instructions.
+
+Schema for Hotels:
+
+service_name: Hotels_1
+
+intents_1 
+	name: ReserveHotel
+	required_slots: hotel_name, check_in_date, number_of_days, destination
+	optional_slots: number_of_rooms: 1
+	result_slots: destination, number_of_rooms, check_in_date, number_of_days, star_rating, hotel_name, street_address, phone_number, price_per_night, has_wifi
+
+intents_2 
+	name: SearchHotel
+	required_slots: destination
+	optional_slots: number_of_rooms: dontcare, has_wifi: dontcare, star_rating: dontcare
+	result_slots: destination, number_of_rooms, star_rating, hotel_name, street_address, phone_number, price_per_night, has_wifi
+end of schema.
+
+Here are a few general guidelines to follow:
+  - Don't overwhelm the USER with too many choices.
+  - Confirm the slot values with the USER before finalizing the call.
+  - Follow the structure of API call from the above example whenever you are making an API Call.
+  - If you're unsure about something, it's always better to ask or confirm with the user.
+  - If you feel the user is confused, guide the user with relevant suggestions and ensure it's relevant to their current intent.
+
+Here is a Conversation history:
+
+USER: I would like to book 1 room at a hotel.

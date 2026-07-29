@@ -1,0 +1,72 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={})"
+  ],
+  "user_req_slots": [
+    [
+      "cast",
+      "genre"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: I would like to find a movie I can watch.\nSystem: ApiCall(method='FindMovies', parameters={})\nSearch Results\n[{'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': '98'}]\nEnd Search Results\nSystem: What do you think of Rojo? It has an average rating of 98 percent.\nUser: Who acted in this movie and what genre is it?\nSystem: This movie is a Thriller and Rudy Chernicoff is one of the actors.\nLast User Utterance:That sounds fine. That's all I needed.\nLast System Utterance: I'm glad to have helped you.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'genre': 'Action', 'released_after': '2015-01-01'})"
+  ],
+  "generated_dialog": [
+    "User: I would like to find a movie I can watch.",
+    "System: Sure, what type of movie are you interested in? For example, thriller, comedy, or drama.",
+    "User: Oh, how about something with some action and maybe a bit of romance thrown in? You know, like those James Bond movies, but not too old, maybe something from the last five years?",
+    "System: APICall(method='FindMovies', parameters={'genre': 'Action', 'released_after': '2015-01-01'})",
+    "Search Results\n[{'cast': 'Tony Hale', 'directed_by': 'Josh Cooley', 'genre': 'Animation', 'movie_title': 'Toy Story 4', 'percent_rating': 97}, {'cast': 'Helena Holmes', 'directed_by': 'David Leitch', 'genre': 'Action', 'movie_title': 'Hobbs and Shaw', 'percent_rating': 67}, {'cast': 'Josh Gad', 'directed_by': 'Thurop Van Orman', 'genre': 'Animation', 'movie_title': 'The Angry Birds Movie 2', 'percent_rating': 72}]\nEnd Search Results",
+    "System: I found a couple of action movies for you. One is 'Hobbs and Shaw' directed by David Leitch with a rating of 67%. Another option is 'The Angry Birds Movie 2' directed by Thurop Van Orman with a rating of 72%. Would you like more details on either of these?",
+    "User: Sure, can you tell me more about 'Hobbs and Shaw'?",
+    "System: Sure! 'Hobbs and Shaw' stars Helena Holmes and is directed by David Leitch. It has a rating of 67%. Would you like to know more about the plot or the cast?",
+    "User: Actually, could you also tell me who else is in the movie besides Helena Holmes? And maybe what it's about?"
+  ],
+  "search_results": [
+    "[{'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': '98'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'cast': 'Tony Hale', 'directed_by': 'Josh Cooley', 'genre': 'Animation', 'movie_title': 'Toy Story 4', 'percent_rating': 97}, {'cast': 'Helena Holmes', 'directed_by': 'David Leitch', 'genre': 'Action', 'movie_title': 'Hobbs and Shaw', 'percent_rating': 67}, {'cast': 'Josh Gad', 'directed_by': 'Thurop Van Orman', 'genre': 'Animation', 'movie_title': 'The Angry Birds Movie 2', 'percent_rating': 72}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"Sure, what type of movie are you interested in? For example, thriller, comedy, or drama.\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindMovies\", \"parameters\": {\"genre\": \"Action\", \"released_after\": \"2015-01-01\"}}",
+    "{\"type\": \"message\", \"content\": \"I found a couple of action movies for you. One is 'Hobbs and Shaw' directed by David Leitch with a rating of 67%. Another option is 'The Angry Birds Movie 2' directed by Thurop Van Orman with a rating of 72%. Would you like more details on either of these?\"}",
+    "{\"type\": \"message\", \"content\": \"Sure! 'Hobbs and Shaw' stars Helena Holmes and is directed by David Leitch. It has a rating of 67%. Would you like to know more about the plot or the cast?\"}"
+  ],
+  "dialog_completed": false
+}

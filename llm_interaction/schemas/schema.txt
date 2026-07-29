@@ -1,0 +1,1556 @@
+service_name: Banks_1
+
+Intents:
+intents_1 
+	name: CheckBalance
+	is_transactional: False
+	required_slots: account_type
+	optional_slots: None
+	result_slots: account_type, balance
+
+intents_2 
+	name: TransferMoney
+	is_transactional: True
+	required_slots: account_type, amount, recipient_account_name
+	optional_slots: recipient_account_type: checking
+	result_slots: account_type, recipient_account_type, amount, recipient_account_name
+
+Slots:
+	slot_name: account_type
+		possible_values: checking, savings
+
+	slot_name: recipient_account_type
+		possible_values: checking, savings
+
+
+service_name: Buses_1
+
+Intents:
+intents_1 
+	name: FindBus
+	is_transactional: False
+	required_slots: from_location, to_location, leaving_date
+	optional_slots: travelers: 1
+	result_slots: from_location, to_location, from_station, to_station, leaving_date, leaving_time, fare, travelers, transfers
+
+intents_2 
+	name: BuyBusTicket
+	is_transactional: True
+	required_slots: from_location, to_location, leaving_date, leaving_time, travelers
+	optional_slots: None
+	result_slots: from_location, to_location, from_station, to_station, leaving_date, leaving_time, fare, travelers, transfers
+
+Slots:
+	slot_name: travelers
+		possible_values: 1, 2, 3, 4, 5
+
+	slot_name: transfers
+		possible_values: 0, 1
+
+
+service_name: Buses_2
+
+Intents:
+intents_1 
+	name: FindBus
+	is_transactional: False
+	required_slots: origin, destination, departure_date
+	optional_slots: fare_type: Economy, group_size: 1
+	result_slots: origin, destination, origin_station_name, destination_station_name, departure_date, price, departure_time, group_size, fare_type
+
+intents_2 
+	name: BuyBusTicket
+	is_transactional: True
+	required_slots: origin, destination, departure_date, departure_time, group_size
+	optional_slots: fare_type: Economy
+	result_slots: origin, destination, origin_station_name, destination_station_name, departure_date, price, departure_time, group_size, fare_type
+
+Slots:
+	slot_name: group_size
+		possible_values: 1, 2, 3, 4, 5
+
+	slot_name: fare_type
+		possible_values: Economy, Economy extra, Flexible
+
+
+service_name: Calendar_1
+
+Intents:
+intents_1 
+	name: GetEvents
+	is_transactional: False
+	required_slots: event_date
+	optional_slots: None
+	result_slots: event_date, event_time, event_location, event_name
+
+intents_2 
+	name: GetAvailableTime
+	is_transactional: False
+	required_slots: event_date
+	optional_slots: None
+	result_slots: event_date, available_start_time, available_end_time
+
+intents_3 
+	name: AddEvent
+	is_transactional: True
+	required_slots: event_name, event_date, event_location, event_time
+	optional_slots: None
+	result_slots: event_date, event_time, event_location, event_name
+
+
+service_name: Events_1
+
+Intents:
+intents_1 
+	name: FindEvents
+	is_transactional: False
+	required_slots: category, city_of_event
+	optional_slots: date: dontcare, subcategory: dontcare
+	result_slots: category, subcategory, event_name, date, time, city_of_event, event_location, address_of_location
+
+intents_2 
+	name: BuyEventTickets
+	is_transactional: True
+	required_slots: event_name, number_of_seats, date, city_of_event
+	optional_slots: None
+	result_slots: event_name, date, time, number_of_seats, city_of_event, event_location, address_of_location
+
+Slots:
+	slot_name: category
+		possible_values: Music, Sports
+
+	slot_name: number_of_seats
+		possible_values: 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+
+service_name: Events_2
+
+Intents:
+intents_1 
+	name: FindEvents
+	is_transactional: False
+	required_slots: event_type, city
+	optional_slots: date: dontcare, category: dontcare
+	result_slots: event_type, category, event_name, date, time, city, venue, venue_address
+
+intents_2 
+	name: GetEventDates
+	is_transactional: False
+	required_slots: event_name, city
+	optional_slots: None
+	result_slots: event_name, date, time, city, venue, venue_address
+
+intents_3 
+	name: BuyEventTickets
+	is_transactional: True
+	required_slots: event_name, number_of_tickets, date, city
+	optional_slots: None
+	result_slots: event_name, date, time, number_of_tickets, city, venue, venue_address
+
+Slots:
+	slot_name: event_type
+		possible_values: Music, Sports
+
+	slot_name: number_of_tickets
+		possible_values: 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+
+service_name: Flights_1
+
+Intents:
+intents_1 
+	name: SearchOnewayFlight
+	is_transactional: False
+	required_slots: origin_city, destination_city, departure_date
+	optional_slots: airlines: dontcare, refundable: dontcare, passengers: 1, seating_class: Economy
+	result_slots: passengers, seating_class, origin_city, destination_city, origin_airport, destination_airport, departure_date, number_stops, outbound_departure_time, outbound_arrival_time, price, refundable, airlines
+
+intents_2 
+	name: SearchRoundtripFlights
+	is_transactional: False
+	required_slots: origin_city, destination_city, departure_date, return_date
+	optional_slots: airlines: dontcare, refundable: dontcare, passengers: 1, seating_class: Economy
+	result_slots: passengers, seating_class, origin_city, destination_city, origin_airport, destination_airport, departure_date, return_date, number_stops, outbound_departure_time, outbound_arrival_time, inbound_arrival_time, inbound_departure_time, price, refundable, airlines
+
+intents_3 
+	name: ReserveOnewayFlight
+	is_transactional: True
+	required_slots: origin_city, destination_city, airlines, departure_date
+	optional_slots: refundable: dontcare, passengers: 1, seating_class: Economy
+	result_slots: passengers, seating_class, origin_city, destination_city, origin_airport, destination_airport, departure_date, number_stops, outbound_departure_time, outbound_arrival_time, price, refundable, airlines
+
+intents_4 
+	name: ReserveRoundtripFlights
+	is_transactional: True
+	required_slots: origin_city, destination_city, airlines, departure_date, return_date, outbound_departure_time, inbound_departure_time
+	optional_slots: refundable: dontcare, passengers: 1, seating_class: Economy
+	result_slots: passengers, seating_class, origin_city, destination_city, origin_airport, destination_airport, departure_date, return_date, number_stops, outbound_departure_time, outbound_arrival_time, inbound_arrival_time, inbound_departure_time, price, refundable, airlines
+
+Slots:
+	slot_name: passengers
+		possible_values: 1, 2, 3, 4
+
+	slot_name: seating_class
+		possible_values: Economy, Premium Economy, Business, First Class
+
+	slot_name: number_stops
+		possible_values: 0, 1
+
+	slot_name: refundable
+		possible_values: True, False
+
+	slot_name: airlines
+		possible_values: United Airlines, American Airlines, Delta Airlines, Southwest Airlines, Alaska Airlines, British Airways, Air Canada, Air France
+
+
+service_name: Flights_2
+
+Intents:
+intents_1 
+	name: SearchOnewayFlight
+	is_transactional: False
+	required_slots: origin, destination, departure_date
+	optional_slots: airlines: dontcare, passengers: 1, seating_class: Economy
+	result_slots: passengers, seating_class, origin, destination, origin_airport, destination_airport, departure_date, number_stops, outbound_departure_time, outbound_arrival_time, fare, is_redeye, airlines
+
+intents_2 
+	name: SearchRoundtripFlights
+	is_transactional: False
+	required_slots: origin, destination, departure_date, return_date
+	optional_slots: airlines: dontcare, passengers: 1, seating_class: Economy
+	result_slots: passengers, seating_class, origin, destination, origin_airport, destination_airport, departure_date, return_date, number_stops, outbound_departure_time, outbound_arrival_time, inbound_arrival_time, inbound_departure_time, fare, is_redeye, airlines
+
+Slots:
+	slot_name: passengers
+		possible_values: 1, 2, 3, 4
+
+	slot_name: seating_class
+		possible_values: Economy, Premium Economy, Business, First Class
+
+	slot_name: number_stops
+		possible_values: 0, 1
+
+	slot_name: is_redeye
+		possible_values: True, False
+
+	slot_name: airlines
+		possible_values: United Airlines, American Airlines, Delta Airlines, Southwest Airlines, Alaska Airlines, British Airways, Air Canada, Air France
+
+
+service_name: Homes_1
+
+Intents:
+intents_1 
+	name: FindApartment
+	is_transactional: False
+	required_slots: area, number_of_beds
+	optional_slots: furnished: dontcare, pets_allowed: dontcare, number_of_baths: dontcare
+	result_slots: area, address, property_name, phone_number, furnished, pets_allowed, rent, number_of_beds, number_of_baths
+
+intents_2 
+	name: ScheduleVisit
+	is_transactional: True
+	required_slots: property_name, visit_date
+	optional_slots: None
+	result_slots: address, property_name, phone_number, furnished, pets_allowed, rent, visit_date, number_of_beds, number_of_baths
+
+Slots:
+	slot_name: furnished
+		possible_values: True, False
+
+	slot_name: pets_allowed
+		possible_values: True, False
+
+	slot_name: number_of_beds
+		possible_values: 1, 2, 3, 4
+
+	slot_name: number_of_baths
+		possible_values: 1, 2, 3, 4
+
+
+service_name: Hotels_1
+
+Intents:
+intents_1 
+	name: ReserveHotel
+	is_transactional: True
+	required_slots: hotel_name, check_in_date, number_of_days, destination
+	optional_slots: number_of_rooms: 1
+	result_slots: destination, number_of_rooms, check_in_date, number_of_days, star_rating, hotel_name, street_address, phone_number, price_per_night, has_wifi
+
+intents_2 
+	name: SearchHotel
+	is_transactional: False
+	required_slots: destination
+	optional_slots: number_of_rooms: dontcare, has_wifi: dontcare, star_rating: dontcare
+	result_slots: destination, number_of_rooms, star_rating, hotel_name, street_address, phone_number, price_per_night, has_wifi
+
+Slots:
+	slot_name: number_of_rooms
+		possible_values: 1, 2, 3
+
+	slot_name: star_rating
+		possible_values: 1, 2, 3, 4, 5
+
+	slot_name: has_wifi
+		possible_values: True, False
+
+
+service_name: Hotels_2
+
+Intents:
+intents_1 
+	name: BookHouse
+	is_transactional: True
+	required_slots: where_to, number_of_adults, check_in_date, check_out_date
+	optional_slots: None
+	result_slots: where_to, number_of_adults, check_in_date, check_out_date, rating, address, phone_number, total_price, has_laundry_service
+
+intents_2 
+	name: SearchHouse
+	is_transactional: False
+	required_slots: where_to
+	optional_slots: rating: dontcare, has_laundry_service: dontcare, number_of_adults: dontcare
+	result_slots: where_to, number_of_adults, rating, address, phone_number, total_price, has_laundry_service
+
+Slots:
+	slot_name: number_of_adults
+		possible_values: 1, 2, 3, 4, 5
+
+	slot_name: has_laundry_service
+		possible_values: True, False
+
+
+service_name: Hotels_3
+
+Intents:
+intents_1 
+	name: ReserveHotel
+	is_transactional: True
+	required_slots: hotel_name, location, check_in_date, check_out_date
+	optional_slots: number_of_rooms: 1
+	result_slots: location, number_of_rooms, check_in_date, check_out_date, average_rating, hotel_name, street_address, phone_number, price, pets_welcome
+
+intents_2 
+	name: SearchHotel
+	is_transactional: False
+	required_slots: location
+	optional_slots: number_of_rooms: dontcare, pets_welcome: dontcare
+	result_slots: location, number_of_rooms, average_rating, hotel_name, street_address, phone_number, price, pets_welcome
+
+Slots:
+	slot_name: number_of_rooms
+		possible_values: 1, 2, 3
+
+	slot_name: pets_welcome
+		possible_values: True, False
+
+
+service_name: Media_1
+
+Intents:
+intents_1 
+	name: FindMovies
+	is_transactional: False
+	required_slots: genre
+	optional_slots: directed_by: dontcare
+	result_slots: title, genre, subtitles, directed_by
+
+intents_2 
+	name: PlayMovie
+	is_transactional: True
+	required_slots: title
+	optional_slots: subtitles: False
+	result_slots: title, genre, subtitles, directed_by
+
+Slots:
+	slot_name: subtitles
+		possible_values: True, False
+
+
+service_name: Movies_1
+
+Intents:
+intents_1 
+	name: BuyMovieTickets
+	is_transactional: True
+	required_slots: movie_name, number_of_tickets, show_date, location, show_time, show_type
+	optional_slots: None
+	result_slots: price, number_of_tickets, show_type, theater_name, show_time, show_date, genre, street_address, location, movie_name
+
+intents_2 
+	name: FindMovies
+	is_transactional: False
+	required_slots: location
+	optional_slots: genre: dontcare, show_type: dontcare, theater_name: dontcare
+	result_slots: price, show_type, theater_name, genre, street_address, location, movie_name
+
+intents_3 
+	name: GetTimesForMovie
+	is_transactional: False
+	required_slots: movie_name, location, show_date
+	optional_slots: show_type: dontcare, theater_name: dontcare
+	result_slots: price, show_type, theater_name, show_time, show_date, genre, street_address, location, movie_name
+
+Slots:
+	slot_name: number_of_tickets
+		possible_values: 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+	slot_name: show_type
+		possible_values: regular, 3d, imax
+
+
+service_name: Music_1
+
+Intents:
+intents_1 
+	name: LookupSong
+	is_transactional: False
+	required_slots: None
+	optional_slots: genre: dontcare, artist: dontcare, album: dontcare, year: dontcare
+	result_slots: song_name, artist, album, genre, year
+
+intents_2 
+	name: PlaySong
+	is_transactional: True
+	required_slots: song_name
+	optional_slots: artist: dontcare, playback_device: TV
+	result_slots: song_name, artist, album, genre, year, playback_device
+
+Slots:
+	slot_name: year
+		possible_values: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019
+
+	slot_name: playback_device
+		possible_values: TV, Kitchen speaker, Bedroom speaker
+
+
+service_name: Music_2
+
+Intents:
+intents_1 
+	name: LookupMusic
+	is_transactional: False
+	required_slots: None
+	optional_slots: genre: dontcare, artist: dontcare, album: dontcare
+	result_slots: song_name, artist, album, genre
+
+intents_2 
+	name: PlayMedia
+	is_transactional: True
+	required_slots: song_name
+	optional_slots: artist: dontcare, playback_device: TV
+	result_slots: song_name, artist, album, genre, playback_device
+
+Slots:
+	slot_name: playback_device
+		possible_values: TV, kitchen speaker, bedroom speaker
+
+
+service_name: RentalCars_1
+
+Intents:
+intents_1 
+	name: GetCarsAvailable
+	is_transactional: False
+	required_slots: pickup_city, pickup_date, pickup_time, dropoff_date
+	optional_slots: type: Standard
+	result_slots: type, car_name, pickup_location, pickup_date, pickup_time, pickup_city, dropoff_date, total_price
+
+intents_2 
+	name: ReserveCar
+	is_transactional: True
+	required_slots: pickup_location, pickup_date, pickup_time, dropoff_date, type
+	optional_slots: None
+	result_slots: type, car_name, pickup_location, pickup_date, pickup_time, dropoff_date, total_price
+
+Slots:
+	slot_name: type
+		possible_values: Compact, Standard, Full-size
+
+
+service_name: RentalCars_2
+
+Intents:
+intents_1 
+	name: GetCarsAvailable
+	is_transactional: False
+	required_slots: pickup_city, pickup_date, pickup_time, dropoff_date
+	optional_slots: car_type: Standard
+	result_slots: car_type, car_name, pickup_location, pickup_date, pickup_time, pickup_city, dropoff_date, total_price
+
+intents_2 
+	name: ReserveCar
+	is_transactional: True
+	required_slots: pickup_location, pickup_date, pickup_time, dropoff_date, car_type
+	optional_slots: None
+	result_slots: car_type, car_name, pickup_location, pickup_date, pickup_time, dropoff_date, total_price
+
+Slots:
+	slot_name: car_type
+		possible_values: Compact, Standard, Full-size
+
+
+service_name: Restaurants_1
+
+Intents:
+intents_1 
+	name: ReserveRestaurant
+	is_transactional: True
+	required_slots: restaurant_name, city, time
+	optional_slots: date: 2019-03-01, party_size: 2
+	result_slots: restaurant_name, date, time, serves_alcohol, has_live_music, phone_number, street_address, party_size, price_range, city, cuisine
+
+intents_2 
+	name: FindRestaurants
+	is_transactional: False
+	required_slots: cuisine, city
+	optional_slots: price_range: dontcare, has_live_music: dontcare, serves_alcohol: dontcare
+	result_slots: restaurant_name, serves_alcohol, has_live_music, phone_number, street_address, price_range, city, cuisine
+
+Slots:
+	slot_name: serves_alcohol
+		possible_values: True, False
+
+	slot_name: has_live_music
+		possible_values: True, False
+
+	slot_name: party_size
+		possible_values: 1, 2, 3, 4, 5, 6
+
+	slot_name: price_range
+		possible_values: inexpensive, moderate, expensive, very expensive
+
+	slot_name: cuisine
+		possible_values: Mexican, Chinese, Indian, American, Italian
+
+
+service_name: RideSharing_1
+
+Intents:
+intents_1 
+	name: GetRide
+	is_transactional: True
+	required_slots: destination, number_of_riders, shared_ride
+	optional_slots: None
+	result_slots: destination, shared_ride, ride_fare, approximate_ride_duration, number_of_riders
+
+Slots:
+	slot_name: shared_ride
+		possible_values: True, False
+
+	slot_name: number_of_riders
+		possible_values: 1, 2, 3, 4
+
+
+service_name: RideSharing_2
+
+Intents:
+intents_1 
+	name: GetRide
+	is_transactional: True
+	required_slots: destination, number_of_seats, ride_type
+	optional_slots: None
+	result_slots: destination, ride_type, ride_fare, wait_time, number_of_seats
+
+Slots:
+	slot_name: ride_type
+		possible_values: Pool, Regular, Luxury
+
+	slot_name: number_of_seats
+		possible_values: 1, 2, 3, 4
+
+
+service_name: Services_1
+
+Intents:
+intents_1 
+	name: BookAppointment
+	is_transactional: True
+	required_slots: stylist_name, appointment_time, appointment_date
+	optional_slots: None
+	result_slots: stylist_name, phone_number, average_rating, is_unisex, street_address, appointment_date, appointment_time
+
+intents_2 
+	name: FindProvider
+	is_transactional: False
+	required_slots: city
+	optional_slots: is_unisex: dontcare
+	result_slots: stylist_name, phone_number, average_rating, is_unisex, street_address, city
+
+Slots:
+	slot_name: is_unisex
+		possible_values: True, False
+
+
+service_name: Services_2
+
+Intents:
+intents_1 
+	name: BookAppointment
+	is_transactional: True
+	required_slots: dentist_name, appointment_time, appointment_date
+	optional_slots: None
+	result_slots: dentist_name, phone_number, address, appointment_date, appointment_time, offers_cosmetic_services
+
+intents_2 
+	name: FindProvider
+	is_transactional: False
+	required_slots: city
+	optional_slots: offers_cosmetic_services: dontcare
+	result_slots: dentist_name, phone_number, address, city, offers_cosmetic_services
+
+Slots:
+	slot_name: offers_cosmetic_services
+		possible_values: True, False
+
+
+service_name: Services_3
+
+Intents:
+intents_1 
+	name: BookAppointment
+	is_transactional: True
+	required_slots: doctor_name, appointment_time, appointment_date
+	optional_slots: None
+	result_slots: doctor_name, phone_number, average_rating, street_address, appointment_date, appointment_time, type
+
+intents_2 
+	name: FindProvider
+	is_transactional: False
+	required_slots: city, type
+	optional_slots: None
+	result_slots: doctor_name, phone_number, average_rating, street_address, city, type
+
+Slots:
+	slot_name: type
+		possible_values: Gynecologist, ENT Specialist, Ophthalmologist, General Practitioner, Dermatologist
+
+
+service_name: Travel_1
+
+Intents:
+intents_1 
+	name: FindAttractions
+	is_transactional: False
+	required_slots: location
+	optional_slots: category: dontcare, free_entry: dontcare, good_for_kids: dontcare
+	result_slots: location, attraction_name, category, phone_number, free_entry, good_for_kids
+
+Slots:
+	slot_name: category
+		possible_values: Place of Worship, Theme Park, Museum, Historical Landmark, Park, Tourist Attraction, Sports Venue, Shopping Area, Performing Arts Venue, Nature Preserve
+
+	slot_name: free_entry
+		possible_values: True, False
+
+	slot_name: good_for_kids
+		possible_values: True, False
+
+
+service_name: Weather_1
+
+Intents:
+intents_1 
+	name: GetWeather
+	is_transactional: False
+	required_slots: city
+	optional_slots: date: 2019-03-01
+	result_slots: precipitation, humidity, wind, temperature, city, date
+
+Slots:
+
+
+
+service_name: Alarm_1
+
+Intents:
+intents_1 
+	name: GetAlarms
+	is_transactional: False
+	required_slots: None
+	optional_slots: None
+	result_slots: alarm_time, alarm_name
+
+intents_2 
+	name: AddAlarm
+	is_transactional: True
+	required_slots: new_alarm_time
+	optional_slots: new_alarm_name: New alarm
+	result_slots: new_alarm_time, new_alarm_name
+
+
+service_name: Buses_3
+
+Intents:
+intents_1 
+	name: FindBus
+	is_transactional: False
+	required_slots: from_city, to_city, departure_date
+	optional_slots: num_passengers: 1, category: direct
+	result_slots: from_city, to_city, from_station, to_station, departure_date, departure_time, price, num_passengers, category
+
+intents_2 
+	name: BuyBusTicket
+	is_transactional: True
+	required_slots: from_city, to_city, departure_date, departure_time, num_passengers
+	optional_slots: additional_luggage: False
+	result_slots: from_city, to_city, from_station, to_station, departure_date, departure_time, price, additional_luggage, num_passengers, category
+
+Slots:
+	slot_name: additional_luggage
+		possible_values: True, False
+
+	slot_name: num_passengers
+		possible_values: 1, 2, 3, 4, 5
+
+	slot_name: category
+		possible_values: direct, one-stop
+
+
+service_name: Events_3
+
+Intents:
+intents_1 
+	name: FindEvents
+	is_transactional: False
+	required_slots: event_type, city
+	optional_slots: date: dontcare
+	result_slots: event_type, event_name, date, time, price_per_ticket, city, venue, venue_address
+
+intents_2 
+	name: BuyEventTickets
+	is_transactional: True
+	required_slots: event_name, number_of_tickets, date, city
+	optional_slots: None
+	result_slots: event_name, date, time, number_of_tickets, price_per_ticket, city, venue, venue_address
+
+Slots:
+	slot_name: event_type
+		possible_values: Music, Theater
+
+	slot_name: number_of_tickets
+		possible_values: 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+
+service_name: Flights_4
+
+Intents:
+intents_1 
+	name: SearchOnewayFlight
+	is_transactional: False
+	required_slots: origin_airport, destination_airport, departure_date
+	optional_slots: seating_class: Economy, number_of_tickets: 1, airlines: dontcare
+	result_slots: number_of_tickets, seating_class, origin_airport, destination_airport, departure_date, is_nonstop, outbound_departure_time, outbound_arrival_time, price, airlines
+
+intents_2 
+	name: SearchRoundtripFlights
+	is_transactional: False
+	required_slots: origin_airport, destination_airport, departure_date, return_date
+	optional_slots: seating_class: Economy, number_of_tickets: 1, airlines: dontcare
+	result_slots: number_of_tickets, seating_class, origin_airport, destination_airport, departure_date, return_date, is_nonstop, outbound_departure_time, outbound_arrival_time, inbound_arrival_time, inbound_departure_time, price, airlines
+
+Slots:
+	slot_name: number_of_tickets
+		possible_values: 1, 2, 3, 4
+
+	slot_name: seating_class
+		possible_values: Economy, Premium Economy, Business
+
+	slot_name: is_nonstop
+		possible_values: True, False
+
+	slot_name: airlines
+		possible_values: United Airlines, American Airlines, Delta Airlines, Southwest Airlines, Alaska Airlines, British Airways, Air Canada, Air France, South African Airways, LOT Polish Airlines, LATAM Brasil
+
+
+service_name: Homes_2
+
+Intents:
+intents_1 
+	name: FindHomeByArea
+	is_transactional: False
+	required_slots: area, intent, number_of_beds, number_of_baths
+	optional_slots: has_garage: dontcare, in_unit_laundry: dontcare
+	result_slots: intent, area, address, property_name, phone_number, has_garage, in_unit_laundry, price, number_of_beds, number_of_baths
+
+intents_2 
+	name: ScheduleVisit
+	is_transactional: True
+	required_slots: property_name, visit_date
+	optional_slots: None
+	result_slots: address, property_name, phone_number, has_garage, in_unit_laundry, price, visit_date, number_of_beds, number_of_baths
+
+Slots:
+	slot_name: intent
+		possible_values: rent, buy
+
+	slot_name: has_garage
+		possible_values: True, False
+
+	slot_name: in_unit_laundry
+		possible_values: True, False
+
+	slot_name: number_of_beds
+		possible_values: 1, 2, 3, 4
+
+	slot_name: number_of_baths
+		possible_values: 1, 2, 3, 4
+
+
+service_name: Hotels_2
+
+Intents:
+intents_1 
+	name: BookHouse
+	is_transactional: True
+	required_slots: where_to, number_of_adults, check_in_date, check_out_date
+	optional_slots: None
+	result_slots: where_to, number_of_adults, check_in_date, check_out_date, rating, address, phone_number, total_price, has_laundry_service
+
+intents_2 
+	name: SearchHouse
+	is_transactional: False
+	required_slots: where_to
+	optional_slots: has_laundry_service: dontcare, number_of_adults: dontcare, rating: dontcare
+	result_slots: where_to, number_of_adults, rating, address, phone_number, total_price, has_laundry_service
+
+Slots:
+	slot_name: number_of_adults
+		possible_values: 1, 2, 3, 4, 5
+
+	slot_name: has_laundry_service
+		possible_values: True, False
+
+
+service_name: Hotels_4
+
+Intents:
+intents_1 
+	name: ReserveHotel
+	is_transactional: True
+	required_slots: place_name, check_in_date, stay_length, location
+	optional_slots: number_of_rooms: 1
+	result_slots: location, number_of_rooms, check_in_date, stay_length, star_rating, place_name, street_address, phone_number, price_per_night, smoking_allowed
+
+intents_2 
+	name: SearchHotel
+	is_transactional: False
+	required_slots: location
+	optional_slots: star_rating: dontcare, smoking_allowed: dontcare, number_of_rooms: dontcare
+	result_slots: location, number_of_rooms, star_rating, place_name, street_address, phone_number, price_per_night, smoking_allowed
+
+Slots:
+	slot_name: number_of_rooms
+		possible_values: 1, 2, 3
+
+	slot_name: star_rating
+		possible_values: 1, 2, 3, 4, 5
+
+	slot_name: smoking_allowed
+		possible_values: True, False
+
+
+service_name: Media_3
+
+Intents:
+intents_1 
+	name: FindMovies
+	is_transactional: False
+	required_slots: genre
+	optional_slots: starring: dontcare
+	result_slots: title, genre, subtitle_language, starring
+
+intents_2 
+	name: PlayMovie
+	is_transactional: True
+	required_slots: title
+	optional_slots: subtitle_language: English
+	result_slots: title, genre, subtitle_language, starring
+
+Slots:
+	slot_name: subtitle_language
+		possible_values: English, Spanish, Hindi, French
+
+
+service_name: Messaging_1
+
+Intents:
+intents_1 
+	name: ShareLocation
+	is_transactional: True
+	required_slots: location, contact_name
+	optional_slots: None
+	result_slots: location, contact_name
+
+
+service_name: Movies_1
+
+Intents:
+intents_1 
+	name: BuyMovieTickets
+	is_transactional: True
+	required_slots: movie_name, number_of_tickets, show_date, location, show_time, show_type
+	optional_slots: None
+	result_slots: price, number_of_tickets, show_type, theater_name, show_time, show_date, genre, street_address, location, movie_name
+
+intents_2 
+	name: FindMovies
+	is_transactional: False
+	required_slots: location
+	optional_slots: theater_name: dontcare, genre: dontcare, show_type: dontcare
+	result_slots: price, show_type, theater_name, genre, street_address, location, movie_name
+
+intents_3 
+	name: GetTimesForMovie
+	is_transactional: False
+	required_slots: movie_name, location, show_date
+	optional_slots: theater_name: dontcare, show_type: dontcare
+	result_slots: price, show_type, theater_name, show_time, show_date, genre, street_address, location, movie_name
+
+Slots:
+	slot_name: number_of_tickets
+		possible_values: 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+	slot_name: show_type
+		possible_values: regular, 3d, imax
+
+
+service_name: Movies_3
+
+Intents:
+intents_1 
+	name: FindMovies
+	is_transactional: False
+	required_slots: None
+	optional_slots: directed_by: dontcare, genre: dontcare, cast: dontcare
+	result_slots: movie_title, genre, percent_rating, cast, directed_by
+
+
+service_name: Music_3
+
+Intents:
+intents_1 
+	name: PlayMedia
+	is_transactional: True
+	required_slots: track
+	optional_slots: artist: dontcare, device: Living room, album: dontcare
+	result_slots: track, artist, album, genre, year, device
+
+intents_2 
+	name: LookupMusic
+	is_transactional: False
+	required_slots: None
+	optional_slots: artist: dontcare, album: dontcare, genre: dontcare, year: dontcare
+	result_slots: track, artist, album, genre, year
+
+Slots:
+	slot_name: year
+		possible_values: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019
+
+	slot_name: device
+		possible_values: Living room, Kitchen, Patio
+
+
+service_name: Payment_1
+
+Intents:
+intents_1 
+	name: RequestPayment
+	is_transactional: True
+	required_slots: receiver, amount
+	optional_slots: private_visibility: False
+	result_slots: amount, receiver, private_visibility
+
+intents_2 
+	name: MakePayment
+	is_transactional: True
+	required_slots: payment_method, amount, receiver
+	optional_slots: private_visibility: False
+	result_slots: payment_method, amount, receiver, private_visibility
+
+Slots:
+	slot_name: payment_method
+		possible_values: app balance, debit card, credit card
+
+	slot_name: private_visibility
+		possible_values: True, False
+
+
+service_name: RentalCars_3
+
+Intents:
+intents_1 
+	name: GetCarsAvailable
+	is_transactional: False
+	required_slots: city, start_date, pickup_time, end_date
+	optional_slots: car_type: dontcare
+	result_slots: car_type, car_name, pickup_location, start_date, pickup_time, city, end_date, price_per_day
+
+intents_2 
+	name: ReserveCar
+	is_transactional: True
+	required_slots: pickup_location, start_date, pickup_time, end_date, car_type, add_insurance
+	optional_slots: None
+	result_slots: car_type, car_name, pickup_location, start_date, pickup_time, end_date, price_per_day, add_insurance
+
+Slots:
+	slot_name: car_type
+		possible_values: Hatchback, Sedan, SUV
+
+	slot_name: add_insurance
+		possible_values: True, False
+
+
+service_name: Restaurants_2
+
+Intents:
+intents_1 
+	name: ReserveRestaurant
+	is_transactional: True
+	required_slots: restaurant_name, location, time
+	optional_slots: number_of_seats: 2, date: 2019-03-01
+	result_slots: restaurant_name, date, time, has_seating_outdoors, has_vegetarian_options, phone_number, rating, address, number_of_seats, price_range, location, category
+
+intents_2 
+	name: FindRestaurants
+	is_transactional: False
+	required_slots: category, location
+	optional_slots: price_range: dontcare, has_vegetarian_options: dontcare, has_seating_outdoors: dontcare
+	result_slots: restaurant_name, has_seating_outdoors, has_vegetarian_options, phone_number, rating, address, price_range, location, category
+
+Slots:
+	slot_name: has_seating_outdoors
+		possible_values: True, False
+
+	slot_name: has_vegetarian_options
+		possible_values: True, False
+
+	slot_name: number_of_seats
+		possible_values: 1, 2, 3, 4, 5, 6
+
+	slot_name: price_range
+		possible_values: cheap, moderate, pricey, ultra high-end
+
+
+service_name: RideSharing_2
+
+Intents:
+intents_1 
+	name: GetRide
+	is_transactional: True
+	required_slots: destination, number_of_seats, ride_type
+	optional_slots: None
+	result_slots: destination, ride_type, ride_fare, wait_time, number_of_seats
+
+Slots:
+	slot_name: ride_type
+		possible_values: Pool, Regular, Luxury
+
+	slot_name: number_of_seats
+		possible_values: 1, 2, 3, 4
+
+
+service_name: Services_1
+
+Intents:
+intents_1 
+	name: BookAppointment
+	is_transactional: True
+	required_slots: stylist_name, appointment_time, appointment_date
+	optional_slots: None
+	result_slots: stylist_name, phone_number, average_rating, is_unisex, street_address, appointment_date, appointment_time
+
+intents_2 
+	name: FindProvider
+	is_transactional: False
+	required_slots: city
+	optional_slots: is_unisex: dontcare
+	result_slots: stylist_name, phone_number, average_rating, is_unisex, street_address, city
+
+Slots:
+	slot_name: is_unisex
+		possible_values: True, False
+
+
+service_name: Services_4
+
+Intents:
+intents_1 
+	name: BookAppointment
+	is_transactional: True
+	required_slots: therapist_name, appointment_time, appointment_date
+	optional_slots: None
+	result_slots: therapist_name, phone_number, address, appointment_date, appointment_time
+
+intents_2 
+	name: FindProvider
+	is_transactional: False
+	required_slots: city, type
+	optional_slots: None
+	result_slots: therapist_name, phone_number, address, city, type
+
+Slots:
+	slot_name: type
+		possible_values: Psychologist, Family Counselor, Psychiatrist
+
+
+service_name: Trains_1
+
+Intents:
+intents_1 
+	name: GetTrainTickets
+	is_transactional: True
+	required_slots: from, to, date_of_journey, journey_start_time, number_of_adults, trip_protection
+	optional_slots: class: Value
+	result_slots: from, to, from_station, to_station, date_of_journey, journey_start_time, total, number_of_adults, class, trip_protection
+
+intents_2 
+	name: FindTrains
+	is_transactional: False
+	required_slots: from, to, date_of_journey
+	optional_slots: class: Value, number_of_adults: 1
+	result_slots: from, to, from_station, to_station, date_of_journey, journey_start_time, total, number_of_adults, class, trip_protection
+
+Slots:
+	slot_name: number_of_adults
+		possible_values: 1, 2, 3, 4, 5
+
+	slot_name: class
+		possible_values: Value, Flexible, Business
+
+	slot_name: trip_protection
+		possible_values: True, False
+
+
+service_name: Travel_1
+
+Intents:
+intents_1 
+	name: FindAttractions
+	is_transactional: False
+	required_slots: location
+	optional_slots: free_entry: dontcare, category: dontcare, good_for_kids: dontcare
+	result_slots: location, attraction_name, category, phone_number, free_entry, good_for_kids
+
+Slots:
+	slot_name: category
+		possible_values: Place of Worship, Theme Park, Museum, Historical Landmark, Park, Tourist Attraction, Sports Venue, Shopping Area, Performing Arts Venue, Nature Preserve
+
+	slot_name: free_entry
+		possible_values: True, False
+
+	slot_name: good_for_kids
+		possible_values: True, False
+
+
+service_name: Weather_1
+
+Intents:
+intents_1 
+	name: GetWeather
+	is_transactional: False
+	required_slots: city
+	optional_slots: date: 2019-03-01
+	result_slots: precipitation, humidity, wind, temperature, city, date
+
+
+service_name: Alarm_1
+
+Intents:
+intents_1 
+	name: GetAlarms
+	is_transactional: False
+	required_slots: None
+	optional_slots: None
+	result_slots: alarm_time, alarm_name
+
+intents_2 
+	name: AddAlarm
+	is_transactional: True
+	required_slots: new_alarm_time
+	optional_slots: new_alarm_name: New alarm
+	result_slots: new_alarm_time, new_alarm_name
+
+
+service_name: Banks_2
+
+Intents:
+intents_1 
+	name: CheckBalance
+	is_transactional: False
+	required_slots: account_type
+	optional_slots: None
+	result_slots: account_type, account_balance
+
+intents_2 
+	name: TransferMoney
+	is_transactional: True
+	required_slots: account_type, transfer_amount, recipient_name
+	optional_slots: recipient_account_type: checking
+	result_slots: account_type, recipient_account_type, transfer_amount, recipient_name, transfer_time
+
+Slots:
+	slot_name: account_type
+		possible_values: checking, savings
+
+	slot_name: recipient_account_type
+		possible_values: checking, savings
+
+
+service_name: Buses_1
+
+Intents:
+intents_1 
+	name: FindBus
+	is_transactional: False
+	required_slots: from_location, to_location, leaving_date
+	optional_slots: travelers: 1
+	result_slots: from_location, to_location, from_station, to_station, leaving_date, leaving_time, fare, travelers, transfers
+
+intents_2 
+	name: BuyBusTicket
+	is_transactional: True
+	required_slots: from_location, to_location, leaving_date, leaving_time, travelers
+	optional_slots: None
+	result_slots: from_location, to_location, from_station, to_station, leaving_date, leaving_time, fare, travelers, transfers
+
+Slots:
+	slot_name: travelers
+		possible_values: 1, 2, 3, 4, 5
+
+	slot_name: transfers
+		possible_values: 0, 1
+
+
+service_name: Events_1
+
+Intents:
+intents_1 
+	name: FindEvents
+	is_transactional: False
+	required_slots: category, city_of_event
+	optional_slots: subcategory: dontcare, date: dontcare
+	result_slots: category, subcategory, event_name, date, time, city_of_event, event_location, address_of_location
+
+intents_2 
+	name: BuyEventTickets
+	is_transactional: True
+	required_slots: event_name, number_of_seats, date, city_of_event
+	optional_slots: None
+	result_slots: event_name, date, time, number_of_seats, city_of_event, event_location, address_of_location
+
+Slots:
+	slot_name: category
+		possible_values: Music, Sports
+
+	slot_name: number_of_seats
+		possible_values: 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+
+service_name: Flights_3
+
+Intents:
+intents_1 
+	name: SearchOnewayFlight
+	is_transactional: False
+	required_slots: origin_city, destination_city, departure_date
+	optional_slots: airlines: dontcare, passengers: 1, flight_class: Economy, number_checked_bags: 0
+	result_slots: passengers, flight_class, origin_city, destination_city, origin_airport_name, destination_airport_name, departure_date, number_stops, outbound_departure_time, outbound_arrival_time, price, number_checked_bags, airlines, arrives_next_day
+
+intents_2 
+	name: SearchRoundtripFlights
+	is_transactional: False
+	required_slots: origin_city, destination_city, departure_date, return_date
+	optional_slots: airlines: dontcare, passengers: 1, flight_class: Economy, number_checked_bags: 0
+	result_slots: passengers, flight_class, origin_city, destination_city, origin_airport_name, destination_airport_name, departure_date, return_date, number_stops, outbound_departure_time, outbound_arrival_time, inbound_arrival_time, inbound_departure_time, price, number_checked_bags, airlines, arrives_next_day
+
+Slots:
+	slot_name: passengers
+		possible_values: 1, 2, 3, 4
+
+	slot_name: flight_class
+		possible_values: Economy, Premium Economy, Business, First Class
+
+	slot_name: number_stops
+		possible_values: 0, 1
+
+	slot_name: number_checked_bags
+		possible_values: 0, 1, 2
+
+	slot_name: airlines
+		possible_values: United Airlines, American Airlines, Delta Airlines, Southwest Airlines, Alaska Airlines, British Airways, Air Canada, Air France
+
+	slot_name: arrives_next_day
+		possible_values: True, False
+
+
+service_name: Homes_1
+
+Intents:
+intents_1 
+	name: FindApartment
+	is_transactional: False
+	required_slots: area, number_of_beds
+	optional_slots: furnished: dontcare, number_of_baths: dontcare, pets_allowed: dontcare
+	result_slots: area, address, property_name, phone_number, furnished, pets_allowed, rent, number_of_beds, number_of_baths
+
+intents_2 
+	name: ScheduleVisit
+	is_transactional: True
+	required_slots: property_name, visit_date
+	optional_slots: None
+	result_slots: address, property_name, phone_number, furnished, pets_allowed, rent, visit_date, number_of_beds, number_of_baths
+
+Slots:
+	slot_name: furnished
+		possible_values: True, False
+
+	slot_name: pets_allowed
+		possible_values: True, False
+
+	slot_name: number_of_beds
+		possible_values: 1, 2, 3, 4
+
+	slot_name: number_of_baths
+		possible_values: 1, 2, 3, 4
+
+
+service_name: Hotels_1
+
+Intents:
+intents_1 
+	name: ReserveHotel
+	is_transactional: True
+	required_slots: hotel_name, check_in_date, number_of_days, destination
+	optional_slots: number_of_rooms: 1
+	result_slots: destination, number_of_rooms, check_in_date, number_of_days, star_rating, hotel_name, street_address, phone_number, price_per_night, has_wifi
+
+intents_2 
+	name: SearchHotel
+	is_transactional: False
+	required_slots: destination
+	optional_slots: has_wifi: dontcare, star_rating: dontcare, number_of_rooms: dontcare
+	result_slots: destination, number_of_rooms, star_rating, hotel_name, street_address, phone_number, price_per_night, has_wifi
+
+Slots:
+	slot_name: number_of_rooms
+		possible_values: 1, 2, 3
+
+	slot_name: star_rating
+		possible_values: 1, 2, 3, 4, 5
+
+	slot_name: has_wifi
+		possible_values: True, False
+
+
+service_name: Hotels_4
+
+Intents:
+intents_1 
+	name: ReserveHotel
+	is_transactional: True
+	required_slots: place_name, check_in_date, stay_length, location
+	optional_slots: number_of_rooms: 1
+	result_slots: location, number_of_rooms, check_in_date, stay_length, star_rating, place_name, street_address, phone_number, price_per_night, smoking_allowed
+
+intents_2 
+	name: SearchHotel
+	is_transactional: False
+	required_slots: location
+	optional_slots: smoking_allowed: dontcare, star_rating: dontcare, number_of_rooms: dontcare
+	result_slots: location, number_of_rooms, star_rating, place_name, street_address, phone_number, price_per_night, smoking_allowed
+
+Slots:
+	slot_name: number_of_rooms
+		possible_values: 1, 2, 3
+
+	slot_name: star_rating
+		possible_values: 1, 2, 3, 4, 5
+
+	slot_name: smoking_allowed
+		possible_values: True, False
+
+
+service_name: Media_2
+
+Intents:
+intents_1 
+	name: FindMovies
+	is_transactional: False
+	required_slots: genre
+	optional_slots: actors: dontcare, director: dontcare
+	result_slots: movie_name, genre, subtitle_language, director, actors, price
+
+intents_2 
+	name: RentMovie
+	is_transactional: True
+	required_slots: movie_name
+	optional_slots: subtitle_language: None
+	result_slots: movie_name, genre, subtitle_language, director, actors, price
+
+Slots:
+	slot_name: subtitle_language
+		possible_values: None, English, Mandarin, Spanish
+
+
+service_name: Movies_2
+
+Intents:
+intents_1 
+	name: FindMovies
+	is_transactional: False
+	required_slots: None
+	optional_slots: starring: dontcare, director: dontcare, genre: dontcare
+	result_slots: title, genre, aggregate_rating, starring, director
+
+
+service_name: Music_1
+
+Intents:
+intents_1 
+	name: LookupSong
+	is_transactional: False
+	required_slots: None
+	optional_slots: year: dontcare, genre: dontcare, artist: dontcare, album: dontcare
+	result_slots: song_name, artist, album, genre, year
+
+intents_2 
+	name: PlaySong
+	is_transactional: True
+	required_slots: song_name
+	optional_slots: artist: dontcare, playback_device: TV
+	result_slots: song_name, artist, album, genre, year, playback_device
+
+Slots:
+	slot_name: year
+		possible_values: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019
+
+	slot_name: playback_device
+		possible_values: TV, Kitchen speaker, Bedroom speaker
+
+
+service_name: RentalCars_1
+
+Intents:
+intents_1 
+	name: GetCarsAvailable
+	is_transactional: False
+	required_slots: pickup_city, pickup_date, pickup_time, dropoff_date
+	optional_slots: type: Standard
+	result_slots: type, car_name, pickup_location, pickup_date, pickup_time, pickup_city, dropoff_date, total_price
+
+intents_2 
+	name: ReserveCar
+	is_transactional: True
+	required_slots: pickup_location, pickup_date, pickup_time, dropoff_date, type
+	optional_slots: None
+	result_slots: type, car_name, pickup_location, pickup_date, pickup_time, dropoff_date, total_price
+
+Slots:
+	slot_name: type
+		possible_values: Compact, Standard, Full-size
+
+
+service_name: Restaurants_2
+
+Intents:
+intents_1 
+	name: ReserveRestaurant
+	is_transactional: True
+	required_slots: restaurant_name, location, time
+	optional_slots: number_of_seats: 2, date: 2019-03-01
+	result_slots: restaurant_name, date, time, has_seating_outdoors, has_vegetarian_options, phone_number, rating, address, number_of_seats, price_range, location, category
+
+intents_2 
+	name: FindRestaurants
+	is_transactional: False
+	required_slots: category, location
+	optional_slots: price_range: dontcare, has_seating_outdoors: dontcare, has_vegetarian_options: dontcare
+	result_slots: restaurant_name, has_seating_outdoors, has_vegetarian_options, phone_number, rating, address, price_range, location, category
+
+Slots:
+	slot_name: has_seating_outdoors
+		possible_values: True, False
+
+	slot_name: has_vegetarian_options
+		possible_values: True, False
+
+	slot_name: number_of_seats
+		possible_values: 1, 2, 3, 4, 5, 6
+
+	slot_name: price_range
+		possible_values: cheap, moderate, pricey, ultra high-end
+
+
+service_name: RideSharing_1
+
+Intents:
+intents_1 
+	name: GetRide
+	is_transactional: True
+	required_slots: destination, number_of_riders, shared_ride
+	optional_slots: None
+	result_slots: destination, shared_ride, ride_fare, approximate_ride_duration, number_of_riders
+
+Slots:
+	slot_name: shared_ride
+		possible_values: True, False
+
+	slot_name: number_of_riders
+		possible_values: 1, 2, 3, 4
+
+
+service_name: Services_4
+
+Intents:
+intents_1 
+	name: BookAppointment
+	is_transactional: True
+	required_slots: therapist_name, appointment_time, appointment_date
+	optional_slots: None
+	result_slots: therapist_name, phone_number, address, appointment_date, appointment_time
+
+intents_2 
+	name: FindProvider
+	is_transactional: False
+	required_slots: city, type
+	optional_slots: None
+	result_slots: therapist_name, phone_number, address, city, type
+
+Slots:
+	slot_name: type
+		possible_values: Psychologist, Family Counselor, Psychiatrist
+
+
+service_name: Travel_1
+
+Intents:
+intents_1 
+	name: FindAttractions
+	is_transactional: False
+	required_slots: location
+	optional_slots: free_entry: dontcare, good_for_kids: dontcare, category: dontcare
+	result_slots: location, attraction_name, category, phone_number, free_entry, good_for_kids
+
+Slots:
+	slot_name: category
+		possible_values: Place of Worship, Theme Park, Museum, Historical Landmark, Park, Tourist Attraction, Sports Venue, Shopping Area, Performing Arts Venue, Nature Preserve
+
+	slot_name: free_entry
+		possible_values: True, False
+
+	slot_name: good_for_kids
+		possible_values: True, False
+
+
+service_name: Weather_1
+
+Intents:
+intents_1 
+	name: GetWeather
+	is_transactional: False
+	required_slots: city
+	optional_slots: date: 2019-03-01
+	result_slots: precipitation, humidity, wind, temperature, city, date
+	

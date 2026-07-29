@@ -1,0 +1,65 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'Asian', 'location': 'San Francisco'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-05', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': '8 Immortals Restaurant', 'time': '12:30'})"
+  ],
+  "user_req_slots": [
+    [],
+    [
+      "price_range",
+      "address"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I'm searching for a location to dine at.\nSystem: what place ought I look in, and what sort of cuisine are you searching for?\nUser: Get me a diner in San Francisco that offers Asian cuisine.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'Asian', 'location': 'San Francisco'})\nSearch Results\n[{'address': '1433 Taraval', 'category': 'Asian', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'phone_number': '415-731-5515', 'price_range': 'cheap', 'rating': '4.00', 'restaurant_name': '8 Immortals Restaurant'}]\nEnd Search Results\nSystem: There is a lovely diner called 8 Immortals Restaurant in San Francisco.\nUser: Yeah, that's fine with me.\nSystem: Do you wish to book a spot there?\nUser: Yeah, I'd like to make a reservation on March 5th.\nSystem: When should I book for?\nUser: Make the booking for 12:30 pm.\nSystem: Please verify the following information: reserve a spot for 2 people at 8 Immortals Restaurant in San Francisco, with the date being March 5th 12:30 pm.\nUser: Yeah, that's fine. Is the diner cheap? Where is it located?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-05', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': '8 Immortals Restaurant', 'time': '12:30'})\nSearch Results\n[{'address': '1433 Taraval', 'category': 'Asian', 'date': '2019-03-05', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-731-5515', 'price_range': 'cheap', 'rating': '4.00', 'restaurant_name': '8 Immortals Restaurant', 'time': '12:30'}]\nEnd Search Results\nSystem: Your booking is complete, and yes - it is a cheap diner. The location is 1433 Taraval.\nUser: Thank you for your assistance.\nSystem: Could I assist you with something else?\nLast User Utterance:Nope; thank you for your help.\nLast System Utterance: Have a pleasant afternoon.",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'Asian', 'location': 'San Francisco'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2023-10-10', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': '8 Immortals Restaurant', 'time': '12:30'})"
+  ],
+  "generated_dialog": [
+    "User: I'm searching for a location to dine at.",
+    "System: Sure, what type of cuisine are you in the mood for?",
+    "User: I want some Asian food! And can you find something in San Francisco?",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'Asian', 'location': 'San Francisco'})",
+    "Search Results\n[{'address': '298 Gough Street', 'category': 'Asian', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'phone_number': '415-863-9335', 'price_range': 'moderate', 'rating': 3.7, 'restaurant_name': 'Bai Thong Thai'}, {'address': '(between 2nd & 3rd Ave)', 'category': 'Asian', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'phone_number': '415-474-5569', 'price_range': 'moderate', 'rating': 4.4, 'restaurant_name': 'Burmese Kitchen'}, {'address': '33 The Embarcadero', 'category': 'Asian', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'phone_number': '415-864-8999', 'price_range': 'moderate', 'rating': 4.0, 'restaurant_name': 'Butterfly Restaurant'}]\nEnd Search Results",
+    "System: I found a few options for you. The first one is Bai Thong Thai, located at 298 Gough Street. It has vegetarian options and a moderate price range. Another option is Burmese Kitchen, situated between 2nd & 3rd Ave, without vegetarian options but with a higher rating. The last one is Butterfly Restaurant at 33 The Embarcadero, also with vegetarian options.",
+    "User: Can you believe it's already 12:30? I totally forgot about this awesome Asian joint you found for me, 8 Immortals Restaurant! So, where should we hit up for some serious Asian grub? Oh, and can you tell me if they're serving up some serious street cred with the prices? Like, are we talking splurging or just a little bit fancy? And do you know where this place is at? I need to know how to get my hands on some of those dumplings!",
+    "System: I'm glad you remembered 8 Immortals Restaurant! Let's confirm the details. Do you want to reserve a table there now? If so, how many seats do you need and what time would you like to dine?",
+    "User: Absolutely, let's make it happen! We're totally going for the whole Asian food fiesta! Two seats, please, and we're hitting that 12:30 spot! And oh, can't forget to spice things up with some serious Asian flavors—let's go all out!",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2023-10-10', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': '8 Immortals Restaurant', 'time': '12:30'})",
+    "Search Results\n[{'address': '1433 Taraval', 'category': 'Asian', 'date': '2023-10-10', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-731-5515', 'price_range': 'cheap', 'rating': 4.0, 'restaurant_name': '8 Immortals Restaurant', 'time': '12:30'}]\nEnd Search Results",
+    "System: Great choice! Your table for two at 8 Immortals Restaurant is booked for 12:30 PM today. They offer affordable prices, so you can enjoy some delicious Asian cuisine without breaking the bank.",
+    "User: That sounds like a plan! Where is this place at? I need to start plotting our escape from the office!",
+    "System: 8 Immortals Restaurant is located at 1433 Taraval in San Francisco. You're all set for your Asian food fiesta!",
+    "User: Oh my gosh, San Francisco is going to be the best city for Asian food adventures! You guys are the bomb! So, what's the scoop on the parking scene? Are we talking valet or is it like, bring your own car kind of thing? I don't wanna miss out on any of those dumplings because we're late for the party!"
+  ],
+  "search_results": [
+    "[{'address': '1433 Taraval', 'category': 'Asian', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'phone_number': '415-731-5515', 'price_range': 'cheap', 'rating': '4.00', 'restaurant_name': '8 Immortals Restaurant'}]",
+    "[{'address': '1433 Taraval', 'category': 'Asian', 'date': '2019-03-05', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-731-5515', 'price_range': 'cheap', 'rating': '4.00', 'restaurant_name': '8 Immortals Restaurant', 'time': '12:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '298 Gough Street', 'category': 'Asian', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'phone_number': '415-863-9335', 'price_range': 'moderate', 'rating': 3.7, 'restaurant_name': 'Bai Thong Thai'}, {'address': '(between 2nd & 3rd Ave)', 'category': 'Asian', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'phone_number': '415-474-5569', 'price_range': 'moderate', 'rating': 4.4, 'restaurant_name': 'Burmese Kitchen'}, {'address': '33 The Embarcadero', 'category': 'Asian', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'phone_number': '415-864-8999', 'price_range': 'moderate', 'rating': 4.0, 'restaurant_name': 'Butterfly Restaurant'}]\nEnd Search Results",
+    "Search Results\n[{'address': '1433 Taraval', 'category': 'Asian', 'date': '2023-10-10', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-731-5515', 'price_range': 'cheap', 'rating': 4.0, 'restaurant_name': '8 Immortals Restaurant', 'time': '12:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

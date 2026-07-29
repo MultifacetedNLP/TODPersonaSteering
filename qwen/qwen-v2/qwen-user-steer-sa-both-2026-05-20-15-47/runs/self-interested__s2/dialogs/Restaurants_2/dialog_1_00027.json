@@ -1,0 +1,73 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Pittsburg', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '12:00'})"
+  ],
+  "user_req_slots": [
+    [
+      "price_range"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I want to have a table booked for me at a restaurant, because I want to have a meal.\nSystem: Can you tell me the restaurant you are interested to have a table booked at?\nUser: Can you check if you can make a booking of a table at Castle Rock?\nSystem: Can you tell me the time that you want to have the table booked for you?\nUser: I prefer to have the booking be made for 12:00.\nSystem: Is there a specific location you are looking for?\nUser: I am interested in restaurants which are located in Livermore.\nSystem: Can you please confirm that you want to book a table for 2 people at Castle Rock Restaurant in Livermore, and that you want the table to be booked for you for 12 pm on March 1st?\nUser: That is not right. Could you please see if you can make a booking at Mcdonald's?\nSystem: Can you please confirm that you want to have a table booked for you on March 1st at Mcdonald's?\nUser: I don't want that either. See if you can find me restaurants in Pittsburg.\nSystem: Can you please confirm that you want to have a table booked for you at 12 pm in the city of Pittsburg?\nUser: Yes that suits me well. Could you inform me about the fact how expensive is the restaurant?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Pittsburg', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '12:00'})\nSearch Results\n[{'address': '2203 Loveridge Road', 'category': 'Sandwich', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Pittsburg', 'number_of_seats': '2', 'phone_number': '925-439-5289', 'price_range': 'cheap', 'rating': '3.50', 'restaurant_name': \"Mcdonald's\", 'time': '12:00'}]\nEnd Search Results\nSystem: Your requested booking has been made, and the restaurant is considered as cheap.\nLast User Utterance:I appreciate it very much. That would be all.\nLast System Utterance: Have a wonderful day.",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Pittsburg', 'number_of_seats': '2', 'restaurant_name': 'McDonald's', 'time': '12:00'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Pittsburg', 'number_of_seats': '2', 'restaurant_name': 'McDonald's', 'time': '12:00'})"
+  ],
+  "generated_dialog": [
+    "User: I want to have a table booked for me at a restaurant, because I want to have a meal.",
+    "System: Sure, I can help with that. Could you please tell me the name of the restaurant you prefer?",
+    "User: I want to reserve a table at McDonald's in Pittsburg for 2 people on March 1st at 12:00. How much do they usually charge per person?",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Pittsburg', 'number_of_seats': '2', 'restaurant_name': 'McDonald's', 'time': '12:00'})",
+    "Search Results\n[{'address': '2203 Loveridge Road', 'category': 'Sandwich', 'date': '2019-03-01', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Pittsburg', 'number_of_seats': 2, 'phone_number': '925-439-5289', 'price_range': 'cheap', 'rating': 3.5, 'restaurant_name': \"Mcdonald's\", 'time': '12:00'}]\nEnd Search Results",
+    "System: Your table is booked at Mcdonald's in Pittsburg on March 1st at 12:00. The price range is cheap per person.",
+    "User: That sounds good to me. Confirm the reservation please.",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Pittsburg', 'number_of_seats': '2', 'restaurant_name': 'McDonald's', 'time': '12:00'})",
+    "Search Results\n[{'address': '2203 Loveridge Road', 'category': 'Sandwich', 'date': '2019-03-01', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Pittsburg', 'number_of_seats': 2, 'phone_number': '925-439-5289', 'price_range': 'cheap', 'rating': 3.5, 'restaurant_name': \"Mcdonald's\", 'time': '12:00'}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'address': '2203 Loveridge Road', 'category': 'Sandwich', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Pittsburg', 'number_of_seats': '2', 'phone_number': '925-439-5289', 'price_range': 'cheap', 'rating': '3.50', 'restaurant_name': \"Mcdonald's\", 'time': '12:00'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '2203 Loveridge Road', 'category': 'Sandwich', 'date': '2019-03-01', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Pittsburg', 'number_of_seats': 2, 'phone_number': '925-439-5289', 'price_range': 'cheap', 'rating': 3.5, 'restaurant_name': \"Mcdonald's\", 'time': '12:00'}]\nEnd Search Results",
+    "Search Results\n[{'address': '2203 Loveridge Road', 'category': 'Sandwich', 'date': '2019-03-01', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Pittsburg', 'number_of_seats': 2, 'phone_number': '925-439-5289', 'price_range': 'cheap', 'rating': 3.5, 'restaurant_name': \"Mcdonald's\", 'time': '12:00'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"Sure, I can help with that. Could you please tell me the name of the restaurant you prefer?\"}",
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2019-03-01\", \"location\": \"Pittsburg\", \"number_of_seats\": 2, \"restaurant_name\": \"McDonald's\", \"time\": \"12:00\"}}",
+    "{\"type\": \"message\", \"content\": \"Your table is booked at Mcdonald's in Pittsburg on March 1st at 12:00. The price range is cheap per person.\"}",
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2019-03-01\", \"location\": \"Pittsburg\", \"number_of_seats\": \"2\", \"restaurant_name\": \"Mcdonald's\", \"time\": \"12:00\"}}"
+  ],
+  "dialog_completed": false
+}

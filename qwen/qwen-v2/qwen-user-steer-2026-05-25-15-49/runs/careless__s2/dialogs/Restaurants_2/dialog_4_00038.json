@@ -1,0 +1,55 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'Chinese', 'location': 'Los Gatos'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-05', 'location': 'Los Gatos', 'number_of_seats': '2', 'restaurant_name': 'Jasmine Chinese Cuisine', 'time': '11:30'})"
+  ],
+  "user_req_slots": [
+    [],
+    [
+      "rating",
+      "has_seating_outdoors"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you find a place for me to eat in Los Gatos?\nSystem: Sure, anything in particular you want to eat?\nUser: Yes, try searching for Chinese.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'Chinese', 'location': 'Los Gatos'})\nSearch Results\n[{'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Los Gatos', 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': '3.70', 'restaurant_name': 'Jasmine Chinese Cuisine'}]\nEnd Search Results\nSystem: There are 2 places. How about Jasmine Chinese Cuisine in Los Gatos?\nUser: Great, can you make a reservation there next Tuesday at morning 11:30.\nSystem: Sure, please confirm you'd like a reservation for 2 at Jasmine Chinese Cuisine in Los Gatos for March 5th at 11:30 am.\nUser: Yup, that's great. What's their rating an do they have outdoor seating?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-05', 'location': 'Los Gatos', 'number_of_seats': '2', 'restaurant_name': 'Jasmine Chinese Cuisine', 'time': '11:30'})\nSearch Results\n[{'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'date': '2019-03-05', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Los Gatos', 'number_of_seats': '2', 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': '3.70', 'restaurant_name': 'Jasmine Chinese Cuisine', 'time': '11:30'}]\nEnd Search Results\nSystem: I've successfully made your reservation. They don't have outdoor seating and their rating is 3.7.\nLast User Utterance:Thanks, that's all for now.\nLast System Utterance: My pleasure.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Can you find a place for me to eat in Los Gatos?",
+    "System: Sure, what type of cuisine are you in the mood for?",
+    "User: uh, how about some chinese food, you know, like kung pao chicken or那个啥，你知道，就是那个像kung pao鸡翅那个 stuff, you know, like that kung pao chickstuff, ya知那个啥,就是那个像kung pao鸡翅那个stuff, you know, like that kung pao chickstuff, ya知那个啥,就是那个像kung pao鸡翅那个stuff, you know, like that kung pao chickstuff, ya知那个啥,就是那个像kung pao鸡翅那个stuff, you know, like that kung piao鸡翅那个stuff, ya知那个啥,就是那个像kung piao鸡翅那个stuff, youknow, like that kung piao鸡翅那个stuff, ya知那个啥,就是那个像kung piao鸡翅那个stuff, youknow, like that kung piao鸡翅那个stuff, ya知那个啥,就是那个像kung piao鸡翅那个stuff, youknow, like that kung piao鸡翅那个stuff, ya知那个啥,就是那个像kung piao鸡翅那个stuff, youknow, like that kung piao鸡",
+    "System: Sure, I understand you're looking for Chinese food. Could you please specify the type of Chinese cuisine you prefer, like Kung Pao chicken?",
+    "User: like that kung pao chicken stuff, you know, like that spicy wings stuff, you know, like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wingz like that wing",
+    "System: I see, you're looking for Chinese food with a bit of spice, like Kung Pao chicken and maybe some spicy wings. Let's focus on finding a place that serves both. Where would you like to eat in Los Gatos?",
+    "User: like that wingz, ya know, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wing",
+    "System: Got it, you're interested in Chinese food with Kung Pao chicken and spicy wings. Let's find a place in Los Gatos that offers both. Do you have any specific area in mind within Los Gatos?",
+    "User: uh, like that wingz stuff, ya know, like that wingz, like that wingz, like, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wing",
+    "System: I understand you're interested in Chinese food with Kung Pao chicken and spicy wings. Let's find a place in Los Gatos that offers both. Do you have any specific area in mind within Los Gatos?",
+    "User: like that wingz, ya know, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wingz, like that wing",
+    "System: I understand you're interested in Chinese food with Kung Pao chicken and spicy wings. Let's find a place in Los Gatos that offers both. Do you have any specific area in mind within Los Gatos?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Los Gatos', 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': '3.70', 'restaurant_name': 'Jasmine Chinese Cuisine'}]",
+    "[{'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'date': '2019-03-05', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Los Gatos', 'number_of_seats': '2', 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': '3.70', 'restaurant_name': 'Jasmine Chinese Cuisine', 'time': '11:30'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

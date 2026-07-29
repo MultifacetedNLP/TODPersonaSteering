@@ -1,0 +1,74 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={})"
+  ],
+  "user_req_slots": [
+    [
+      "cast",
+      "genre"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: I would like to find a movie I can watch.\nSystem: ApiCall(method='FindMovies', parameters={})\nSearch Results\n[{'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': '98'}]\nEnd Search Results\nSystem: What do you think of Rojo? It has an average rating of 98 percent.\nUser: Who acted in this movie and what genre is it?\nSystem: This movie is a Thriller and Rudy Chernicoff is one of the actors.\nLast User Utterance:That sounds fine. That's all I needed.\nLast System Utterance: I'm glad to have helped you.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'genre': 'Thriller', 'cast': 'dontcare'})",
+    "APICall(method='FindMovies', parameters={'movie_title': 'The Ladykillers', 'genre': 'Thriller'})"
+  ],
+  "generated_dialog": [
+    "User: I would like to find a movie I can watch.",
+    "System: Sure, what type of movie are you interested in? For example, thriller, comedy, or drama.",
+    "User: I am looking for a thriller movie. Also, could you include the main cast if possible?",
+    "System: APICall(method='FindMovies', parameters={'genre': 'Thriller', 'cast': 'dontcare'})",
+    "Search Results\n[{'cast': 'Leonard Sharp', 'directed_by': 'Alexander Mackendrick', 'genre': 'Thriller', 'movie_title': 'The Ladykillers', 'percent_rating': 100}, {'cast': 'Jason Burkey', 'directed_by': 'Riley Stearns', 'genre': 'Thriller', 'movie_title': 'The Art of Self-Defense', 'percent_rating': 83}, {'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': 98}]\nEnd Search Results",
+    "System: I found a few thriller movies for you. Here are some options: 'The Ladykillers' with a perfect 100% rating, 'The Art of Self-Defense' with 83%, and 'Rojo' with 98%. Would you like more details on any of these?",
+    "User: Could you provide more details on 'The Ladykillers' and 'Rojo'?",
+    "System: APICall(method='FindMovies', parameters={'movie_title': 'The Ladykillers', 'genre': 'Thriller'})",
+    "Search Results\n[{'cast': 'Leonard Sharp', 'directed_by': 'Alexander Mackendrick', 'genre': 'Thriller', 'movie_title': 'The Ladykillers', 'percent_rating': 100}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': '98'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'cast': 'Leonard Sharp', 'directed_by': 'Alexander Mackendrick', 'genre': 'Thriller', 'movie_title': 'The Ladykillers', 'percent_rating': 100}, {'cast': 'Jason Burkey', 'directed_by': 'Riley Stearns', 'genre': 'Thriller', 'movie_title': 'The Art of Self-Defense', 'percent_rating': 83}, {'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': 98}]\nEnd Search Results",
+    "Search Results\n[{'cast': 'Leonard Sharp', 'directed_by': 'Alexander Mackendrick', 'genre': 'Thriller', 'movie_title': 'The Ladykillers', 'percent_rating': 100}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"Sure, what type of movie are you interested in? For example, thriller, comedy, or drama.\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindMovies\", \"parameters\": {\"genre\": \"Thriller\", \"cast\": \"dontcare\"}}",
+    "{\"type\": \"message\", \"content\": \"I found a few thriller movies for you. Here are some options: 'The Ladykillers' starring Leonard Sharp with a 100% rating, 'The Art of Self-Defense' starring Jason Burkey with an 83% rating, and 'Rojo' starring Rudy Chernicoff with a 98% rating. Which one would you like more information on?\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindMovies\", \"parameters\": {\"movie_title\": \"The Ladykillers\", \"genre\": \"Thriller\"}}"
+  ],
+  "dialog_completed": false
+}

@@ -1,0 +1,71 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Pacifica', 'number_of_seats': '2', 'restaurant_name': 'Puerto 27', 'time': '13:15'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you check restaurants in Pacifica, I'm looking to make a reservation.\nSystem: Is there a particular restaurant you want? What time did you want the reservation?\nUser: See if you can get one at Puerto 27 for 1:15 pm.\nSystem: To verify: You would like a reseravation at Puerto 27 in Pacifica for 1:15 pm on March 1st for 2.\nUser: Yes that's right.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Pacifica', 'number_of_seats': '2', 'restaurant_name': 'Puerto 27', 'time': '13:15'})\nSearch Results\n[{'address': '525 Crespi Drive', 'category': 'Peruvian', 'date': '2019-03-01', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Pacifica', 'number_of_seats': '2', 'phone_number': '650-733-7343', 'price_range': 'moderate', 'rating': '4.10', 'restaurant_name': 'Puerto 27', 'time': '13:30'}]\nEnd Search Results\nSystem: Your table is reserved.\nLast User Utterance:Thanks so much. That's all I need for now.\nLast System Utterance: Have a great day.",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'Mexican', 'location': 'Pacifica'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2023-03-01', 'location': 'Pacifica', 'number_of_seats': '2', 'restaurant_name': 'The Surf Spot', 'time': '13:15'})"
+  ],
+  "generated_dialog": [
+    "User: Can you check restaurants in Pacifica, I'm looking to make a reservation.",
+    "System: Sure, what type of cuisine are you interested in for your reservation in Pacifica?",
+    "User: I'm in the mood for some Mexican food. Can you suggest a place?",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'Mexican', 'location': 'Pacifica'})",
+    "Search Results\n[{'address': '4627 Pacific Coast Highway', 'category': 'Mexican', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Pacifica', 'phone_number': '650-355-7873', 'price_range': 'moderate', 'rating': 3.8, 'restaurant_name': 'The Surf Spot'}]\nEnd Search Results",
+    "System: I found a Mexican restaurant in Pacifica called The Surf Spot. Would you like to make a reservation there?",
+    "User: That sounds great, can we make a reservation for two people at 1:15 PM on March 1st?",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2023-03-01', 'location': 'Pacifica', 'number_of_seats': '2', 'restaurant_name': 'The Surf Spot', 'time': '13:15'})",
+    "Search Results\n[{'address': '525 Crespi Drive', 'category': 'Peruvian', 'date': '2023-03-01', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'Pacifica', 'number_of_seats': 2, 'phone_number': '650-733-7343', 'price_range': 'moderate', 'rating': 4.1, 'restaurant_name': 'The Surf Spot', 'time': '13:15'}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'address': '525 Crespi Drive', 'category': 'Peruvian', 'date': '2019-03-01', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Pacifica', 'number_of_seats': '2', 'phone_number': '650-733-7343', 'price_range': 'moderate', 'rating': '4.10', 'restaurant_name': 'Puerto 27', 'time': '13:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '4627 Pacific Coast Highway', 'category': 'Mexican', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Pacifica', 'phone_number': '650-355-7873', 'price_range': 'moderate', 'rating': 3.8, 'restaurant_name': 'The Surf Spot'}]\nEnd Search Results",
+    "Search Results\n[{'address': '525 Crespi Drive', 'category': 'Peruvian', 'date': '2023-03-01', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'Pacifica', 'number_of_seats': 2, 'phone_number': '650-733-7343', 'price_range': 'moderate', 'rating': 4.1, 'restaurant_name': 'The Surf Spot', 'time': '13:15'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"dontcare\", \"location\": \"Pacifica\"}}",
+    "{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"Mexican\", \"location\": \"Pacifica\"}}",
+    "{\"type\": \"message\", \"content\": \"I found a Mexican restaurant in Pacifica called The Surf Spot. Would you like to make a reservation there?\"}",
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2023-03-01\", \"location\": \"Pacifica\", \"number_of_seats\": 2, \"restaurant_name\": \"The Surf Spot\", \"time\": \"13:15\"}}"
+  ],
+  "dialog_completed": false
+}

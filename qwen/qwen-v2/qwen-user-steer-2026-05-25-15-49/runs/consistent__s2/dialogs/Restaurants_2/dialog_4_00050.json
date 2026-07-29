@@ -1,0 +1,95 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'Italian', 'location': 'Belmont'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-14', 'location': 'Belmont', 'number_of_seats': '2', 'restaurant_name': 'Caprinos', 'time': '11:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "phone_number"
+    ],
+    [
+      "price_range",
+      "address"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Help me find somewhere to eat.\nSystem: Sure, where and what kind of food?\nUser: Find an Italian restaurant in Belmont.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'Italian', 'location': 'Belmont'})\nSearch Results\n[{'address': '1000 6th Avenue', 'category': 'Italian', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Belmont', 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': '3.20', 'restaurant_name': 'Caprinos'}]\nEnd Search Results\nSystem: There's 3 you may like. How about Caprinos in Belmont?\nUser: What's the phone number?\nSystem: They're at 650-591-4156.\nUser: Great, thank you.\nSystem: Should I reserve a table?\nUser: Yeah, reserve a table for 2 for the 14th of this month at morning 11:30.\nSystem: Sure, please confirm you'd like a table for 2 at Caprinos in Belmont at 11:30 am on March 14th.\nUser: Correct, is it cheap and what's their address?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-14', 'location': 'Belmont', 'number_of_seats': '2', 'restaurant_name': 'Caprinos', 'time': '11:30'})\nSearch Results\n[{'address': '1000 6th Avenue', 'category': 'Italian', 'date': '2019-03-14', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Belmont', 'number_of_seats': '2', 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': '3.20', 'restaurant_name': 'Caprinos', 'time': '11:30'}]\nEnd Search Results\nSystem: I've reserved your table. They are moderate and at 1000 6th Avenue.\nUser: Thank you again.\nSystem: Need anything else?\nLast User Utterance:Nope, thank you!\nLast System Utterance: My pleasure, enjoy your day.",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'Italian', 'location': 'Belmont'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2023-10-10', 'location': 'Belmont', 'number_of_seats': '2', 'restaurant_name': 'Caprinos', 'time': '12:30'})"
+  ],
+  "generated_dialog": [
+    "User: Help me find somewhere to eat.",
+    "System: Sure! What type of cuisine are you in the mood for and where would you like to eat?",
+    "User: I'm in the mood for Italian food and I'd like to eat in Belmont. Could you also provide me with the phone number of the restaurant, please?",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'Italian', 'location': 'Belmont'})",
+    "Search Results\n[{'address': '1000 6th Avenue', 'category': 'Italian', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Belmont', 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': 3.2, 'restaurant_name': 'Caprinos'}, {'address': '968 Ralston Avenue', 'category': 'Italian', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Belmont', 'phone_number': '650-620-9103', 'price_range': 'moderate', 'rating': 4.4, 'restaurant_name': 'Divino Ristorante'}, {'address': '1910 Ralston Avenue', 'category': 'Italian', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Belmont', 'phone_number': '650-637-0611', 'price_range': 'moderate', 'rating': 4.5, 'restaurant_name': 'Vivace Ristorante'}]\nEnd Search Results",
+    "System: I found a couple of Italian restaurants in Belmont for you. The first one is Caprinos with a rating of 3.2, and the second one is Divino Ristorante with a rating of 4.4. The third one is Vivace Ristorante with a rating of 4.5. Would you like the phone number for any of these restaurants?",
+    "User: Could you please give me the phone number for Caprinos?",
+    "System: Sure, the phone number for Caprinos is 650-591-4156.",
+    "User: Could you also let me know the price range and the address of Caprinos, please?",
+    "System: The price range for Caprinos is moderate and its address is 1000 6th Avenue.",
+    "User: Could you confirm the address and the price range for Caprinos again, please?",
+    "System: Sure, Caprinos is located at 1000 6th Avenue and the price range is moderate.",
+    "User: Could you also confirm the phone number for Caprinos, please?",
+    "System: The phone number for Caprinos is 650-591-4156. Is there anything else you need confirmation on regarding Caprinos?",
+    "User: Could you confirm the address and the price range for Caprinos one more time, please?",
+    "System: Sure, Caprinos is located at 1000 6th Avenue and the price range is moderate. The phone number is 650-591-4156. Is there anything else you need confirmation on regarding Caprinos?",
+    "User: Could you confirm the address and the price range for Caprinos once more, please?",
+    "System: Sure, Caprinos is located at 1000 6th Avenue and the price range is moderate. The phone number is 650-591-4156. Is there anything else you need confirmation on regarding Caprinos?",
+    "User: No, that's all, thanks.",
+    "System: You're welcome! If you need any more help in the future, feel free to ask. Have a great day!",
+    "User: I'm ready to make a reservation for Caprinos. Can you confirm the address and the price range for me one more time?",
+    "System: Sure, Caprinos is located at 1000 6th Avenue and the price range is moderate. Shall we proceed with the reservation?",
+    "User: Shall we proceed with the reservation?",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2023-10-10', 'location': 'Belmont', 'number_of_seats': '2', 'restaurant_name': 'Caprinos', 'time': '12:30'})",
+    "Search Results\n[{'address': '1000 6th Avenue', 'category': 'Italian', 'date': '2023-10-10', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.False_, 'location': 'Belmont', 'number_of_seats': 2, 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': np.float64(3.2), 'restaurant_name': 'Caprinos', 'time': '12:30'}]\nEnd Search Results",
+    "System: Your table at Caprinos is booked for 10/10/2023 at 12:30 PM. The restaurant is located at 1000 6th Avenue and the price range is moderate. Is there anything else you need?",
+    "User: The reservation is confirmed. Can you please remind me of the address and the price range one more time?",
+    "System: Sure, your reservation is confirmed at Caprinos. The restaurant is located at 1000 6th Avenue and the price range is moderate. Have a great meal!",
+    "User: Thank you for confirming the details. I will remember the address and the price range. Can we proceed with the reservation?"
+  ],
+  "search_results": [
+    "[{'address': '1000 6th Avenue', 'category': 'Italian', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Belmont', 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': '3.20', 'restaurant_name': 'Caprinos'}]",
+    "[{'address': '1000 6th Avenue', 'category': 'Italian', 'date': '2019-03-14', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Belmont', 'number_of_seats': '2', 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': '3.20', 'restaurant_name': 'Caprinos', 'time': '11:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '1000 6th Avenue', 'category': 'Italian', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Belmont', 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': 3.2, 'restaurant_name': 'Caprinos'}, {'address': '968 Ralston Avenue', 'category': 'Italian', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Belmont', 'phone_number': '650-620-9103', 'price_range': 'moderate', 'rating': 4.4, 'restaurant_name': 'Divino Ristorante'}, {'address': '1910 Ralston Avenue', 'category': 'Italian', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Belmont', 'phone_number': '650-637-0611', 'price_range': 'moderate', 'rating': 4.5, 'restaurant_name': 'Vivace Ristorante'}]\nEnd Search Results",
+    "Search Results\n[{'address': '1000 6th Avenue', 'category': 'Italian', 'date': '2023-10-10', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.False_, 'location': 'Belmont', 'number_of_seats': 2, 'phone_number': '650-591-4156', 'price_range': 'moderate', 'rating': np.float64(3.2), 'restaurant_name': 'Caprinos', 'time': '12:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

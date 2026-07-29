@@ -1,0 +1,88 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={})",
+    "ApiCall(method='FindMovies', parameters={'directed_by': 'Quentin Tarantino', 'genre': 'Cult'})"
+  ],
+  "user_req_slots": [
+    [],
+    [
+      "cast"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: Its boring to have a routing life and i plan to watch a movie. will you find me a good movie?\nSystem: ApiCall(method='FindMovies', parameters={})\nSearch Results\n[{'cast': 'Manabu Hosoi', 'directed_by': 'Shinichirou Ueda', 'genre': 'Horror', 'movie_title': 'One Cut of the Dead', 'percent_rating': '100'}]\nEnd Search Results\nSystem: I found 10 movies as per your taste. How about One cut of the Dead? the movie has an average rating of 100 percent.\nUser: No , i am not interested. Any other movies?\nSystem: How about Rojo? The average rating of that movie is 98 percent.\nUser: Not interested. Any other movies which are directed by QUentin Tarantino? type of movie should be Cult genre.\nSystem: ApiCall(method='FindMovies', parameters={'directed_by': 'Quentin Tarantino', 'genre': 'Cult'})\nSearch Results\n[{'cast': 'Quentin Tarantino', 'directed_by': 'Quentin Tarantino', 'genre': 'Cult', 'movie_title': 'Pulp Fiction', 'percent_rating': '92'}]\nEnd Search Results\nSystem: How about Pulp Fiction? The average rating of that movie is 92 percent.\nUser: Who played in that movie?\nSystem: Quentin Tarantino Acted in the movie.\nLast User Utterance:Ok that sounds good. that's all i need\nLast System Utterance: Have a wonderful day",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'genre': 'drama'})",
+    "APICall(method='FindMovies', parameters={'movie_title': 'Brittany Runs a Marathon'})",
+    "APICall(method='FindMovies', parameters={'movie_title': 'Brittany Runs a Marathon'})"
+  ],
+  "generated_dialog": [
+    "User: Its boring to have a routing life and i plan to watch a movie. will you find me a good movie?",
+    "System: APICall(method='FindMovies', parameters={'genre': 'drama'})",
+    "Search Results\n[{'cast': 'Javier Bardem', 'directed_by': 'Pedro Almodovar', 'genre': 'Drama', 'movie_title': 'Live Flesh', 'percent_rating': 80}, {'cast': 'Doris McCarthy', 'directed_by': 'Bart Freundlich', 'genre': 'Drama', 'movie_title': 'After The Wedding', 'percent_rating': 43}, {'cast': 'Michaela Watkins', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}]\nEnd Search Results",
+    "System: I found a few drama movies for you. 'Live Flesh' has a 80% rating, 'After The Wedding' has 43%, and 'Brittany Runs a Marathon' has 90%. Which one would you like to watch?",
+    "User: I think I'll go with 'Brittany Runs a Marathon'. Can you tell me more about the cast?",
+    "System: APICall(method='FindMovies', parameters={'movie_title': 'Brittany Runs a Marathon'})",
+    "Search Results\n[{'cast': 'Michaela Watkins', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}, {'cast': 'Jillian Bell', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}, {'cast': 'Utkarsh Ambudkar', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}]\nEnd Search Results",
+    "System: The movie 'Brittany Runs a Marathon' stars Michaela Watkins, Jillian Bell, and Utkarsh Ambudkar. Would you like to know anything else about this movie?",
+    "User: Yes, can you also tell me the release year and the director of the movie?",
+    "System: APICall(method='FindMovies', parameters={'movie_title': 'Brittany Runs a Marathon'})",
+    "Search Results\n[{'cast': 'Michaela Watkins', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}, {'cast': 'Jillian Bell', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}, {'cast': 'Utkarsh Ambudkar', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'cast': 'Manabu Hosoi', 'directed_by': 'Shinichirou Ueda', 'genre': 'Horror', 'movie_title': 'One Cut of the Dead', 'percent_rating': '100'}]",
+    "[{'cast': 'Quentin Tarantino', 'directed_by': 'Quentin Tarantino', 'genre': 'Cult', 'movie_title': 'Pulp Fiction', 'percent_rating': '92'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'cast': 'Javier Bardem', 'directed_by': 'Pedro Almodovar', 'genre': 'Drama', 'movie_title': 'Live Flesh', 'percent_rating': 80}, {'cast': 'Doris McCarthy', 'directed_by': 'Bart Freundlich', 'genre': 'Drama', 'movie_title': 'After The Wedding', 'percent_rating': 43}, {'cast': 'Michaela Watkins', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}]\nEnd Search Results",
+    "Search Results\n[{'cast': 'Michaela Watkins', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}, {'cast': 'Jillian Bell', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}, {'cast': 'Utkarsh Ambudkar', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}]\nEnd Search Results",
+    "Search Results\n[{'cast': 'Michaela Watkins', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}, {'cast': 'Jillian Bell', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}, {'cast': 'Utkarsh Ambudkar', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": -1.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"FindMovies\", \"parameters\": {\"genre\": \"drama\"}}",
+    "{\"type\": \"message\", \"content\": \"I found a few drama movies for you. 'Live Flesh' has a 80% rating, 'After The Wedding' has 43%, and 'Brittany Runs a Marathon' has 90%. Which one would you like to watch?\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindMovies\", \"parameters\": {\"movie_title\": \"Brittany Runs a Marathon\"}}",
+    "{\"type\": \"message\", \"content\": \"The movie 'Brittany Runs a Marathon' stars Michaela Watkins, Jillian Bell, and Utkarsh Ambudkar. Would you like to know anything else about this movie?\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindMovies\", \"parameters\": {\"movie_title\": \"Brittany Runs a Marathon\"}}"
+  ],
+  "dialog_completed": false
+}

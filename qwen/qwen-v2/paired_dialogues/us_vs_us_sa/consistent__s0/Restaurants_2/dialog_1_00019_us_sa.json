@@ -1,0 +1,79 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Larkspur', 'number_of_seats': '2', 'restaurant_name': 'Amalfi', 'time': '17:30'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I'd like to make a reservation at a restaurant.\nSystem: Is there a specific restaurant you'd like to make the reservation for?\nUser: It's a restaurant called Amalfi, please try that.\nSystem: Where is the restaurant located and what time do you want the reservation for?\nUser: I want it for 5:30 in the evening and it should be in Larkspur.\nSystem: I'll make you a reservation at Amalfi in Larkspur for 5:30 pm on March 1st for 2 people. Is that correct?\nUser: Yeah, that sounds awesome.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Larkspur', 'number_of_seats': '2', 'restaurant_name': 'Amalfi', 'time': '17:30'})\nSearch Results\n[{'address': '455 Magnolia Avenue', 'category': 'Italian', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Larkspur', 'number_of_seats': '2', 'phone_number': '415-924-3332', 'price_range': 'moderate', 'rating': '3.50', 'restaurant_name': 'Amalfi', 'time': '17:30'}]\nEnd Search Results\nSystem: I've booked the reservation.\nLast User Utterance:Thanks a lot. That's it for now.\nLast System Utterance: Have an excellent rest of your day.",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'Amalfi', 'location': 'Larkspur', 'time': '17:30'})"
+  ],
+  "generated_dialog": [
+    "User: I'd like to make a reservation at a restaurant.",
+    "System: Sure, I can help with that. Could you please tell me the name of the restaurant you're interested in?",
+    "User: I want to reserve a table at Amalfi.",
+    "System: Sure, I can help with that. Could you please also provide the location and the time you would like to reserve the table?",
+    "User: Sure, I would like to reserve a table at Amalfi in Larkspur for 17:30.",
+    "System: APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'Amalfi', 'location': 'Larkspur', 'time': '17:30'})",
+    "Search Results\n[{'address': '455 Magnolia Avenue', 'category': 'Italian', 'date': '2019-03-01', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Larkspur', 'number_of_seats': 2, 'phone_number': '415-924-3332', 'price_range': 'moderate', 'rating': 3.5, 'restaurant_name': 'Amalfi', 'time': '17:30'}]\nEnd Search Results",
+    "System: Your table is reserved at Amalfi in Larkspur for 17:30. Is there anything else you need help with?",
+    "User: No, that's all, thanks.",
+    "System: You're welcome! Enjoy your meal at Amalfi.",
+    "User: Great, see you there!"
+  ],
+  "search_results": [
+    "[{'address': '455 Magnolia Avenue', 'category': 'Italian', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Larkspur', 'number_of_seats': '2', 'phone_number': '415-924-3332', 'price_range': 'moderate', 'rating': '3.50', 'restaurant_name': 'Amalfi', 'time': '17:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '455 Magnolia Avenue', 'category': 'Italian', 'date': '2019-03-01', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Larkspur', 'number_of_seats': 2, 'phone_number': '415-924-3332', 'price_range': 'moderate', 'rating': 3.5, 'restaurant_name': 'Amalfi', 'time': '17:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"Sure, I can help with that. Could you please tell me the name of the restaurant you're interested in?\"}",
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"restaurant_name\": \"Amalfi\", \"location\": \"dontcare\", \"time\": \"dontcare\"}}",
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"restaurant_name\": \"Amalfi\", \"location\": \"Larkspur\", \"time\": \"17:30\"}}",
+    "{\"type\": \"message\", \"content\": \"Your table is reserved at Amalfi in Larkspur for 17:30. Is there anything else you need help with?\"}",
+    "{\"type\": \"message\", \"content\": \"You're welcome! Enjoy your meal at Amalfi.\"}"
+  ],
+  "dialog_completed": false
+}

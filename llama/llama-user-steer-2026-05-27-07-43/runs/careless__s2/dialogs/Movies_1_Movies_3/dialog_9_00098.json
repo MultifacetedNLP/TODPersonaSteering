@@ -1,0 +1,72 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={})"
+  ],
+  "user_req_slots": [
+    [
+      "cast",
+      "genre"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: I would like to find a movie I can watch.\nSystem: ApiCall(method='FindMovies', parameters={})\nSearch Results\n[{'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': '98'}]\nEnd Search Results\nSystem: What do you think of Rojo? It has an average rating of 98 percent.\nUser: Who acted in this movie and what genre is it?\nSystem: This movie is a Thriller and Rudy Chernicoff is one of the actors.\nLast User Utterance:That sounds fine. That's all I needed.\nLast System Utterance: I'm glad to have helped you.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: I would like to find a movie I can watch.",
+    "System: What type of movie are you in the mood for?",
+    "User: I don't know, just something with a good action movie guy, like Tom Cruise or something.",
+    "System: Do you have a preferred action movie genre, such as sci-fi or historical?",
+    "User: I like action movies with explosions, so maybe something like Die Hard or Mission Impossible?",
+    "System: What type of movie are you in the mood for?",
+    "User: I don't know, just something with a good action movie guy, like Tom Cruise or something.",
+    "System: You mentioned Tom Cruise, so I'm guessing you like action movies. Is that correct?",
+    "User: I guess I like action movies with explosions, like Die Hard or Mission Impossible, so maybe something with Tom Cruise?",
+    "System: We can search for action movies with Tom Cruise. Would you like to know the title of the movie, its genre, or something else?",
+    "User: I don't know, just tell me if it's like Die Hard or Mission Impossible, I guess.",
+    "System: We can search for action movies with Tom Cruise. Would you like to know the title of the movie, its genre, or something else?",
+    "User: I guess just tell me if it's like Die Hard or Mission Impossible, I don't know, just like that.",
+    "System: You mentioned Tom Cruise, so I'm guessing you like action movies. Is that correct?",
+    "User: I guess I like action movies with explosions, like Die Hard or Mission Impossible, so maybe something with Tom Cruise?",
+    "System: You mentioned Tom Cruise, so I'm guessing you like action movies. Is that correct?",
+    "User: I guess I like action movies with explosions, like Die Hard or Mission Impossible, so maybe something with Tom Cruise?",
+    "System: You mentioned Tom Cruise and action movies with explosions. Are you looking for a specific movie, such as Mission Impossible or Die Hard, or are you open to other suggestions?",
+    "User: I guess I like action movies with explosions, like Die Hard or Mission Impossible, so maybe something with Tom Cruise?",
+    "System: You mentioned Tom Cruise and action movies with explosions. Are you looking for a specific movie, such as Mission Impossible or Die Hard, or are you open to other suggestions?",
+    "User: I guess I like action movies with explosions, like Die Hard or Mission Impossible, so maybe something with Tom Cruise?",
+    "System: You mentioned Tom Cruise and action movies with explosions. Are you looking for a specific movie, such as Mission Impossible or Die Hard, or are you open to other suggestions?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': '98'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

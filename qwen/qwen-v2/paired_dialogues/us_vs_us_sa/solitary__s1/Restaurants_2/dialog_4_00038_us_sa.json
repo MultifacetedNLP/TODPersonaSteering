@@ -1,0 +1,96 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'Chinese', 'location': 'Los Gatos'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-05', 'location': 'Los Gatos', 'number_of_seats': '2', 'restaurant_name': 'Jasmine Chinese Cuisine', 'time': '11:30'})"
+  ],
+  "user_req_slots": [
+    [],
+    [
+      "rating",
+      "has_seating_outdoors"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you find a place for me to eat in Los Gatos?\nSystem: Sure, anything in particular you want to eat?\nUser: Yes, try searching for Chinese.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'Chinese', 'location': 'Los Gatos'})\nSearch Results\n[{'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Los Gatos', 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': '3.70', 'restaurant_name': 'Jasmine Chinese Cuisine'}]\nEnd Search Results\nSystem: There are 2 places. How about Jasmine Chinese Cuisine in Los Gatos?\nUser: Great, can you make a reservation there next Tuesday at morning 11:30.\nSystem: Sure, please confirm you'd like a reservation for 2 at Jasmine Chinese Cuisine in Los Gatos for March 5th at 11:30 am.\nUser: Yup, that's great. What's their rating an do they have outdoor seating?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-05', 'location': 'Los Gatos', 'number_of_seats': '2', 'restaurant_name': 'Jasmine Chinese Cuisine', 'time': '11:30'})\nSearch Results\n[{'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'date': '2019-03-05', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Los Gatos', 'number_of_seats': '2', 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': '3.70', 'restaurant_name': 'Jasmine Chinese Cuisine', 'time': '11:30'}]\nEnd Search Results\nSystem: I've successfully made your reservation. They don't have outdoor seating and their rating is 3.7.\nLast User Utterance:Thanks, that's all for now.\nLast System Utterance: My pleasure.",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'Chinese', 'location': 'Los Gatos'})",
+    "APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'Jasmine Chinese Cuisine', 'location': 'Los Gatos', 'number_of_seats': '2', 'time': '13:30'})"
+  ],
+  "generated_dialog": [
+    "User: Can you find a place for me to eat in Los Gatos?",
+    "System: Sure, what type of cuisine are you in the mood for?",
+    "User: I would like to find a Chinese restaurant.",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'Chinese', 'location': 'Los Gatos'})",
+    "Search Results\n[{'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'Los Gatos', 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': 3.7, 'restaurant_name': 'Jasmine Chinese Cuisine'}, {'address': '14107 South Winchester Boulevard', 'category': 'Chinese', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'Los Gatos', 'phone_number': '408-370-2032', 'price_range': 'moderate', 'rating': 4.4, 'restaurant_name': 'Yeung Shing'}, {'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'date': '2019-03-05', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'Los Gatos', 'number_of_seats': 3, 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': 3.7, 'restaurant_name': 'Jasmine Chinese Cuisine', 'time': '13:30'}]\nEnd Search Results",
+    "System: I found a couple of Chinese restaurants in Los Gatos. The first one is Jasmine Chinese Cuisine located at 20 South Santa Cruz Avenue, and the second one is Yeung Shing at 14107 South Winchester Boulevard. Which one would you prefer?",
+    "User: I would like to reserve a table for two at Jasmine Chinese Cuisine. Can you confirm if the seating is indoors or if there are outdoor options available?",
+    "System: APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'Jasmine Chinese Cuisine', 'location': 'Los Gatos', 'number_of_seats': '2', 'time': '13:30'})",
+    "Search Results\n[{'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'date': '2019-03-05', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.True_, 'location': 'Los Gatos', 'number_of_seats': 2, 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': np.float64(3.7), 'restaurant_name': 'Jasmine Chinese Cuisine', 'time': '13:30'}]\nEnd Search Results",
+    "System: Your table is reserved at Jasmine Chinese Cuisine in Los Gatos for 2 people at 13:30. The seating is indoors. Is there anything else you need help with?",
+    "User: No, that's all, thanks.",
+    "System: You're welcome! Enjoy your meal at Jasmine Chinese Cuisine. Have a great day!"
+  ],
+  "search_results": [
+    "[{'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Los Gatos', 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': '3.70', 'restaurant_name': 'Jasmine Chinese Cuisine'}]",
+    "[{'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'date': '2019-03-05', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Los Gatos', 'number_of_seats': '2', 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': '3.70', 'restaurant_name': 'Jasmine Chinese Cuisine', 'time': '11:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'Los Gatos', 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': 3.7, 'restaurant_name': 'Jasmine Chinese Cuisine'}, {'address': '14107 South Winchester Boulevard', 'category': 'Chinese', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'Los Gatos', 'phone_number': '408-370-2032', 'price_range': 'moderate', 'rating': 4.4, 'restaurant_name': 'Yeung Shing'}, {'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'date': '2019-03-05', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'Los Gatos', 'number_of_seats': 3, 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': 3.7, 'restaurant_name': 'Jasmine Chinese Cuisine', 'time': '13:30'}]\nEnd Search Results",
+    "Search Results\n[{'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'date': '2019-03-05', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.True_, 'location': 'Los Gatos', 'number_of_seats': 2, 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': np.float64(3.7), 'restaurant_name': 'Jasmine Chinese Cuisine', 'time': '13:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"dontcare\", \"location\": \"Los Gatos\"}}",
+    "{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"Chinese\", \"location\": \"Los Gatos\"}}",
+    "{\"type\": \"message\", \"content\": \"I found a couple of Chinese restaurants in Los Gatos. The first one is Jasmine Chinese Cuisine located at 20 South Santa Cruz Avenue, and the second one is Yeung Shing at 14107 South Winchester Boulevard. Which one would you prefer?\"}",
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"restaurant_name\": \"Jasmine Chinese Cuisine\", \"location\": \"Los Gatos\", \"number_of_seats\": 2, \"time\": \"13:30\"}}",
+    "{\"type\": \"message\", \"content\": \"Your table is reserved at Jasmine Chinese Cuisine in Los Gatos for 2 people at 13:30. The seating is indoors. Is there anything else you need help with?\"}",
+    "{\"type\": \"message\", \"content\": \"You're welcome! Enjoy your meal at Jasmine Chinese Cuisine. Have a great day!\", \"end_dialog\": true}"
+  ],
+  "dialog_completed": true
+}

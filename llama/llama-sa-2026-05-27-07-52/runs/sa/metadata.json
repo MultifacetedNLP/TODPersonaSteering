@@ -1,0 +1,47 @@
+{
+  "experiment_name": "llama-sa-2026-05-27-07-52",
+  "experiment_description": "Persona-flow TOD experiment",
+  "run_name": "sa",
+  "run_description": "Persona-flow TOD eval",
+  "status": "evaluation_finished",
+  "updated_at": "2026-05-27T21:26:52.081804-05:00",
+  "command": "sbatch /var/spool/slurmd/job18526461/slurm_script  ",
+  "project_root": "/work/hdd/beto/balvesrodrigues/persona_vectors/Persona-TOD",
+  "experiment_dir": "/work/hdd/beto/balvesrodrigues/persona_vectors/Persona-TOD/output/llama-sa-2026-05-27-07-52",
+  "output_dir": "/work/hdd/beto/balvesrodrigues/persona_vectors/Persona-TOD/output/llama-sa-2026-05-27-07-52/runs/sa",
+  "dialogs_dir": "/work/hdd/beto/balvesrodrigues/persona_vectors/Persona-TOD/output/llama-sa-2026-05-27-07-52/runs/sa/dialogs",
+  "config_name": "tod_inference",
+  "git_commit": "35f802c8af72d80ecc8908f9cb69b3a9c2519bc5",
+  "hostname": "cn093.delta.ncsa.illinois.edu",
+  "slurm": {
+    "job_id": "18526606",
+    "array_job_id": null,
+    "array_task_id": null,
+    "submit_dir": "/work/hdd/beto/balvesrodrigues/persona_vectors/Persona-TOD",
+    "cpus_per_task": "10"
+  },
+  "environment": {
+    "experiment_id": "llama-sa-2026-05-27-07-52",
+    "run_label": "sa",
+    "domain": null,
+    "config_name": "tod_inference"
+  },
+  "config_summary": {
+    "dataset_type": null,
+    "test_domain_settings": [
+      [
+        "Restaurants_2"
+      ],
+      [
+        "Movies_1",
+        "Movies_3"
+      ]
+    ],
+    "num_dialogues_per_domain": 25,
+    "system_provider": "sa",
+    "system_model_name": "meta-llama/Llama-3.1-8B-Instruct",
+    "user_provider": "local",
+    "user_model_name": "meta-llama/Llama-3.1-8B-Instruct"
+  },
+  "created_at": "2026-05-27T17:49:21.494690-05:00"
+}

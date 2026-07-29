@@ -1,0 +1,99 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-14', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': \"Schroeder's\", 'time': '13:30'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Hi there, could you get me a table at a restaurant on the 14th of March at 1:30 pm please?\nSystem: Sure, any particular restaurant are you interested in ?\nUser: Could you get me a reservation at Schroeder's please?\nSystem: Sure, and which location would you prefer?\nUser: A table for two at San Francisco will be fine.\nSystem: Please confirm you reservation at Schroeder's in San Francisco for 2 at 1:30 pm on the March 14th.\nUser: That sounds great to me!\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-14', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': \"Schroeder's\", 'time': '13:30'})\nSearch Results\n[{'address': '240 Front Street', 'category': 'European', 'date': '2019-03-14', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-421-4778', 'price_range': 'moderate', 'rating': '4.20', 'restaurant_name': \"Schroeder's\", 'time': '13:30'}]\nEnd Search Results\nSystem: Your reservation has been made.\nUser: Thank you so much!\nSystem: Do you require any further assistance?\nLast User Utterance:No, that is all I need. Really appreciate it!\nLast System Utterance: No worries, have a great day!",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'date': '2024-03-14', 'location': 'unknown', 'number_of_seats': '2', 'restaurant_name': 'Schroeder's', 'time': '13:30'})"
+  ],
+  "generated_dialog": [
+    "User: Hi there, could you get me a table at a restaurant on the 14th of March at 1:30 pm please?",
+    "System: I'd be happy to help you book a table. Can you please tell me the name of the restaurant you're interested in?",
+    "User: I'm actually looking for a table at Schroeder's, is that okay?",
+    "System: Great, I've got Schroeder's. Can you please confirm the date and time you'd like to book the table for?",
+    "User: Yes, the 14th of March at 1:30 pm is correct, isn't it?",
+    "System: Yes, the 14th of March at 1:30 pm is correct. Just to confirm, you'd like to book a table for 2 people at Schroeder's on that date and time, correct?",
+    "User: Yes, that's correct, two people.",
+    "System: Just to confirm, you'd like to book a table for 2 people at Schroeder's on the 14th of March at 1:30 pm. Is that correct?",
+    "User: Yes, that's correct, two people.",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2024-03-14', 'location': 'unknown', 'number_of_seats': '2', 'restaurant_name': 'Schroeder's', 'time': '13:30'})",
+    "Search Results\n[{'address': '240 Front Street', 'category': 'European', 'date': '2024-03-14', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.False_, 'location': 'unknown', 'number_of_seats': '2', 'phone_number': '415-421-4778', 'price_range': 'moderate', 'rating': np.float64(4.2), 'restaurant_name': \"Schroeder's\", 'time': '13:30'}]\nEnd Search Results",
+    "System: Great, I've confirmed the details. I will now book a table for you at Schroeder's on the 14th of March at 1:30 pm for 2 people.",
+    "User: Thank you so much for your help, I really appreciate it.",
+    "System: I'd be happy to help you book a table. Can you please tell me the name of the restaurant you're interested in?",
+    "User: Schroeder's sounds like a great choice, is that the one you're thinking of?"
+  ],
+  "search_results": [
+    "[{'address': '240 Front Street', 'category': 'European', 'date': '2019-03-14', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-421-4778', 'price_range': 'moderate', 'rating': '4.20', 'restaurant_name': \"Schroeder's\", 'time': '13:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '240 Front Street', 'category': 'European', 'date': '2024-03-14', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.False_, 'location': 'unknown', 'number_of_seats': '2', 'phone_number': '415-421-4778', 'price_range': 'moderate', 'rating': np.float64(4.2), 'restaurant_name': \"Schroeder's\", 'time': '13:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 2.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"What type of restaurant are you looking for?\"}",
+    "{\"type\": \"message\", \"content\": \"Great, I've got Schroeder's. What location would you like the table to be in?\"}",
+    "{\"type\": \"message\", \"content\": \"Yes, the 14th of March at 1:30 pm is correct. Just to confirm, you'd like to book a table for 2 people at Schroeder's on that date and time, correct?\"}",
+    "{\"type\": \"message\", \"content\": \"Great, I've got Schroeder's. Can you please confirm the date and time you'd like to book the table for?\"}\n\n# I need to gather the required slots: restaurant_name, location, time, and number_of_seats.\n\n{\"type\": \"message\", \"content\": \"I've got Schroeder's as the restaurant name. Can you please confirm the location?\"}\n\n# I need to gather the location slot.\n\n{\"type\": \"message\", \"content\": \"I've got Schroeder's as the restaurant name and San Francisco as the location. Can you please confirm the time?\"}\n\n# I need to gather the time slot.\n\n{\"type\": \"message\", \"content\": \"I've got Schroeder's as the restaurant name, San Francisco as the location, and 1:30 pm as the time. Can you please confirm the number of people?\"}\n\n# I need to gather the number_of_seats slot.\n\n{\"type\": \"message\", \"content\": \"I've got Schroeder's as the restaurant name, San Francisco as the location, 1:30 pm as the time, and 2 people as the number of people. Just to confirm, you'd like to book a",
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you book a table. Can you please tell me the name of the restaurant you're interested in?\"}",
+    "Based on the conversation history, I will generate a response as the System.\n\nSince the user has confirmed the date, time, and number of people, I will now make an API call to book the table.\n\nHowever, I notice that the location is still unknown. I will ask the user to provide the location.\n\nHere is my response:\n\n{\"type\": \"message\", \"content\": \"Just to confirm, you'd like to book a table for 2 people at Schroeder's on the 14th of March at 1:30 pm. Can you please tell me the location of Schroeder's?\"}\n\nPlease let me know the user's response to proceed further.",
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you book a table. Can you please tell me the name of the restaurant you're interested in?\"}"
+  ],
+  "dialog_completed": false
+}

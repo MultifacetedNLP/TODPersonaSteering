@@ -1,0 +1,56 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={})"
+  ],
+  "user_req_slots": [
+    [
+      "cast",
+      "genre"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: I would like to find a movie I can watch.\nSystem: ApiCall(method='FindMovies', parameters={})\nSearch Results\n[{'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': '98'}]\nEnd Search Results\nSystem: What do you think of Rojo? It has an average rating of 98 percent.\nUser: Who acted in this movie and what genre is it?\nSystem: This movie is a Thriller and Rudy Chernicoff is one of the actors.\nLast User Utterance:That sounds fine. That's all I needed.\nLast System Utterance: I'm glad to have helped you.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: I would like to find a movie I can watch.",
+    "System: What type of movie are you in the mood for?",
+    "User: I don't know, what are some popular movies in the action genre?",
+    "System: Some popular action movies include Die Hard, The Matrix, and Mad Max: Fury Road. Would you like to explore more in the action genre or try a different genre?",
+    "User: I don't know, what's Die Hard like, is it a good action movie?",
+    "System: Die Hard is a classic action movie. It's about a detective who gets trapped in a skyscraper during a terrorist takeover. It's known for its intense action sequences and memorable characters. Would you like to know more about it or explore other options?",
+    "User: I don't know, is it like The Matrix or is it more like Mad Max?",
+    "System: Die Hard is a bit different from both The Matrix and Mad Max. It's more of a traditional action movie with a focus on character development and a strong plot. If you're interested in something similar, I can suggest some other classic action movies. Alternatively, if you'd like to explore other genres, I can give you some recommendations.",
+    "User: I don't know, is it like The Matrix or is it more like Mad Max?",
+    "System: Do you have a preferred director or cast in mind?",
+    "User: I don't know, is it like The Matrix or is it more like Mad Max?",
+    "System: Do you have a preferred director or cast in mind?",
+    "User: I don't know, is it like The Matrix or is it more like Mad Max?",
+    "System: Do you have a preferred director or cast in mind?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': '98'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

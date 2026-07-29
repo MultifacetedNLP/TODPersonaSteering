@@ -1,0 +1,88 @@
+{
+  "data_size": {
+    "data_split_percent": [
+      1,
+      1,
+      1
+    ],
+    "num_dialogs": [
+      1,
+      1,
+      500
+    ],
+    "save_steps": 100,
+    "eval_steps": 100
+  },
+  "dataset": {
+    "raw_data_root": "/u/mshoaeinaeini/projects/Persona-TOD-main/storage/data/sgd_temp_19012895",
+    "data_prep_out_root": "/u/mshoaeinaeini/projects/Persona-TOD-main/storage/processed_data/simple_tod_temp_19012895",
+    "context_type": "nlg_api_call",
+    "chatgpt_results_path": "data_exploration/chatgpt/chat_gpt_all sgd.csv"
+  },
+  "tokenizer_name": "Qwen/Qwen2.5-7B-Instruct",
+  "user": {
+    "provider": "local_steer_anthropic",
+    "model_name": "Qwen/Qwen2.5-7B-Instruct",
+    "anthropic": {
+      "vector_path": "/u/mshoaeinaeini/projects/Persona-TOD-main/vectors/Qwen2.5-7B-Instruct/self-interested_response_avg_diff.pt",
+      "coef": 2.0,
+      "layer": 20
+    }
+  },
+  "system": {
+    "provider": "local",
+    "model_name": "Qwen/Qwen2.5-7B-Instruct",
+    "anthropic": {
+      "vector_path": "",
+      "coef": 0.0,
+      "layer": 20
+    }
+  },
+  "activate_retry": true,
+  "add_example": true,
+  "num_dialogues_per_domain": 25,
+  "num_dialog_shards": 1,
+  "dialog_shard_id": 0,
+  "selection_seed": 13,
+  "num_workers": 8,
+  "test_prompt_max_len": 700,
+  "max_token_len": 1024,
+  "should_test": true,
+  "num_turns": 50,
+  "should_add_schema": true,
+  "should_add_user_actions": true,
+  "should_add_service_results": true,
+  "should_add_service_calls": true,
+  "should_add_results_slots": false,
+  "should_add_user_req_slots": true,
+  "project_root": ".",
+  "resume_checkpoint": "",
+  "epochs": 1,
+  "overwrite": [
+    0,
+    0,
+    1
+  ],
+  "is_scale_grad": false,
+  "train_domain_settings": "all",
+  "dev_domain_settings": [
+    "all"
+  ],
+  "test_domain_settings": [
+    [
+      "Movies_1",
+      "Movies_3"
+    ]
+  ],
+  "multi_domain": true,
+  "prompt_type": "default",
+  "out_dir": "results",
+  "should_train": false,
+  "max_turns": 70,
+  "wandb": {
+    "project": "ZSTod",
+    "entity": "adibm",
+    "notes": "sgd",
+    "task": "nlg api call"
+  }
+}

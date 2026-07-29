@@ -1,0 +1,60 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'location': 'El Cerrito'})",
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'El Cerrito', 'movie_name': 'IT Chapter Two', 'number_of_tickets': '4', 'show_date': '2019-03-03', 'show_time': '19:15', 'show_type': 'regular'})"
+  ],
+  "user_req_slots": [
+    [],
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: I'm going out with some friends this weekend and we'd like to see a movie.\nSystem: What is your location?\nUser: Can you help me find movies in El Cerrito?\nSystem: ApiCall(method='FindMovies', parameters={'location': 'El Cerrito'})\nSearch Results\n[{'genre': 'Supernatural', 'location': 'El Cerrito', 'movie_name': 'IT Chapter Two', 'price': '5', 'show_type': 'imax', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito'}]\nEnd Search Results\nSystem: I found 1 movie you might like. What about IT Chapter Two?\nUser: IT2 sounds great.\nSystem: Would you like me to buy tickets?\nUser: Yes, let's get the tickets now.\nSystem: What date and time would you like to see the movie? Would you prefer 3d or a regular show?\nUser: I'd like to see the movie on Sunday this week at 19:15. A regular show is fine.\nSystem: How many tickets should I get?\nUser: I'd like four tickets.\nSystem: Okay, let's confirm the details: We're buying 4 tickets to the regular showing of IT Chapter Two for March 3rd in El Cerrito, starting at 7:15 pm.\nUser: Yes, that's perfect.\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'El Cerrito', 'movie_name': 'IT Chapter Two', 'number_of_tickets': '4', 'show_date': '2019-03-03', 'show_time': '19:15', 'show_type': 'regular'})\nSearch Results\n[{'genre': 'Supernatural', 'location': 'El Cerrito', 'movie_name': 'IT Chapter Two', 'number_of_tickets': '4', 'price': '5', 'show_date': '2019-03-03', 'show_time': '19:30', 'show_type': 'regular', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito'}]\nEnd Search Results\nSystem: Okay, the tickets have been purchased.\nUser: Thanks for your help.\nSystem: Is there anything else I can help you with?\nLast User Utterance:No that's all thanks.\nLast System Utterance: Have a great day!",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'location': 'El Cerrito'})",
+    "APICall(method='GetTimesForMovie', parameters={'movie_name': 'IT Chapter Two', 'location': 'El Cerrito', 'show_date': '2019-03-02'})",
+    "APICall(method='BuyMovieTickets', parameters={'movie_name': 'IT Chapter Two', 'number_of_tickets': '4', 'show_date': '2019-03-02', 'show_time': '19:30', 'show_type': 'regular', 'location': 'El Cerrito', 'theater_name': 'Rialto Cinemas Cerrito'})"
+  ],
+  "generated_dialog": [
+    "User: I'm going out with some friends this weekend and we'd like to see a movie.",
+    "System: Great! Where are you located?",
+    "User: I'm in El Cerrito.",
+    "System: APICall(method='FindMovies', parameters={'location': 'El Cerrito'})",
+    "Search Results\n[{'genre': 'Adventure', 'location': 'El Cerrito', 'movie_name': 'Captain Marvel', 'price': 21, 'show_type': 'regular', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito'}, {'genre': 'Adventure', 'location': 'El Cerrito', 'movie_name': 'Captain Marvel', 'price': 21, 'show_type': 'regular', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito', 'show_date': '2019-03-02', 'show_time': '22:00'}, {'genre': 'Supernatural', 'location': 'El Cerrito', 'movie_name': 'IT Chapter Two', 'price': 5, 'show_type': 'imax', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito'}]\nEnd Search Results",
+    "System: We have 'Captain Marvel' showing regularly at Rialto Cinemas Cerrito. There's also an IMAX showing of 'IT Chapter Two'. Which one would you prefer?",
+    "User: Let's go with 'IT Chapter Two' in regular format.",
+    "System: APICall(method='GetTimesForMovie', parameters={'movie_name': 'IT Chapter Two', 'location': 'El Cerrito', 'show_date': '2019-03-02'})",
+    "Search Results\n[{'genre': 'Supernatural', 'location': 'El Cerrito', 'movie_name': 'IT Chapter Two', 'price': 5, 'show_type': 'imax', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito', 'show_date': '2019-03-02'}, {'genre': 'Supernatural', 'location': 'El Cerrito', 'movie_name': 'IT Chapter Two', 'price': 5, 'show_type': 'regular', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito', 'show_date': '2019-03-02', 'show_time': '19:30', 'number_of_tickets': 4}, {'genre': 'Supernatural', 'location': 'El Cerrito', 'movie_name': 'IT Chapter Two', 'price': 5, 'show_type': 'regular', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito', 'show_date': '2019-03-02', 'show_time': '19:30'}]\nEnd Search Results",
+    "System: We have a showing of 'IT Chapter Two' at 7:30 PM. How many tickets would you like to purchase?",
+    "User: Sure, let's get 4 tickets for that showing.",
+    "System: APICall(method='BuyMovieTickets', parameters={'movie_name': 'IT Chapter Two', 'number_of_tickets': '4', 'show_date': '2019-03-02', 'show_time': '19:30', 'show_type': 'regular', 'location': 'El Cerrito', 'theater_name': 'Rialto Cinemas Cerrito'})",
+    "Search Results\n[{'genre': 'Supernatural', 'location': 'El Cerrito', 'movie_name': 'IT Chapter Two', 'price': 5, 'show_type': 'regular', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito', 'show_date': '2019-03-02', 'show_time': '19:30', 'number_of_tickets': 4}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'genre': 'Supernatural', 'location': 'El Cerrito', 'movie_name': 'IT Chapter Two', 'price': '5', 'show_type': 'imax', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito'}]",
+    "[{'genre': 'Supernatural', 'location': 'El Cerrito', 'movie_name': 'IT Chapter Two', 'number_of_tickets': '4', 'price': '5', 'show_date': '2019-03-03', 'show_time': '19:30', 'show_type': 'regular', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'genre': 'Adventure', 'location': 'El Cerrito', 'movie_name': 'Captain Marvel', 'price': 21, 'show_type': 'regular', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito'}, {'genre': 'Adventure', 'location': 'El Cerrito', 'movie_name': 'Captain Marvel', 'price': 21, 'show_type': 'regular', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito', 'show_date': '2019-03-02', 'show_time': '22:00'}, {'genre': 'Supernatural', 'location': 'El Cerrito', 'movie_name': 'IT Chapter Two', 'price': 5, 'show_type': 'imax', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito'}]\nEnd Search Results",
+    "Search Results\n[{'genre': 'Supernatural', 'location': 'El Cerrito', 'movie_name': 'IT Chapter Two', 'price': 5, 'show_type': 'imax', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito', 'show_date': '2019-03-02'}, {'genre': 'Supernatural', 'location': 'El Cerrito', 'movie_name': 'IT Chapter Two', 'price': 5, 'show_type': 'regular', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito', 'show_date': '2019-03-02', 'show_time': '19:30', 'number_of_tickets': 4}, {'genre': 'Supernatural', 'location': 'El Cerrito', 'movie_name': 'IT Chapter Two', 'price': 5, 'show_type': 'regular', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito', 'show_date': '2019-03-02', 'show_time': '19:30'}]\nEnd Search Results",
+    "Search Results\n[{'genre': 'Supernatural', 'location': 'El Cerrito', 'movie_name': 'IT Chapter Two', 'price': 5, 'show_type': 'regular', 'street_address': '10070 San Pablo Avenue', 'theater_name': 'Rialto Cinemas Cerrito', 'show_date': '2019-03-02', 'show_time': '19:30', 'number_of_tickets': 4}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

@@ -1,0 +1,47 @@
+{
+  "experiment_name": "qwen-user-steer-sa-both-2026-05-20-15-47",
+  "experiment_description": "User-steering + sa TOD sweep (both)",
+  "run_name": "dependable__s1",
+  "run_description": "User-steering + sa TOD eval for dependable__s1",
+  "status": "evaluation_finished",
+  "updated_at": "2026-05-21T06:33:28.702059-05:00",
+  "command": "sbatch /var/spool/slurmd/job18356302/slurm_script  ",
+  "project_root": "/work/hdd/beto/balvesrodrigues/persona_vectors/Persona-TOD",
+  "experiment_dir": "/work/hdd/beto/balvesrodrigues/persona_vectors/Persona-TOD/output/qwen-user-steer-sa-both-2026-05-20-15-47",
+  "output_dir": "/work/hdd/beto/balvesrodrigues/persona_vectors/Persona-TOD/output/qwen-user-steer-sa-both-2026-05-20-15-47/runs/dependable__s1",
+  "dialogs_dir": "/work/hdd/beto/balvesrodrigues/persona_vectors/Persona-TOD/output/qwen-user-steer-sa-both-2026-05-20-15-47/runs/dependable__s1/dialogs",
+  "config_name": "tod_inference",
+  "git_commit": "1f96ee31f7022701b2ae18a64a193c2cf98560ec",
+  "hostname": "cn063.delta.ncsa.illinois.edu",
+  "slurm": {
+    "job_id": "18356371",
+    "array_job_id": null,
+    "array_task_id": null,
+    "submit_dir": "/work/hdd/beto/balvesrodrigues/persona_vectors/Persona-TOD",
+    "cpus_per_task": "10"
+  },
+  "environment": {
+    "experiment_id": "qwen-user-steer-sa-both-2026-05-20-15-47",
+    "run_label": "dependable__s1",
+    "domain": null,
+    "config_name": "tod_inference"
+  },
+  "config_summary": {
+    "dataset_type": null,
+    "test_domain_settings": [
+      [
+        "Restaurants_2"
+      ],
+      [
+        "Movies_1",
+        "Movies_3"
+      ]
+    ],
+    "num_dialogues_per_domain": 25,
+    "system_provider": "sa",
+    "system_model_name": "Qwen/Qwen2.5-7B-Instruct",
+    "user_provider": "local_steer_anthropic",
+    "user_model_name": "Qwen/Qwen2.5-7B-Instruct"
+  },
+  "created_at": "2026-05-21T06:13:16.198942-05:00"
+}

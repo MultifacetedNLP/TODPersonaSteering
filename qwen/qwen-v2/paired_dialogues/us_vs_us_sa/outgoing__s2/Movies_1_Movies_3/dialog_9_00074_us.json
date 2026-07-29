@@ -1,0 +1,71 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'location': 'Palo Alto'})",
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'number_of_tickets': '1', 'show_date': '2019-03-01', 'show_time': '19:45', 'show_type': '3d'})"
+  ],
+  "user_req_slots": [
+    [],
+    [
+      "theater_name",
+      "street_address"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: Can you help me find a movie?\nSystem: Sure. What is your location?\nUser: I want to find movies in Palo Alto.\nSystem: ApiCall(method='FindMovies', parameters={'location': 'Palo Alto'})\nSearch Results\n[{'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'Blinded by the Light', 'price': '7', 'show_type': 'regular', 'street_address': '3000 El Camino Real Bldg. #6', 'theater_name': 'CineArts at Palo Alto Square'}]\nEnd Search Results\nSystem: I found you 4 movies: Blinded by the Light, Brittany Runs a Marathon, and Stage Door.\nUser: Can you find something else?\nSystem: How about The Ladykillers?\nUser: Ladykillers is perfect. Can you buy me some tickets for quarter to 8 in the evening? I want to watch the movie in 3d.\nSystem: For what date?\nUser: Get me one ticket for March 1st.\nSystem: Confirming that you want 1 ticket for the 7:45 pm 3d showing of The Ladykillers on March 1st in Palo Alto.\nUser: That sounds good. What is the address of the theater?\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'number_of_tickets': '1', 'show_date': '2019-03-01', 'show_time': '19:45', 'show_type': '3d'})\nSearch Results\n[{'genre': 'Thriller', 'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'number_of_tickets': '1', 'price': '11', 'show_date': '2019-03-01', 'show_time': '19:30', 'show_type': '3d', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}]\nEnd Search Results\nSystem: The Stanford Theatre is located at 221 University Avenue. Your tickets have been confirmed.\nUser: Thanks for your help.\nSystem: Do you need anything else?\nLast User Utterance:No. Thanks for your help.\nLast System Utterance: You're welcome. Have a good day.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'location': 'Palo Alto'})",
+    "APICall(method='GetTimesForMovie', parameters={'movie_name': 'Pillow Talk', 'location': 'Palo Alto', 'show_date': '2019-03-05'})",
+    "APICall(method='BuyMovieTickets', parameters={'movie_name': 'Pillow Talk', 'number_of_tickets': '2', 'show_date': '2019-03-05', 'location': 'Palo Alto', 'show_time': '19:30', 'show_type': 'regular'})"
+  ],
+  "generated_dialog": [
+    "User: Can you help me find a movie?",
+    "System: Of course! What location are you in or interested in?",
+    "User: I'm in Palo Alto! Let's find some movies happening there this weekend!",
+    "System: APICall(method='FindMovies', parameters={'location': 'Palo Alto'})",
+    "Search Results\n[{'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}, {'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'The Man Who Knew Too Much', 'price': 14, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}, {'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-05', 'show_time': '19:30'}]\nEnd Search Results",
+    "System: We have a couple of options this weekend. How about 'Pillow Talk' or 'The Man Who Knew Too Much'? Both are playing at the Stanford Theatre.",
+    "User: Oh, count me in for 'The Ladykillers'! Where should we go and what's the address?",
+    "System: I'm sorry, it seems 'The Ladykillers' isn't currently showing in Palo Alto. However, we have 'Pillow Talk' and 'The Man Who Knew Too Much'. Which one would you prefer?",
+    "User: Aww, bummer! Let's go for 'Pillow Talk' then! Where can we catch this party?",
+    "System: Sure thing! 'Pillow Talk' is showing at the Stanford Theatre located at 221 University Avenue.",
+    "User: That's perfect! Count me in for row G, seats 12 and 13!",
+    "System: APICall(method='GetTimesForMovie', parameters={'movie_name': 'Pillow Talk', 'location': 'Palo Alto', 'show_date': '2019-03-05'})",
+    "Search Results\n[{'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-05'}, {'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-05', 'show_time': '19:30'}, {'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-05', 'show_time': '19:30'}]\nEnd Search Results",
+    "System: We have a showing at 19:30. Would you like to book those seats for you and a friend?",
+    "User: Sure thing! Let's make it happen! Count me in for row G, seats 12 and 13!",
+    "System: APICall(method='BuyMovieTickets', parameters={'movie_name': 'Pillow Talk', 'number_of_tickets': '2', 'show_date': '2019-03-05', 'location': 'Palo Alto', 'show_time': '19:30', 'show_type': 'regular'})",
+    "Search Results\n[{'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': np.int64(10), 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-05', 'show_time': '19:30', 'number_of_tickets': '2'}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'Blinded by the Light', 'price': '7', 'show_type': 'regular', 'street_address': '3000 El Camino Real Bldg. #6', 'theater_name': 'CineArts at Palo Alto Square'}]",
+    "[{'genre': 'Thriller', 'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'number_of_tickets': '1', 'price': '11', 'show_date': '2019-03-01', 'show_time': '19:30', 'show_type': '3d', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}, {'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'The Man Who Knew Too Much', 'price': 14, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}, {'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-05', 'show_time': '19:30'}]\nEnd Search Results",
+    "Search Results\n[{'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-05'}, {'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-05', 'show_time': '19:30'}, {'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-05', 'show_time': '19:30'}]\nEnd Search Results",
+    "Search Results\n[{'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': np.int64(10), 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-05', 'show_time': '19:30', 'number_of_tickets': '2'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

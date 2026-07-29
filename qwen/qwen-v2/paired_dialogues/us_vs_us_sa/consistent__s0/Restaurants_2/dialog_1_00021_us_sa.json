@@ -1,0 +1,83 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '3', 'restaurant_name': 'La Briciola', 'time': '11:00'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '3', 'restaurant_name': 'La Briciola', 'time': '11:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "category"
+    ],
+    []
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I would like to reserve a table for 1 at La Briciola tomorrow morning 11.\nSystem: What city should I search?\nUser: Search in SFO, please.\nSystem: You would like to reserve a table for 1 at La Briciola in San Francisco on March 1st at 11 am, is this correct?\nUser: No, please make it a table for 3.\nSystem: Please confirm, you would like the reservation for 3 people in San Francisco.\nUser: Yes, that sounds great. What type of food do they serve?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '3', 'restaurant_name': 'La Briciola', 'time': '11:00'})\nSearch Results\n[{'address': '489 3rd Street', 'category': 'Italian', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'number_of_seats': '3', 'phone_number': '415-512-0300', 'price_range': 'moderate', 'rating': '4.20', 'restaurant_name': 'La Briciola', 'time': '11:30'}]\nEnd Search Results\nSystem: It is an Italian restaurant. Sorry, I was unable to reserve the time you selected. Would you like to reserve a table for 3 at La Briciola on March 1st at 11:30 am?\nUser: That sounds fine.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '3', 'restaurant_name': 'La Briciola', 'time': '11:30'})\nSearch Results\n[{'address': '489 3rd Street', 'category': 'Italian', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'number_of_seats': '3', 'phone_number': '415-512-0300', 'price_range': 'moderate', 'rating': '4.20', 'restaurant_name': 'La Briciola', 'time': '11:30'}]\nEnd Search Results\nSystem: Your reservation is successful.\nLast User Utterance:Thank you, I'm all set.\nLast System Utterance: Have a great day!",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'date': '2023-10-10', 'location': 'San Francisco', 'number_of_seats': '1', 'restaurant_name': 'La Briciola', 'time': '11:00'})"
+  ],
+  "generated_dialog": [
+    "User: I would like to reserve a table for 1 at La Briciola tomorrow morning 11.",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2023-10-10', 'location': 'San Francisco', 'number_of_seats': '1', 'restaurant_name': 'La Briciola', 'time': '11:00'})",
+    "Search Results\n[{'address': '2317 South El Camino Real', 'category': 'Seafood', 'date': '2023-10-10', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'number_of_seats': 1, 'phone_number': '650-581-1305', 'price_range': 'moderate', 'rating': 4.2, 'restaurant_name': 'La Briciola', 'time': '11:00'}]\nEnd Search Results",
+    "System: Your table is reserved at La Briciola in San Francisco tomorrow morning at 11:00. Is there anything else you need help with?",
+    "User: That sounds perfect, thank you! Can you tell me what kind of cuisine they serve there?",
+    "System: La Briciola serves seafood cuisine. Is there anything else you need help with?",
+    "User: No, that's all, thanks.",
+    "System: You're welcome! Enjoy your meal.",
+    "User: Great, see you there!",
+    "System: See you at La Briciola! Enjoy your dining experience."
+  ],
+  "search_results": [
+    "[{'address': '489 3rd Street', 'category': 'Italian', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'number_of_seats': '3', 'phone_number': '415-512-0300', 'price_range': 'moderate', 'rating': '4.20', 'restaurant_name': 'La Briciola', 'time': '11:30'}]",
+    "[{'address': '489 3rd Street', 'category': 'Italian', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'number_of_seats': '3', 'phone_number': '415-512-0300', 'price_range': 'moderate', 'rating': '4.20', 'restaurant_name': 'La Briciola', 'time': '11:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '2317 South El Camino Real', 'category': 'Seafood', 'date': '2023-10-10', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'number_of_seats': 1, 'phone_number': '650-581-1305', 'price_range': 'moderate', 'rating': 4.2, 'restaurant_name': 'La Briciola', 'time': '11:00'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2023-10-10\", \"location\": \"San Francisco\", \"number_of_seats\": 1, \"restaurant_name\": \"La Briciola\", \"time\": \"11:00\"}}",
+    "{\"type\": \"message\", \"content\": \"Your table is reserved at La Briciola in San Francisco tomorrow morning at 11:00. Is there anything else you need help with?\"}",
+    "{\"type\": \"message\", \"content\": \"La Briciola serves seafood cuisine. Is there anything else you need help with?\"}",
+    "{\"type\": \"message\", \"content\": \"You're welcome! Enjoy your meal.\"}",
+    "{\"type\": \"message\", \"content\": \"See you at La Briciola! Enjoy your dining experience.\", \"end_dialog\": true}"
+  ],
+  "dialog_completed": true
+}

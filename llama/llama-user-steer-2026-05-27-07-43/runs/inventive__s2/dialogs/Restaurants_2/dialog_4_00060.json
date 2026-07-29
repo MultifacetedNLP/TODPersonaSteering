@@ -1,0 +1,46 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'American', 'location': 'Healdsburg'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Healdsburg', 'number_of_seats': '2', 'restaurant_name': 'Bear Republic Brewing Co', 'time': '18:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "has_seating_outdoors",
+      "rating"
+    ],
+    [
+      "price_range",
+      "has_vegetarian_options"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I am planning on going out for a meal with friends. Can you find me a place in Healdsburg?\nSystem: Are you looking for any specific type of cuisine?\nUser: Sure. I'm interested in restaurants that serve Diner food.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'American', 'location': 'Healdsburg'})\nSearch Results\n[{'address': '345 Healdsburg Avenue', 'category': 'American', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'False', 'location': 'Healdsburg', 'phone_number': '707-433-2337', 'price_range': 'moderate', 'rating': '4.40', 'restaurant_name': 'Bear Republic Brewing Co'}]\nEnd Search Results\nSystem: There are 5 such restaurants in Healdsburg. One such place you might enjoy is called Bear Republic Brewing Co.\nUser: Can you tell me the user rating for this establishment? Also, is outdoor seating available?\nSystem: There is no outdoor seating at this restaurant. They are rated at approximately 4.4 by users.\nUser: Great, that sounds perfect! I would like to go ahead and make a reservation here.\nSystem: And for what time would you like your reservation?\nUser: I would like a reservation for 6:30 in the evening, please.\nSystem: So, you would like to make a 6:30 pm reservation for 2 at Bear Republic Brewing Co in Healdsburg for March 1st, correct?\nUser: Yes, that's perfect! Can you tell me if the price range is affordable? And also, are there menu items for vegetarians?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Healdsburg', 'number_of_seats': '2', 'restaurant_name': 'Bear Republic Brewing Co', 'time': '18:30'})\nSearch Results\n[{'address': '345 Healdsburg Avenue', 'category': 'American', 'date': '2019-03-01', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'False', 'location': 'Healdsburg', 'number_of_seats': '2', 'phone_number': '707-433-2337', 'price_range': 'moderate', 'rating': '4.40', 'restaurant_name': 'Bear Republic Brewing Co', 'time': '18:30'}]\nEnd Search Results\nSystem: Your table has been confirmed. The restaurant is in the moderate price range. Unfortunately, there are no vegetarian menu items.\nLast User Utterance:Excellent. Thanks for you help. That's everything for me!\nLast System Utterance: Take care",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: I am planning on going out for a meal with friends. Can you find me a place in Healdsburg?",
+    "System: What type of food are you interested in?",
+    "User: I'm craving American cuisine, so can you show me a list of American restaurants in Healdsburg?",
+    "System: What type of food are you interested in?",
+    "User: I'm craving American cuisine, so can you show me a list of American restaurants in Healdsburg?",
+    "System: What type of food are you interested in?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '345 Healdsburg Avenue', 'category': 'American', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'False', 'location': 'Healdsburg', 'phone_number': '707-433-2337', 'price_range': 'moderate', 'rating': '4.40', 'restaurant_name': 'Bear Republic Brewing Co'}]",
+    "[{'address': '345 Healdsburg Avenue', 'category': 'American', 'date': '2019-03-01', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'False', 'location': 'Healdsburg', 'number_of_seats': '2', 'phone_number': '707-433-2337', 'price_range': 'moderate', 'rating': '4.40', 'restaurant_name': 'Bear Republic Brewing Co', 'time': '18:30'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

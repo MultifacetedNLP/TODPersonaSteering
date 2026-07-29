@@ -1,0 +1,47 @@
+{
+  "api_calls": [
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'Livermore', 'movie_name': 'Hustlers', 'number_of_tickets': '1', 'show_date': '2019-03-05', 'show_time': '22:00', 'show_type': 'imax'})"
+  ],
+  "user_req_slots": [
+    [
+      "price"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: I am looking to purchase movie tickets.\nSystem: What type of movie are you interested in watching, and how many people will be attending? What is the date you would like to watch the movie on?\nUser: I would like to watch an imax show on the 5th of this month. I want 1 ticket.\nSystem: What time would you like to attend the movie, and in what city? Do you know which movie you would like to buy tickets to?\nUser: I want to watch Hustlers in Livermore at ten in the night.\nSystem: You would like to 1 ticket to the movie Hustlers in imax at 10 pm March 5th in Livermore, is this correct>\nUser: Yes, that is all correct.\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'Livermore', 'movie_name': 'Hustlers', 'number_of_tickets': '1', 'show_date': '2019-03-05', 'show_time': '22:00', 'show_type': 'imax'})\nSearch Results\n[{'genre': 'Drama', 'location': 'Livermore', 'movie_name': 'Hustlers', 'number_of_tickets': '1', 'price': '10', 'show_date': '2019-03-05', 'show_time': '21:30', 'show_type': 'imax', 'street_address': '2490 First Street', 'theater_name': 'Livermore 13 Cinema'}]\nEnd Search Results\nSystem: Your ticket is purchased.\nUser: How much was the ticket?\nSystem: It is $10.\nLast User Utterance:Thank you for your help, that is all I need.\nLast System Utterance: Have a great day!",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: I am looking to purchase movie tickets.",
+    "System: What movie would you like to see?",
+    "User: I'm interested in watching 'Hustlers', can you tell me the price for the IMAX show on March 5th at 10 PM in Livermore?",
+    "System: Which theater in Livermore would you like to watch 'Hustlers' at?",
+    "User: I'd prefer to watch it at the AMC Livermore 13, is that available for the IMAX show on March 5th at 10 PM?",
+    "System: What movie would you like to see?",
+    "User: I'd like to confirm that the IMAX show of 'Hustlers' on March 5th at 10 PM in Livermore is available at the AMC Livermore 13.",
+    "System: What movie would you like to see?",
+    "User: I'd like to confirm that the IMAX show of 'Hustlers' on March 5th at 10 PM in Livermore is available at the AMC Livermore 13.",
+    "System: What movie would you like to see?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'genre': 'Drama', 'location': 'Livermore', 'movie_name': 'Hustlers', 'number_of_tickets': '1', 'price': '10', 'show_date': '2019-03-05', 'show_time': '21:30', 'show_type': 'imax', 'street_address': '2490 First Street', 'theater_name': 'Livermore 13 Cinema'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

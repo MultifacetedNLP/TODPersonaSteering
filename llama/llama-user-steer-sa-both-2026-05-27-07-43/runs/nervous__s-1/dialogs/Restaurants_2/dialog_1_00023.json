@@ -1,0 +1,87 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Academy Bar And Kitchen', 'time': '19:00'})"
+  ],
+  "user_req_slots": [
+    [
+      "has_vegetarian_options"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Looking to book a table at the Academy bar?\nSystem: Which location to look in and at what time?\nUser: Find in San Fran at 19:00\nSystem: Please confirm: Booking a table for 2 at the Academy Bar and Kitchen in San Francisco at 7 pm on March 1st.\nUser: Yes, thats right\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Academy Bar And Kitchen', 'time': '19:00'})\nSearch Results\n[{'address': '1800 Fillmore Street', 'category': 'American', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-775-1800', 'price_range': 'moderate', 'rating': '3.80', 'restaurant_name': 'Academy Bar And Kitchen', 'time': '19:00'}]\nEnd Search Results\nSystem: it is done\nUser: Any vegetarian options there?\nSystem: yes, there are good options\nUser: thanks a lot\nSystem: any thing else?\nLast User Utterance:no, thanks again\nLast System Utterance: have a great day!",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Looking to book a table at the Academy bar?",
+    "System: I'd be happy to help you book a table. Can you please tell me the location of the Academy bar?",
+    "User: It's located in San Francisco, right?",
+    "System: Yes, I have the location as San Francisco. Can you please confirm the location is correct?",
+    "User: Does the Academy Bar And Kitchen have vegetarian options available?",
+    "System: Yes, I have the location as San Francisco. Can you please confirm the location is correct?",
+    "User: Yes, that's correct.",
+    "System: I'd be happy to help you book a table. Can you please tell me the location of the Academy bar?",
+    "User: I'd like to confirm that the restaurant has vegetarian options available for the evening of the 1st.",
+    "System: I'd be happy to help you book a table. Can you please tell me the location of the Academy bar?",
+    "User: I'd like to confirm that the restaurant has vegetarian options available for the evening of the 1st.",
+    "System: I'd be happy to help you book a table. Can you please tell me the location of the Academy bar?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '1800 Fillmore Street', 'category': 'American', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-775-1800', 'price_range': 'moderate', 'rating': '3.80', 'restaurant_name': 'Academy Bar And Kitchen', 'time': '19:00'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you book a table. Can you please tell me the location of the Academy bar?\"}",
+    "{\"type\": \"message\", \"content\": \"Yes, I've confirmed the location. What time would you like to book the table for?\"}",
+    "{\"type\": \"message\", \"content\": \"Yes, I have the location as San Francisco. Can you please confirm the location is correct?\"}\n\n# Waiting for user confirmation on location",
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you book a table. Can you please tell me the location of the Academy bar?\"}\n\nPlease confirm the location of the Academy bar.",
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you book a table. Can you please tell me the location of the Academy bar?\"}\n\nPlease confirm the location of the Academy bar.",
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you book a table. Can you please tell me the location of the Academy bar?\"}\n\nPlease respond with the location of the Academy bar."
+  ],
+  "dialog_completed": false
+}

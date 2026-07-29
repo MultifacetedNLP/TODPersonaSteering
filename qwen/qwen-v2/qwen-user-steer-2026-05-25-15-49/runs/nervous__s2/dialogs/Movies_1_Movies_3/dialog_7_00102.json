@@ -1,0 +1,49 @@
+{
+  "api_calls": [
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'Mill Valley', 'movie_name': 'IT Chapter Two', 'number_of_tickets': '1', 'show_date': '2019-03-02', 'show_time': '18:45', 'show_type': 'regular'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: I am in the mood to go to the movie theater. I would like to purchase tickets in advance.\nSystem: Which city would you prefer the theater to be in? How many tickets are you looking for.\nUser: I would like to go to a theater in Mill Valley. I only need one ticket.\nSystem: Do you have a certain movie in mind? Does it matter if it is an imax or 3d show?\nUser: I was hoping to see IT2. A regular show would be fine.\nSystem: What day would you like to see the movie?\nUser: I am thinking the 2nd of March would be a good day.\nSystem: Do you have a preferred showtime?\nUser: Yes, thanks for asking. I would like to visit at 6:45 in the evening.\nSystem: I want to make sure I understand your request. You need 1 ticket on March 2nd for IT Chapter Two. You would like to see a regular show in MIll Valley at 6:45 pm.\nUser: You are one hundred percent correct.\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'Mill Valley', 'movie_name': 'IT Chapter Two', 'number_of_tickets': '1', 'show_date': '2019-03-02', 'show_time': '18:45', 'show_type': 'regular'})\nSearch Results\n[{'genre': 'Supernatural', 'location': 'Mill Valley', 'movie_name': 'IT Chapter Two', 'number_of_tickets': '1', 'price': '13', 'show_date': '2019-03-02', 'show_time': '19:00', 'show_type': 'regular', 'street_address': '25 Throckmorton Avenue', 'theater_name': 'CineArts Sequoia'}]\nEnd Search Results\nSystem: Your ticket has been bought.\nLast User Utterance:I don't need anything else. Thank you so much.\nLast System Utterance: Hope you have a great day.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'location': 'Mill Valley'})"
+  ],
+  "generated_dialog": [
+    "User: I am in the mood to go to the movie theater. I would like to purchase tickets in advance.",
+    "System: Sure, where would you like to go? I have information on theaters in Newark.",
+    "User: Oh, um, I don't know if they have that many options there... Can I just... like, pick somewhere else, maybe Mill Valley? I heard they have really good popcorn over there!",
+    "System: Sure thing! Let's check what movies are showing at the Mill Valley theater.",
+    "User: Oh yeah, totally! What's playing there right now? I was hoping IT Chapter Two would still be around...",
+    "System: APICall(method='FindMovies', parameters={'location': 'Mill Valley'})",
+    "Search Results\n[{'genre': 'Drama', 'location': 'Mill Valley', 'movie_name': 'The Best of Enemies', 'price': 21, 'show_type': '3d', 'street_address': '25 Throckmorton Avenue', 'theater_name': 'CineArts at Sequoia'}, {'genre': 'Drama', 'location': 'Mill Valley', 'movie_name': 'The Best of Enemies', 'price': 21, 'show_type': '3d', 'street_address': '25 Throckmorton Avenue', 'theater_name': 'CineArts at Sequoia', 'show_date': '2019-03-01', 'show_time': '19:00'}, {'genre': 'Drama', 'location': 'Mill Valley', 'movie_name': 'The Best of Enemies', 'price': 21, 'show_type': '3d', 'street_address': '25 Throckmorton Avenue', 'theater_name': 'CineArts at Sequoia', 'show_date': '2019-03-02', 'show_time': '19:00'}]\nEnd Search Results",
+    "System: I found 'The Best of Enemies' playing in 3D at CineArts at Sequoia in Mill Valley. It's showing tomorrow at 7:00 PM. Would you like to see this movie?",
+    "User: Oh no, I was really hoping for IT Chapter Two... Is that one even playing there? Like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like",
+    "System: I'm sorry, IT Chapter Two isn't showing at CineArts at Sequoia in Mill Valley. Would you like to see 'The Best of Enemies' instead?",
+    "User: Oh, that's a bummer... I guess I'll have to settle for that one, I mean, if you're sure they don't have IT Chapter Two there... Ugh, okay, I don't know, I just really wanted to see that one tonight... Can I... like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like, like,"
+  ],
+  "search_results": [
+    "[{'genre': 'Supernatural', 'location': 'Mill Valley', 'movie_name': 'IT Chapter Two', 'number_of_tickets': '1', 'price': '13', 'show_date': '2019-03-02', 'show_time': '19:00', 'show_type': 'regular', 'street_address': '25 Throckmorton Avenue', 'theater_name': 'CineArts Sequoia'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'genre': 'Drama', 'location': 'Mill Valley', 'movie_name': 'The Best of Enemies', 'price': 21, 'show_type': '3d', 'street_address': '25 Throckmorton Avenue', 'theater_name': 'CineArts at Sequoia'}, {'genre': 'Drama', 'location': 'Mill Valley', 'movie_name': 'The Best of Enemies', 'price': 21, 'show_type': '3d', 'street_address': '25 Throckmorton Avenue', 'theater_name': 'CineArts at Sequoia', 'show_date': '2019-03-01', 'show_time': '19:00'}, {'genre': 'Drama', 'location': 'Mill Valley', 'movie_name': 'The Best of Enemies', 'price': 21, 'show_type': '3d', 'street_address': '25 Throckmorton Avenue', 'theater_name': 'CineArts at Sequoia', 'show_date': '2019-03-02', 'show_time': '19:00'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

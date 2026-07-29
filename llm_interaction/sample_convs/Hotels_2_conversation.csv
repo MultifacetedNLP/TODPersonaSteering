@@ -1,0 +1,16 @@
+Speaker,Utterance
+dialogue_id:, 43_00049
+USER,"""I am looking to book a house and check out on the 14th of March."""
+SYSTEM,"""What is your date of arrival? How many guests will be staying? And, what is your destination?"""
+USER,"""I'm looking to arrive on the 8th of March. There is only one guest. And, I am travelling to London."""
+SYSTEM,"""Can you please confirm that the information is correct? Destination is London. There will be 1 guest. You will be checking in next Friday and checking out March 14th."""
+USER,"""No, my arrival is for Monday next week and my destination will be in Atlanta, GA."""
+SYSTEM,"""Please confirm the following information is correct? Arrival date is to be next Monday in Atlanta."""
+USER,"""Yes, that would be great. What will be the total cost? And what is the rating?"""
+SYSTEM,"""APICall(method='BookHouse', parameters={ check_in_date: 2019-03-04, check_out_date: 2019-03-14, number_of_adults: 1, where_to: Atlanta })"""
+Tool,"""Search Results\n[{ address: 111 Cone Street Northwest, check_in_date: 2019-03-04, check_out_date: 2019-03-14, has_laundry_service: True, number_of_adults: 1, phone_number: +1 404-524-7000, rating: 3.80, total_price: 2160, where_to: Atlanta }]\nEnd Search Results"""
+SYSTEM,"""Your reservation has been confirmed. The total cost is 2160 and the rating is 3.8."""
+USER,"""Thank you for your help."""
+SYSTEM,"""Anything else I can further assist you with?"""
+USER,"""No. Thank you again for your help."""
+SYSTEM,"""It is my pleasure. Best travels!"""

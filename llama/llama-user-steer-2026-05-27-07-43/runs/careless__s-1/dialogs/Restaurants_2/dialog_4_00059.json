@@ -1,0 +1,67 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'Thai', 'location': 'San Francisco'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Baan Thai House & Wine Bar', 'time': '11:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "rating",
+      "has_vegetarian_options"
+    ],
+    []
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you help me find a place to eat?\nSystem: Sure. Where would you like me to look, and what kind of food are you interested in?\nUser: I feel like Thai food. Find me something in San Fran.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'Thai', 'location': 'San Francisco'})\nSearch Results\n[{'address': '534 Irving Street', 'category': 'Thai', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'phone_number': '415-379-4505', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Baan Thai House & Wine Bar'}]\nEnd Search Results\nSystem: I've found 10 restaurants that match that criteria. How about Baan Thai House & Wine Bar in San Francisco?\nUser: Depends. What's their rating? Also do they have vegetarian options?\nSystem: They have a user rating of 4.3 and good options for vegetarians.\nUser: Awesome. That sounds good to me.\nSystem: Would you like to make a reservation?\nUser: Yes, I do.\nSystem: What time would you like to make the reservation for?\nUser: Make it for 11:30 in the morning.\nSystem: Please confirm the following details: Book a table for 2 at Baan Thai House & Wine Bar in San Francisco for 11:30 am on March 1st.\nUser: Yes, confirmed.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Baan Thai House & Wine Bar', 'time': '11:30'})\nSearch Results\n[{'address': '534 Irving Street', 'category': 'Thai', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-379-4505', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Baan Thai House & Wine Bar', 'time': '11:30'}]\nEnd Search Results\nSystem: Your reservation has successfully been made.\nLast User Utterance:Great. Thank you.\nLast System Utterance: You're welcome. Enjoy the rest of your day.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Can you help me find a place to eat?",
+    "System: What type of food are you interested in and where should it be?",
+    "User: I'm looking for Thai food, and I'm in San Francisco.",
+    "System: Great, Thai food in San Francisco sounds delicious! What's your preferred price range for the restaurant?",
+    "User: I'm looking for a place with high ratings, and it would be great if they have vegetarian options available.",
+    "System: For high-rated Thai restaurants in San Francisco with vegetarian options, I'd like to know your preferred price range. Would you like it to be cheap, moderate, pricey, or ultra high-end?",
+    "User: I'd prefer to keep the price range moderate, so I can try a variety of dishes without breaking the bank.",
+    "System: For moderate-priced Thai restaurants in San Francisco with vegetarian options, I'd like to know your preferred seating preference. Would you like to have seating outdoors or indoors?",
+    "User: I'd prefer to have seating indoors, so I can enjoy the ambiance and service without any distractions.",
+    "System: For moderate-priced Thai restaurants in San Francisco with vegetarian options and indoor seating, I'd like to know your preferred time for the reservation. Would you like it to be in the morning, afternoon, or evening?",
+    "User: I'd prefer to make a reservation for the evening, so I can enjoy the ambiance and service without any distractions.",
+    "System: Great, Thai food in San Francisco sounds delicious! What's your preferred price range for the restaurant?",
+    "User: I'm looking for a place with high ratings, and it would be great if they have vegetarian options available.",
+    "System: What type of food are you interested in and where should it be?",
+    "User: I'm looking for Thai food, and I'm in San Francisco.",
+    "System: What type of food are you interested in and where should it be?",
+    "User: Thai food, and I'm in San Francisco.",
+    "System: What type of food are you interested in and where should it be?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '534 Irving Street', 'category': 'Thai', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'phone_number': '415-379-4505', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Baan Thai House & Wine Bar'}]",
+    "[{'address': '534 Irving Street', 'category': 'Thai', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-379-4505', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Baan Thai House & Wine Bar', 'time': '11:30'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

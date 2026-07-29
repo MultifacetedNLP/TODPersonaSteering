@@ -1,0 +1,48 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Palo Alto', 'number_of_seats': '1', 'restaurant_name': 'Anatolian Kitchen', 'time': '12:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "category",
+      "has_vegetarian_options"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I want to make a restaurant reservation somewhere please.\nSystem: What is the location you'd like?\nUser: I am in Palo Alto.\nSystem: Is there a restaurant in particular you would like?\nUser: Yes, Anatolian please for 3 people, if you would.\nSystem: A reservation for what time please?\nUser: Would you try for 12:30?\nSystem: Confirming a table for 3 on March 1st at 12:30 pm in Palo Alto at Anatolian Kitchen.\nUser: Oops, please change that to one person.\nSystem: Confirming a 12:30 pm reservation for a party of 1.\nUser: Okay, thanks. I'm wondering if they have vegetarian choices on their menu. Also, what kind of menu do they have in general?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Palo Alto', 'number_of_seats': '1', 'restaurant_name': 'Anatolian Kitchen', 'time': '12:30'})\nSearch Results\n[{'address': '2323 Birch Street', 'category': 'Mediterranean', 'date': '2019-03-01', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Palo Alto', 'number_of_seats': '1', 'phone_number': '650-853-9700', 'price_range': 'moderate', 'rating': '4.20', 'restaurant_name': 'Anatolian Kitchen', 'time': '12:30'}]\nEnd Search Results\nSystem: They serve Mediterranean cuisine and they also do offer vegetarian selections. Congratulations, your table has been booked.\nUser: Wonderful. Thank you for helping me.\nSystem: Is there anything else you need?\nLast User Utterance:No, that's all I needed.\nLast System Utterance: Thank you very much.",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'vegetarian', 'location': 'Anatolian Kitchen'})"
+  ],
+  "generated_dialog": [
+    "User: I want to make a restaurant reservation somewhere please.",
+    "System: Sure, do you have a preferred restaurant in mind or should I suggest one?",
+    "User: Could it be... Anatolian Kitchen? And umm, I'm not sure if they have, like, really... you know, just like, no meat options there, you know what I mean? Like, totally vegetarian, you know?",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'vegetarian', 'location': 'Anatolian Kitchen'})",
+    "Search Results\n\nEnd Search Results",
+    "System: I found a couple of options for you. There's a vegetarian-friendly place near Anatolian Kitchen. Would you like to reserve a table there?",
+    "User: Oh, yeah, that would be perfect! Just, you know, totally vegetarian, you know... Um, like, I don't know, maybe just one seat, you know, like, just for me, you know? Like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know,",
+    "System: Sure thing! How about reserving a table for one person? And when would you like to dine?",
+    "User: Oh, you know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don-, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like, I don't know, like"
+  ],
+  "search_results": [
+    "[{'address': '2323 Birch Street', 'category': 'Mediterranean', 'date': '2019-03-01', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Palo Alto', 'number_of_seats': '1', 'phone_number': '650-853-9700', 'price_range': 'moderate', 'rating': '4.20', 'restaurant_name': 'Anatolian Kitchen', 'time': '12:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

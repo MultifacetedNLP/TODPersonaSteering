@@ -1,0 +1,64 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Petaluma', 'number_of_seats': '2', 'restaurant_name': 'Cattlemens', 'time': '19:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "has_vegetarian_options",
+      "address"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Help me to find hotel in Petaluma to book a table at evening 7:30.\nSystem: Do you have any particular restaurant to choose?\nUser: yeah, get me at Cattlemens.\nSystem: Then please confirm, you need a table for 2 people in Cattlemens in Petaluma at 7:30 pm on March 1st.\nUser: Good, thats all.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Petaluma', 'number_of_seats': '2', 'restaurant_name': 'Cattlemens', 'time': '19:30'})\nSearch Results\n[{'address': '5012 Petaluma Boulevard North', 'category': 'Steakhouse', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Petaluma', 'number_of_seats': '2', 'phone_number': '707-763-4114', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Cattlemens', 'time': '19:30'}]\nEnd Search Results\nSystem: It is booked.\nUser: Shall I get veg food there. What is their phone number?\nSystem: No, you won't get veg. Their address is 5012 Petaluma Boulevard North.\nUser: Great service, thank you.\nSystem: Do you need any other help?\nLast User Utterance:No, thats all.\nLast System Utterance: Have a great day.",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'restaurant', 'location': 'Petaluma'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2023-10-10', 'location': 'Petaluma', 'number_of_seats': '2', 'restaurant_name': 'Cattlemens', 'time': '19:30'})"
+  ],
+  "generated_dialog": [
+    "User: Help me to find hotel in Petaluma to book a table at evening 7:30.",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'restaurant', 'location': 'Petaluma'})",
+    "Search Results\n\nEnd Search Results",
+    "System: I found some options for you in Petaluma. Would you like to reserve a table at any of these restaurants tonight at 7:30 PM?",
+    "User: Sure, let's reserve a table at Cattlemens. Do they have vegetarian options?",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2023-10-10', 'location': 'Petaluma', 'number_of_seats': '2', 'restaurant_name': 'Cattlemens', 'time': '19:30'})",
+    "Search Results\n[{'address': '5012 Petaluma Boulevard North', 'category': 'Steakhouse', 'date': '2023-10-10', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Petaluma', 'number_of_seats': 2, 'phone_number': '707-763-4114', 'price_range': 'moderate', 'rating': 4.3, 'restaurant_name': 'Cattlemens', 'time': '19:30'}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'address': '5012 Petaluma Boulevard North', 'category': 'Steakhouse', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Petaluma', 'number_of_seats': '2', 'phone_number': '707-763-4114', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Cattlemens', 'time': '19:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n\nEnd Search Results",
+    "Search Results\n[{'address': '5012 Petaluma Boulevard North', 'category': 'Steakhouse', 'date': '2023-10-10', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Petaluma', 'number_of_seats': 2, 'phone_number': '707-763-4114', 'price_range': 'moderate', 'rating': 4.3, 'restaurant_name': 'Cattlemens', 'time': '19:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"restaurant\", \"location\": \"Petaluma\"}}",
+    "{\"type\": \"message\", \"content\": \"I found some options for you in Petaluma. Would you like to reserve a table at any of these restaurants tonight at 7:30 PM?\"}",
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2023-10-10\", \"location\": \"Petaluma\", \"number_of_seats\": 2, \"restaurant_name\": \"Cattlemens\", \"time\": \"19:30\"}}"
+  ],
+  "dialog_completed": false
+}

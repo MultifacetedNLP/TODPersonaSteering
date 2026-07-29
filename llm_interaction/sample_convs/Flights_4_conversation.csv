@@ -1,0 +1,16 @@
+Speaker,Utterance
+dialogue_id:, 3_00000
+USER,"""I am planning a trip. I will need three tickets. The tickets will be for a one way flight on Thursday next week."""
+SYSTEM,"""Which city would you like to fly out of."""
+USER,"""I am hoping to find a flight out of Los Angeles."""
+SYSTEM,"""Which city would you like to fly to?"""
+USER,"""Atlanta will be my destination."""
+SYSTEM,"""APICall(method='SearchOnewayFlight', parameters={ departure_date: 2019-03-07, destination_airport: Atlanta, number_of_tickets: 3, origin_airport: Los Angeles })"""
+Tool,"""Search Results\n[{ airlines: Alaska Airlines, departure_date: 2019-03-07, destination_airport: Atlanta, is_nonstop: True, number_of_tickets: 3, origin_airport: Los Angeles, outbound_arrival_time: 07:29, outbound_departure_time: 23:30, price: 171, seating_class: Economy }, { airlines: American Airlines, departure_date: 2019-03-07, destination_airport: Atlanta, is_nonstop: True, number_of_tickets: 3, origin_airport: Los Angeles, outbound_arrival_time: 23:04, outbound_departure_time: 15:05, price: 160, seating_class: Economy }]\nEnd Search Results"""
+SYSTEM,"""Is Alaska Airlines acceptable for you. They have a plane leaving at 11:30 pm with no stops. The charge would be $171."""
+USER,"""What time would the flight arrive in Atlanta."""
+SYSTEM,"""The arrival time is projected at 7:29 am."""
+USER,"""Awesome. That flight will work for me."""
+SYSTEM,"""Is there anything else I can do for you?"""
+USER,"""Nothing at the moment. Thanks so much for the assistance."""
+SYSTEM,"""Your welcome. I hope you have a great day."""

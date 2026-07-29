@@ -1,0 +1,85 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Pacifica', 'number_of_seats': '2', 'restaurant_name': 'Puerto 27', 'time': '13:15'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you check restaurants in Pacifica, I'm looking to make a reservation.\nSystem: Is there a particular restaurant you want? What time did you want the reservation?\nUser: See if you can get one at Puerto 27 for 1:15 pm.\nSystem: To verify: You would like a reseravation at Puerto 27 in Pacifica for 1:15 pm on March 1st for 2.\nUser: Yes that's right.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Pacifica', 'number_of_seats': '2', 'restaurant_name': 'Puerto 27', 'time': '13:15'})\nSearch Results\n[{'address': '525 Crespi Drive', 'category': 'Peruvian', 'date': '2019-03-01', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Pacifica', 'number_of_seats': '2', 'phone_number': '650-733-7343', 'price_range': 'moderate', 'rating': '4.10', 'restaurant_name': 'Puerto 27', 'time': '13:30'}]\nEnd Search Results\nSystem: Your table is reserved.\nLast User Utterance:Thanks so much. That's all I need for now.\nLast System Utterance: Have a great day.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Can you check restaurants in Pacifica, I'm looking to make a reservation.",
+    "System: What type of cuisine are you interested in?",
+    "User: I'm really into seafood, do you have any seafood places in Pacifica that I could make a reservation at?",
+    "System: We have a few seafood options in Pacifica. Can you please tell me what time you're looking to make a reservation for?",
+    "User: I'm thinking 1:15, is that a good time for Puerto 27?",
+    "System: What type of cuisine are you interested in?",
+    "User: I'm really into seafood, do you have any seafood places in Pacifica that I could make a reservation at?",
+    "System: We have a few seafood options in Pacifica. Can you please tell me what time you're looking to make a reservation for?",
+    "User: I'm thinking 1:15, is that a good time for Puerto 27?",
+    "System: We have a few seafood options in Pacifica. Can you please tell me what time you're looking to make a reservation for?",
+    "User: I'm thinking 1:15, is that a good time for Puerto 27?",
+    "System: We have a few seafood options in Pacifica. Can you please tell me what time you're looking to make a reservation for?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '525 Crespi Drive', 'category': 'Peruvian', 'date': '2019-03-01', 'has_seating_outdoors': 'True', 'has_vegetarian_options': 'True', 'location': 'Pacifica', 'number_of_seats': '2', 'phone_number': '650-733-7343', 'price_range': 'moderate', 'rating': '4.10', 'restaurant_name': 'Puerto 27', 'time': '13:30'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"What type of food are you interested in?\"}",
+    "{\"type\": \"message\", \"content\": \"That sounds great. I'd like to find some seafood restaurants in Pacifica for you. Can you please tell me what category of seafood you're interested in? Italian seafood, sushi, or something else?\"}",
+    "{\"type\": \"message\", \"content\": \"What type of cuisine are you interested in?\"}\n\n# Wait for user response",
+    "{\"type\": \"message\", \"content\": \"We have a few seafood options in Pacifica. Can you please tell me what time you're looking to make a reservation for?\"}\n\n{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"seafood\", \"location\": \"Pacifica\"}} \n\n{\"type\": \"message\", \"content\": \"I've found some seafood restaurants in Pacifica. One of them is Puerto 27. Is that the one you're interested in?\"}\n\n{\"type\": \"message\", \"content\": \"What time were you thinking of making a reservation for?\"}\n\n{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2019-03-01\", \"location\": \"Pacifica\", \"number_of_seats\": \"2\", \"restaurant_name\": \"Puerto 27\", \"time\": \"13:15\"}} \n\n{\"type\": \"message\", \"content\": \"Alright. Your table is booked at Puerto 27 in Pacifica for 1:15 pm. Is there anything else I can help you with?\"}\n\n{\"type\": \"message\", \"content\": \"Glad I could help. Have a great",
+    "{\"type\": \"message\", \"content\": \"We have a few seafood options in Pacifica. Can you please tell me what time you're looking to make a reservation for?\"}",
+    "{\"type\": \"message\", \"content\": \"We have a few seafood options in Pacifica. Can you please tell me what time you're looking to make a reservation for?\"}"
+  ],
+  "dialog_completed": false
+}

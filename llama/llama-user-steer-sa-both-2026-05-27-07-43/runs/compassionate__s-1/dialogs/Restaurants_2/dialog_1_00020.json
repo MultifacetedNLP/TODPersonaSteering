@@ -1,0 +1,118 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-04', 'location': 'Morgan Hill', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "has_seating_outdoors",
+      "phone_number"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you help me to book a table at a restaurant for 2 people at evening 6:30\nSystem: Is there any choice of restaurant you want to book?\nUser: Would you kindly book the table at Mcdonalds?\nSystem: In which place you want me to search?\nUser: Search restaurants in Morgan Hill and it is for next monday\nSystem: Please give the confirmation details:your table booking at Mcdonalds in the city Morgan Hill on march 4th for 2 people at 6:30 pm.\nUser: Okay..this is cool\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-04', 'location': 'Morgan Hill', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'})\nSearch Results\n[{'address': '201 Vineyard Town Ctr', 'category': 'American', 'date': '2019-03-04', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Morgan Hill', 'number_of_seats': '2', 'phone_number': '408-779-8182', 'price_range': 'cheap', 'rating': '3.40', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]\nEnd Search Results\nSystem: Your booking is confirmed.\nUser: Is there outdoor seating in that restaurant and can i know the phone number\nSystem: There is no outdoor seating and telephone number is 408-779-8182.\nLast User Utterance:This is cool..thanks a lot.\nLast System Utterance: Have a nice day.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Can you help me to book a table at a restaurant for 2 people at evening 6:30",
+    "System: I'd be happy to help you book a table at a restaurant. Can you please tell me the name of the restaurant you're interested in?",
+    "User: I'm looking for something casual, so I'll probably go with McDonald's.",
+    "System: Great choice! To confirm, you'd like to book a table at McDonald's for 2 people in the evening at 6:30. Is that correct?",
+    "User: Do they have outdoor seating at McDonald's?",
+    "System: McDonald's is a fast-food restaurant, so it's unlikely they have outdoor seating. However, I can try to confirm this for you. Would you like me to make an API call to check?",
+    "User: I'd rather not bother with that, can you just confirm if they have outdoor seating or not?",
+    "System: I'm not sure if McDonald's has outdoor seating. I can try to confirm this for you by making an API call. Would you like me to do that?",
+    "User: Do you know their phone number or should I look it up?",
+    "System: To confirm, you'd like to book a table at McDonald's for 2 people in the evening at 6:30. Is that correct?",
+    "User: Yes, that's correct.",
+    "System: To confirm, you'd like to book a table at McDonald's for 2 people in the evening at 6:30. Is that correct?",
+    "User: I don't think they have a phone number listed on their website, do they?",
+    "System: To book a table at McDonald's, I'll need to know the location. Can you please tell me where you'd like to book the table?",
+    "User: I think I'm in Morgan Hill, is that where I'd book the table?",
+    "System: To book a table at McDonald's, I'll need to know the location. Can you please tell me where you'd like to book the table?",
+    "User: I think I'm in Morgan Hill, is that where I'd book the table?",
+    "System: To book a table at McDonald's, I'll need to know the location. Can you please tell me where you'd like to book the table?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '201 Vineyard Town Ctr', 'category': 'American', 'date': '2019-03-04', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Morgan Hill', 'number_of_seats': '2', 'phone_number': '408-779-8182', 'price_range': 'cheap', 'rating': '3.40', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you book a table at a restaurant. Can you please tell me the name of the restaurant you're interested in?\"}",
+    "{\"type\": \"message\", \"content\": \"Great choice! To confirm, you'd like to book a table at McDonald's for 2 people in the evening at 6:30. Is that correct?\"}\n\nPlease provide the next user input.",
+    "{\"type\": \"message\", \"content\": \"McDonald's is a fast-food restaurant, so it's unlikely they have outdoor seating. However, I can try to confirm this for you. Would you like me to make an API call to check?\"}",
+    "{\"type\": \"message\", \"content\": \"I'm not sure if McDonald's has outdoor seating. I can try to confirm this for you by making an API call. Would you like me to do that?\"}\n\n{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"restaurant_name\": \"McDonald's\", \"location\": \"unknown\", \"time\": \"18:30\", \"number_of_seats\": \"2\"}} \n\n(Note: Since the location is unknown, we cannot proceed with the API call. We need to ask the user for the location.)\n\n{\"type\": \"message\", \"content\": \"To book a table at McDonald's, I need to know the location. Can you please tell me where you'd like to book the table?\"}",
+    "{\"type\": \"message\", \"content\": \"I'm not sure if McDonald's has outdoor seating. I can try to confirm this for you by making an API call. Would you like me to do that?\"}\n\n{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"restaurant_name\": \"McDonald's\", \"location\": \"unknown\", \"time\": \"18:30\", \"number_of_seats\": \"2\"}} \n\nPlease note that I've assumed the location as \"unknown\" since it was not provided by the user. If you have the location, you can replace it with the actual value.\n\nPlease provide the search results for the API call.",
+    "{\"type\": \"message\", \"content\": \"To book a table at McDonald's, I need to confirm a few details. Can you please tell me the name of the restaurant you're interested in?\"}\n\n# Wait for user response\n\n{\"type\": \"message\", \"content\": \"Great choice! To confirm, you'd like to book a table at McDonald's for 2 people in the evening at 6:30. Is that correct?\"}\n\n# Wait for user response\n\n{\"type\": \"message\", \"content\": \"I'm not sure if McDonald's has outdoor seating. I can try to confirm this for you by making an API call. Would you like me to do that?\"}\n\n# Wait for user response\n\n{\"type\": \"message\", \"content\": \"To confirm, you'd like to book a table at McDonald's for 2 people in the evening at 6:30. Is that correct?\"}\n\n# Wait for user response\n\n{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2023-07-26\", \"location\": \"user_location\", \"number_of_seats\": 2, \"restaurant_name\": \"McDonald's\", \"time\": \"18:30",
+    "{\"type\": \"message\", \"content\": \"To book a table at McDonald's, I'll need to know the location. Can you please tell me where you'd like to book the table?\"}",
+    "{\"type\": \"message\", \"content\": \"To book a table at McDonald's, I'll need to know the location. Can you please tell me where you'd like to book the table?\"}",
+    "{\"type\": \"message\", \"content\": \"To book a table at McDonald's, I'll need to know the location. Can you please tell me where you'd like to book the table?\"}"
+  ],
+  "dialog_completed": false
+}

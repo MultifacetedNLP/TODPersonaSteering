@@ -1,0 +1,47 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Regent Thai', 'time': '19:00'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I need to reserve a table at a restaurant in SF for 7 pm.\nSystem: What restaurant do you want to reserve a table at?\nUser: Can you reserve a table at Regent?\nSystem: Please confirm: Reserve a table at Regent Thai in San Francisco for 2 people on March 1st at 7 pm.\nUser: That is correct.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Regent Thai', 'time': '19:00'})\nSearch Results\n[{'address': '1700 Church Street', 'category': 'Thai', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-643-5893', 'price_range': 'cheap', 'rating': '4.30', 'restaurant_name': 'Regent Thai', 'time': '18:30'}]\nEnd Search Results\nSystem: Your reservation has been confirmed.\nLast User Utterance:Thanks, that is all.\nLast System Utterance: Enjoy your day.",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'Regent Thai', 'location': 'SF', 'time': '2023-10-05T19:00'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2023-10-05', 'location': 'SF', 'number_of_seats': '2', 'restaurant_name': 'Regent Thai', 'time': '19:00'})"
+  ],
+  "generated_dialog": [
+    "User: I need to reserve a table at a restaurant in SF for 7 pm.",
+    "System: I see you want to reserve a table for 7 pm. Could you please tell me the name of the restaurant you're interested in?",
+    "User: I'd like to reserve a table at Regent Thai.",
+    "System: APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'Regent Thai', 'location': 'SF', 'time': '2023-10-05T19:00'})",
+    "Search Results\n[{'address': '', 'category': '', 'date': '', 'has_seating_outdoors': '', 'has_vegetarian_options': '', 'location': 'SF', 'number_of_seats': '', 'phone_number': '', 'price_range': '', 'rating': '', 'restaurant_name': 'Regent Thai', 'time': '2023-10-05T19:00'}]\nEnd Search Results",
+    "System: I've found a reservation for you at Regent Thai in San Francisco for 7 pm. How many seats do you need?",
+    "User: That's perfect for two of us.",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2023-10-05', 'location': 'SF', 'number_of_seats': '2', 'restaurant_name': 'Regent Thai', 'time': '19:00'})",
+    "Search Results\n[{'address': '96 Gough Street', 'category': 'Coffeehouse', 'date': '2023-10-05', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'SF', 'number_of_seats': 2, 'phone_number': '415-658-7888', 'price_range': 'moderate', 'rating': 4.5, 'restaurant_name': 'Regent Thai', 'time': '19:00'}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'address': '1700 Church Street', 'category': 'Thai', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-643-5893', 'price_range': 'cheap', 'rating': '4.30', 'restaurant_name': 'Regent Thai', 'time': '18:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '', 'category': '', 'date': '', 'has_seating_outdoors': '', 'has_vegetarian_options': '', 'location': 'SF', 'number_of_seats': '', 'phone_number': '', 'price_range': '', 'rating': '', 'restaurant_name': 'Regent Thai', 'time': '2023-10-05T19:00'}]\nEnd Search Results",
+    "Search Results\n[{'address': '96 Gough Street', 'category': 'Coffeehouse', 'date': '2023-10-05', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'SF', 'number_of_seats': 2, 'phone_number': '415-658-7888', 'price_range': 'moderate', 'rating': 4.5, 'restaurant_name': 'Regent Thai', 'time': '19:00'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

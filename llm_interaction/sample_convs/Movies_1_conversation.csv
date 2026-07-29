@@ -1,0 +1,18 @@
+Speaker,Utterance
+dialogue_id:, 43_00014
+USER,"""I think I'd like to see a movie."""
+SYSTEM,"""Where are you now?"""
+USER,"""I'd like to go to the AMC NewPark.  Can you tell me what movies are showing in Newark?"""
+SYSTEM,"""APICall(method='FindMovies', parameters={ location: Newark, theater_name: AMC NewPark 12 })"""
+Tool,"""Search Results\n[{ genre: Biographical, location: Newark, movie_name: Breakthrough, price: 24, show_type: regular, street_address: 400 Newpark Mall, theater_name: AMC NewPark 12 }, { genre: Adventure, location: Newark, movie_name: Captain Marvel, price: 13, show_type: 3d, street_address: 400 Newpark Mall, theater_name: AMC NewPark 12 }]\nEnd Search Results"""
+SYSTEM,"""My preference would be Breakthrough, Captain Marvel or Dumbo."""
+USER,"""I want to see Captain Marvel.  Are tickets available on the 3rd?  I'd rather see it in 3d."""
+SYSTEM,"""APICall(method='GetTimesForMovie', parameters={ location: Newark, movie_name: Captain Marvel, show_date: 2019-03-03, show_type: 3d, theater_name: AMC NewPark 12 })"""
+Tool,"""Search Results\n[{ genre: Adventure, location: Newark, movie_name: Captain Marvel, price: 13, show_date: 2019-03-03, show_time: 22:30, show_type: 3d, street_address: 400 Newpark Mall, theater_name: AMC NewPark 12 }]\nEnd Search Results"""
+SYSTEM,"""I found only 1 showing.  It's at 10:30 pm at the AMC NewPark 12."""
+USER,"""That's perfect."""
+SYSTEM,"""Want to buy tickets?"""
+USER,"""I think I'll hold off."""
+SYSTEM,"""Anything else I can help you with?"""
+USER,"""Not now, thanks."""
+SYSTEM,"""Enjoy your day."""

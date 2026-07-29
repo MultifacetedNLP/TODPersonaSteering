@@ -1,0 +1,51 @@
+{
+  "api_calls": [
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'Pittsburg', 'movie_name': 'Overcomer', 'number_of_tickets': '1', 'show_date': '2019-03-02', 'show_time': '22:00', 'show_type': 'regular'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: I want to watch a movie and I need your help to purchase the tickets for the movie.\nSystem: I which City, you want to find the movie tickets?\nUser: I need to buy it in Pittsburg.\nSystem: Which Movie you want to watch on which date? Also let me know whether you like regular or 3D show?\nUser: I need the tickets for regular show for the movie Overcomer on 2nd of March.\nSystem: Let me know the number of tickets you want me to purchase and what is your convenient time to watch the movie?\nUser: Buy 1 ticket for the show time night 10.\nSystem: I need your confirmation to purchase 1 ticket for regular show of movie Overcomer on March 2nd at 10 pm in Pittsburg.\nUser: Yes, confirmed.\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'Pittsburg', 'movie_name': 'Overcomer', 'number_of_tickets': '1', 'show_date': '2019-03-02', 'show_time': '22:00', 'show_type': 'regular'})\nSearch Results\n[{'genre': 'Drama', 'location': 'Pittsburg', 'movie_name': 'Overcomer', 'number_of_tickets': '1', 'price': '14', 'show_date': '2019-03-02', 'show_time': '22:00', 'show_type': 'regular', 'street_address': '4085 Century Boulevard', 'theater_name': 'Maya Pittsburg Cinemas'}]\nEnd Search Results\nSystem: Successfully purchased your tickets.\nLast User Utterance:Thanks and that's all.\nLast System Utterance: Have a nice day.",
+  "predicted_api_calls": [
+    "APICall(method='GetTimesForMovie', parameters={'movie_name': 'Overcomer', 'location': 'Pittsburg', 'show_date': '2019-03-02'})",
+    "APICall(method='BuyMovieTickets', parameters={'movie_name': 'Overcomer', 'number_of_tickets': '1', 'show_date': '2019-03-02', 'location': 'Pittsburg', 'show_time': '22:00', 'show_type': 'regular'})"
+  ],
+  "generated_dialog": [
+    "User: I want to watch a movie and I need your help to purchase the tickets for the movie.",
+    "System: Sure, I can assist with that. Could you please tell me your location and the movie you're interested in?",
+    "User: Sure, I'm in Pittsburg and I'm interested in watching \"Overcomer\".",
+    "System: Could you please provide the date you're interested in watching 'Overcomer'?",
+    "User: Sure, how about March 2nd, 2019 at 10:00 PM?",
+    "System: APICall(method='GetTimesForMovie', parameters={'movie_name': 'Overcomer', 'location': 'Pittsburg', 'show_date': '2019-03-02'})",
+    "Search Results\n[{'genre': 'Drama', 'location': 'Pittsburg', 'movie_name': 'Overcomer', 'price': 14, 'show_type': 'regular', 'street_address': '4085 Century Boulevard', 'theater_name': 'Maya Pittsburg Cinemas', 'show_date': '2019-03-02', 'show_time': '22:00', 'number_of_tickets': 1}, {'genre': 'Drama', 'location': 'Pittsburg', 'movie_name': 'Overcomer', 'price': 14, 'show_type': 'regular', 'street_address': '4085 Century Boulevard', 'theater_name': 'Maya Pittsburg Cinemas', 'show_date': '2019-03-02'}]\nEnd Search Results",
+    "System: I found a showing of 'Overcomer' at Maya Pittsburg Cinemas on 2nd March 2019 at 10:00 PM. The ticket price is $14. Would you like to proceed with purchasing the ticket?",
+    "User: Yes, that works for me. Can we get the ticket now?",
+    "System: APICall(method='BuyMovieTickets', parameters={'movie_name': 'Overcomer', 'number_of_tickets': '1', 'show_date': '2019-03-02', 'location': 'Pittsburg', 'show_time': '22:00', 'show_type': 'regular'})",
+    "Search Results\n[{'genre': 'Drama', 'location': 'Pittsburg', 'movie_name': 'Overcomer', 'price': 14, 'show_type': 'regular', 'street_address': '4085 Century Boulevard', 'theater_name': 'Maya Pittsburg Cinemas', 'show_date': '2019-03-02', 'show_time': '22:00', 'number_of_tickets': 1}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'genre': 'Drama', 'location': 'Pittsburg', 'movie_name': 'Overcomer', 'number_of_tickets': '1', 'price': '14', 'show_date': '2019-03-02', 'show_time': '22:00', 'show_type': 'regular', 'street_address': '4085 Century Boulevard', 'theater_name': 'Maya Pittsburg Cinemas'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'genre': 'Drama', 'location': 'Pittsburg', 'movie_name': 'Overcomer', 'price': 14, 'show_type': 'regular', 'street_address': '4085 Century Boulevard', 'theater_name': 'Maya Pittsburg Cinemas', 'show_date': '2019-03-02', 'show_time': '22:00', 'number_of_tickets': 1}, {'genre': 'Drama', 'location': 'Pittsburg', 'movie_name': 'Overcomer', 'price': 14, 'show_type': 'regular', 'street_address': '4085 Century Boulevard', 'theater_name': 'Maya Pittsburg Cinemas', 'show_date': '2019-03-02'}]\nEnd Search Results",
+    "Search Results\n[{'genre': 'Drama', 'location': 'Pittsburg', 'movie_name': 'Overcomer', 'price': 14, 'show_type': 'regular', 'street_address': '4085 Century Boulevard', 'theater_name': 'Maya Pittsburg Cinemas', 'show_date': '2019-03-02', 'show_time': '22:00', 'number_of_tickets': 1}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

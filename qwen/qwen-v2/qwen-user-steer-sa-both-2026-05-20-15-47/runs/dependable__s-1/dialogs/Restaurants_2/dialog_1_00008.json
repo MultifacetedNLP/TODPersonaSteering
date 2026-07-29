@@ -1,0 +1,48 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-06', 'location': 'Oakland', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '18:45'})"
+  ],
+  "user_req_slots": [
+    [
+      "price_range",
+      "has_seating_outdoors"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I need to make a reservation for a restaurant in Oakland. The reservation should be for next Wednesday at 6:45 pm.\nSystem: Which restaurant would you like me to make a reservation for?\nUser: Can you book me a table at Mcdonald's?\nSystem: Please confirm: Reserve 1 table at Mcdonald's in Oakland for 2 people on March 6th at 6:45 pm.\nUser: That is correct. How expensive is the restaurant and does it have outdoor seating?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-06', 'location': 'Oakland', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '18:45'})\nSearch Results\n[{'address': '6300 East 14th Street', 'category': 'Sandwich', 'date': '2019-03-06', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Oakland', 'number_of_seats': '2', 'phone_number': '510-568-6471', 'price_range': 'cheap', 'rating': '3.50', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]\nEnd Search Results\nSystem: Your reservation has been made. It is a cheap restaurant. It does not have outdoor seating.\nUser: Thank you.\nSystem: Can I assist you with anything else?\nLast User Utterance:No thanks.\nLast System Utterance: Enjoy your day.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: I need to make a reservation for a restaurant in Oakland. The reservation should be for next Wednesday at 6:45 pm.",
+    "System: To confirm: You want to make a reservation for a restaurant in Oakland on Wednesday at 6:45 pm. How many seats do you need?",
+    "User: Sure, just two seats. And, um, I don't mind if it's inside or outside, you know, if they have some nice sunny spot!",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2023-11-22', 'location': 'Oakland', 'number_of_seats': '2', 'time': '18:45'})",
+    "<Failed Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '6300 East 14th Street', 'category': 'Sandwich', 'date': '2019-03-06', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Oakland', 'number_of_seats': '2', 'phone_number': '510-568-6471', 'price_range': 'cheap', 'rating': '3.50', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 2.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2023-11-22\", \"location\": \"Oakland\", \"time\": \"18:45\"}}",
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2023-11-22\", \"location\": \"Oakland\", \"number_of_seats\": 2, \"time\": \"18:45\"}}"
+  ],
+  "dialog_completed": false
+}

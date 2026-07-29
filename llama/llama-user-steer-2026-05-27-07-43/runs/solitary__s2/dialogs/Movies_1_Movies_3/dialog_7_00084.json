@@ -1,0 +1,53 @@
+{
+  "api_calls": [
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'San Jose', 'movie_name': 'Ad Astra', 'number_of_tickets': '1', 'show_date': '2019-03-16', 'show_time': '21:00', 'show_type': 'regular'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: I want to watch the regular showing of Ad Astra tonight. I want to watch the showing at night 9 pm-ish\nSystem: How many seats do you need and on what date?\nUser: I want to watch on the night of the 16th of March, and I only need one ticket in San Jose\nSystem: Confirming you need 1 ticket to the regular screening of Ad Astra at 9 pm in San Jose on March 16th?\nUser: Yes that's all correct\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'San Jose', 'movie_name': 'Ad Astra', 'number_of_tickets': '1', 'show_date': '2019-03-16', 'show_time': '21:00', 'show_type': 'regular'})\nSearch Results\n\nEnd Search Results\nSystem: Sorry, I was unable to book that one, can I try another movie time?\nLast User Utterance:No it's ok for now, thanks though\nLast System Utterance: Sure, sorry about that, just let me know what I can do",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: I want to watch the regular showing of Ad Astra tonight. I want to watch the showing at night 9 pm-ish",
+    "System: What location would you like to watch the movie in?",
+    "User: I'd prefer to watch it in San Jose.",
+    "System: What time is the movie theater in San Jose open until?",
+    "User: I'm not sure, can you tell me if the theater in San Jose is open until 9 pm?",
+    "System: What time is the movie theater in San Jose open until?",
+    "User: I think the theater in San Jose is open until around 10 pm, so 9 pm should be fine.",
+    "System: What location would you like to watch the movie in?",
+    "User: I've already specified the location as San Jose.",
+    "System: You've already specified the location as San Jose. Let's focus on finding a movie theater that is open until 9 pm. Can you tell me the name of the movie theater in San Jose that you're interested in?",
+    "User: I think the theater in San Jose that I'm interested in is the one that shows Ad Astra.",
+    "System: You've already specified the location as San Jose. Let's focus on finding a movie theater that is open until 9 pm. Can you tell me the name of the movie theater in San Jose that you're interested in?",
+    "User: I think the theater in San Jose that shows Ad Astra is the one that's open until 9 pm, isn't it?",
+    "System: You've already specified the location as San Jose. Let's focus on finding a movie theater that is open until 9 pm. Can you tell me the name of the movie theater in San Jose that you're interested in?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    ""
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

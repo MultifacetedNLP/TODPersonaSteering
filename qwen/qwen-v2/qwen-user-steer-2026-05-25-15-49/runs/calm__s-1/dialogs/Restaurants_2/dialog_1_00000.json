@@ -1,0 +1,63 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-08', 'location': 'Corte Madera', 'number_of_seats': '2', 'restaurant_name': \"P.f. Chang's\", 'time': '12:00'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-08', 'location': 'Corte Madera', 'number_of_seats': '2', 'restaurant_name': 'Benissimo Restaurant & Bar', 'time': '12:00'})"
+  ],
+  "user_req_slots": [
+    [],
+    [
+      "price_range",
+      "has_vegetarian_options"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Hi, could you get me a restaurant booking on the 8th please?\nSystem: Any preference on the restaurant, location and time?\nUser: Could you get me a reservation at P.f. Chang's in Corte Madera at afternoon 12?\nSystem: Please confirm your reservation at P.f. Chang's in Corte Madera at 12 pm for 2 on March 8th.\nUser: Sure, that is great.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-08', 'location': 'Corte Madera', 'number_of_seats': '2', 'restaurant_name': \"P.f. Chang's\", 'time': '12:00'})\nSearch Results\n\nEnd Search Results\nSystem: Sorry, your reservation could not be made. Could I help you with something else?\nUser: Could you try booking a table at Benissimo instead?\nSystem: Sure, please confirm your reservation at Benissimo Restaurant & Bar in Corte Madera at 12 pm for 2 on March 8th.\nUser: Sure, may I know if they have vegetarian options and how expensive is their food?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-08', 'location': 'Corte Madera', 'number_of_seats': '2', 'restaurant_name': 'Benissimo Restaurant & Bar', 'time': '12:00'})\nSearch Results\n[{'address': '18 Tamalpais Drive', 'category': 'Italian', 'date': '2019-03-08', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Corte Madera', 'number_of_seats': '2', 'phone_number': '415-927-2316', 'price_range': 'moderate', 'rating': '4.10', 'restaurant_name': 'Benissimo Restaurant & Bar', 'time': '12:00'}]\nEnd Search Results\nSystem: Your reservation has been made. Unfortunately, they do not serve vegetarian options, although they are moderate priced.\nUser: I see, thanks alot!\nSystem: No worries, could I further assist you?\nLast User Utterance:No, that is all. Thank you!\nLast System Utterance: Have a great day ahead!",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'date': '2023-04-08', 'location': 'Corte Madera', 'number_of_seats': '2', 'restaurant_name': 'P.f. Chang's', 'time': '12:00'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2023-03-08', 'location': 'Corte Madera', 'number_of_seats': '2', 'restaurant_name': 'P.f. Chang's', 'time': '12:00'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2023-03-08', 'location': 'Corte Madera', 'number_of_seats': '2', 'restaurant_name': 'P.f. Chang's', 'time': '12:00'})"
+  ],
+  "generated_dialog": [
+    "User: Hi, could you get me a restaurant booking on the 8th please?",
+    "System: Sure, I can help with that. Could you please tell me the name of the restaurant and the location?",
+    "User: Okay, it's P.f. Chang's in Corte Madera. And I need it for two people at noon.",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2023-04-08', 'location': 'Corte Madera', 'number_of_seats': '2', 'restaurant_name': 'P.f. Chang's', 'time': '12:00'})",
+    "Search Results\n[{'address': '900 Stanford Shopping Center Bldg. W Bldg. W', 'category': 'Seafood', 'date': '2023-04-08', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'Corte Madera', 'number_of_seats': 2, 'phone_number': '650-330-1782', 'price_range': 'moderate', 'rating': 3.7, 'restaurant_name': \"P.f. Chang's\", 'time': '12:00'}]\nEnd Search Results",
+    "System: Your table is booked at P.f. Chang's in Corte Madera on April 8th at 12:00 PM for 2 people.",
+    "User: Oh, wait, did I say April 8th? I meant March 8th! Can you change that for me?",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2023-03-08', 'location': 'Corte Madera', 'number_of_seats': '2', 'restaurant_name': 'P.f. Chang's', 'time': '12:00'})",
+    "Search Results\n[{'address': '900 Stanford Shopping Center Bldg. W Bldg. W', 'category': 'Seafood', 'date': '2023-03-08', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'Corte Madera', 'number_of_seats': '2', 'phone_number': '650-330-1782', 'price_range': 'moderate', 'rating': 3.7, 'restaurant_name': \"P.f. Chang's\", 'time': '12:00'}]\nEnd Search Results",
+    "System: Your table is now booked at P.f. Chang's in Corte Madera on March 8th at 12:00 PM for 2 people.",
+    "User: Oh no, and I forgot to mention, do they have vegetarian options there? And um, can you check if it's like under twenty bucks a person?",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2023-03-08', 'location': 'Corte Madera', 'number_of_seats': '2', 'restaurant_name': 'P.f. Chang's', 'time': '12:00'})",
+    "Search Results\n[{'address': '900 Stanford Shopping Center Bldg. W Bldg. W', 'category': 'Seafood', 'date': '2023-03-08', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'Corte Madera', 'number_of_seats': '2', 'phone_number': '650-330-1782', 'price_range': 'moderate', 'rating': 3.7, 'restaurant_name': \"P.f. Chang's\", 'time': '12:00'}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "",
+    "[{'address': '18 Tamalpais Drive', 'category': 'Italian', 'date': '2019-03-08', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Corte Madera', 'number_of_seats': '2', 'phone_number': '415-927-2316', 'price_range': 'moderate', 'rating': '4.10', 'restaurant_name': 'Benissimo Restaurant & Bar', 'time': '12:00'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '900 Stanford Shopping Center Bldg. W Bldg. W', 'category': 'Seafood', 'date': '2023-04-08', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'Corte Madera', 'number_of_seats': 2, 'phone_number': '650-330-1782', 'price_range': 'moderate', 'rating': 3.7, 'restaurant_name': \"P.f. Chang's\", 'time': '12:00'}]\nEnd Search Results",
+    "Search Results\n[{'address': '900 Stanford Shopping Center Bldg. W Bldg. W', 'category': 'Seafood', 'date': '2023-03-08', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'Corte Madera', 'number_of_seats': '2', 'phone_number': '650-330-1782', 'price_range': 'moderate', 'rating': 3.7, 'restaurant_name': \"P.f. Chang's\", 'time': '12:00'}]\nEnd Search Results",
+    "Search Results\n[{'address': '900 Stanford Shopping Center Bldg. W Bldg. W', 'category': 'Seafood', 'date': '2023-03-08', 'has_seating_outdoors': True, 'has_vegetarian_options': True, 'location': 'Corte Madera', 'number_of_seats': '2', 'phone_number': '650-330-1782', 'price_range': 'moderate', 'rating': 3.7, 'restaurant_name': \"P.f. Chang's\", 'time': '12:00'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

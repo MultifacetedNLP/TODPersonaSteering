@@ -1,0 +1,46 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={})"
+  ],
+  "user_req_slots": [
+    [
+      "genre",
+      "cast"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: I need help finding a movie.\nSystem: ApiCall(method='FindMovies', parameters={})\nSearch Results\n[{'cast': 'Leonard Sharp', 'directed_by': 'Alexander Mackendrick', 'genre': 'Thriller', 'movie_title': 'The Ladykillers', 'percent_rating': '100'}]\nEnd Search Results\nSystem: I'd recommend the Ladykillers. It has a rating of 100 percent on average.\nUser: What's the genre?\nSystem: It's considered a thriller.\nUser: Who's in it?\nSystem: The main actor is Leonard Sharp.\nUser: Great, thanks.\nSystem: Need anything else right now?\nLast User Utterance:Nope, thanks again.\nLast System Utterance: My pleasure, enjoy.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'cast': 'Kevin Hart', 'genre': 'Comedy'})",
+    "APICall(method='FindMovies', parameters={'cast': 'Kevin Hart', 'genre': 'Comedy'})"
+  ],
+  "generated_dialog": [
+    "User: I need help finding a movie.",
+    "System: Sure, I can help with that. Could you tell me the name of the director or the genre you're interested in?",
+    "User: I'm looking for a comedy movie, and maybe something starring Kevin Hart.",
+    "System: APICall(method='FindMovies', parameters={'cast': 'Kevin Hart', 'genre': 'Comedy'})",
+    "Search Results\n\nEnd Search Results",
+    "System: APICall(method='FindMovies', parameters={'cast': 'Kevin Hart', 'genre': 'Comedy'})",
+    "Search Results\n\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'cast': 'Leonard Sharp', 'directed_by': 'Alexander Mackendrick', 'genre': 'Thriller', 'movie_title': 'The Ladykillers', 'percent_rating': '100'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n\nEnd Search Results",
+    "Search Results\n\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

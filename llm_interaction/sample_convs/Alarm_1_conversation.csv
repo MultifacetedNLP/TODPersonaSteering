@@ -1,0 +1,18 @@
+Speaker,Utterance
+dialogue_id:, 3_00000
+USER,"""I want to know what alarms I have on."""
+SYSTEM,"""APICall(method='GetAlarms', parameters={  })"""
+Tool,"""Search Results\n[{ alarm_name: Wake up, alarm_time: 06:00 }, { alarm_name: Catch bus, alarm_time: 11:00 }]\nEnd Search Results"""
+SYSTEM,"""You have 2 alarms on now. There is one for 6 am to wake up."""
+USER,"""Nice. I would like to add one alarm called cleaning."""
+SYSTEM,"""What time do you want this alarm to be?"""
+USER,"""Put it for evening 4."""
+SYSTEM,"""Okay, please confirm that you want to create a 4 pm alarm called cleaning."""
+USER,"""Yep."""
+SYSTEM,"""APICall(method='AddAlarm', parameters={ new_alarm_name: Cleaning, new_alarm_time: 16:00 })"""
+Tool,"""Search Results\n[{ new_alarm_name: Cleaning, new_alarm_time: 16:00 }]\nEnd Search Results"""
+SYSTEM,"""I made the alarm successfully."""
+USER,"""Thanks so much."""
+SYSTEM,"""Do you need help with something else?"""
+USER,"""No, that is all. Thank you so much."""
+SYSTEM,"""Thanks."""

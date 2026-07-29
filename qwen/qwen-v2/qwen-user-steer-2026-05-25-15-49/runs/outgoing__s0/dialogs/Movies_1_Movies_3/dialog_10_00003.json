@@ -1,0 +1,43 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'directed_by': 'Peter Jackson', 'genre': 'Fantasy'})"
+  ],
+  "user_req_slots": [
+    [
+      "cast"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: I want to see a movie by Peter Jackson that is a Fantasy.\nSystem: ApiCall(method='FindMovies', parameters={'directed_by': 'Peter Jackson', 'genre': 'Fantasy'})\nSearch Results\n[{'cast': 'Liv Tyler', 'directed_by': 'Peter Jackson', 'genre': 'Fantasy', 'movie_title': 'The Lord of the Rings: The Return of the King', 'percent_rating': '93'}]\nEnd Search Results\nSystem: Well, it sounds like you are talking about The Lord of the Rings: The Return of the King. it has a 93 % rating.\nUser: Who was in that?\nSystem: Liv Tyler was in it.\nLast User Utterance:Fine, I appreciate the idea.\nLast System Utterance: enjoy the film.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'directed_by': 'Peter Jackson', 'genre': 'Fantasy'})"
+  ],
+  "generated_dialog": [
+    "User: I want to see a movie by Peter Jackson that is a Fantasy.",
+    "System: APICall(method='FindMovies', parameters={'directed_by': 'Peter Jackson', 'genre': 'Fantasy'})",
+    "Search Results\n[{'cast': 'Liv Tyler', 'directed_by': 'Peter Jackson', 'genre': 'Fantasy', 'movie_title': 'The Lord of the Rings: The Return of the King', 'percent_rating': 93}, {'cast': 'Ian Hughes', 'directed_by': 'Peter Jackson', 'genre': 'Fantasy', 'movie_title': 'The Lord of the Rings: The Return of the King', 'percent_rating': 93}, {'cast': 'Sarah McLeod', 'directed_by': 'Peter Jackson', 'genre': 'Fantasy', 'movie_title': 'The Lord of the Rings: The Return of the King', 'percent_rating': 93}]\nEnd Search Results",
+    "System: We found 'The Lord of the Rings: The Return of the King' directed by Peter Jackson, which has a 93 percent rating. Would you like more information on this movie?",
+    "User: Yes, can you tell me about the main actors in the movie?",
+    "System: The main actors in 'The Lord of the Rings: The Return of the King' include Liv Tyler, Ian Hughes, and Sarah McLeod.",
+    "User: That's great! Who else is in the movie besides those actors?"
+  ],
+  "search_results": [
+    "[{'cast': 'Liv Tyler', 'directed_by': 'Peter Jackson', 'genre': 'Fantasy', 'movie_title': 'The Lord of the Rings: The Return of the King', 'percent_rating': '93'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'cast': 'Liv Tyler', 'directed_by': 'Peter Jackson', 'genre': 'Fantasy', 'movie_title': 'The Lord of the Rings: The Return of the King', 'percent_rating': 93}, {'cast': 'Ian Hughes', 'directed_by': 'Peter Jackson', 'genre': 'Fantasy', 'movie_title': 'The Lord of the Rings: The Return of the King', 'percent_rating': 93}, {'cast': 'Sarah McLeod', 'directed_by': 'Peter Jackson', 'genre': 'Fantasy', 'movie_title': 'The Lord of the Rings: The Return of the King', 'percent_rating': 93}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

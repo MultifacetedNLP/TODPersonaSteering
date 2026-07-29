@@ -1,0 +1,10 @@
+Speaker,Utterance
+dialogue_id:, 35_00000
+USER,"""I am looking for an apartment with 3 baths."""
+SYSTEM,"""What is the number of bedrooms you want the apartment to have? In which area do you want the property to be located?"""
+USER,"""I want it to have 3 bedrooms and to be located in Oakley."""
+SYSTEM,"""APICall(method='FindApartment', parameters={ area: Oakley, number_of_baths: 3, number_of_beds: 3 })"""
+Tool,"""Search Results\n[{ address: 4950 Empire Avenue # D2, area: Oakley, furnished: False, number_of_baths: 3, number_of_beds: 3, pets_allowed: True, phone_number: 925-625-1704, property_name: Summer Creek Place, rent: 4200 }]\nEnd Search Results"""
+SYSTEM,"""I located 1 nice apartment called Summer Creek Place. It's a fine property and can be found at 4950 Empire Avenue # D2. It has 3 bathrooms and 3 bedrooms. Rent for this apartment is $4,200 each month."""
+USER,"""Yes, that apartment sounds fine. Thanks for your help, that was all I needed."""
+SYSTEM,"""Have a very nice day."""

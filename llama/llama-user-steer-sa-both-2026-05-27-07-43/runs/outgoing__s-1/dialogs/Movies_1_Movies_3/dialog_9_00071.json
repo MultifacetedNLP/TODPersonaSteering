@@ -1,0 +1,112 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'location': 'Santa Rosa', 'show_type': 'regular', 'theater_name': '3rd Street Cinema'})",
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'Santa Rosa', 'movie_name': 'Toy Story 4', 'number_of_tickets': '3', 'show_date': '2019-03-07', 'show_time': '16:45', 'show_type': 'regular'})"
+  ],
+  "user_req_slots": [
+    [],
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: I would like to watch a regular show at 3rd Street Cinema in Santa Rosa.\nSystem: ApiCall(method='FindMovies', parameters={'location': 'Santa Rosa', 'show_type': 'regular', 'theater_name': '3rd Street Cinema'})\nSearch Results\n[{'genre': 'Drama', 'location': 'Santa Rosa', 'movie_name': 'The Art of Racing in the Rain', 'price': '9', 'show_type': 'regular', 'street_address': '620 3rd Street', 'theater_name': '3rd Street Cinema'}]\nEnd Search Results\nSystem: There is The Art of racing in the rain, Toy Story 4 or Yesterday?\nUser: Toy story four is perfect.\nSystem: Would you like to purchase tickets?\nUser: Yes, I would like three tickets.\nSystem: When do you want to watch the movie?\nUser: I would like to go in the evening 4:45.\nSystem: When do you want to go?\nUser: I would like to watch it next Thursday.\nSystem: Booking 3 tickets regular for Toy Story 4 on March 7th in Santa Rosa at 4:45 pm.\nUser: Yes, that is perfect.\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'Santa Rosa', 'movie_name': 'Toy Story 4', 'number_of_tickets': '3', 'show_date': '2019-03-07', 'show_time': '16:45', 'show_type': 'regular'})\nSearch Results\n[{'genre': 'Animation', 'location': 'Santa Rosa', 'movie_name': 'Toy Story 4', 'number_of_tickets': '3', 'price': '13', 'show_date': '2019-03-07', 'show_time': '16:30', 'show_type': 'regular', 'street_address': '620 3rd Street', 'theater_name': '3rd Street Cinema'}]\nEnd Search Results\nSystem: The tickets are bought.\nUser: Thank you for your time.\nSystem: Can I help with something else?\nLast User Utterance:No, that is all I needed.\nLast System Utterance: Have a good day.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'location': 'Santa Rosa', 'theater_name': '3rd Street Cinema'})"
+  ],
+  "generated_dialog": [
+    "User: I would like to watch a regular show at 3rd Street Cinema in Santa Rosa.",
+    "System: What movie would you like to watch?",
+    "User: I'm not sure, can you tell me what's playing at 3rd Street Cinema in Santa Rosa today?",
+    "System: What movie would you like to watch?",
+    "User: I'm still not sure, can you tell me what's playing at 3rd Street Cinema in Santa Rosa today?",
+    "System: APICall(method='FindMovies', parameters={'location': 'Santa Rosa', 'theater_name': '3rd Street Cinema'})",
+    "Search Results\n[{'genre': 'Fantasy', 'location': 'Santa Rosa', 'movie_name': 'Hellboy', 'price': 17, 'show_type': 'regular', 'street_address': '620 3rd Street', 'theater_name': '3rd Street Cinema'}, {'genre': 'Animation', 'location': 'Santa Rosa', 'movie_name': 'How to Train Your Dragon: The Hidden World', 'price': 18, 'show_type': '3d', 'street_address': '620 3rd Street', 'theater_name': '3rd Street Cinema'}, {'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'The Upside', 'price': 9, 'show_type': '3d', 'street_address': '620 3rd Street', 'theater_name': '3rd Street Cinema'}]\nEnd Search Results",
+    "System: Based on the conversation history, I will respond as the system.",
+    "User: I think I'd like to watch Toy Story 4.",
+    "System: I didn't see Toy Story 4 in the search results. Can you confirm if you're interested in watching it?",
+    "User: I'm pretty sure I'd like to watch Toy Story 4, but I'd like to buy tickets for it.",
+    "System: Unfortunately, Toy Story 4 was not in the search results. Can you confirm if you'd like to watch one of the available movies instead?",
+    "User: I'm pretty sure I'd like to watch Toy Story 4, but I'd like to buy tickets for it.",
+    "System: Unfortunately, Toy Story 4 was not in the search results. Can you confirm if you'd like to watch one of the available movies instead?",
+    "User: I'm pretty sure I'd like to watch Toy Story 4, but I'd like to buy tickets for it.",
+    "System: Unfortunately, Toy Story 4 was not in the search results. Can you confirm if you'd like to watch one of the available movies instead?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'genre': 'Drama', 'location': 'Santa Rosa', 'movie_name': 'The Art of Racing in the Rain', 'price': '9', 'show_type': 'regular', 'street_address': '620 3rd Street', 'theater_name': '3rd Street Cinema'}]",
+    "[{'genre': 'Animation', 'location': 'Santa Rosa', 'movie_name': 'Toy Story 4', 'number_of_tickets': '3', 'price': '13', 'show_date': '2019-03-07', 'show_time': '16:30', 'show_type': 'regular', 'street_address': '620 3rd Street', 'theater_name': '3rd Street Cinema'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'genre': 'Fantasy', 'location': 'Santa Rosa', 'movie_name': 'Hellboy', 'price': 17, 'show_type': 'regular', 'street_address': '620 3rd Street', 'theater_name': '3rd Street Cinema'}, {'genre': 'Animation', 'location': 'Santa Rosa', 'movie_name': 'How to Train Your Dragon: The Hidden World', 'price': 18, 'show_type': '3d', 'street_address': '620 3rd Street', 'theater_name': '3rd Street Cinema'}, {'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'The Upside', 'price': 9, 'show_type': '3d', 'street_address': '620 3rd Street', 'theater_name': '3rd Street Cinema'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"What movie would you like to watch?\"}",
+    "{\"type\": \"message\", \"content\": \"What movie would you like to watch?\"}\n\nPlease respond with a movie name.",
+    "{\"type\": \"message\", \"content\": \"What movie would you like to watch?\"}\n\nPlease respond with a movie name.",
+    "Based on the conversation history, I will respond as the system.",
+    "Based on the conversation history, the user wants to watch Toy Story 4. However, Toy Story 4 is not in the search results. The user is still unsure about what movie to watch. \n\nTo continue the conversation, I will ask the user to confirm the location and theater name. \n\n{\"type\": \"message\", \"content\": \"You're interested in watching Toy Story 4. Can you confirm the location and theater name?\"}",
+    "Based on the conversation history, I will respond as the system.\n\n{\"type\": \"message\", \"content\": \"Unfortunately, Toy Story 4 is not in the search results. Can you confirm if you'd like to watch one of the available movies instead?\"}\n\nHowever, since the user is still interested in watching Toy Story 4, I will ask for more information to make an API call.\n\n{\"type\": \"message\", \"content\": \"Can you please confirm the location where you'd like to watch Toy Story 4?\"}\n\nPlease provide the location.",
+    "Based on the conversation history, I will respond as the system.\n\n{\"type\": \"message\", \"content\": \"Unfortunately, Toy Story 4 was not in the search results. Can you confirm if you'd like to watch one of the available movies instead?\"}\n\nHowever, since the user is still interested in watching Toy Story 4, I will ask for more information to try to find a solution.\n\n{\"type\": \"message\", \"content\": \"Can you please confirm the location and date you would like to watch Toy Story 4?\"}\n\nPlease provide the location and date, and I will try to find a solution.",
+    "Based on the conversation history, I will respond as the system.\n\n{\"type\": \"message\", \"content\": \"Unfortunately, Toy Story 4 was not in the search results. Can you confirm if you'd like to watch one of the available movies instead?\"}\n\nHowever, since the user is still insisting on watching Toy Story 4, I will ask for more information to try to find a solution.\n\n{\"type\": \"message\", \"content\": \"Can you please confirm the location and date you would like to watch Toy Story 4?\"}\n\nThis will allow me to make an API call to check if Toy Story 4 is playing at the specified location on the specified date.\n\nIf the user provides the required information, I will make an API call to check the showtimes for Toy Story 4.\n\n{\"type\": \"api_call\", \"method\": \"GetTimesForMovie\", \"parameters\": {\"movie_name\": \"Toy Story 4\", \"location\": \"Santa Rosa\", \"show_date\": \"today\"}}"
+  ],
+  "dialog_completed": false
+}

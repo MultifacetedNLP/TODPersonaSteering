@@ -1,0 +1,86 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'genre': 'Drama'})",
+    "ApiCall(method='FindMovies', parameters={'directed_by': 'Hari Sama', 'genre': 'Drama'})"
+  ],
+  "user_req_slots": [
+    [],
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: My friend and I want to go see a movie but we can't find one we like. We really want to see a Drama.\nSystem: ApiCall(method='FindMovies', parameters={'genre': 'Drama'})\nSearch Results\n[{'cast': 'Bakary Sangare', 'directed_by': 'Louis Garrel', 'genre': 'Drama', 'movie_title': 'A Faithful Man', 'percent_rating': '78'}]\nEnd Search Results\nSystem: Have you heard of A Faithful Man? It is highly rated at 78 percent.\nUser: Yeah, we already saw that one. Is there anything directed by Hari Sama?\nSystem: ApiCall(method='FindMovies', parameters={'directed_by': 'Hari Sama', 'genre': 'Drama'})\nSearch Results\n[{'cast': 'Xabiani Ponce de Leon', 'directed_by': 'Hari Sama', 'genre': 'Drama', 'movie_title': 'This Is Not Berlin', 'percent_rating': '86'}]\nEnd Search Results\nSystem: Sure, you might like This Is Not Berlin. It's rating is 86 percent.\nLast User Utterance:Yes, that one sounds really good. That's all I needed today.\nLast System Utterance: Glad I could help you! Have a great day!",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'genre': 'Drama'})",
+    "APICall(method='FindMovies', parameters={'movie_title': 'Brittany Runs a Marathon'})",
+    "APICall(method='FindMovies', parameters={'movie_title': 'Brittany Runs a Marathon'})"
+  ],
+  "generated_dialog": [
+    "User: My friend and I want to go see a movie but we can't find one we like. We really want to see a Drama.",
+    "System: APICall(method='FindMovies', parameters={'genre': 'Drama'})",
+    "Search Results\n[{'cast': 'Javier Bardem', 'directed_by': 'Pedro Almodovar', 'genre': 'Drama', 'movie_title': 'Live Flesh', 'percent_rating': 80}, {'cast': 'Doris McCarthy', 'directed_by': 'Bart Freundlich', 'genre': 'Drama', 'movie_title': 'After The Wedding', 'percent_rating': 43}, {'cast': 'Michaela Watkins', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}]\nEnd Search Results",
+    "System: We found a few dramas for you. How about 'Live Flesh' directed by Pedro Almodovar with a 80% rating, or 'Brittany Runs a Marathon' with Michaela Watkins in the lead and a 90% rating?",
+    "User: I am interested in the movie 'Brittany Runs a Marathon'. Can you provide more details about this movie?",
+    "System: APICall(method='FindMovies', parameters={'movie_title': 'Brittany Runs a Marathon'})",
+    "Search Results\n[{'cast': 'Michaela Watkins', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}, {'cast': 'Jillian Bell', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}, {'cast': 'Utkarsh Ambudkar', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}]\nEnd Search Results",
+    "System: Sure! 'Brittany Runs a Marathon' is a Drama movie directed by Paul Downs Colaizzo. It stars Michaela Watkins, Jillian Bell, and Utkarsh Ambudkar. It has a high rating of 90%. Would you like to know the showtimes or where to buy tickets?",
+    "User: Can you provide showtimes and ticket options for 'Brittany Runs a Marathon'?",
+    "System: APICall(method='FindMovies', parameters={'movie_title': 'Brittany Runs a Marathon'})",
+    "Search Results\n[{'cast': 'Michaela Watkins', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}, {'cast': 'Jillian Bell', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}, {'cast': 'Utkarsh Ambudkar', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'cast': 'Bakary Sangare', 'directed_by': 'Louis Garrel', 'genre': 'Drama', 'movie_title': 'A Faithful Man', 'percent_rating': '78'}]",
+    "[{'cast': 'Xabiani Ponce de Leon', 'directed_by': 'Hari Sama', 'genre': 'Drama', 'movie_title': 'This Is Not Berlin', 'percent_rating': '86'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'cast': 'Javier Bardem', 'directed_by': 'Pedro Almodovar', 'genre': 'Drama', 'movie_title': 'Live Flesh', 'percent_rating': 80}, {'cast': 'Doris McCarthy', 'directed_by': 'Bart Freundlich', 'genre': 'Drama', 'movie_title': 'After The Wedding', 'percent_rating': 43}, {'cast': 'Michaela Watkins', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}]\nEnd Search Results",
+    "Search Results\n[{'cast': 'Michaela Watkins', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}, {'cast': 'Jillian Bell', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}, {'cast': 'Utkarsh Ambudkar', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}]\nEnd Search Results",
+    "Search Results\n[{'cast': 'Michaela Watkins', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}, {'cast': 'Jillian Bell', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}, {'cast': 'Utkarsh Ambudkar', 'directed_by': 'Paul Downs Colaizzo', 'genre': 'Drama', 'movie_title': 'Brittany Runs a Marathon', 'percent_rating': 90}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"FindMovies\", \"parameters\": {\"genre\": \"Drama\"}}",
+    "{\"type\": \"message\", \"content\": \"We found a few dramas for you. How about 'Live Flesh' directed by Pedro Almodovar with a 80% rating, or 'Brittany Runs a Marathon' with Michaela Watkins in the lead and a 90% rating?\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindMovies\", \"parameters\": {\"movie_title\": \"Brittany Runs a Marathon\"}}",
+    "{\"type\": \"message\", \"content\": \"Sure! 'Brittany Runs a Marathon' is a Drama movie directed by Paul Downs Colaizzo. It stars Michaela Watkins, Jillian Bell, and Utkarsh Ambudkar. It has a high rating of 90%. Would you like to know the showtimes or where to buy tickets?\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindShowtimesAndTickets\", \"parameters\": {\"movie_title\": \"Brittany Runs a Marathon\"}}"
+  ],
+  "dialog_completed": false
+}

@@ -1,0 +1,49 @@
+{
+  "api_calls": [
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'Santa Rosa', 'movie_name': 'Official Secrets', 'number_of_tickets': '1', 'show_date': '2019-03-04', 'show_time': '20:15', 'show_type': 'regular'})"
+  ],
+  "user_req_slots": [
+    [
+      "street_address",
+      "genre",
+      "price"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: Please get me tickets to the movie Official Secrets.\nSystem: Sure, how many? Do you want a 3d or regular showing and which date do you want?\nUser: I just want one ticket to a regular show on 4th of March.\nSystem: Where do you want to go? What time do you want to see it?\nUser: I need Santa Rosa at 8:15 in the night.\nSystem: Ok, here's what I have: 1 ticket for Official Secrets on March 4th in Santa Rosa at 8:15 pm. Regular format.\nUser: Fine, that works.\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'Santa Rosa', 'movie_name': 'Official Secrets', 'number_of_tickets': '1', 'show_date': '2019-03-04', 'show_time': '20:15', 'show_type': 'regular'})\nSearch Results\n[{'genre': 'Mystery', 'location': 'Santa Rosa', 'movie_name': 'Official Secrets', 'number_of_tickets': '1', 'price': '15', 'show_date': '2019-03-04', 'show_time': '20:30', 'show_type': 'regular', 'street_address': '551 Summerfield Road', 'theater_name': 'Summerfield Cinemas'}]\nEnd Search Results\nSystem: You have tickets. It is at 551 Summerfield Road.\nUser: Fine, what kind of movie is it? How much must I pay?\nSystem: It's a Mystery and your total is $15 per person.\nLast User Utterance:Wow, great. Thank you.\nLast System Utterance: Enjoy your Mystery movie.",
+  "predicted_api_calls": [
+    "APICall(method='GetTimesForMovie', parameters={'movie_name': 'Official Secrets', 'location': 'Santa Rosa', 'show_date': '2019-03-04', 'show_type': 'regular'})"
+  ],
+  "generated_dialog": [
+    "User: Please get me tickets to the movie Official Secrets.",
+    "System: Sure, when would you like to watch the movie and which date?",
+    "User: I want to see it on March 4th at 8:15 PM. Can you find me a regular showtime ticket in Santa Rosa?",
+    "System: APICall(method='GetTimesForMovie', parameters={'movie_name': 'Official Secrets', 'location': 'Santa Rosa', 'show_date': '2019-03-04', 'show_type': 'regular'})",
+    "Search Results\n[{'genre': 'Mystery', 'location': 'Santa Rosa', 'movie_name': 'Official Secrets', 'price': 15, 'show_type': 'regular', 'street_address': '551 Summerfield Road', 'theater_name': 'Summerfield Cinemas', 'show_date': '2019-03-04', 'show_time': '20:30', 'number_of_tickets': 1}, {'genre': 'Mystery', 'location': 'Santa Rosa', 'movie_name': 'Official Secrets', 'price': 15, 'show_type': 'regular', 'street_address': '551 Summerfield Road', 'theater_name': 'Summerfield Cinemas', 'show_date': '2019-03-04'}]\nEnd Search Results",
+    "System: I found a regular showtime at 8:30 PM on March 4th. Would you like to book a ticket?",
+    "User: Sure, let's go with that 8:30 PM showtime. And while we're at it, can you tell me the price and the address of the theater?",
+    "System: The ticket price is $15 and the theater address is 551 Summerfield Road, Summerfield Cinemas. Shall I proceed with booking the ticket for you?",
+    "User: Sure, let's proceed with booking the ticket."
+  ],
+  "search_results": [
+    "[{'genre': 'Mystery', 'location': 'Santa Rosa', 'movie_name': 'Official Secrets', 'number_of_tickets': '1', 'price': '15', 'show_date': '2019-03-04', 'show_time': '20:30', 'show_type': 'regular', 'street_address': '551 Summerfield Road', 'theater_name': 'Summerfield Cinemas'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'genre': 'Mystery', 'location': 'Santa Rosa', 'movie_name': 'Official Secrets', 'price': 15, 'show_type': 'regular', 'street_address': '551 Summerfield Road', 'theater_name': 'Summerfield Cinemas', 'show_date': '2019-03-04', 'show_time': '20:30', 'number_of_tickets': 1}, {'genre': 'Mystery', 'location': 'Santa Rosa', 'movie_name': 'Official Secrets', 'price': 15, 'show_type': 'regular', 'street_address': '551 Summerfield Road', 'theater_name': 'Summerfield Cinemas', 'show_date': '2019-03-04'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

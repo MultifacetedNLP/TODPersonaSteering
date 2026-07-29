@@ -1,0 +1,107 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Pittsburg', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '12:00'})"
+  ],
+  "user_req_slots": [
+    [
+      "price_range"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I want to have a table booked for me at a restaurant, because I want to have a meal.\nSystem: Can you tell me the restaurant you are interested to have a table booked at?\nUser: Can you check if you can make a booking of a table at Castle Rock?\nSystem: Can you tell me the time that you want to have the table booked for you?\nUser: I prefer to have the booking be made for 12:00.\nSystem: Is there a specific location you are looking for?\nUser: I am interested in restaurants which are located in Livermore.\nSystem: Can you please confirm that you want to book a table for 2 people at Castle Rock Restaurant in Livermore, and that you want the table to be booked for you for 12 pm on March 1st?\nUser: That is not right. Could you please see if you can make a booking at Mcdonald's?\nSystem: Can you please confirm that you want to have a table booked for you on March 1st at Mcdonald's?\nUser: I don't want that either. See if you can find me restaurants in Pittsburg.\nSystem: Can you please confirm that you want to have a table booked for you at 12 pm in the city of Pittsburg?\nUser: Yes that suits me well. Could you inform me about the fact how expensive is the restaurant?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'Pittsburg', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '12:00'})\nSearch Results\n[{'address': '2203 Loveridge Road', 'category': 'Sandwich', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Pittsburg', 'number_of_seats': '2', 'phone_number': '925-439-5289', 'price_range': 'cheap', 'rating': '3.50', 'restaurant_name': \"Mcdonald's\", 'time': '12:00'}]\nEnd Search Results\nSystem: Your requested booking has been made, and the restaurant is considered as cheap.\nLast User Utterance:I appreciate it very much. That would be all.\nLast System Utterance: Have a wonderful day.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: I want to have a table booked for me at a restaurant, because I want to have a meal.",
+    "System: I'd be happy to help you book a table at a restaurant. Can you please tell me the name of the restaurant you're interested in?",
+    "User: I was thinking of going to McDonald's, is that okay?",
+    "System: McDonald's is a great choice. Is it in a specific location you'd like to dine at?",
+    "User: I was thinking of going to the one in downtown Pittsburg, is that the one you were asking about?",
+    "System: Great choice! I'd like to confirm the location. Is the McDonald's in downtown Pittsburgh the one you're interested in?",
+    "User: Yes, that's the one, and I'm looking for a casual dining experience, so I'm guessing it's pretty affordable, right?",
+    "System: McDonald's in downtown Pittsburgh sounds like a great choice. I'd like to confirm the location. Is the McDonald's in downtown Pittsburgh the one you're interested in?",
+    "User: I'm guessing it's pretty affordable, right?",
+    "System: McDonald's in downtown Pittsburgh sounds like a great choice. I'd like to confirm the location. Is the McDonald's in downtown Pittsburgh the one you're interested in?",
+    "User: I'm guessing it's pretty affordable, right?",
+    "System: I'd be happy to help you book a table at a restaurant. Can you please tell me the name of the restaurant you're interested in?",
+    "User: I was thinking of going to McDonald's, is that okay?",
+    "System: I'd be happy to help you book a table at a restaurant. Can you please tell me the name of the restaurant you're interested in?",
+    "User: I was thinking of going to McDonald's, is that okay?",
+    "System: I'd be happy to help you book a table at a restaurant. Can you please tell me the name of the restaurant you're interested in?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '2203 Loveridge Road', 'category': 'Sandwich', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Pittsburg', 'number_of_seats': '2', 'phone_number': '925-439-5289', 'price_range': 'cheap', 'rating': '3.50', 'restaurant_name': \"Mcdonald's\", 'time': '12:00'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"I can help you book a table at a restaurant. Which type of cuisine are you interested in?\"}",
+    "{\"type\": \"message\", \"content\": \"McDonald's is a great choice. Is it in a specific location you'd like to dine at?\"}",
+    "{\"type\": \"message\", \"content\": \"Great choice! I'd like to confirm the location. Is the McDonald's in downtown Pittsburgh the one you're looking for?\"}\n\nPlease respond with the location of the McDonald's in downtown Pittsburgh.",
+    "{\"type\": \"message\", \"content\": \"McDonald's in downtown Pittsburgh sounds like a great choice. I'd like to confirm the location. Is the McDonald's in downtown Pittsburgh the one you're interested in?\"}\n\nPlease confirm the location of the McDonald's in downtown Pittsburgh.",
+    "{\"type\": \"message\", \"content\": \"McDonald's in downtown Pittsburgh sounds like a great choice. I'd like to confirm the location. Is the McDonald's in downtown Pittsburgh the one you're interested in?\"}\n\n{\"type\": \"message\", \"content\": \"I'm guessing it's pretty affordable, right?\"}\n\n{\"type\": \"message\", \"content\": \"I'd like to confirm the price range of McDonald's in downtown Pittsburgh. Is it cheap, moderate, pricey, or ultra high-end?\"}\n\n{\"type\": \"message\", \"content\": \"I'd like to confirm the time you'd like to book the table. What time would you like to dine at McDonald's in downtown Pittsburgh?\"}\n\n{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2024-07-26\", \"location\": \"Pittsburgh\", \"number_of_seats\": \"2\", \"restaurant_name\": \"McDonald's\", \"time\": \"User's preferred time\"}}",
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you book a table at a restaurant. Can you please tell me the name of the restaurant you're interested in?\"}\n\n# Waiting for user response...",
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you book a table at a restaurant. Can you please tell me the name of the restaurant you're interested in?\"}\n\nPlease respond with the name of the restaurant.",
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you book a table at a restaurant. Can you please tell me the name of the restaurant you're interested in?\"}\n\nPlease respond with the name of the restaurant."
+  ],
+  "dialog_completed": false
+}

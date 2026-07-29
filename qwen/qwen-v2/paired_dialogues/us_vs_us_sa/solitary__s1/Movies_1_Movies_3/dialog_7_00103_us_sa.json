@@ -1,0 +1,71 @@
+{
+  "api_calls": [
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'San Jose', 'movie_name': 'The Load', 'number_of_tickets': '1', 'show_date': '2019-03-05', 'show_time': '20:15', 'show_type': '3d'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: I'm looking for some 3d movie tickets in San Jose.\nSystem: How many tickets do you need and what time do you want to see the movie?\nUser: I need 1 ticket for a movie at 8:15 pm.\nSystem: What date do you want to see the movie?\nUser: I want to see it on the 5th of March.\nSystem: What movie do you want to watch?\nUser: I want to watch The Load.\nSystem: Okay, I have 1 3d ticket for The Load on March 5th at 8:15 pm in San Jose, correct?\nUser: Yes, that sounds good.\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'San Jose', 'movie_name': 'The Load', 'number_of_tickets': '1', 'show_date': '2019-03-05', 'show_time': '20:15', 'show_type': '3d'})\nSearch Results\n[{'genre': 'War', 'location': 'San Jose', 'movie_name': 'The Load', 'number_of_tickets': '1', 'price': '14', 'show_date': '2019-03-05', 'show_time': '20:00', 'show_type': '3d', 'street_address': '288 South 2nd Street', 'theater_name': '3 Below Theaters And Lounge'}]\nEnd Search Results\nSystem: I have successfully purchased the ticket.\nUser: Thank you.\nSystem: Is there anything else I can help with?\nLast User Utterance:No, thank you.\nLast System Utterance: Have a great day.",
+  "predicted_api_calls": [
+    "APICall(method='GetTimesForMovie', parameters={'movie_name': 'The Lobster', 'location': 'San Jose', 'show_date': '2023-10-01'})",
+    "APICall(method='GetTimesForMovie', parameters={'movie_name': 'The Lobster', 'location': 'San Jose', 'show_date': '2023-10-01'})"
+  ],
+  "generated_dialog": [
+    "User: I'm looking for some 3d movie tickets in San Jose.",
+    "System: Could you please tell me the name of the movie you're interested in?",
+    "User: I want to see \"The Load\".",
+    "System: I couldn't find any movie named 'The Load'. Could you please provide the correct movie name?",
+    "User: I apologize, I meant to say \"The Lobster\".",
+    "System: APICall(method='GetTimesForMovie', parameters={'movie_name': 'The Lobster', 'location': 'San Jose', 'show_date': '2023-10-01'})",
+    "Search Results\n\nEnd Search Results",
+    "System: APICall(method='GetTimesForMovie', parameters={'movie_name': 'The Lobster', 'location': 'San Jose', 'show_date': '2023-10-01'})",
+    "Search Results\n\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'genre': 'War', 'location': 'San Jose', 'movie_name': 'The Load', 'number_of_tickets': '1', 'price': '14', 'show_date': '2019-03-05', 'show_time': '20:00', 'show_type': '3d', 'street_address': '288 South 2nd Street', 'theater_name': '3 Below Theaters And Lounge'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n\nEnd Search Results",
+    "Search Results\n\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"GetTimesForMovie\", \"parameters\": {\"movie_name\": \"dontcare\", \"location\": \"San Jose\", \"show_date\": \"dontcare\", \"show_type\": \"3d\"}}",
+    "{\"type\": \"api_call\", \"method\": \"GetTimesForMovie\", \"parameters\": {\"movie_name\": \"The Load\", \"location\": \"San Jose\", \"show_date\": \"\"}}",
+    "{\"type\": \"api_call\", \"method\": \"GetTimesForMovie\", \"parameters\": {\"movie_name\": \"The Lobster\", \"location\": \"San Jose\", \"show_date\": \"2023-10-01\"}}",
+    "{\"type\": \"api_call\", \"method\": \"GetTimesForMovie\", \"parameters\": {\"movie_name\": \"The Lobster\", \"location\": \"San Jose\", \"show_date\": \"2023-10-01\"}}"
+  ],
+  "dialog_completed": false
+}

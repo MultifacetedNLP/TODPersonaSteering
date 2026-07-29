@@ -1,0 +1,72 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-04', 'location': 'Morgan Hill', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'})"
+  ],
+  "user_req_slots": [
+    [
+      "has_seating_outdoors",
+      "phone_number"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you help me to book a table at a restaurant for 2 people at evening 6:30\nSystem: Is there any choice of restaurant you want to book?\nUser: Would you kindly book the table at Mcdonalds?\nSystem: In which place you want me to search?\nUser: Search restaurants in Morgan Hill and it is for next monday\nSystem: Please give the confirmation details:your table booking at Mcdonalds in the city Morgan Hill on march 4th for 2 people at 6:30 pm.\nUser: Okay..this is cool\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-04', 'location': 'Morgan Hill', 'number_of_seats': '2', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'})\nSearch Results\n[{'address': '201 Vineyard Town Ctr', 'category': 'American', 'date': '2019-03-04', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Morgan Hill', 'number_of_seats': '2', 'phone_number': '408-779-8182', 'price_range': 'cheap', 'rating': '3.40', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]\nEnd Search Results\nSystem: Your booking is confirmed.\nUser: Is there outdoor seating in that restaurant and can i know the phone number\nSystem: There is no outdoor seating and telephone number is 408-779-8182.\nLast User Utterance:This is cool..thanks a lot.\nLast System Utterance: Have a nice day.",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'McDonald's', 'location': 'Morgan Hill', 'time': '18:30', 'number_of_seats': '2'})"
+  ],
+  "generated_dialog": [
+    "User: Can you help me to book a table at a restaurant for 2 people at evening 6:30",
+    "System: Sure, I can help with that. Which restaurant would you like to reserve a table at in New York?",
+    "User: I want to reserve a table at McDonald's in Morgan Hill. Do they have outdoor seating available? And could you also give me their phone number just in case?",
+    "System: APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'McDonald's', 'location': 'Morgan Hill', 'time': '18:30', 'number_of_seats': '2'})",
+    "Search Results\n[{'address': '201 Vineyard Town Ctr', 'category': 'American', 'date': '2019-03-04', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Morgan Hill', 'number_of_seats': 2, 'phone_number': '408-779-8182', 'price_range': 'cheap', 'rating': 3.4, 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]\nEnd Search Results",
+    "System: I found a McDonald's in Morgan Hill where you can reserve a table for 2 people at 18:30. They don't have outdoor seating, but you can reach them at 408-779-8182 if you need any assistance.",
+    "User: Got it, I'll make sure to bring my jacket just in case it gets chilly. Thanks for the phone number, I'll keep that handy.",
+    "System: You're welcome! If you need anything else, feel free to ask.",
+    "User: That sounds good, I'll give them a call if needed. Thanks for everything!"
+  ],
+  "search_results": [
+    "[{'address': '201 Vineyard Town Ctr', 'category': 'American', 'date': '2019-03-04', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'Morgan Hill', 'number_of_seats': '2', 'phone_number': '408-779-8182', 'price_range': 'cheap', 'rating': '3.40', 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '201 Vineyard Town Ctr', 'category': 'American', 'date': '2019-03-04', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'Morgan Hill', 'number_of_seats': 2, 'phone_number': '408-779-8182', 'price_range': 'cheap', 'rating': 3.4, 'restaurant_name': \"Mcdonald's\", 'time': '18:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"date\": \"2023-10-10\", \"location\": \"New York\", \"number_of_seats\": 2, \"restaurant_name\": \"\", \"time\": \"18:30\"}}",
+    "{\"type\": \"api_call\", \"method\": \"ReserveRestaurant\", \"parameters\": {\"restaurant_name\": \"McDonald's\", \"location\": \"Morgan Hill\", \"time\": \"18:30\", \"number_of_seats\": 2}}",
+    "{\"type\": \"message\", \"content\": \"I found a McDonald's in Morgan Hill where you can reserve a table for 2 people at 18:30. They don't have outdoor seating, but you can reach them at 408-779-8182.\"}",
+    "{\"type\": \"message\", \"content\": \"You're welcome! If you need anything else, feel free to ask.\"}"
+  ],
+  "dialog_completed": false
+}

@@ -1,0 +1,90 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'Korean', 'location': 'San Francisco'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Aato', 'time': '10:30'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Aato', 'time': '19:00'})"
+  ],
+  "user_req_slots": [
+    [
+      "has_seating_outdoors",
+      "rating"
+    ],
+    [],
+    []
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I need help searching for a place to eat.\nSystem: Is there a type of food you prefer? And where do you want to search.\nUser: I want to look for Korean Barbeque in SFO.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'Korean', 'location': 'San Francisco'})\nSearch Results\n[{'address': '1449 Lombard Street', 'category': 'Korean', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'phone_number': '415-292-2368', 'price_range': 'moderate', 'rating': '3.60', 'restaurant_name': 'Aato'}]\nEnd Search Results\nSystem: There are 10 restaurants I've found. Aato is a nice spot in San Francisco.\nUser: Is there outdoor seating? And what's their user rating?\nSystem: There is not outdoor seating. Their user rating is 3.6.\nUser: Okay, that can work. Please book me a table.\nSystem: What time do you want the table?\nUser: I want it for half past 10 in the morning.\nSystem: I'll book you a table for 2 at Aato in San Francisco for March 1st at 10:30 am. Is that right?\nUser: That is right.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Aato', 'time': '10:30'})\nSearch Results\n\nEnd Search Results\nSystem: I'm sorry, but that time is all booked. Do you need anything else?\nUser: Can we try for a table at 7 pm?\nSystem: I'll book you a table for 2 at Aato in San Francisco for March 1st at 7 pm. Is that right?\nUser: That is right.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Aato', 'time': '19:00'})\nSearch Results\n[{'address': '1449 Lombard Street', 'category': 'Korean', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-292-2368', 'price_range': 'moderate', 'rating': '3.60', 'restaurant_name': 'Aato', 'time': '19:00'}]\nEnd Search Results\nSystem: I have made the reservation.\nUser: Thanks a lot.\nSystem: What else can I assist you with?\nLast User Utterance:Nothing else, thanks a lot.\nLast System Utterance: Have a pleasant day.",
+  "predicted_api_calls": [
+    "APICall(method='FindRestaurants', parameters={'category': 'Korean', 'location': 'San Francisco', 'has_seating_outdoors': 'dontcare', 'has_vegetarian_options': 'dontcare', 'price_range': 'dontcare'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2023-10-10', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Aato', 'time': '10:30'})",
+    "APICall(method='ReserveRestaurant', parameters={'date': '2023-10-10', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Aato', 'time': '10:30'})"
+  ],
+  "generated_dialog": [
+    "User: I need help searching for a place to eat.",
+    "System: Sure, what type of cuisine are you in the mood for and where would you like to eat?",
+    "User: I'm in the mood for some Korean food in San Francisco! Do they have outdoor seating available? And can you tell me if it's a good place to go for a date night?",
+    "System: APICall(method='FindRestaurants', parameters={'category': 'Korean', 'location': 'San Francisco', 'has_seating_outdoors': 'dontcare', 'has_vegetarian_options': 'dontcare', 'price_range': 'dontcare'})",
+    "Search Results\n[{'address': '1449 Lombard Street', 'category': 'Korean', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'phone_number': '415-292-2368', 'price_range': 'moderate', 'rating': 3.6, 'restaurant_name': 'Aato'}, {'address': '711 Geary Street', 'category': 'Korean', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'phone_number': '415-525-4985', 'price_range': 'moderate', 'rating': 4.6, 'restaurant_name': 'Barnzu'}, {'address': '1825 Post Street', 'category': 'Korean', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'phone_number': '415-872-9868', 'price_range': 'moderate', 'rating': 4.1, 'restaurant_name': 'Beque Bbq Grill'}]\nEnd Search Results",
+    "System: I found a couple of options for you. Aato is known for its vegetarian options and has a moderate price range. Barnzu also has great reviews but doesn't offer outdoor seating. Beque Bbq Grill is another option, though it might be more casual. Which one would you prefer to reserve a table at?",
+    "User: I think Aato sounds perfect! Can you check if they have a table for two at 10:30 AM?",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2023-10-10', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Aato', 'time': '10:30'})",
+    "Search Results\n[{'address': '1449 Lombard Street', 'category': 'Korean', 'date': '2023-10-10', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.True_, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-292-2368', 'price_range': 'moderate', 'rating': np.float64(3.6), 'restaurant_name': 'Aato', 'time': '10:30'}]\nEnd Search Results",
+    "System: Great! Your table is reserved at Aato on 10/10/2023 at 10:30 AM for two people.",
+    "User: That works perfectly! Can you remind me what time it is again just to make sure?",
+    "System: Sure, your table is reserved at Aato on 10/10/2023 at 10:30 AM for two people.",
+    "User: That's awesome, thanks! Can you also tell me what time it is now?",
+    "System: You're welcome! The current time is now. Is there anything else you need help with regarding your reservation?",
+    "User: It's 10:00 AM right now, so we've got some time before our reservation!",
+    "System: That's correct, it's currently 10:00 AM. You have some time before your reservation at Aato. Is there anything else you need help with?",
+    "User: It's looking good! Can you tell me what the dress code is like at Aato?",
+    "System: I don't have specific information about the dress code at Aato. However, since it's a moderately priced restaurant, you can dress casually but smartly. Would you like to confirm your reservation or do you have any other questions?",
+    "User: Sure, let's confirm our reservation!",
+    "System: APICall(method='ReserveRestaurant', parameters={'date': '2023-10-10', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Aato', 'time': '10:30'})",
+    "Search Results\n[{'address': '1449 Lombard Street', 'category': 'Korean', 'date': '2023-10-10', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.True_, 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-292-2368', 'price_range': 'moderate', 'rating': np.float64(3.6), 'restaurant_name': 'Aato', 'time': '10:30'}]\nEnd Search Results",
+    "System: Your reservation at Aato is confirmed for 10/10/2023 at 10:30 AM for two people. Enjoy your meal!",
+    "User: That's great, thanks! Can you remind me of the address for Aato?",
+    "System: Sure, Aato is located at 1449 Lombard Street in San Francisco. Enjoy your meal!",
+    "User: Got it, Aato is at 1449 Lombard Street! Can't wait!"
+  ],
+  "search_results": [
+    "[{'address': '1449 Lombard Street', 'category': 'Korean', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'phone_number': '415-292-2368', 'price_range': 'moderate', 'rating': '3.60', 'restaurant_name': 'Aato'}]",
+    "",
+    "[{'address': '1449 Lombard Street', 'category': 'Korean', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-292-2368', 'price_range': 'moderate', 'rating': '3.60', 'restaurant_name': 'Aato', 'time': '19:00'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '1449 Lombard Street', 'category': 'Korean', 'has_seating_outdoors': False, 'has_vegetarian_options': True, 'location': 'San Francisco', 'phone_number': '415-292-2368', 'price_range': 'moderate', 'rating': 3.6, 'restaurant_name': 'Aato'}, {'address': '711 Geary Street', 'category': 'Korean', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'phone_number': '415-525-4985', 'price_range': 'moderate', 'rating': 4.6, 'restaurant_name': 'Barnzu'}, {'address': '1825 Post Street', 'category': 'Korean', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'phone_number': '415-872-9868', 'price_range': 'moderate', 'rating': 4.1, 'restaurant_name': 'Beque Bbq Grill'}]\nEnd Search Results",
+    "Search Results\n[{'address': '1449 Lombard Street', 'category': 'Korean', 'date': '2023-10-10', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.True_, 'location': 'San Francisco', 'number_of_seats': 2, 'phone_number': '415-292-2368', 'price_range': 'moderate', 'rating': np.float64(3.6), 'restaurant_name': 'Aato', 'time': '10:30'}]\nEnd Search Results",
+    "Search Results\n[{'address': '1449 Lombard Street', 'category': 'Korean', 'date': '2023-10-10', 'has_seating_outdoors': np.False_, 'has_vegetarian_options': np.True_, 'location': 'San Francisco', 'number_of_seats': '2', 'phone_number': '415-292-2368', 'price_range': 'moderate', 'rating': np.float64(3.6), 'restaurant_name': 'Aato', 'time': '10:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

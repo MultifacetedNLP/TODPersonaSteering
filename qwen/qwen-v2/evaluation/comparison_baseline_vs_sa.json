@@ -1,0 +1,224 @@
+{
+  "conditions": {
+    "baseline": "qwen/qwen-v2/evaluation/baseline/baseline",
+    "sa": "qwen/qwen-v2/evaluation/sa/sa"
+  },
+  "n_entries": {
+    "baseline": 2,
+    "sa": 2
+  },
+  "note": "baseline and sa are single neutral runs (no trait/scalar variation). Overall = mean across 2 domains.",
+  "overall": {
+    "baseline": {
+      "method_accuracy": 0.5014688601645123,
+      "key_accuracy": 0.621509009009009,
+      "key_iou": 0.5839789323484976,
+      "value_accuracy": 0.5556390520955738,
+      "value_iou": 0.5241216356107661,
+      "full_api_accuracy": 0.33078730904817866,
+      "full_api_accuracy_iou": 0.29553466509988247,
+      "successful_dialogs_rate": 0.18,
+      "successful_dialogs_iou_rate": 0.16,
+      "inform_accuracy": 0.42267441860465116,
+      "inform_accuracy_with_search_results": 0.7019230769230769,
+      "bleu": 0.3413925085273779,
+      "dialog_completion_rate": 0.12,
+      "bert_score_f1": 0.75190101146698
+    },
+    "sa": {
+      "method_accuracy": 0.523207990599295,
+      "key_accuracy": 0.6342391304347825,
+      "key_iou": 0.5952597784119523,
+      "value_accuracy": 0.5666300430865648,
+      "value_iou": 0.5336633512394382,
+      "full_api_accuracy": 0.3416568742655699,
+      "full_api_accuracy_iou": 0.29553466509988247,
+      "successful_dialogs_rate": 0.22,
+      "successful_dialogs_iou_rate": 0.18,
+      "inform_accuracy": 0.43430232558139537,
+      "inform_accuracy_with_search_results": 0.7211538461538461,
+      "bleu": 0.3470002248961547,
+      "dialog_completion_rate": 0.1,
+      "bert_score_f1": 0.7521185731887817
+    }
+  },
+  "pairwise_comparison": {
+    "condition_a": "baseline",
+    "condition_b": "sa",
+    "judge_model": "openai/gpt-4o-mini",
+    "metrics": {
+      "usersat": {
+        "overall": {
+          "win_rate_a": 0.06,
+          "win_rate_b": 0.18,
+          "tie_rate": 0.76,
+          "wins_a": 3,
+          "wins_b": 9,
+          "ties": 38,
+          "n_pairs": 50,
+          "sa_advantage_pp": 12.0
+        },
+        "by_domain": {
+          "Movies_1_Movies_3": {
+            "win_rate_a": 0.08,
+            "win_rate_b": 0.16,
+            "tie_rate": 0.76,
+            "wins_a": 2,
+            "wins_b": 4,
+            "ties": 19,
+            "n_pairs": 25,
+            "sa_advantage_pp": 8.0
+          },
+          "Restaurants_2": {
+            "win_rate_a": 0.04,
+            "win_rate_b": 0.2,
+            "tie_rate": 0.76,
+            "wins_a": 1,
+            "wins_b": 5,
+            "ties": 19,
+            "n_pairs": 25,
+            "sa_advantage_pp": 16.0
+          }
+        }
+      },
+      "constraint": {
+        "overall": {
+          "win_rate_a": 0.0588,
+          "win_rate_b": 0.0588,
+          "tie_rate": 0.8824,
+          "wins_a": 2,
+          "wins_b": 2,
+          "ties": 30,
+          "n_pairs": 34,
+          "sa_advantage_pp": 0.0
+        },
+        "by_domain": {
+          "Movies_1_Movies_3": {
+            "win_rate_a": 0.0,
+            "win_rate_b": 0.0,
+            "tie_rate": 1.0,
+            "wins_a": 0,
+            "wins_b": 0,
+            "ties": 13,
+            "n_pairs": 13,
+            "sa_advantage_pp": 0.0
+          },
+          "Restaurants_2": {
+            "win_rate_a": 0.0952,
+            "win_rate_b": 0.0952,
+            "tie_rate": 0.8095,
+            "wins_a": 2,
+            "wins_b": 2,
+            "ties": 17,
+            "n_pairs": 21,
+            "sa_advantage_pp": 0.0
+          }
+        }
+      },
+      "truthfulness": {
+        "overall": {
+          "win_rate_a": 0.06,
+          "win_rate_b": 0.08,
+          "tie_rate": 0.86,
+          "wins_a": 3,
+          "wins_b": 4,
+          "ties": 43,
+          "n_pairs": 50,
+          "sa_advantage_pp": 2.0
+        },
+        "by_domain": {
+          "Movies_1_Movies_3": {
+            "win_rate_a": 0.08,
+            "win_rate_b": 0.08,
+            "tie_rate": 0.84,
+            "wins_a": 2,
+            "wins_b": 2,
+            "ties": 21,
+            "n_pairs": 25,
+            "sa_advantage_pp": 0.0
+          },
+          "Restaurants_2": {
+            "win_rate_a": 0.04,
+            "win_rate_b": 0.08,
+            "tie_rate": 0.88,
+            "wins_a": 1,
+            "wins_b": 2,
+            "ties": 22,
+            "n_pairs": 25,
+            "sa_advantage_pp": 4.0
+          }
+        }
+      }
+    }
+  },
+  "by_domain": {
+    "baseline": {
+      "Movies_1_Movies_3": {
+        "method_accuracy": 0.4594594594594595,
+        "key_accuracy": 0.6846846846846847,
+        "key_iou": 0.633848133848134,
+        "value_accuracy": 0.5771621621621623,
+        "value_iou": 0.536904761904762,
+        "full_api_accuracy": 0.2702702702702703,
+        "full_api_accuracy_iou": 0.24324324324324326,
+        "successful_dialogs_rate": 0.2,
+        "successful_dialogs_iou_rate": 0.16,
+        "inform_accuracy": 0.45,
+        "inform_accuracy_with_search_results": 0.75,
+        "bleu": 0.3566672778115791,
+        "dialog_completion_rate": 0.08,
+        "bert_score_f1": 0.7497896504402161
+      },
+      "Restaurants_2": {
+        "method_accuracy": 0.5434782608695652,
+        "key_accuracy": 0.5583333333333332,
+        "key_iou": 0.5341097308488613,
+        "value_accuracy": 0.5341159420289854,
+        "value_iou": 0.5113385093167703,
+        "full_api_accuracy": 0.391304347826087,
+        "full_api_accuracy_iou": 0.34782608695652173,
+        "successful_dialogs_rate": 0.16,
+        "successful_dialogs_iou_rate": 0.16,
+        "inform_accuracy": 0.3953488372093023,
+        "inform_accuracy_with_search_results": 0.6538461538461539,
+        "bleu": 0.3261177392431767,
+        "dialog_completion_rate": 0.16,
+        "bert_score_f1": 0.7540123724937439
+      }
+    },
+    "sa": {
+      "Movies_1_Movies_3": {
+        "method_accuracy": 0.4594594594594595,
+        "key_accuracy": 0.6666666666666666,
+        "key_iou": 0.6158301158301158,
+        "value_accuracy": 0.5591441441441442,
+        "value_iou": 0.5188867438867438,
+        "full_api_accuracy": 0.2702702702702703,
+        "full_api_accuracy_iou": 0.24324324324324326,
+        "successful_dialogs_rate": 0.2,
+        "successful_dialogs_iou_rate": 0.16,
+        "inform_accuracy": 0.45,
+        "inform_accuracy_with_search_results": 0.75,
+        "bleu": 0.3520221931186261,
+        "dialog_completion_rate": 0.04,
+        "bert_score_f1": 0.7497987151145935
+      },
+      "Restaurants_2": {
+        "method_accuracy": 0.5869565217391305,
+        "key_accuracy": 0.6018115942028984,
+        "key_iou": 0.5746894409937888,
+        "value_accuracy": 0.5741159420289855,
+        "value_iou": 0.5484399585921325,
+        "full_api_accuracy": 0.41304347826086957,
+        "full_api_accuracy_iou": 0.34782608695652173,
+        "successful_dialogs_rate": 0.24,
+        "successful_dialogs_iou_rate": 0.2,
+        "inform_accuracy": 0.4186046511627907,
+        "inform_accuracy_with_search_results": 0.6923076923076923,
+        "bleu": 0.3419782566736832,
+        "dialog_completion_rate": 0.16,
+        "bert_score_f1": 0.7544384312629699
+      }
+    }
+  }
+}

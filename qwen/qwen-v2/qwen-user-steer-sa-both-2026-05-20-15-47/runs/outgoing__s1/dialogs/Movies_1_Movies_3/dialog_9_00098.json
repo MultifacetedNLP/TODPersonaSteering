@@ -1,0 +1,72 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={})"
+  ],
+  "user_req_slots": [
+    [
+      "cast",
+      "genre"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: I would like to find a movie I can watch.\nSystem: ApiCall(method='FindMovies', parameters={})\nSearch Results\n[{'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': '98'}]\nEnd Search Results\nSystem: What do you think of Rojo? It has an average rating of 98 percent.\nUser: Who acted in this movie and what genre is it?\nSystem: This movie is a Thriller and Rudy Chernicoff is one of the actors.\nLast User Utterance:That sounds fine. That's all I needed.\nLast System Utterance: I'm glad to have helped you.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'genre': 'Action Romance'})"
+  ],
+  "generated_dialog": [
+    "User: I would like to find a movie I can watch.",
+    "System: Sure, what type of movie are you interested in? For example, thriller, comedy, or drama.",
+    "User: I'm in the mood for something with some action and maybe a bit of romance! Can you recommend an action romance movie?",
+    "System: APICall(method='FindMovies', parameters={'genre': 'Action Romance'})",
+    "Search Results\n[{'cast': 'Helena Holmes', 'directed_by': 'David Leitch', 'genre': 'Action', 'movie_title': 'Hobbs and Shaw', 'percent_rating': 67}, {'cast': 'Prabhas', 'directed_by': 'Sujeeth', 'genre': 'Action', 'movie_title': 'Saaho', 'percent_rating': 10}, {'cast': 'Nick Nolte', 'directed_by': 'Ric Roman Waugh', 'genre': 'Action', 'movie_title': 'Angel Has Fallen', 'percent_rating': 39}]\nEnd Search Results",
+    "System: I found a couple of action romance movies for you. 'Hobbs and Shaw' starring Helena Holmes has a 67% rating, and 'Saaho' starring Prabhas also falls into this category with a perfect 10% rating. Would you like more details on either of these?",
+    "User: Can you tell me more about 'Hobbs and Shaw'?",
+    "System: Sure! 'Hobbs and Shaw' is an action romance movie starring Helena Holmes. It has a 67% rating. Would you like to know the director's name or any other details?",
+    "User: Can you tell me who directed 'Hobbs and Shaw'?"
+  ],
+  "search_results": [
+    "[{'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': '98'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'cast': 'Helena Holmes', 'directed_by': 'David Leitch', 'genre': 'Action', 'movie_title': 'Hobbs and Shaw', 'percent_rating': 67}, {'cast': 'Prabhas', 'directed_by': 'Sujeeth', 'genre': 'Action', 'movie_title': 'Saaho', 'percent_rating': 10}, {'cast': 'Nick Nolte', 'directed_by': 'Ric Roman Waugh', 'genre': 'Action', 'movie_title': 'Angel Has Fallen', 'percent_rating': 39}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"Sure, what type of movie are you interested in? For example, thriller, comedy, or drama.\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindMovies\", \"parameters\": {\"genre\": \"Action Romance\"}}",
+    "{\"type\": \"message\", \"content\": \"I found a couple of action romance movies for you. 'Hobbs and Shaw' starring Helena Holmes has a 67% rating, and 'Saaho' starring Prabhas also falls into this category with a perfect 10% rating. Would you like more details on either of these?\"}",
+    "{\"type\": \"message\", \"content\": \"Sure! 'Hobbs and Shaw' is an action romance movie starring Helena Holmes. It has a 67% rating. Would you like to know the director's name or any other details?\"}"
+  ],
+  "dialog_completed": false
+}

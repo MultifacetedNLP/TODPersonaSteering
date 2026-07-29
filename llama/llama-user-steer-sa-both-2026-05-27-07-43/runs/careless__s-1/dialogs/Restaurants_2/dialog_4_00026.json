@@ -1,0 +1,123 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'American', 'location': 'San Francisco'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '4', 'restaurant_name': '25 Lusk', 'time': '19:00'})"
+  ],
+  "user_req_slots": [
+    [
+      "phone_number",
+      "rating"
+    ],
+    [
+      "address"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I need help finding somewhere to eat.\nSystem: What area are you interested in and what kind of food do you like?\nUser: I want a Barbecue place in San Fran.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'American', 'location': 'San Francisco'})\nSearch Results\n[{'address': '1760 Polk Street', 'category': 'American', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'phone_number': '415-359-1212', 'price_range': 'pricey', 'rating': '4.40', 'restaurant_name': '1760'}]\nEnd Search Results\nSystem: 1760 is a good place in San Francisco.\nUser: What else is there?\nSystem: 25 Lusk is a good place in San Francisco.\nUser: Can you give me their phone number?\nSystem: You can reach them at 415-495-5875.\nUser: And what is their user rating?\nSystem: They have 4.4 user rating.\nUser: Alright, that seems good.\nSystem: Do you want me to book you a table?\nUser: Yes, please do that.\nSystem: What time do you want the table?\nUser: I want it for 7:15 pm.\nSystem: I'll book you a table for 2 at 25 Lusk in San Francisco for March 1st at 7:15 pm. Does that work for you?\nUser: No, it should be a table for 4 and for seven pm.\nSystem: So a table for 4 at 7 pm. Are these the changes you wanted?\nUser: Yes. And can you tell me their address?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '4', 'restaurant_name': '25 Lusk', 'time': '19:00'})\nSearch Results\n[{'address': '25 Lusk Street', 'category': 'American', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '4', 'phone_number': '415-495-5875', 'price_range': 'pricey', 'rating': '4.40', 'restaurant_name': '25 Lusk', 'time': '19:00'}]\nEnd Search Results\nSystem: They are located at 25 Lusk Street. I have booked you table.\nUser: Thanks a lot.\nSystem: Do you need me to help with anything else?\nLast User Utterance:No, thanks again.\nLast System Utterance: Have a fine day.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: I need help finding somewhere to eat.",
+    "System: What type of food are you interested in and where should it be?",
+    "User: I'm looking for American cuisine in San Francisco.",
+    "System: Great, American cuisine in San Francisco. Can you please tell me what price range you're looking for?",
+    "User: I'm looking for mid-range options, and it would be great to know the phone number and rating of the restaurants you recommend.",
+    "System: What price range are you looking for: cheap, moderate, pricey, or ultra high-end?",
+    "User: I'm looking for mid-range options, and it would be great to know the phone number and rating of the restaurants you recommend.",
+    "System: You mentioned mid-range options, but I didn't see that as an option. Let me clarify: what price range are you looking for: cheap, moderate, pricey, or ultra high-end?",
+    "User: I'm looking for mid-range options, which I believe falls under'moderate'.",
+    "System: You mentioned mid-range options, which I believe falls under'moderate'. I'll make sure to find restaurants that fit this category for you. Would you like to know the phone number and rating of the restaurants I recommend?",
+    "User: Yes, that would be great, and it would be helpful to have the phone number and rating of the restaurants you recommend.",
+    "System: You mentioned mid-range options, which I believe falls under'moderate'. I'll make sure to find restaurants that fit this category for you. Would you like to know the phone number and rating of the restaurants I recommend?",
+    "User: Yes, that would be great, and it would be helpful to have the phone number and rating of the restaurants you recommend.",
+    "System: Great, American cuisine in San Francisco. Can you please tell me what price range you're looking for?",
+    "User: I'm looking for mid-range options, and it would be great to know the phone number and rating of the restaurants you recommend.",
+    "System: Great, American cuisine in San Francisco. Can you please tell me what price range you're looking for?",
+    "User: I'm looking for mid-range options, and it would be great to know the phone number and rating of the restaurants you recommend.",
+    "System: Great, American cuisine in San Francisco. Can you please tell me what price range you're looking for?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '1760 Polk Street', 'category': 'American', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'False', 'location': 'San Francisco', 'phone_number': '415-359-1212', 'price_range': 'pricey', 'rating': '4.40', 'restaurant_name': '1760'}]",
+    "[{'address': '25 Lusk Street', 'category': 'American', 'date': '2019-03-01', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'San Francisco', 'number_of_seats': '4', 'phone_number': '415-495-5875', 'price_range': 'pricey', 'rating': '4.40', 'restaurant_name': '25 Lusk', 'time': '19:00'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 2.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"What type of food are you interested in?\"}",
+    "{\"type\": \"message\", \"content\": \"American cuisine, got it. What's your preferred price range for the restaurant?\"}",
+    "{\"type\": \"message\", \"content\": \"What price range are you looking for, cheap, moderate, pricey, or ultra high-end?\"}",
+    "{\"type\": \"message\", \"content\": \"You mentioned mid-range options, but I didn't see that as an option. Let me clarify, mid-range options would be'moderate'. Is that correct?\"}",
+    "{\"type\": \"message\", \"content\": \"You mentioned mid-range options, which I believe falls under'moderate'. I'll make sure to recommend restaurants that fit this price range. Can you please confirm if you'd like to know the phone number and rating of the restaurants I recommend?\"}",
+    "{\"type\": \"message\", \"content\": \"You mentioned mid-range options, which I believe falls under'moderate'. I'll make sure to find restaurants that fit this category for you. Would you like to know the phone number and rating of the restaurants I recommend?\"}\n\n{\"type\": \"message\", \"content\": \"To confirm, you're looking for American cuisine in San Francisco, and you'd like mid-range options. Is that correct?\"}\n\n{\"type\": \"api_call\", \"method\": \"FindRestaurants\", \"parameters\": {\"category\": \"American\", \"location\": \"San Francisco\", \"price_range\": \"moderate\"}}",
+    "{\"type\": \"message\", \"content\": \"Great, American cuisine in San Francisco. Can you please tell me what price range you're looking for?\"}",
+    "{\"type\": \"message\", \"content\": \"Great, American cuisine in San Francisco. Can you please tell me what price range you're looking for?\"}\n\nPlease respond with one of the following options: cheap, moderate, pricey, or ultra high-end.",
+    "{\"type\": \"message\", \"content\": \"Great, American cuisine in San Francisco. Can you please tell me what price range you're looking for?\"}"
+  ],
+  "dialog_completed": false
+}

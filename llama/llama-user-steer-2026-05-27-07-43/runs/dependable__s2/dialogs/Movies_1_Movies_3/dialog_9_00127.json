@@ -1,0 +1,71 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'cast': 'Sterling K. Brown', 'directed_by': 'Thurop Van Orman'})"
+  ],
+  "user_req_slots": [
+    [
+      "genre"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: I like to watch a movie. will you find me a movie which has sterling K. Brown as a actor and it should be directed by Thurop Van Orman\nSystem: ApiCall(method='FindMovies', parameters={'cast': 'Sterling K. Brown', 'directed_by': 'Thurop Van Orman'})\nSearch Results\n[{'cast': 'Sterling K. Brown', 'directed_by': 'Thurop Van Orman', 'genre': 'Animation', 'movie_title': 'The Angry Birds Movie 2', 'percent_rating': '72'}]\nEnd Search Results\nSystem: How about The Angry Birds Movie 2 ? The average rating of the movie is 72 percent.\nUser: What is the genre of that movie?\nSystem: It is a Animation movie.\nLast User Utterance:ok that sounds good . thats all i need.\nLast System Utterance: Have a wonderful day.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'cast': 'Sterling K. Brown', 'directed_by': 'Thurop Van Orman', 'genre': 'Action'})"
+  ],
+  "generated_dialog": [
+    "User: I like to watch a movie. will you find me a movie which has sterling K. Brown as a actor and it should be directed by Thurop Van Orman",
+    "System: I'd be happy to help you find a movie. Can you please confirm if you'd like to find a movie with Sterling K. Brown as an actor and directed by Thurop Van Orman?",
+    "User: What genre of movie are you looking for, a comedy or an action film?",
+    "System: To find a movie with Sterling K. Brown as an actor and directed by Thurop Van Orman, I need to know the genre of the movie. Would you like it to be a comedy or an action film?",
+    "User: I'd prefer an action film, as I'm in the mood for something fast-paced and thrilling.",
+    "System: Great, I'll look for an action film. Sterling K. Brown is a great actor. To confirm, you'd like to find an action film with Sterling K. Brown as an actor and directed by Thurop Van Orman. Is that correct?",
+    "User: I'm looking for an action film, so I'd like it to be in the action genre.",
+    "System: To find a movie with Sterling K. Brown as an actor and directed by Thurop Van Orman, I need to know the genre of the movie. Would you like it to be a comedy or an action film?",
+    "User: I'd prefer an action film, as I'm in the mood for something fast-paced and thrilling.",
+    "System: I'd be happy to help you find a movie. Can you please confirm if you'd like to find a movie with Sterling K. Brown as an actor and directed by Thurop Van Orman?",
+    "User: I've confirmed that you're looking for a movie with Sterling K. Brown as an actor and directed by Thurop Van Orman.",
+    "System: To find a movie with Sterling K. Brown as an actor and directed by Thurop Van Orman, I need to know the genre of the movie. Would you like it to be a comedy or an action film?",
+    "User: I'd prefer an action film, as I'm in the mood for something fast-paced and thrilling.",
+    "System: To find a movie with Sterling K. Brown as an actor and directed by Thurop Van Orman, I need to know the genre of the movie. Would you like it to be a comedy or an action film?",
+    "User: An action film is the right choice, so let's confirm that the genre is action.",
+    "System: APICall(method='FindMovies', parameters={'cast': 'Sterling K. Brown', 'directed_by': 'Thurop Van Orman', 'genre': 'Action'})",
+    "Search Results\n[{'cast': 'Sterling K. Brown', 'directed_by': 'Thurop Van Orman', 'genre': 'Animation', 'movie_title': 'The Angry Birds Movie 2', 'percent_rating': 72}]\nEnd Search Results",
+    "System: I'd be happy to help you find a movie. Can you please confirm if you'd like to find a movie with Sterling K. Brown as an actor and directed by Thurop Van Orman?",
+    "User: Yes, you're looking for a movie with Sterling K. Brown as an actor and directed by Thurop Van Orman.",
+    "System: I'd be happy to help you find a movie. Can you please confirm if you'd like to find a movie with Sterling K. Brown as an actor and directed by Thurop Van Orman?",
+    "User: Yes, you're looking for a movie with Sterling K. Brown as an actor and directed by Thurop Van Orman."
+  ],
+  "search_results": [
+    "[{'cast': 'Sterling K. Brown', 'directed_by': 'Thurop Van Orman', 'genre': 'Animation', 'movie_title': 'The Angry Birds Movie 2', 'percent_rating': '72'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'cast': 'Sterling K. Brown', 'directed_by': 'Thurop Van Orman', 'genre': 'Animation', 'movie_title': 'The Angry Birds Movie 2', 'percent_rating': 72}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

@@ -1,0 +1,117 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'genre': 'Drama'})"
+  ],
+  "user_req_slots": [
+    [
+      "directed_by"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: Can you help me find a movie to stream in the Play genre?\nSystem: ApiCall(method='FindMovies', parameters={'genre': 'Drama'})\nSearch Results\n[{'cast': 'Bakary Sangare', 'directed_by': 'Louis Garrel', 'genre': 'Drama', 'movie_title': 'A Faithful Man', 'percent_rating': '78'}]\nEnd Search Results\nSystem: I'd be happy to help. I have 10 movies you might be interested in. May I recommend A Faithful Man? It is a well reviewed movie with an average score of 78 percent.\nUser: Can you tell me who directed it?\nSystem: Yes, Louis Garrel directed the film.\nLast User Utterance:I like his movies! Thank you for the help.\nLast System Utterance: I'm happy to be of assistance.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Can you help me find a movie to stream in the Play genre?",
+    "System: I'd be happy to help you find a movie to stream. Can you please tell me what genre of movie you're interested in?",
+    "User: I'm just looking for something like \"The Shawshank\" or \"The Pursuit of Happyness\" so I guess I'm in the mood for a Drama.",
+    "System: I'd be happy to help you find a movie to stream. Can you please tell me what genre of movie you're interested in?",
+    "User: I'm just looking for something like \"The Shawshank\" or \"The Pursuit of Happyness\" so I guess I'm in the mood for a Drama.",
+    "System: Those are great examples of inspiring movies. Are you looking for a movie with a similar tone, such as uplifting or motivational?",
+    "User: I don't know, I just like movies that make me feel something, I guess.",
+    "System: I'd be happy to help you find a movie that evokes strong emotions. Can you please tell me what genre of movie you're interested in?",
+    "User: I don't know, I just like movies that make me feel something, I guess.",
+    "System: What kind of movie are you in the mood for? Something light-hearted, adventurous, or perhaps something that makes you think?",
+    "User: I don't know, just like I said, something like \"The Shawshank\" or \"The Pursuit of Happyness\" I guess...",
+    "System: Can you think of a movie that you really enjoyed watching, and what made it so enjoyable for you?",
+    "User: I don't know, I just like movies that make me feel something, I guess.",
+    "System: Those are great examples of inspiring movies. Can you think of a specific scene or moment from one of those movies that really stood out to you?",
+    "User: I guess I liked the part where Red and Andy just talk, like, they just talk and it's so deep, you know?",
+    "System: Those are great examples of inspiring movies. Can you think of a specific scene or moment from one of those movies that really stood out to you?",
+    "User: I guess I liked the part where Red and Andy just talk, like, they just talk and it's so deep, you know?",
+    "System: Those are great examples of inspiring movies. Can you think of a specific scene or moment from one of those movies that really stood out to you?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'cast': 'Bakary Sangare', 'directed_by': 'Louis Garrel', 'genre': 'Drama', 'movie_title': 'A Faithful Man', 'percent_rating': '78'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you find a movie to stream. What type of movie are you in the mood for? Do you have a preferred director or cast in mind?\"}",
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you find a movie to stream. Can you please tell me what genre of movie you're interested in?\"}",
+    "It seems like the conversation is stuck in a loop. The system is asking the same question twice. To resolve this, I'll provide a response that asks a more specific question to gather more information about the user's intent.\n\n{\"type\": \"message\", \"content\": \"Those are both great movies. Are you looking for a specific type of drama, such as a biographical drama or a historical drama?\"}",
+    "{\"type\": \"message\", \"content\": \"I'd be happy to help you find a movie that evokes strong emotions. Can you please tell me what genre of movie you're interested in?\"}",
+    "Based on the conversation history, it seems like the user is having trouble answering the question about the genre of movie they're interested in. \n\nTo clarify, I'll ask a more specific question about the genre. \n\n{\"type\": \"message\", \"content\": \"You mentioned you like 'The Shawshank' and 'The Pursuit of Happyness'. Are you looking for a movie in the Drama genre?\"}",
+    "Based on the conversation history, it seems like the user is having trouble answering the question about the genre of movie they're interested in. They keep giving examples of movies that they like, but they're not directly answering the question.\n\nTo clarify, I'll ask a more specific question to try to get a better understanding of what they're looking for.\n\n{\"type\": \"message\", \"content\": \"Can you think of any other movies that you've enjoyed watching in the past? Maybe we can find something similar.\"}",
+    "Based on the conversation history, it seems like the user is having trouble articulating their preferences for a movie. They mention being in the mood for something like \"The Shawshank\" or \"The Pursuit of Happyness\", but can't quite put their finger on what specifically they're looking for.\n\nTo help the user, I would like to ask for more information about their preferences. However, I will ask only one slot at a time to avoid overwhelming the user.\n\nHere's my first response:\n\n{\"type\": \"message\", \"content\": \"Those are great examples of inspiring movies. Are you looking for a movie with a similar tone, such as uplifting or motivational?\"}\n\nPlease let me know the user's response.",
+    "Based on the conversation history, it seems like the user is having trouble articulating their preferences for a movie. They mention being in the mood for something like \"The Shawshank\" or \"The Pursuit of Happyness\", but can't quite put their finger on what specifically they're looking for.\n\nTo help the user, I'll try to ask more open-ended questions to get a better sense of their preferences.\n\n{\"type\": \"message\", \"content\": \"Those are great examples of inspiring movies. Can you think of a specific scene or moment from one of those movies that really stood out to you?\"}\n\nThis question is designed to help the user reflect on their emotional response to the movies they enjoy, and see if we can identify any common themes or elements that might help us find a movie that resonates with them.",
+    "Based on the conversation history, it seems like the user is having trouble articulating their preferences for a movie. They keep saying they like movies that make them feel something, but can't quite pinpoint what that means.\n\nTo try and help the user, I'll ask a more open-ended question to see if we can get to the root of what they're looking for.\n\n{\"type\": \"message\", \"content\": \"Let's try to break it down. What do you think it is about 'The Shawshank' or 'The Pursuit of Happyness' that makes them so impactful for you?\"}"
+  ],
+  "dialog_completed": false
+}

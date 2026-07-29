@@ -1,0 +1,109 @@
+{
+  "api_calls": [
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'San Jose', 'movie_name': 'The Load', 'number_of_tickets': '1', 'show_date': '2019-03-05', 'show_time': '20:15', 'show_type': '3d'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: I'm looking for some 3d movie tickets in San Jose.\nSystem: How many tickets do you need and what time do you want to see the movie?\nUser: I need 1 ticket for a movie at 8:15 pm.\nSystem: What date do you want to see the movie?\nUser: I want to see it on the 5th of March.\nSystem: What movie do you want to watch?\nUser: I want to watch The Load.\nSystem: Okay, I have 1 3d ticket for The Load on March 5th at 8:15 pm in San Jose, correct?\nUser: Yes, that sounds good.\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'San Jose', 'movie_name': 'The Load', 'number_of_tickets': '1', 'show_date': '2019-03-05', 'show_time': '20:15', 'show_type': '3d'})\nSearch Results\n[{'genre': 'War', 'location': 'San Jose', 'movie_name': 'The Load', 'number_of_tickets': '1', 'price': '14', 'show_date': '2019-03-05', 'show_time': '20:00', 'show_type': '3d', 'street_address': '288 South 2nd Street', 'theater_name': '3 Below Theaters And Lounge'}]\nEnd Search Results\nSystem: I have successfully purchased the ticket.\nUser: Thank you.\nSystem: Is there anything else I can help with?\nLast User Utterance:No, thank you.\nLast System Utterance: Have a great day.",
+  "predicted_api_calls": [
+    "APICall(method='GetTimesForMovie', parameters={'location': 'San Jose', 'movie_name': 'The Load', 'show_date': '2024-03-05', 'show_type': '3D'})"
+  ],
+  "generated_dialog": [
+    "User: I'm looking for some 3d movie tickets in San Jose.",
+    "System: What movie would you like to see in 3D?",
+    "User: I'd like to see \"The Load\" in 3D.",
+    "System: What date would you like to see the movie?",
+    "User: How about March 5th?",
+    "System: What time would you like to see the movie?",
+    "User: How about the 8:15 PM show?",
+    "System: Is the show type indeed 3D?",
+    "User: Yes, it's a 3D show.",
+    "System: Just to confirm, the show type is indeed 3D, correct?",
+    "User: Yes, that's correct, it's a 3D show.",
+    "System: APICall(method='GetTimesForMovie', parameters={'location': 'San Jose', 'movie_name': 'The Load', 'show_date': '2024-03-05', 'show_type': '3D'})",
+    "Search Results\n[{'genre': 'War', 'location': 'San Jose', 'movie_name': 'The Load', 'price': 14, 'show_type': '3d', 'street_address': '288 South 2nd Street', 'theater_name': '3 Below Theaters And Lounge', 'show_date': '2024-03-05', 'show_time': '20:00', 'number_of_tickets': 1}, {'genre': 'War', 'location': 'San Jose', 'movie_name': 'The Load', 'price': 14, 'show_type': '3d', 'street_address': '288 South 2nd Street', 'theater_name': '3 Below Theaters And Lounge', 'show_date': '2024-03-05'}]\nEnd Search Results",
+    "System: How many tickets would you like to buy?",
+    "User: I'd like to buy one ticket.",
+    "System: How many tickets would you like to buy?",
+    "User: Just one ticket should be enough."
+  ],
+  "search_results": [
+    "[{'genre': 'War', 'location': 'San Jose', 'movie_name': 'The Load', 'number_of_tickets': '1', 'price': '14', 'show_date': '2019-03-05', 'show_time': '20:00', 'show_type': '3d', 'street_address': '288 South 2nd Street', 'theater_name': '3 Below Theaters And Lounge'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'genre': 'War', 'location': 'San Jose', 'movie_name': 'The Load', 'price': 14, 'show_type': '3d', 'street_address': '288 South 2nd Street', 'theater_name': '3 Below Theaters And Lounge', 'show_date': '2024-03-05', 'show_time': '20:00', 'number_of_tickets': 1}, {'genre': 'War', 'location': 'San Jose', 'movie_name': 'The Load', 'price': 14, 'show_type': '3d', 'street_address': '288 South 2nd Street', 'theater_name': '3 Below Theaters And Lounge', 'show_date': '2024-03-05'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"What movie are you interested in watching?\"}",
+    "{\"type\": \"message\", \"content\": \"What date would you like to see the movie?\"}",
+    "{\"type\": \"message\", \"content\": \"What time would you like to see the movie?\"}",
+    "{\"type\": \"message\", \"content\": \"What movie would you like to see in 3D?\"}\n\n# Waiting for user response...",
+    "Based on the conversation history, I will respond accordingly.\n\nTo confirm, I have the following required slots:\n\n- movie_name: \"The Load\"\n- location: San Jose\n- show_date: March 5th\n- show_time: 8:15 PM\n- show_type: 3D\n\nI will now make an API call to confirm the show details.\n\n{\"type\": \"api_call\", \"method\": \"GetTimesForMovie\", \"parameters\": {\"movie_name\": \"The Load\", \"location\": \"San Jose\", \"show_date\": \"2024-03-05\", \"show_type\": \"3D\"}}",
+    "Based on the conversation history, I will respond accordingly.\n\nTo confirm, I have the following required slots:\n\n- movie_name: \"The Load\"\n- location: San Jose\n- show_date: March 5th\n- show_time: 8:15 PM\n- show_type: 3D\n\nI will now make an API call to confirm the show details.\n\n{\"type\": \"api_call\", \"method\": \"GetTimesForMovie\", \"parameters\": {\"location\": \"San Jose\", \"movie_name\": \"The Load\", \"show_date\": \"2024-03-05\", \"show_type\": \"3D\"}}",
+    "Based on the conversation history, I will generate a response as the System.\n\nSince the user has confirmed the show type as 3D, I will proceed with the API call to get the show times for the movie \"The Load\" in 3D on March 5th in San Jose.\n\nHere is the API call:\n\n{\"type\": \"api_call\", \"method\": \"GetTimesForMovie\", \"parameters\": {\"location\": \"San Jose\", \"movie_name\": \"The Load\", \"show_date\": \"2024-03-05\", \"show_type\": \"3D\"}}",
+    "{\"type\": \"message\", \"content\": \"How many tickets would you like to buy?\"}"
+  ],
+  "dialog_completed": false
+}

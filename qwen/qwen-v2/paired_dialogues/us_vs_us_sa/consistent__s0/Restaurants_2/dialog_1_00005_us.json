@@ -1,0 +1,53 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Saap Ver', 'time': '13:15'})"
+  ],
+  "user_req_slots": [
+    [
+      "address"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: I need to book a table at a restaurant.\nSystem: At which time would you like to reserve it for?\nUser: I want it at 1:15 in the afternoon, please.\nSystem: In which location would you like it? What is the restaurant name?\nUser: I need a table at Saap Ver, in San Francisco.\nSystem: Please confirm the following information: Book a table at Saap Ver, in San Francisco at 1:15 PM on the day of March 1st. This is for a party of 2, correct?\nUser: Yes, that is everything. Address?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-01', 'location': 'San Francisco', 'number_of_seats': '2', 'restaurant_name': 'Saap Ver', 'time': '13:15'})\nSearch Results\n\nEnd Search Results\nSystem: Sorry, but the reservation could not be placed. Is there anything else to help with?\nLast User Utterance:No, but thanks.\nLast System Utterance: Of course. Have a wonderful day.",
+  "predicted_api_calls": [
+    "APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'Saap Ver', 'location': 'San Francisco', 'time': '13:15'})",
+    "APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'Saap Ver', 'location': 'San Francisco', 'time': '13:15', 'address': '1234 Fillmore Street'})"
+  ],
+  "generated_dialog": [
+    "User: I need to book a table at a restaurant.",
+    "System: Sure, I can help with that. Could you please tell me the name of the restaurant you're interested in?",
+    "User: I want to reserve a table at Saap Ver.",
+    "System: I need the location and the time you'd like to reserve the table at Saap Ver.",
+    "User: Sure, I'd like to reserve a table at Saap Ver in San Francisco at 13:15. Can you also give me the address?",
+    "System: APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'Saap Ver', 'location': 'San Francisco', 'time': '13:15'})",
+    "Search Results\n[{'address': '', 'category': '', 'date': '', 'has_seating_outdoors': '', 'has_vegetarian_options': '', 'location': 'San Francisco', 'number_of_seats': '', 'phone_number': '', 'price_range': '', 'rating': '', 'restaurant_name': 'Saap Ver', 'time': '13:15'}]\nEnd Search Results",
+    "System: I'm sorry, I couldn't find the address for Saap Ver in San Francisco. Could you please provide the address or confirm the details?",
+    "User: The address is 1234 Fillmore Street.",
+    "System: APICall(method='ReserveRestaurant', parameters={'restaurant_name': 'Saap Ver', 'location': 'San Francisco', 'time': '13:15', 'address': '1234 Fillmore Street'})",
+    "Search Results\n[{'address': '1234 Fillmore Street', 'category': 'American', 'date': '', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'number_of_seats': '', 'phone_number': '415-673-1294', 'price_range': 'ultra high-end', 'rating': 4.6, 'restaurant_name': 'Saap Ver', 'time': '13:15'}]\nEnd Search Results"
+  ],
+  "search_results": [
+    ""
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'address': '', 'category': '', 'date': '', 'has_seating_outdoors': '', 'has_vegetarian_options': '', 'location': 'San Francisco', 'number_of_seats': '', 'phone_number': '', 'price_range': '', 'rating': '', 'restaurant_name': 'Saap Ver', 'time': '13:15'}]\nEnd Search Results",
+    "Search Results\n[{'address': '1234 Fillmore Street', 'category': 'American', 'date': '', 'has_seating_outdoors': False, 'has_vegetarian_options': False, 'location': 'San Francisco', 'number_of_seats': '', 'phone_number': '415-673-1294', 'price_range': 'ultra high-end', 'rating': 4.6, 'restaurant_name': 'Saap Ver', 'time': '13:15'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

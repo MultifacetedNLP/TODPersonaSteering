@@ -1,0 +1,108 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={})"
+  ],
+  "user_req_slots": [
+    [
+      "cast",
+      "genre"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: I would like to find a movie I can watch.\nSystem: ApiCall(method='FindMovies', parameters={})\nSearch Results\n[{'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': '98'}]\nEnd Search Results\nSystem: What do you think of Rojo? It has an average rating of 98 percent.\nUser: Who acted in this movie and what genre is it?\nSystem: This movie is a Thriller and Rudy Chernicoff is one of the actors.\nLast User Utterance:That sounds fine. That's all I needed.\nLast System Utterance: I'm glad to have helped you.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: I would like to find a movie I can watch.",
+    "System: What type of movie are you in the mood for?",
+    "User: I don't know, what are some popular movies in the action genre?",
+    "System: Some popular action movies include Die Hard, The Matrix, and Mad Max: Fury Road. Would you like to explore more in the action genre or try a different genre?",
+    "User: I don't know, what's Die Hard like, is it a good action movie?",
+    "System: Die Hard is a classic action movie. It's about a detective who finds himself trapped in a skyscraper during a terrorist takeover on Christmas Eve. It's known for its intense action sequences, memorable characters, and iconic one-liners. Would you like to know more about it or explore other options?",
+    "User: I don't know, is it like The Matrix or is it more like Mad Max?",
+    "System: Die Hard is a bit different from both The Matrix and Mad Max. It's more of a traditional action movie with a focus on character development and a strong plot. If you're interested in a more futuristic, visually stunning experience, The Matrix might be a better fit. If you prefer a post-apocalyptic, high-octane ride, Mad Max could be the way to go. Which one of these descriptions resonates with you, or do you have a different preference?",
+    "User: I don't know, I guess I'm just really bad at choosing between them, what if I just pick one of them and then watch something else after?",
+    "System: Let's pick one of them, and then you can watch something else afterwards. Which one would you like to start with, Die Hard, The Matrix, or Mad Max: Fury Road?",
+    "User: I don't know, I guess I'm just really bad at choosing between them, what if I just pick one of them and then watch something else after?",
+    "System: What specifically are you looking for in an action movie? Are you interested in a futuristic setting, a post-apocalyptic world, or something else?",
+    "User: I don't know, I guess I'm just really bad at choosing between them, what if I just pick one of them and then watch something else after?",
+    "System: What specifically are you looking for in an action movie? Are you interested in a futuristic setting, a post-apocalyptic world, or something else?",
+    "User: I don't know, I guess I'm just really bad at choosing between them, what if I just pick one of them and then watch something else after...",
+    "System: What specifically are you looking for in an action movie? Are you interested in a futuristic setting, a post-apocalyptic world, or something else?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'cast': 'Rudy Chernicoff', 'directed_by': 'Benjamin Naishtat', 'genre': 'Thriller', 'movie_title': 'Rojo', 'percent_rating': '98'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 1.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"What type of movie are you in the mood for?\"}",
+    "{\"type\": \"message\", \"content\": \"Some popular action movies include Die Hard, The Matrix, and Mad Max: Fury Road. Would you like to explore more in the action genre or try a different genre?\"}",
+    "{\"type\": \"message\", \"content\": \"Die Hard is a classic action movie. It's about a detective who gets trapped in a skyscraper during a terrorist takeover. It's known for its intense action sequences and memorable characters. Would you like to know more about it or explore other options?\"}",
+    "{\"type\": \"message\", \"content\": \"Die Hard is a bit different from both The Matrix and Mad Max. It's more of a traditional action movie with a focus on character development and a strong plot. If you're interested in something similar, I can suggest other movies in the action genre. Alternatively, if you'd like to explore other genres, I can give you some recommendations.\"}",
+    "Based on the conversation history, I will respond to the user's intent. \n\nThe user is unsure about choosing between Die Hard, The Matrix, and Mad Max: Fury Road. They want to pick one and then watch something else after.\n\nTo help the user make a decision, I will ask for their preference between the three movies. \n\n{\"type\": \"message\", \"content\": \"Which one of Die Hard, The Matrix, or Mad Max: Fury Road sounds more appealing to you?\"}",
+    "Based on the conversation history, it seems like the user is having trouble choosing between different action movies. To help the user, I'll ask for clarification on their preferences.\n\n{\"type\": \"message\", \"content\": \"What specifically are you looking for in an action movie? Do you want something with a lot of action sequences, a strong plot, or memorable characters?\"}\n\nPlease respond with the user's answer to this question.",
+    "Based on the conversation history, it seems like the user is having trouble choosing between Die Hard, The Matrix, and Mad Max: Fury Road. To help the user, I'll ask a few more questions to narrow down their preferences.\n\n{\"type\": \"message\", \"content\": \"What specifically are you looking for in an action movie? Are you interested in a futuristic setting, a post-apocalyptic world, or something else?\"}",
+    "Based on the provided conversation history, it seems like the user is having trouble choosing between three action movies: Die Hard, The Matrix, and Mad Max: Fury Road. The user is unsure about what type of movie they want to watch and is having difficulty making a decision.\n\nTo assist the user, I will ask a clarifying question to help them narrow down their preferences.\n\n{\"type\": \"message\", \"content\": \"What specifically are you looking for in an action movie? Are you interested in a futuristic setting, a post-apocalyptic world, or something else?\"}"
+  ],
+  "dialog_completed": false
+}

@@ -1,0 +1,227 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'location': 'Palo Alto'})",
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'number_of_tickets': '1', 'show_date': '2019-03-01', 'show_time': '19:45', 'show_type': '3d'})"
+  ],
+  "user_req_slots": [
+    [],
+    [
+      "theater_name",
+      "street_address"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: Can you help me find a movie?\nSystem: Sure. What is your location?\nUser: I want to find movies in Palo Alto.\nSystem: ApiCall(method='FindMovies', parameters={'location': 'Palo Alto'})\nSearch Results\n[{'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'Blinded by the Light', 'price': '7', 'show_type': 'regular', 'street_address': '3000 El Camino Real Bldg. #6', 'theater_name': 'CineArts at Palo Alto Square'}]\nEnd Search Results\nSystem: I found you 4 movies: Blinded by the Light, Brittany Runs a Marathon, and Stage Door.\nUser: Can you find something else?\nSystem: How about The Ladykillers?\nUser: Ladykillers is perfect. Can you buy me some tickets for quarter to 8 in the evening? I want to watch the movie in 3d.\nSystem: For what date?\nUser: Get me one ticket for March 1st.\nSystem: Confirming that you want 1 ticket for the 7:45 pm 3d showing of The Ladykillers on March 1st in Palo Alto.\nUser: That sounds good. What is the address of the theater?\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'number_of_tickets': '1', 'show_date': '2019-03-01', 'show_time': '19:45', 'show_type': '3d'})\nSearch Results\n[{'genre': 'Thriller', 'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'number_of_tickets': '1', 'price': '11', 'show_date': '2019-03-01', 'show_time': '19:30', 'show_type': '3d', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}]\nEnd Search Results\nSystem: The Stanford Theatre is located at 221 University Avenue. Your tickets have been confirmed.\nUser: Thanks for your help.\nSystem: Do you need anything else?\nLast User Utterance:No. Thanks for your help.\nLast System Utterance: You're welcome. Have a good day.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'location': 'Palo Alto'})",
+    "APICall(method='GetTimesForMovie', parameters={'movie_name': 'The Ladykillers', 'location': 'Palo Alto', 'show_date': '2019-03-01'})"
+  ],
+  "generated_dialog": [
+    "User: Can you help me find a movie?",
+    "System: What city are you in?",
+    "User: I'm in Palo Alto.",
+    "System: What city are you in?",
+    "User: I'm in Palo Alto.",
+    "System: I'd like to know what movies are showing in Palo Alto. Can you tell me?",
+    "User: I'd like to know what movies are showing in Palo Alto.",
+    "System: APICall(method='FindMovies', parameters={'location': 'Palo Alto'})",
+    "Search Results\n[{'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}, {'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'The Man Who Knew Too Much', 'price': 14, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}, {'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-05', 'show_time': '19:30'}]\nEnd Search Results",
+    "System: Which movie would you like to watch?",
+    "User: I'd like to watch The Ladykillers, what theater is showing it in Palo Alto?",
+    "System: What date would you like to watch The Ladykillers?",
+    "User: I'd like to watch it on March 1st.",
+    "System: What time would you like to watch The Ladykillers on March 1st?",
+    "User: I'd like to watch it at 7:45 PM.",
+    "System: Which movie would you like to watch?",
+    "User: I'd like to watch The Ladykillers, what theater is showing it in Palo Alto?",
+    "System: What date would you like to watch The Ladykillers?",
+    "User: I'd like to watch it on March 1st.",
+    "System: Which movie would you like to watch?",
+    "User: I'd like to watch The Ladykillers, what theater is showing it in Palo Alto?",
+    "System: You'd like to watch The Ladykillers in Palo Alto, correct?",
+    "User: Yes, that's correct, I'd like to watch The Ladykillers in Palo Alto.",
+    "System: Which movie would you like to watch?",
+    "User: I'd like to watch The Ladykillers, what theater is showing it in Palo Alto?",
+    "System: You'd like to watch The Ladykillers in Palo Alto, correct? And you'd like to know which theater is showing it?",
+    "User: Can you tell me the name of the theater in Palo Alto that's showing The Ladykillers?",
+    "System: You'd like to watch The Ladykillers in Palo Alto, correct?",
+    "User: Yes, that's correct, I'd like to watch The Ladykillers in Palo Alto.",
+    "System: You'd like to watch The Ladykillers in Palo Alto, correct? And you'd like to know which theater is showing it? Can you please confirm the date you'd like to watch it?",
+    "User: Can you please confirm the date you'd like to watch it is March 1st and what time is 7:45 PM in 3D?",
+    "System: How many tickets would you like to purchase for The Ladykillers on March 1st at 7:45 PM in 3D?",
+    "User: Can you tell me the name of the theater in Palo Alto that's showing The Ladykillers?",
+    "System: APICall(method='GetTimesForMovie', parameters={'movie_name': 'The Ladykillers', 'location': 'Palo Alto', 'show_date': '2019-03-01'})",
+    "Search Results\n[{'genre': 'Thriller', 'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'price': 11, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-01'}, {'genre': 'Thriller', 'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'price': 11, 'show_type': '3d', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-01', 'show_time': '19:30', 'number_of_tickets': 1}, {'genre': 'Thriller', 'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'price': 11, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-01', 'show_time': '19:30'}]\nEnd Search Results",
+    "System: You'd like to watch The Ladykillers in Palo Alto, correct?",
+    "User: Yes, that's correct, I'd like to watch The Ladykillers in Palo Alto.",
+    "System: You'd like to watch The Ladykillers in Palo Alto, correct? And you'd like to know which theater is showing it?",
+    "User: Can you tell me the name of the theater in Palo Alto that's showing The Ladykillers?"
+  ],
+  "search_results": [
+    "[{'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'Blinded by the Light', 'price': '7', 'show_type': 'regular', 'street_address': '3000 El Camino Real Bldg. #6', 'theater_name': 'CineArts at Palo Alto Square'}]",
+    "[{'genre': 'Thriller', 'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'number_of_tickets': '1', 'price': '11', 'show_date': '2019-03-01', 'show_time': '19:30', 'show_type': '3d', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}, {'genre': 'Drama', 'location': 'Palo Alto', 'movie_name': 'The Man Who Knew Too Much', 'price': 14, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre'}, {'genre': 'Romance', 'location': 'Palo Alto', 'movie_name': 'Pillow Talk', 'price': 10, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-05', 'show_time': '19:30'}]\nEnd Search Results",
+    "Search Results\n[{'genre': 'Thriller', 'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'price': 11, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-01'}, {'genre': 'Thriller', 'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'price': 11, 'show_type': '3d', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-01', 'show_time': '19:30', 'number_of_tickets': 1}, {'genre': 'Thriller', 'location': 'Palo Alto', 'movie_name': 'The Ladykillers', 'price': 11, 'show_type': 'regular', 'street_address': '221 University Avenue', 'theater_name': 'Stanford Theatre', 'show_date': '2019-03-01', 'show_time': '19:30'}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 2.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 2.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"What city are you in?\"}",
+    "{\"type\": \"message\", \"content\": \"What city are you in?\"}",
+    "{\"type\": \"message\", \"content\": \"I'd like to know what movies are playing in Palo Alto. Can you tell me?\"}",
+    "{\"type\": \"api_call\", \"method\": \"FindMovies\", \"parameters\": {\"location\": \"Palo Alto\"}}",
+    "Based on the conversation history, I will continue the conversation with the user.\n\nSince the user has already provided the location as Palo Alto, I will proceed with the next step.\n\n{\"type\": \"message\", \"content\": \"Which movie would you like to watch?\"}",
+    "Based on the conversation history, I will respond as the System.\n\nSince the User is interested in watching \"The Ladykillers\" in Palo Alto, I will first ask for the show date to confirm the availability of the movie.\n\n{\"type\": \"message\", \"content\": \"What date would you like to watch The Ladykillers?\"}",
+    "Based on the conversation history, I will continue the conversation with the user.\n\nSince the user is interested in watching \"The Ladykillers\" on March 1st, I will first ask for the show time.\n\n{\"type\": \"message\", \"content\": \"What time would you like to watch The Ladykillers on March 1st?\"}\n\nPlease respond with the show time, and I will proceed with the conversation.",
+    "Based on the conversation history, I will continue the conversation with the user.\n\nSince the user is interested in watching \"The Ladykillers\" on March 1st, I will first ask for the show time.\n\n{\"type\": \"message\", \"content\": \"What time would you like to watch The Ladykillers on March 1st?\"}\n\nPlease respond with the show time, and I will proceed with the conversation.",
+    "Based on the conversation history, I will continue the conversation with the user.\n\nSince the user mentioned they want to watch \"The Ladykillers\" on March 1st at 7:45 PM, I will ask for the number of tickets they want to buy.\n\n{\"type\": \"message\", \"content\": \"How many tickets would you like to buy for The Ladykillers on March 1st at 7:45 PM?\"}\n\nPlease respond with the number of tickets you would like to buy.",
+    "Based on the conversation history, I will continue the conversation with the user.\n\nSince the user has already mentioned that they want to watch \"The Ladykillers\" on March 1st, I will ask for the show time.\n\n{\"type\": \"message\", \"content\": \"What time would you like to watch The Ladykillers on March 1st?\"}\n\nPlease respond with the show time, and I will proceed with the conversation.",
+    "Based on the conversation history, it seems like the user is having trouble providing a clear answer to the system's questions. The user is repeatedly asking the same question, which is \"I'd like to watch The Ladykillers, what theater is showing it in Palo Alto?\".\n\nTo clarify, I will ask the user a question to confirm their intent. \n\n{\"type\": \"message\", \"content\": \"You'd like to watch The Ladykillers, correct? And you're looking for a theater in Palo Alto that's showing it. Is that right?\"}\n\nPlease respond with the user's answer.",
+    "Based on the conversation history, I will continue the conversation.\n\nSince the user has already provided the location as Palo Alto, I will proceed with the next question.\n\n{\"type\": \"message\", \"content\": \"Which movie would you like to watch?\"}\n\nPlease respond with the movie name.\n\n(Note: I will use the search results to provide the list of movies showing in Palo Alto)\n\nIf the user responds with a movie name, I will ask for the date and time.\n\nIf the user responds with a date, I will ask for the time.\n\nIf the user responds with a time, I will ask if they want to buy tickets.\n\nIf the user responds with \"yes\" to buying tickets, I will make an API call to buy the tickets.\n\nIf the user responds with \"no\" to buying tickets, I will end the dialog.\n\nPlease respond with the movie name.",
+    "Based on the conversation history, it seems like the user is having trouble providing a clear answer to the system's questions. The user is repeatedly asking the same question, which is \"I'd like to watch The Ladykillers, what theater is showing it in Palo Alto?\".\n\nTo clarify the user's intent, I will ask a follow-up question to confirm the movie and location.\n\n{\"type\": \"message\", \"content\": \"You'd like to watch The Ladykillers in Palo Alto, correct?\"}\n\nIf the user confirms, I will proceed with the next step to find the showtimes for the movie. However, since the user has not confirmed the movie and location, I will not make an API call yet.\n\nPlease respond with the user's confirmation.",
+    "Based on the conversation history, I can see that the user is interested in watching \"The Ladykillers\" in Palo Alto. However, there are some inconsistencies in the user's responses. The user initially asks about \"The Ladykillers\" but later mentions \"March 1st\" and \"7:45 PM\" which suggests that the user is interested in watching a specific showing of the movie.\n\nTo clarify the user's intent, I will ask a few more questions to confirm the required slots.\n\n{\"type\": \"message\", \"content\": \"You'd like to watch The Ladykillers in Palo Alto, correct?\"}\n\n{\"type\": \"message\", \"content\": \"And you'd like to know which theater is showing it?\"}\n\nHowever, since the user has already confirmed that they would like to watch \"The Ladykillers\" in Palo Alto, I can proceed with making an API call to find the theater showing the movie.\n\n{\"type\": \"api_call\", \"method\": \"FindMovies\", \"parameters\": {\"location\": \"Palo Alto\", \"movie_name\": \"The Ladykillers\"}}",
+    "Based on the conversation history, I can see that the user is trying to find a movie to watch in Palo Alto. However, the user's responses are not clear and are causing confusion.\n\nTo clarify, I will ask the user to confirm the movie and location. \n\n{\"type\": \"message\", \"content\": \"You'd like to watch The Ladykillers in Palo Alto, correct?\"}\n\nPlease respond with a confirmation or correction.",
+    "Based on the conversation history, I will continue the conversation with the user.\n\nSince the user has confirmed the date and time for watching The Ladykillers, I will now ask for the number of tickets they would like to purchase.\n\n{\"type\": \"message\", \"content\": \"How many tickets would you like to buy for The Ladykillers on March 1st at 7:45 PM in 3D?\"}\n\nPlease respond with the number of tickets you would like to purchase.",
+    "Based on the conversation history, I can see that the user is interested in watching \"The Ladykillers\" in Palo Alto. However, there seems to be some confusion in the conversation. The user has mentioned different dates and times, and also asked about the theater showing the movie.\n\nTo clarify, I will ask the user to confirm the date and time they would like to watch \"The Ladykillers\". I will also ask for the number of tickets they would like to purchase.\n\nHere is my response:\n\n{\"type\": \"message\", \"content\": \"You'd like to watch The Ladykillers in Palo Alto, correct? And you'd like to know which theater is showing it? Can you please confirm the date you'd like to watch it is March 1st and what time is 7:45 PM in 3D?\"}\n\nPlease let me know the user's response.",
+    "Based on the conversation history, I will continue the conversation with the user.\n\nSince the user has already confirmed the date and time for watching The Ladykillers, I will ask for the number of tickets they would like to purchase.\n\n{\"type\": \"message\", \"content\": \"How many tickets would you like to purchase for The Ladykillers on March 1st at 7:45 PM in 3D?\"}",
+    "Based on the conversation history, it seems like the user is trying to find a movie to watch in Palo Alto. However, the user's intent is not clear, and they are providing conflicting information.\n\nTo clarify the user's intent, I will ask a few questions to gather more information.\n\n{\"type\": \"message\", \"content\": \"You'd like to watch a movie in Palo Alto, correct?\"}\n\nPlease respond with a confirmation or denial of this statement."
+  ],
+  "dialog_completed": false
+}

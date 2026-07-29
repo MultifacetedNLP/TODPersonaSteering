@@ -1,0 +1,48 @@
+{
+  "api_calls": [
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-11', 'location': 'Santa Clara', 'number_of_seats': '2', 'restaurant_name': 'Thai Chili Cuisine', 'time': '17:45'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-11', 'location': 'Santa Clara', 'number_of_seats': '2', 'restaurant_name': 'Thai Chili Cuisine', 'time': '18:00'})"
+  ],
+  "user_req_slots": [
+    [],
+    []
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you help me book a table at Thai Chili on March 11th? Please find restaurants in Santa Clara.\nSystem: What time do you prefer?\nUser: I want 5:45 in the evening.\nSystem: Okay, you want to book a table for 2 people at Thai Chili Cuisine in Santa Clara on March 11th at 5:45 pm. Please confirm.\nUser: Yes, that's good.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-11', 'location': 'Santa Clara', 'number_of_seats': '2', 'restaurant_name': 'Thai Chili Cuisine', 'time': '17:45'})\nSearch Results\n[{'address': '1550 Halford Avenue', 'category': 'Thai', 'date': '2019-03-11', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Santa Clara', 'number_of_seats': '2', 'phone_number': '408-615-9199', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Thai Chili Cuisine', 'time': '18:00'}]\nEnd Search Results\nSystem: Sorry, I fail to make a reservation. Thai Chili Cuisine is a good restaurant, do you want me to book a reservation for 2 again on March 11th at 6 pm?\nUser: Yes, that's fine.\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-11', 'location': 'Santa Clara', 'number_of_seats': '2', 'restaurant_name': 'Thai Chili Cuisine', 'time': '18:00'})\nSearch Results\n[{'address': '1550 Halford Avenue', 'category': 'Thai', 'date': '2019-03-11', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Santa Clara', 'number_of_seats': '2', 'phone_number': '408-615-9199', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Thai Chili Cuisine', 'time': '18:00'}]\nEnd Search Results\nSystem: Your booking is now confirmed!\nLast User Utterance:Thanks a lot.\nLast System Utterance: You are welcome!",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Can you help me book a table at Thai Chili on March 11th? Please find restaurants in Santa Clara.",
+    "System: What type of food are you interested in and where should it be?",
+    "User: We're looking for Thai food, and it has to be in Santa Clara.",
+    "System: I'd be happy to help you find Thai restaurants in Santa Clara. What's your preferred price range for the restaurant?",
+    "User: We're on a budget, so something affordable would be amazing!",
+    "System: You're looking for Thai food in Santa Clara. What's your preferred price range for the restaurant?",
+    "User: We're on a budget, so something affordable would be amazing!",
+    "System: You're looking for Thai food in Santa Clara. What's your preferred price range for the restaurant?",
+    "User: We're on a budget, so something affordable would be amazing!",
+    "System: You're looking for Thai food in Santa Clara. What's your preferred price range for the restaurant?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '1550 Halford Avenue', 'category': 'Thai', 'date': '2019-03-11', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Santa Clara', 'number_of_seats': '2', 'phone_number': '408-615-9199', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Thai Chili Cuisine', 'time': '18:00'}]",
+    "[{'address': '1550 Halford Avenue', 'category': 'Thai', 'date': '2019-03-11', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Santa Clara', 'number_of_seats': '2', 'phone_number': '408-615-9199', 'price_range': 'moderate', 'rating': '4.30', 'restaurant_name': 'Thai Chili Cuisine', 'time': '18:00'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

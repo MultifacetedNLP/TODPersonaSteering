@@ -1,0 +1,67 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindRestaurants', parameters={'category': 'Chinese', 'location': 'Los Gatos'})",
+    "ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-05', 'location': 'Los Gatos', 'number_of_seats': '2', 'restaurant_name': 'Jasmine Chinese Cuisine', 'time': '11:30'})"
+  ],
+  "user_req_slots": [
+    [],
+    [
+      "rating",
+      "has_seating_outdoors"
+    ]
+  ],
+  "system_schema": "Schema for Restaurants\nIntent: ReserveRestaurant\nrequired slots: restaurant name,location,time\noptional slots: number of seats,date\nIntent: FindRestaurants\nrequired slots: category,location\noptional slots: price range,has vegetarian options,has seating outdoors",
+  "domains": "restaurants",
+  "domains_original": "Restaurants_2",
+  "dialog": "User: Can you find a place for me to eat in Los Gatos?\nSystem: Sure, anything in particular you want to eat?\nUser: Yes, try searching for Chinese.\nSystem: ApiCall(method='FindRestaurants', parameters={'category': 'Chinese', 'location': 'Los Gatos'})\nSearch Results\n[{'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Los Gatos', 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': '3.70', 'restaurant_name': 'Jasmine Chinese Cuisine'}]\nEnd Search Results\nSystem: There are 2 places. How about Jasmine Chinese Cuisine in Los Gatos?\nUser: Great, can you make a reservation there next Tuesday at morning 11:30.\nSystem: Sure, please confirm you'd like a reservation for 2 at Jasmine Chinese Cuisine in Los Gatos for March 5th at 11:30 am.\nUser: Yup, that's great. What's their rating an do they have outdoor seating?\nSystem: ApiCall(method='ReserveRestaurant', parameters={'date': '2019-03-05', 'location': 'Los Gatos', 'number_of_seats': '2', 'restaurant_name': 'Jasmine Chinese Cuisine', 'time': '11:30'})\nSearch Results\n[{'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'date': '2019-03-05', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Los Gatos', 'number_of_seats': '2', 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': '3.70', 'restaurant_name': 'Jasmine Chinese Cuisine', 'time': '11:30'}]\nEnd Search Results\nSystem: I've successfully made your reservation. They don't have outdoor seating and their rating is 3.7.\nLast User Utterance:Thanks, that's all for now.\nLast System Utterance: My pleasure.",
+  "predicted_api_calls": [],
+  "generated_dialog": [
+    "User: Can you find a place for me to eat in Los Gatos?",
+    "System: What type of food are you interested in?",
+    "User: I'm in the mood for something Chinese.",
+    "System: Great, Chinese food in Los Gatos. What's your preferred price range?",
+    "User: I'm open to trying different price ranges, but something mid-range would be great.",
+    "System: Los Gatos is a bit of a small town, but I can try to find some Chinese restaurants for you. What's your preferred price range?",
+    "User: I'm open to trying different price ranges, but something mid-range would be great.",
+    "System: What type of food are you interested in?",
+    "User: I'm in the mood for something Chinese.",
+    "System: What type of food are you interested in?",
+    "User: I'm in the mood for something Chinese.",
+    "System: Chinese food in Los Gatos. What's your preferred price range?",
+    "User: I'm open to trying different price ranges, but something mid-range would be great.",
+    "System: What type of food are you interested in?",
+    "User: Chinese food.",
+    "System: What type of food are you interested in?",
+    "User: Chinese food.",
+    "System: What type of food are you interested in?",
+    "<Looping Dialog>"
+  ],
+  "search_results": [
+    "[{'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Los Gatos', 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': '3.70', 'restaurant_name': 'Jasmine Chinese Cuisine'}]",
+    "[{'address': '20 South Santa Cruz Avenue', 'category': 'Chinese', 'date': '2019-03-05', 'has_seating_outdoors': 'False', 'has_vegetarian_options': 'True', 'location': 'Los Gatos', 'number_of_seats': '2', 'phone_number': '408-395-2373', 'price_range': 'moderate', 'rating': '3.70', 'restaurant_name': 'Jasmine Chinese Cuisine', 'time': '11:30'}]"
+  ],
+  "predicted_search_results": [],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

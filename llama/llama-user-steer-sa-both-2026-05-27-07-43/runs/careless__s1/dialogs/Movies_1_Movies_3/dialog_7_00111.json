@@ -1,0 +1,181 @@
+{
+  "api_calls": [
+    "ApiCall(method='BuyMovieTickets', parameters={'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'number_of_tickets': '1', 'show_date': '2019-03-02', 'show_time': '22:00', 'show_type': 'regular'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: BuyMovieTickets\nrequired slots: movie name,number of tickets,show date,location,show time,show type\n\nIntent: FindMovies\nrequired slots: location\noptional slots: theater name,genre,show type\nIntent: GetTimesForMovie\nrequired slots: movie name,location,show date\noptional slots: theater name,show type",
+  "domains": "movies",
+  "domains_original": "Movies_1",
+  "dialog": "User: I'm looking to buy tickets to see a movie.\nSystem: How many tickets would you like?\nUser: Just 1 ticket please.\nSystem: What kind of show are you interested in?\nUser: Just a regular show, nothing special.\nSystem: When do you want to watch the movie and what film do you want to watch?\nUser: I want to watch Good Boys at 22:00.\nSystem: When would you like to watch it and where are you based?\nUser: Please find movies in Santa Rosa on March 2nd.\nSystem: Okay sure so just to confirm, you want 1 ticket to watch a regular movie called Good Boys in Santa Rosa on March 2nd at 10 pm.\nUser: Yes that's correct.\nSystem: ApiCall(method='BuyMovieTickets', parameters={'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'number_of_tickets': '1', 'show_date': '2019-03-02', 'show_time': '22:00', 'show_type': 'regular'})\nSearch Results\n[{'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'number_of_tickets': '1', 'price': '12', 'show_date': '2019-03-02', 'show_time': '22:00', 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14'}]\nEnd Search Results\nSystem: Your ticket has been purchased.\nUser: Thanks a lot.\nSystem: Do you need anything else?\nLast User Utterance:No that's all for now thanks.\nLast System Utterance: Enjoy your day.",
+  "predicted_api_calls": [
+    "APICall(method='GetTimesForMovie', parameters={'movie_name': 'Good Boys', 'location': 'Santa Rosa', 'show_date': '2019-03-02', 'show_time': '22:00', 'show_type': 'regular'})",
+    "APICall(method='GetTimesForMovie', parameters={'movie_name': 'Good Boys', 'location': 'Santa Rosa', 'show_date': '2019-03-02', 'show_time': '22:00', 'show_type': 'regular'})"
+  ],
+  "generated_dialog": [
+    "User: I'm looking to buy tickets to see a movie.",
+    "System: What movie would you like to see?",
+    "User: I think I'd like to see Good Boys, I've heard it's really funny.",
+    "System: Great choice! What city are you planning to watch Good Boys in?",
+    "User: I think I'd like to watch it in Santa Rosa.",
+    "System: What date would you like to watch Good Boys in Santa Rosa?",
+    "User: I was thinking maybe the 2nd of March?",
+    "System: What date would you like to watch Good Boys in Santa Rosa?",
+    "User: I was thinking maybe the 2nd of March?",
+    "System: What time would you like to watch Good Boys on March 2nd in Santa Rosa?",
+    "User: I was thinking maybe 10 PM, is that a regular show or something else?",
+    "System: What time would you like to watch Good Boys on March 2nd in Santa Rosa?",
+    "User: I was thinking maybe 10 PM, is that a regular show or something else?",
+    "System: What movie would you like to see?",
+    "User: I think I'd like to see Good Boys, I've heard it's really funny.",
+    "System: What time would you like to watch Good Boys on March 2nd in Santa Rosa?",
+    "User: 10 PM sounds late, is 10 PM a regular show or is it like a midnight showing or something?",
+    "System: What movie would you like to see?",
+    "User: I think I'd like to see Good Boys, I've heard it's really funny.",
+    "System: What movie would you like to see?",
+    "User: I think I'd like to see Good Boys, I've heard it's really funny.",
+    "System: Just to confirm, you'd like to see 'Good Boys' in Santa Rosa on March 2nd at 10 PM, correct?",
+    "User: Yeah, that sounds right, 10 PM on the 2nd of March in Santa Rosa, Good Boys, regular show, I think that's all.",
+    "System: Just to confirm, you'd like to see 'Good Boys' in Santa Rosa on March 2nd at 10 PM, correct?",
+    "User: Yeah, that sounds right, 10 PM on the 2nd of March in Santa Rosa, Good Boys, regular show, I think that's all.",
+    "System: What movie would you like to see?",
+    "User: I think I'd like to see Good Boys, I've heard it's really funny.",
+    "System: APICall(method='GetTimesForMovie', parameters={'movie_name': 'Good Boys', 'location': 'Santa Rosa', 'show_date': '2019-03-02', 'show_time': '22:00', 'show_type': 'regular'})",
+    "Search Results\n[{'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 12, 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14', 'show_date': '2019-03-02', 'show_time': '22:00', 'number_of_tickets': 1}, {'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 12, 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14', 'show_date': '2019-03-02', 'show_time': '22:00', 'number_of_tickets': 2}, {'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 12, 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14', 'show_date': '2019-03-02', 'show_time': '22:00', 'number_of_tickets': 2}]\nEnd Search Results",
+    "System: APICall(method='GetTimesForMovie', parameters={'movie_name': 'Good Boys', 'location': 'Santa Rosa', 'show_date': '2019-03-02', 'show_time': '22:00', 'show_type': 'regular'})",
+    "Search Results\n[{'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 12, 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14', 'show_date': '2019-03-02', 'show_time': '22:00', 'number_of_tickets': 1}, {'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 12, 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14', 'show_date': '2019-03-02', 'show_time': '22:00', 'number_of_tickets': 2}, {'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 12, 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14', 'show_date': '2019-03-02', 'show_time': '22:00', 'number_of_tickets': 2}]\nEnd Search Results"
+  ],
+  "search_results": [
+    "[{'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'number_of_tickets': '1', 'price': '12', 'show_date': '2019-03-02', 'show_time': '22:00', 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 12, 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14', 'show_date': '2019-03-02', 'show_time': '22:00', 'number_of_tickets': 1}, {'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 12, 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14', 'show_date': '2019-03-02', 'show_time': '22:00', 'number_of_tickets': 2}, {'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 12, 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14', 'show_date': '2019-03-02', 'show_time': '22:00', 'number_of_tickets': 2}]\nEnd Search Results",
+    "Search Results\n[{'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 12, 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14', 'show_date': '2019-03-02', 'show_time': '22:00', 'number_of_tickets': 1}, {'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 12, 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14', 'show_date': '2019-03-02', 'show_time': '22:00', 'number_of_tickets': 2}, {'genre': 'Comedy', 'location': 'Santa Rosa', 'movie_name': 'Good Boys', 'price': 12, 'show_type': 'regular', 'street_address': '85 Santa Rosa Avenue', 'theater_name': 'Roxy Stadium 14', 'show_date': '2019-03-02', 'show_time': '22:00', 'number_of_tickets': 2}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 1.0,
+      "Agreeableness": 1.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 1.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"message\", \"content\": \"What movie would you like to see?\"}",
+    "{\"type\": \"message\", \"content\": \"Which theater would you like to watch Good Boys at?\"}",
+    "{\"type\": \"message\", \"content\": \"What date would you like to watch Good Boys in Santa Rosa?\"}",
+    "{\"type\": \"message\", \"content\": \"What date would you like to watch Good Boys in Santa Rosa?\"}\n\n{\"type\": \"api_call\", \"method\": \"GetTimesForMovie\", \"parameters\": {\"movie_name\": \"Good Boys\", \"location\": \"Santa Rosa\", \"show_date\": \"2019-03-02\"}}",
+    "{\"type\": \"message\", \"content\": \"What time would you like to watch Good Boys on March 2nd in Santa Rosa?\"}",
+    "{\"type\": \"message\", \"content\": \"What time would you like to watch Good Boys on March 2nd in Santa Rosa?\"}\n\n# I need to gather the required slots for the intent 'BuyMovieTickets'. \n# The required slots are: movie_name, number_of_tickets, show_date, location, show_time, show_type.\n\n# I will ask the user for the movie_name.\n{\"type\": \"message\", \"content\": \"You've chosen Good Boys. Is that correct?\"}\n\n# I need to confirm the movie_name slot value.\n# The user confirmed the movie_name slot value.\n\n# I will ask the user for the number_of_tickets.\n{\"type\": \"message\", \"content\": \"How many tickets would you like to buy for Good Boys?\"}\n\n# I need to confirm the number_of_tickets slot value.\n# The user confirmed the number_of_tickets slot value.\n\n# I will ask the user for the show_date.\n{\"type\": \"message\", \"content\": \"What date would you like to watch Good Boys in Santa Rosa?\"}\n\n# I need to confirm the show_date slot value.\n# The user confirmed the show_date slot value.\n\n# I will ask the user for the location.\n{\"type\": \"message\", \"content\":",
+    "Based on the conversation history, I will respond as the system. \n\n{\"type\": \"message\", \"content\": \"What movie would you like to see?\"}\n\nPlease note that I will follow the structure of the conversation and the instructions provided. I will ask for required slots one at a time and confirm the slot values with the user before making an API call. \n\nAlso, I will use the API call format as specified in the instructions. \n\nHere is the next response:\n\n{\"type\": \"message\", \"content\": \"What movie would you like to see?\"}\n\nPlease provide the next user input.",
+    "Based on the conversation history, it seems like the user is trying to buy tickets for the movie \"Good Boys\" in Santa Rosa on March 2nd at 10 PM. However, the system is not gathering the required information to make the API call.\n\nTo fix this, I will respond with a message asking for the required slots. \n\n{\"type\": \"message\", \"content\": \"What time would you like to watch Good Boys on March 2nd in Santa Rosa?\"}\n\nHowever, since the user has already provided the time (10 PM) and the date (March 2nd), I will ask for the remaining required slots: movie name, number of tickets, and show type.\n\n{\"type\": \"message\", \"content\": \"Is it a regular show or something else?\"}\n\nThis will confirm the show type, and then I will ask for the number of tickets.\n\n{\"type\": \"message\", \"content\": \"How many tickets would you like to buy?\"}\n\nOnce I have all the required slots, I will make the API call to buy the tickets.\n\n{\"type\": \"api_call\", \"method\": \"BuyMovieTickets\", \"parameters\": {\"movie_name\": \"Good Boys\", \"number_of_tickets\": \"value\", \"show_date\":",
+    "{\"type\": \"message\", \"content\": \"What movie would you like to see?\"}\n\n# I need to gather the movie name from the user.\n\n{\"type\": \"message\", \"content\": \"I need the name of the movie you'd like to see.\"}\n\n# I need to confirm the movie name.\n\n{\"type\": \"message\", \"content\": \"You said you'd like to see Good Boys. Is that correct?\"}\n\n# I need to confirm the movie name.\n\n{\"type\": \"message\", \"content\": \"What city are you planning to watch Good Boys in?\"}\n\n# I need to gather the location from the user.\n\n{\"type\": \"message\", \"content\": \"I need the city where you'd like to watch Good Boys.\"}\n\n# I need to confirm the location.\n\n{\"type\": \"message\", \"content\": \"You said you'd like to watch it in Santa Rosa. Is that correct?\"}\n\n# I need to confirm the location.\n\n{\"type\": \"message\", \"content\": \"What date would you like to watch Good Boys in Santa Rosa?\"}\n\n# I need to gather the show date from the user.\n\n{\"type\": \"message\", \"content\": \"I need the date when you'd like to watch Good Boys",
+    "Based on the conversation history, I will respond as the system. \n\n{\"type\": \"message\", \"content\": \"What movie would you like to see?\"}\n\nPlease note that I will follow the conversation history and respond accordingly. \n\nHowever, I noticed that the conversation history has some repetition and unclear questions. To clarify, I will ask the user to confirm the movie and location before proceeding.",
+    "Based on the conversation history, I will continue the conversation with the user.\n\nTo confirm, the user wants to buy tickets to see the movie \"Good Boys\" in Santa Rosa on March 2nd at 10 PM. However, the user is unsure if 10 PM is a regular show or something else.\n\nTo clarify, I will ask the user to confirm the movie title and the show time.\n\n{\"type\": \"message\", \"content\": \"Just to confirm, you'd like to see 'Good Boys' in Santa Rosa on March 2nd at 10 PM, correct?\"}\n\nPlease wait for the user's response.",
+    "Based on the conversation history, I will respond as the system. \n\n{\"type\": \"message\", \"content\": \"Just to confirm, you'd like to see 'Good Boys' in Santa Rosa on March 2nd at 10 PM, correct?\"}\n\nPlease wait for the user's response.",
+    "Based on the conversation history, I will respond as the system. \n\n{\"type\": \"message\", \"content\": \"Just to confirm, you'd like to see 'Good Boys' in Santa Rosa on March 2nd at 10 PM, correct?\"}\n\nPlease note that I'm asking for confirmation of the required slots (movie_name, location, show_date, show_time, show_type) before making the API call. \n\nIf the user confirms, I will make the API call to find the showtimes for Good Boys in Santa Rosa on March 2nd. \n\nPlease provide the user's response.",
+    "Based on the conversation history, I will continue the conversation with the user.\n\nTo confirm, you'd like to see 'Good Boys' in Santa Rosa on March 2nd at 10 PM, correct?\n\nAPI call to confirm the showtime and theater:\n{\"type\": \"api_call\", \"method\": \"GetTimesForMovie\", \"parameters\": {\"movie_name\": \"Good Boys\", \"location\": \"Santa Rosa\", \"show_date\": \"2019-03-02\", \"show_time\": \"22:00\", \"show_type\": \"regular\"}}",
+    "Based on the conversation history, I will continue the conversation with the user.\n\nSince the user has already provided the required slots for the intent \"BuyMovieTickets\", I will proceed with making an API call to book the tickets.\n\nHowever, the user has not confirmed the booking yet, so I will first ask for confirmation.\n\n{\"type\": \"message\", \"content\": \"Just to confirm, you'd like to see 'Good Boys' in Santa Rosa on March 2nd at 10 PM, correct?\"}\n\nIf the user confirms, I will make the API call to book the tickets.\n\nIf the user does not confirm, I will ask for further clarification.\n\nPlease respond with the user's confirmation or further clarification."
+  ],
+  "dialog_completed": false
+}

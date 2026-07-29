@@ -1,0 +1,59 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={'cast': 'Zoe Bell'})"
+  ],
+  "user_req_slots": [
+    []
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: I want to watch a Zoe Bell movie.\nSystem: ApiCall(method='FindMovies', parameters={'cast': 'Zoe Bell'})\nSearch Results\n[{'cast': 'Zoe Bell', 'directed_by': 'Quentin Tarantino', 'genre': 'Offbeat', 'movie_title': 'Once Upon a Time In Hollywood', 'percent_rating': '85'}]\nEnd Search Results\nSystem: I found 1 movie. Once Upon a Time in Hollywood has a 85 percent rating.\nUser: That's a good one.\nSystem: What else do you need help with?\nLast User Utterance:That's all. Thank you.\nLast System Utterance: Have a nice day.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'cast': 'Zoe Bell'})"
+  ],
+  "generated_dialog": [
+    "User: I want to watch a Zoe Bell movie.",
+    "System: APICall(method='FindMovies', parameters={'cast': 'Zoe Bell'})",
+    "Search Results\n[{'cast': 'Zoe Bell', 'directed_by': 'Quentin Tarantino', 'genre': 'Offbeat', 'movie_title': 'Once Upon a Time In Hollywood', 'percent_rating': 85}]\nEnd Search Results",
+    "System: I found a movie starring Zoe Bell. It's 'Once Upon a Time In Hollywood' directed by Quentin Tarantino with an 85% rating.",
+    "User: That sounds interesting, when was it released?",
+    "System: Unfortunately, the release year isn't included in our current information. Would you like to know more about the movie or search for other options?",
+    "User: Can you tell me more about the plot or the main characters?"
+  ],
+  "search_results": [
+    "[{'cast': 'Zoe Bell', 'directed_by': 'Quentin Tarantino', 'genre': 'Offbeat', 'movie_title': 'Once Upon a Time In Hollywood', 'percent_rating': '85'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n[{'cast': 'Zoe Bell', 'directed_by': 'Quentin Tarantino', 'genre': 'Offbeat', 'movie_title': 'Once Upon a Time In Hollywood', 'percent_rating': 85}]\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    },
+    {
+      "Extraversion": 0.0,
+      "Agreeableness": 0.0,
+      "Conscientiousness": 0.0,
+      "Neuroticism": 0.0,
+      "Openness": 0.0
+    }
+  ],
+  "baseline_counterfactuals": [
+    "{\"type\": \"api_call\", \"method\": \"FindMovies\", \"parameters\": {\"cast\": \"Zoe Bell\"}}",
+    "{\"type\": \"message\", \"content\": \"I found a movie starring Zoe Bell. It's 'Once Upon a Time In Hollywood' directed by Quentin Tarantino with an 85% rating.\"}",
+    "{\"type\": \"message\", \"content\": \"Unfortunately, the release year isn't included in our current information. Would you like to know more about the movie or search for other options?\"}"
+  ],
+  "dialog_completed": false
+}

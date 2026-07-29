@@ -1,0 +1,96 @@
+{
+  "api_calls": [
+    "ApiCall(method='FindMovies', parameters={})"
+  ],
+  "user_req_slots": [
+    [
+      "genre",
+      "cast"
+    ]
+  ],
+  "system_schema": "Schema for Movies\nIntent: FindMovies\n\noptional slots: directed by,genre,cast",
+  "domains": "movies",
+  "domains_original": "Movies_3",
+  "dialog": "User: I need help finding a movie.\nSystem: ApiCall(method='FindMovies', parameters={})\nSearch Results\n[{'cast': 'Leonard Sharp', 'directed_by': 'Alexander Mackendrick', 'genre': 'Thriller', 'movie_title': 'The Ladykillers', 'percent_rating': '100'}]\nEnd Search Results\nSystem: I'd recommend the Ladykillers. It has a rating of 100 percent on average.\nUser: What's the genre?\nSystem: It's considered a thriller.\nUser: Who's in it?\nSystem: The main actor is Leonard Sharp.\nUser: Great, thanks.\nSystem: Need anything else right now?\nLast User Utterance:Nope, thanks again.\nLast System Utterance: My pleasure, enjoy.",
+  "predicted_api_calls": [
+    "APICall(method='FindMovies', parameters={'genre': 'Romantic Comedy', 'cast': 'Emma Stone, Ryan Gosling'})"
+  ],
+  "generated_dialog": [
+    "User: I need help finding a movie.",
+    "System: What kind of movie are you looking for?",
+    "User: I'm looking for a romantic comedy with Emma Stone.",
+    "System: What's the genre of romantic comedy you're looking for? (e.g. light-hearted, serious, etc.)",
+    "User: I'm looking for something light-hearted, like a feel-good movie.",
+    "System: What kind of movie are you looking for?",
+    "User: I'm looking for a romantic comedy with Emma Stone.",
+    "System: What kind of movie are you looking for?",
+    "User: I'm looking for a romantic comedy with Emma Stone.",
+    "System: What's the genre of romantic comedy you're looking for? (e.g. light-hearted, serious, etc.)",
+    "User: Something like a light-hearted, feel-good romantic comedy with a mix of humor and heart.",
+    "System: Is there a specific director or cast member you'd like to see in the movie, apart from Emma Stone?",
+    "User: I'd love to see Ryan Gosling in the movie, he's great in romantic comedies.",
+    "System: Is there a specific director or cast member you'd like to see in the movie, apart from Emma Stone?",
+    "User: I'd love to see Ryan Gosling in the movie, he's great in romantic comedies.",
+    "System: What kind of movie are you looking for?",
+    "User: I'm looking for a romantic comedy with Emma Stone.",
+    "System: What kind of movie are you looking for?",
+    "User: I'm looking for a romantic comedy with Emma Stone.",
+    "System: What's the genre of romantic comedy you're looking for? (e.g. light-hearted, serious, etc.)",
+    "User: Something like a light-hearted, feel-good romantic comedy with a mix of humor and heart.",
+    "System: You're looking for a romantic comedy movie with Emma Stone and Ryan Gosling. Is that correct?",
+    "User: Yes, that's correct.",
+    "System: Based on the provided conversation history, I will respond as the system.",
+    "User: I'd love to see a mix of both light-hearted and serious moments in the movie, something that balances humor and heart.",
+    "System: You're looking for a romantic comedy movie with Emma Stone and Ryan Gosling. Is that correct?",
+    "User: I'd love to see a mix of both light-hearted and serious moments in the movie, something that balances humor and heart.",
+    "System: APICall(method='FindMovies', parameters={'genre': 'Romantic Comedy', 'cast': 'Emma Stone, Ryan Gosling'})",
+    "Search Results\n\nEnd Search Results",
+    "System: You're looking for a romantic comedy movie with Emma Stone and Ryan Gosling. Is that correct?",
+    "User: I'd love to see a mix of both light-hearted and serious moments in the movie, something that balances humor and heart.",
+    "System: What kind of movie are you looking for?",
+    "User: I'm looking for a romantic comedy with Emma Stone."
+  ],
+  "search_results": [
+    "[{'cast': 'Leonard Sharp', 'directed_by': 'Alexander Mackendrick', 'genre': 'Thriller', 'movie_title': 'The Ladykillers', 'percent_rating': '100'}]"
+  ],
+  "predicted_search_results": [
+    "Search Results\n\nEnd Search Results"
+  ],
+  "sa_coeffs": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "baseline_counterfactuals": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dialog_completed": false
+}

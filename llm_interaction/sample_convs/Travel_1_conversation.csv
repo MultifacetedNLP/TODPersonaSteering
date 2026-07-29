@@ -1,0 +1,14 @@
+Speaker,Utterance
+dialogue_id:, 5_00022
+USER,"""Can you tell me about some good attractions that are near me?"""
+SYSTEM,"""Where are you right now?"""
+USER,"""I'm in London and I want to see something big."""
+SYSTEM,"""APICall(method='FindAttractions', parameters={ location: London })"""
+Tool,"""Search Results\n[{ attraction_name: 30 St Mary Axe (The Gherkin), category: Historical Landmark, free_entry: True, good_for_kids: True, location: London, phone_number: 20 7071 5029 }, { attraction_name: Alexandra Palace, category: Performing Arts Venue, free_entry: False, good_for_kids: True, location: London, phone_number: 20 8365 2121 }]\nEnd Search Results"""
+SYSTEM,"""There are 10 near you. But, why don't you look at 30 st Mary Axe (The Gherkin). It is really big and a historical landmark."""
+USER,"""Cool, is there anything else without an entry fee? Maybe something wet and slippery."""
+SYSTEM,"""APICall(method='FindAttractions', parameters={ free_entry: True, location: London })"""
+Tool,"""Search Results\n[{ attraction_name: 30 St Mary Axe (The Gherkin), category: Historical Landmark, free_entry: True, good_for_kids: True, location: London, phone_number: 20 7071 5029 }, { attraction_name: Alexandra Palace Ice Rink, category: Sports Venue, free_entry: True, good_for_kids: True, location: London, phone_number: 20 8365 2121 }]\nEnd Search Results"""
+SYSTEM,"""There are 9 others, but maybe you should check out the sports venue Alexandra Palace Ice Rink. It's really wet and slippery."""
+USER,"""Okay that's all I wanted."""
+SYSTEM,"""Enjoy your visit."""
