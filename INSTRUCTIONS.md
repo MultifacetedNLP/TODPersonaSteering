@@ -1,6 +1,6 @@
 ## Instructions for a fresh clone of `Activation-Steered-Personas`
 
-The GitHub repo is published as [`Activation-Steered-Personas`](https://github.com/MaryamShoaei1/Activation-Steered-Personas); the checkout folder name can be anything, but these instructions assume `Activation-Steered-Personas`.
+The GitHub repo is published as [`TODPersonaSteering`](https://github.com/MultifacetedNLP/TODPersonaSteering); the checkout folder name can be anything, but these instructions assume `Activation-Steered-Personas`.
 
 Requirements: Python 3.10+, Linux with Bash 4+, and (for full experiments) a SLURM cluster with A100 GPUs.
 
@@ -12,7 +12,7 @@ Keep both repos as siblings in the same parent folder:
 ```bash
 mkdir -p ~/work/activation-steered-personas && cd ~/work/activation-steered-personas
 
-git clone https://github.com/MultifacetedNLP/TODPersonaSteering
+git clone https://github.com/MultifacetedNLP/TODPersonaSteering Activation-Steered-Personas
 git clone https://github.com/xcfcode/persona
 ```
 
